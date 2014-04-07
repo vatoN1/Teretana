@@ -8,6 +8,10 @@ namespace TeretanaBilderhana
 {
     class Klijent : Osoba
     {
+        public Klijent()
+        {
+
+        }
         private double tezina
         {
             get;

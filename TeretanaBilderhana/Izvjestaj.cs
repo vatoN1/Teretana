@@ -8,6 +8,11 @@ namespace TeretanaBilderhana
 {
     class Izvjestaj
     {
+        public Izvjestaj()
+        {
+
+        }
+
         private Uposlenik podnosiocIzvjestaja
 	    {
 		    get;

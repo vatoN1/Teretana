@@ -6,7 +6,13 @@ using System.Threading.Tasks;
 
 namespace TeretanaBilderhana
 {
-    class Osoba
+    enum Spol
+    {
+        Musko,
+        Zensko,
+    }
+
+    public abstract class Osoba
     {
         private DateTime datumRodjenja
         {

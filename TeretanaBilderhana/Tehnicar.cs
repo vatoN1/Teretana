@@ -8,6 +8,11 @@ namespace TeretanaBilderhana
 {
     class Tehnicar : Osoba
     {
+        public Tehnicar()
+        {
+
+        }
+
         private string kontakt
         {
             get;

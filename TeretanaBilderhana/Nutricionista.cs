@@ -8,6 +8,11 @@ namespace TeretanaBilderhana
 {
     class Nutricionista : Osoba
     {
+        public Nutricionista()
+        {
+
+        }
+
         private string komentar
         {
             get;

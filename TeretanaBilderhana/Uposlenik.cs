@@ -8,6 +8,11 @@ namespace TeretanaBilderhana
 {
     class Uposlenik : Osoba
     {
+        public Uposlenik()
+        {
+
+        }
+
         private decimal plata
         {
             get;

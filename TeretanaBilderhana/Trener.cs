@@ -8,6 +8,11 @@ namespace TeretanaBilderhana
 {
     class Trener : Osoba
     {
+        public Trener()
+        {
+
+        }
+
         private string komentar
         {
             get;
