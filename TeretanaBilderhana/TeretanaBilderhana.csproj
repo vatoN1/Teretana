@@ -66,12 +66,20 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
+    <Compile Include="Inventar.cs" />
     <Compile Include="Izvjestaj.cs" />
+    <Compile Include="JednokratnaUsluga.cs" />
     <Compile Include="Klijent.cs" />
     <Compile Include="Nutricionista.cs" />
+    <Compile Include="Oprema.cs" />
     <Compile Include="Osoba.cs" />
+    <Compile Include="PrehrambeniProgram.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Prostorija.cs" />
+    <Compile Include="Spol.cs" />
+    <Compile Include="Sprava.cs" />
+    <Compile Include="Suplement.cs" />
     <Compile Include="Tehnicar.cs" />
     <Compile Include="TipClanarine.cs" />
     <Compile Include="TipOpreme.cs" />
@@ -80,8 +88,11 @@
     <Compile Include="TipSprave.cs" />
     <Compile Include="TipSuplementa.cs" />
     <Compile Include="TipUsluge.cs" />
+    <Compile Include="TrajnaUsluga.cs" />
     <Compile Include="Trener.cs" />
     <Compile Include="Uposlenik.cs" />
+    <Compile Include="Usluga.cs" />
+    <Compile Include="WorkoutProgram.cs" />
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
