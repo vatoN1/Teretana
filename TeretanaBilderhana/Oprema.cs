@@ -9,37 +9,19 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
-public class Uposlenik : Osoba
+public class Oprema : Inventar
 {
-    public Uposlenik() { }
-	private decimal plata
+    public Oprema() { }
+	private TipOpreme tipOpreme
 	{
 		get;
 		set;
 	}
 
-	private DateTime datumZaposlenja
+	private decimal cijenaNajama
 	{
 		get;
 		set;
-	}
-
-	public virtual IEnumerable<Izvjestaj> Izvjestaj
-	{
-		get;
-		set;
-	}
-
-	
-
-	public virtual Izvjestaj kreirajIzvjestaj()
-	{
-		throw new System.NotImplementedException();
-	}
-
-	public virtual void azurirajPodatke()
-	{
-		throw new System.NotImplementedException();
 	}
 
 }

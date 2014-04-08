@@ -9,35 +9,28 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
-public class Uposlenik : Osoba
+public abstract class Usluga
 {
-    public Uposlenik() { }
-	private decimal plata
+    public Usluga() { }
+	private decimal cijena
 	{
 		get;
 		set;
 	}
 
-	private DateTime datumZaposlenja
+	public virtual IEnumerable<Prostorija> Prostorija
 	{
 		get;
 		set;
 	}
 
-	public virtual IEnumerable<Izvjestaj> Izvjestaj
-	{
-		get;
-		set;
-	}
 
-	
-
-	public virtual Izvjestaj kreirajIzvjestaj()
+	public virtual decimal obracunajCijenu()
 	{
 		throw new System.NotImplementedException();
 	}
 
-	public virtual void azurirajPodatke()
+	public virtual void Usluga()
 	{
 		throw new System.NotImplementedException();
 	}

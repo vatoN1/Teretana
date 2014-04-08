@@ -9,38 +9,15 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
-public abstract class Osoba
+public class WorkoutProgram : Program
 {
-    public Osoba() { }
-	private DateTime datumRodjenja
+    private string[] vjezbe;
+    public WorkoutProgram()
 	{
-		get;
-		set;
-	}
-
-	private int ID
-	{
-		get;
-		set;
-	}
-
-	private string ime
-	{
-		get;
-		set;
-	}
-
-	private string prezime
-	{
-		get;
-		set;
-	}
-
-	private Spol spol
-	{
-		get;
-		set;
-	}
+        vjezbe = new string[7];
+    }
+	
+    
 
 }
 

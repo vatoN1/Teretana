@@ -9,37 +9,13 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
-public class Uposlenik : Osoba
+public class PrehrambeniProgram : Program
 {
-    public Uposlenik() { }
-	private decimal plata
-	{
-		get;
-		set;
-	}
-
-	private DateTime datumZaposlenja
-	{
-		get;
-		set;
-	}
-
-	public virtual IEnumerable<Izvjestaj> Izvjestaj
-	{
-		get;
-		set;
-	}
-
+    private string[] obroci;
 	
-
-	public virtual Izvjestaj kreirajIzvjestaj()
+    public virtual void PrehrambeniProgram()
 	{
-		throw new System.NotImplementedException();
-	}
-
-	public virtual void azurirajPodatke()
-	{
-		throw new System.NotImplementedException();
+		obroci=new string[7];
 	}
 
 }

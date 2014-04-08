@@ -9,22 +9,12 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
-public class Uposlenik : Osoba
+public abstract class Inventar
 {
-    public Uposlenik() { }
-	private decimal plata
-	{
-		get;
-		set;
-	}
+    public virtual Inventar(){
 
-	private DateTime datumZaposlenja
-	{
-		get;
-		set;
-	}
-
-	public virtual IEnumerable<Izvjestaj> Izvjestaj
+    }
+	private int kolicina
 	{
 		get;
 		set;
@@ -32,12 +22,7 @@ public class Uposlenik : Osoba
 
 	
 
-	public virtual Izvjestaj kreirajIzvjestaj()
-	{
-		throw new System.NotImplementedException();
-	}
-
-	public virtual void azurirajPodatke()
+	public virtual void osvjezi()
 	{
 		throw new System.NotImplementedException();
 	}

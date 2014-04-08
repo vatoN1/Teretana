@@ -9,38 +9,37 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
-public class Uposlenik : Osoba
+public class TrajnaUsluga : Usluga
 {
-    public Uposlenik() { }
-	private decimal plata
+    public TrajnaUsluga() { }
+	private TipClanarine clanarina
 	{
 		get;
 		set;
 	}
 
-	private DateTime datumZaposlenja
+	public virtual IEnumerable<Program> Program
 	{
 		get;
 		set;
 	}
 
-	public virtual IEnumerable<Izvjestaj> Izvjestaj
+	public virtual void produziClanarinu()
 	{
-		get;
-		set;
+		throw new System.NotImplementedException();
+	}
+
+	public virtual void okoncajUslugu()
+	{
+		throw new System.NotImplementedException();
+	}
+
+	public virtual TrajnaUsluga()
+	{
+		throw new System.NotImplementedException();
 	}
 
 	
-
-	public virtual Izvjestaj kreirajIzvjestaj()
-	{
-		throw new System.NotImplementedException();
-	}
-
-	public virtual void azurirajPodatke()
-	{
-		throw new System.NotImplementedException();
-	}
 
 }
 
