@@ -33,13 +33,5 @@ public class TrajnaUsluga : Usluga
 	{
 		throw new System.NotImplementedException();
 	}
-
-	public virtual TrajnaUsluga()
-	{
-		throw new System.NotImplementedException();
-	}
-
-	
-
 }
 

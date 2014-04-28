@@ -18,7 +18,7 @@ public class JednokratnaUsluga : Usluga
         get { return odabraneUsluge; }
         set { odabraneUsluge = value; }
     }
-    public virtual JednokratnaUsluga()
+    public JednokratnaUsluga()
 	{
         odabraneUsluge = new List<TipUsluge>();
 	}

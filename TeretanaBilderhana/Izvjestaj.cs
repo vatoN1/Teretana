@@ -11,7 +11,7 @@ using System.Text;
 
 public class Izvjestaj
 {
-    public virtual Izvjestaj()
+    public Izvjestaj()
     {
         throw new System.NotImplementedException();
     }

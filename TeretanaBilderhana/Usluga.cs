@@ -29,11 +29,5 @@ public abstract class Usluga
 	{
 		throw new System.NotImplementedException();
 	}
-
-	public virtual void Usluga()
-	{
-		throw new System.NotImplementedException();
-	}
-
 }
 

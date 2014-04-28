@@ -11,7 +11,7 @@ using System.Text;
 
 public abstract class Inventar
 {
-    public virtual Inventar(){
+    public Inventar(){
 
     }
 	private int kolicina

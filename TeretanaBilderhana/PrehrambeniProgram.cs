@@ -13,7 +13,7 @@ public class PrehrambeniProgram : Program
 {
     private string[] obroci;
 	
-    public virtual void PrehrambeniProgram()
+    public PrehrambeniProgram()
 	{
 		obroci=new string[7];
 	}
