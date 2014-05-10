@@ -1,2 +1,232 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<ClassDiagram /> 
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="Administrator">
+    <Position X="11.75" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAQAAAAAAAgAAAAAAAAAAAAAAAAAAAAAEAAAAAA=</HashCode>
+      <FileName>Administrator.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsCollectionAssociation>
+      <Property Name="Izvjestaji" />
+    </ShowAsCollectionAssociation>
+  </Class>
+  <Class Name="Inventar">
+    <Position X="16.75" Y="7" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAQAAAAAAAAIAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Inventar.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Izvjestaj">
+    <Position X="11.75" Y="5.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAEAAAAAAAAAAAAAAAAAAAAAAACAAAgAAAA=</HashCode>
+      <FileName>Izvjestaj.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="Uposlenik" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="JednokratnaUsluga">
+    <Position X="13.75" Y="3.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>JednokratnaUsluga.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Klijent">
+    <Position X="9.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAQAAAAAQAAAAAAAAAAQAAAA=</HashCode>
+      <FileName>Klijent.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Nutricionista">
+    <Position X="8.75" Y="8.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAgA=</HashCode>
+      <FileName>Nutricionista.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Oprema">
+    <Position X="19.25" Y="9.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AEABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Oprema.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Osoba">
+    <Position X="6.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAQAAABgAAIAAAAAABAAAAAAAAAAAAAAAgAAAA=</HashCode>
+      <FileName>Osoba.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PrehrambeniProgram">
+    <Position X="20.5" Y="3.5" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>PrehrambeniProgram.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="GymProgram">
+    <Position X="20.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAABAAAAAAAAAAAEAAAAAAAAAAAAAA=</HashCode>
+      <FileName>GymProgram.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Prostorija">
+    <Position X="18.5" Y="0.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAACAAAAAAAAAAAAgAAAAAAAAAAAAAAAAAACAAAAAA=</HashCode>
+      <FileName>Prostorija.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsCollectionAssociation>
+      <Property Name="Inventar" />
+    </ShowAsCollectionAssociation>
+  </Class>
+  <Class Name="Sprava">
+    <Position X="14.5" Y="9.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAABAAAIAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Sprava.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Suplement">
+    <Position X="16.75" Y="9.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAgAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAAA=</HashCode>
+      <FileName>Suplement.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Tehnicar">
+    <Position X="11" Y="9" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Tehnicar.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="TrajnaUsluga">
+    <Position X="17" Y="3.75" Width="1.5" />
+    <AssociationLine Name="PrehrambeniProgram" Type="PrehrambeniProgram" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="18.5" Y="4.312" />
+        <Point X="18.875" Y="4.312" />
+        <Point X="18.875" Y="4.342" />
+        <Point X="19.354" Y="4.342" Type="JumpStart" />
+        <Point X="19.521" Y="4.342" Type="JumpEnd" />
+        <Point X="20.5" Y="4.342" />
+      </Path>
+    </AssociationLine>
+    <TypeIdentifier>
+      <HashCode>AAAAABAAAAAEAAAAAAAAQAAAAAACAQAAAAAAAAAAAAA=</HashCode>
+      <FileName>TrajnaUsluga.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="PrehrambeniProgram" />
+      <Property Name="WorkoutProgram" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="Trener">
+    <Position X="6.25" Y="8.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAgA=</HashCode>
+      <FileName>Trener.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Uposlenik">
+    <Position X="8.25" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAICAAAAAAAAAAAAACAAAAAAAAAAAAAAAAABA=</HashCode>
+      <FileName>Uposlenik.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Usluga">
+    <Position X="14.75" Y="0.5" Width="1.5" />
+    <AssociationLine Name="Prostorija" Type="Prostorija" FixedFromPoint="true">
+      <Path>
+        <Point X="16.25" Y="1.875" />
+        <Point X="18.5" Y="1.875" />
+      </Path>
+    </AssociationLine>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAgAAAAAAAAAAAAAAAAAAIAIAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Usluga.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="Prostorija" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="WorkoutProgram">
+    <Position X="22" Y="6.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAA=</HashCode>
+      <FileName>WorkoutProgram.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="TeretanaBilderhana.Program" Collapsed="true">
+    <Position X="24.25" Y="5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAA=</HashCode>
+      <FileName>Program.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Enum Name="Spol">
+    <Position X="24.75" Y="3" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAYAAAAAA=</HashCode>
+      <FileName>Spol.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="TipClanarine">
+    <Position X="28.25" Y="3" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAAABAAAAAAAAA=</HashCode>
+      <FileName>TipClanarine.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="TipOpreme">
+    <Position X="28.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAgCAAAAAAAAIAAAAAAAAQABAAAQAAAIA=</HashCode>
+      <FileName>TipOpreme.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="TipPrograma">
+    <Position X="26.5" Y="3" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAEAAAQAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>TipPrograma.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="TipProstorije">
+    <Position X="23" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>BAAAAAAAAAAAAgQAAABAAAAAAAAAAAAAAABAAAAAAAA=</HashCode>
+      <FileName>TipProstorije.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="TipSprave">
+    <Position X="24.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAoA=</HashCode>
+      <FileName>TipSprave.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="TipSuplementa">
+    <Position X="26.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAACAIAAAAAIAEAAAAAAAAAAAAAAIEAAAAAAAAAAAA=</HashCode>
+      <FileName>TipSuplementa.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="TipUsluge">
+    <Position X="23" Y="3" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIA=</HashCode>
+      <FileName>TipUsluge.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

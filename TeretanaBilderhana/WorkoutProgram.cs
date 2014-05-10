@@ -9,12 +9,17 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
-public class WorkoutProgram : Program
+public class WorkoutProgram : GymProgram
 {
-    private string[] vjezbe;
     public WorkoutProgram()
 	{
-        vjezbe = new string[7];
+        
+    }
+
+    public string Vjezbe
+    {
+        get;
+        set;
     }
 	
     

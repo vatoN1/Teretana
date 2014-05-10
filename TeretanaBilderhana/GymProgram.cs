@@ -9,49 +9,24 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
-public abstract class Osoba
+public abstract class GymProgram
 {
-    public Osoba() { }
-    public DateTime DatumRodjenja
-	{
-		get;
-		set;
-	}
-
-    public int ID
-	{
-		get;
-		set;
-	}
-
-    public string Ime
-	{
-		get;
-		set;
-	}
-
-    public string Prezime
-	{
-		get;
-		set;
-	}
-
-    public Spol Spol
-	{
-		get;
-		set;
-	}
-
-    public string Kontakt
+    public GymProgram()
     {
-        get
-        {
-            throw new System.NotImplementedException();
-        }
-        set
-        {
-        }
+        
     }
+    public TipPrograma TipPrograma
+	{
+		get;
+		set;
+	}
 
+    public string Opis
+	{
+		get;
+		set;
+	}
+
+	
 }
 

@@ -12,23 +12,6 @@ using System.Text;
 public class Nutricionista : Uposlenik
 {
     public Nutricionista() { }
-	private string komentar
-	{
-		get;
-		set;
-	}
-
-	public virtual IEnumerable<PrehrambeniProgram> PrehrambeniProgram
-	{
-		get;
-		set;
-	}
-
-	public virtual IEnumerable<Suplement> Suplement
-	{
-		get;
-		set;
-	}
 
 	public virtual void azurirajProgram()
 	{

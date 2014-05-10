@@ -11,19 +11,19 @@ using System.Text;
 
 public class Klijent : Osoba
 {
-	private double tezina
+    public double Tezina
 	{
 		get;
 		set;
 	}
 
-	private double visina
+    public double Visina
 	{
 		get;
 		set;
 	}
 
-	private string komentar
+    public string Komentar
 	{
 		get;
 		set;

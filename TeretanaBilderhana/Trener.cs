@@ -12,17 +12,6 @@ using System.Text;
 public class Trener : Uposlenik
 {
     public Trener() { }
-	private string komentar
-	{
-		get;
-		set;
-	}
-
-	public virtual IEnumerable<WorkoutProgram> WorkoutProgram
-	{
-		get;
-		set;
-	}
 
 	public virtual WorkoutProgram noviProgram()
 	{

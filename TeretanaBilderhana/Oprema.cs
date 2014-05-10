@@ -12,13 +12,13 @@ using System.Text;
 public class Oprema : Inventar
 {
     public Oprema() { }
-	private TipOpreme tipOpreme
+    public TipOpreme TipOpreme
 	{
 		get;
 		set;
 	}
 
-	private decimal cijenaNajama
+    public decimal CijenaNajama
 	{
 		get;
 		set;

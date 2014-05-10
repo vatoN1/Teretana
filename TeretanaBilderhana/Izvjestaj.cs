@@ -15,23 +15,29 @@ public class Izvjestaj
     {
         throw new System.NotImplementedException();
     }
-	private Uposlenik podnosiocIzvjestaja
+
+    public string SadrzajIzvjestaja
 	{
 		get;
 		set;
 	}
 
-	private string sadrzajIzvjestaja
+    public DateTime DatumIzvjestaja
 	{
 		get;
 		set;
 	}
 
-	private DateTime datumIzvjestaja
-	{
-		get;
-		set;
-	}
+    public global::Uposlenik Uposlenik
+    {
+        get
+        {
+            throw new System.NotImplementedException();
+        }
+        set
+        {
+        }
+    }
 
 	
 

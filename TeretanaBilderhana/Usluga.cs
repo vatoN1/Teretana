@@ -12,17 +12,22 @@ using System.Text;
 public abstract class Usluga
 {
     public Usluga() { }
-	private decimal cijena
+    public decimal Cijena
 	{
 		get;
 		set;
-	}
+    }
 
-	public virtual IEnumerable<Prostorija> Prostorija
-	{
-		get;
-		set;
-	}
+    public global::Prostorija Prostorija
+    {
+        get
+        {
+            throw new System.NotImplementedException();
+        }
+        set
+        {
+        }
+    }
 
 
 	public virtual decimal obracunajCijenu()

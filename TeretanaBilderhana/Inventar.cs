@@ -14,7 +14,7 @@ public abstract class Inventar
     public Inventar(){
 
     }
-	private int kolicina
+    public int Kolicina
 	{
 		get;
 		set;
