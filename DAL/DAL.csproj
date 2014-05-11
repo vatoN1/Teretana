@@ -42,7 +42,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Class1.cs" />
+    <Compile Include="DAL.cs" />
+    <Compile Include="DAOFactory.cs" />
     <Compile Include="Enumeracije\Spol.cs" />
     <Compile Include="Enumeracije\TipClanarine.cs" />
     <Compile Include="Enumeracije\TipOpreme.cs" />
@@ -51,6 +52,7 @@
     <Compile Include="Enumeracije\TipSprave.cs" />
     <Compile Include="Enumeracije\TipSuplementa.cs" />
     <Compile Include="Enumeracije\TipUsluge.cs" />
+    <Compile Include="Interfejsi\IDaoCrud.cs" />
     <Compile Include="Klase\Administrator.cs" />
     <Compile Include="Klase\GymProgram.cs" />
     <Compile Include="Klase\Inventar.cs" />
