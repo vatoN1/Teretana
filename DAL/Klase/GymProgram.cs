@@ -27,9 +27,9 @@ public abstract class GymProgram
 		set;
 	}
 
-    string ID;
+    int ID;
 
-public string ID1
+public int ID1
 {
   get { return ID; }
   set { ID = value; }

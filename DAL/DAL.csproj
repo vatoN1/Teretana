@@ -47,7 +47,8 @@
   <ItemGroup>
     <Compile Include="DAL.cs" />
     <Compile Include="DAOFactory.cs" />
-    <Compile Include="DAOklase\PrehrambeniProgram.cs" />
+    <Compile Include="DAOklase\PrehrambeniProgramDAO.cs" />
+    <Compile Include="DAOklase\ProstorijaDAO.cs" />
     <Compile Include="Enumeracije\Spol.cs" />
     <Compile Include="Enumeracije\TipClanarine.cs" />
     <Compile Include="Enumeracije\TipOpreme.cs" />

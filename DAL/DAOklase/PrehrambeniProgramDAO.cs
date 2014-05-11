@@ -72,7 +72,7 @@ namespace DAL
             {
                 try
                 {
-                    c = new MySqlCommand(String.Format("DELETE FROM prehrambeniprogram WHERE idUposlenika ='{0}';", entity.ID1), con);
+                    c = new MySqlCommand(String.Format("DELETE FROM prehrambeniprogram WHERE id ='{0}';", entity.ID1), con);
                     c.ExecuteNonQuery();
                 }
                 catch (Exception e)
@@ -85,7 +85,7 @@ namespace DAL
             {
                 try
                 {
-                    c = new MySqlCommand(String.Format("SELECT * FROM uposlenik WHERE idUposlenika='{0}';", id), con);
+                    c = new MySqlCommand(String.Format("SELECT * FROM prehrambeniprogram WHERE id='{0}';", id), con);
                     MySqlDataReader r = c.ExecuteReader();
                     if (r.Read())
                     {
@@ -128,7 +128,7 @@ namespace DAL
             {
                 try
                 {
-                    c = new MySqlCommand(String.Format("SELECT * FROM uposlenik WHERE {0}='{1}';", name, values), con);
+                    c = new MySqlCommand(String.Format("SELECT * FROM prehrambeniprogram WHERE {0}='{1}';", name, values), con);
                     MySqlDataReader r = c.ExecuteReader();
                     List<PrehrambeniProgram> pprogram = new List<PrehrambeniProgram>();
                     while (r.Read())
