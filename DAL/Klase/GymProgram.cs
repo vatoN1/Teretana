@@ -11,6 +11,20 @@ using System.Text;
 
 public abstract class GymProgram
 {
+    String opis;
+    TipPrograma tipPrograma;
+    String tipProgramaS;
+
+    public GymProgram(String opis, TipPrograma tipPrograma) 
+    {
+        this.opis = opis;
+        this.tipPrograma = tipPrograma;
+    }
+    public GymProgram(String opis, String tipPrograma)
+    {
+        this.opis = opis;
+        this.tipProgramaS = tipPrograma;
+    }
     public GymProgram()
     {
         
@@ -21,7 +35,13 @@ public abstract class GymProgram
 		set;
 	}
 
-    public string Opis
+    public String TipProgramaS
+    {
+        get { return tipProgramaS; }
+        set { tipProgramaS = value; }
+    }
+
+    public String Opis
 	{
 		get;
 		set;

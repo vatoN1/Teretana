@@ -11,14 +11,42 @@ using System.Text;
 
 public class Suplement : Inventar
 {
+    int idSuplementa;
+    TipSuplementa tipSuplementa;
+    String tipSuplementaS;
+    Decimal cijena;
+    
     public Suplement() { }
+
+    public Suplement(int id, TipSuplementa tipSuplementa, Decimal cijena)
+    {
+        // TODO: Complete member initialization
+        this.idSuplementa = id;
+        this.tipSuplementa = tipSuplementa;
+        this.cijena = cijena;
+    }
+
+    public Suplement(int id, String tipSuplementa, Decimal cijena)
+    {
+        // TODO: Complete member initialization
+        this.idSuplementa = id;
+        this.tipSuplementaS = tipSuplementa;
+        this.cijena = cijena;
+    }
+
+    public int IdSuplementa
+    {
+        get;
+        set;
+    }
+
     public TipSuplementa TipSuplementa
 	{
 		get;
 		set;
 	}
 
-    public decimal Cijena
+    public Decimal Cijena
 	{
 		get;
 		set;

@@ -1,0 +1,170 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using MySql.Data.MySqlClient;
+
+namespace DAL
+{
+    partial class DAL
+    {
+        public class UposlenikDAO : IDaoCrud<Uposlenik>
+        {
+            protected MySqlCommand c;
+
+            public long create(Uposlenik entity)
+            {
+                try
+                {
+
+                    c = new MySqlCommand(String.Format("INSERT INTO uposlenici VALUES ('{0}','{1}','{2}','{3}','{4}', {5}, {6}, {7});"
+                        , entity.Ime, entity.Prezime, entity.Spol, entity.DatumRodjenja, entity.DatumZaposlenja
+                        , entity.Plata, entity.Kontakt, entity.Zaposlenje), con);
+                    c.ExecuteNonQuery();
+                    return c.LastInsertedId;
+                }
+                catch (Exception e)
+                {
+                    throw e;
+                }
+            }
+            
+            public Uposlenik read(Uposlenik entity)
+            {
+                try
+                {
+                    c = new MySqlCommand(String.Format("SELECT * FROM uposlenici WHERE id='{0}'", entity.IdUposlenika)
+                        , con);
+
+                    MySqlDataReader r = c.ExecuteReader();
+
+                    if (r.Read())
+                    {
+                        Uposlenik Uposlenik = new Uposlenik
+                        (
+                            r.GetInt32("id"), r.GetString("ime"), r.GetString("prezime"), r.GetString("spol"),
+                             r.GetDateTime("datumRodjenja"), r.GetDateTime("datumZaposlenja"),
+                             r.GetDecimal("plata"), r.GetString("kontakt"), r.GetString("zaposlenje")
+                        );
+
+                        r.Close();
+                        return Uposlenik;
+                    }
+                    else throw
+                     new Exception("Nema podataka za citanje");
+
+                }
+                catch (Exception e)
+                {
+                    throw e;
+                }
+            }
+
+            public Uposlenik update(int id, Uposlenik entity)
+            {
+                try
+                {
+                    c = new MySqlCommand(String.Format("UPDATE uposlenici SET id='{0}', ime='{1}', prezime='{2}', spol = '{3}', "+
+                    "datumRodjenja = '{4}', datumZaposlenja = '{5}, plata = {6}, kontakt = {7}, zaposlenje = '{8}' " +
+                    "where idUposlenika = '{9}'",
+                        entity.IdUposlenika, entity.Ime, entity.Prezime, entity.Spol, entity.DatumRodjenja, 
+                        entity.DatumZaposlenja, entity.Plata, entity.Kontakt, entity.Zaposlenje, id), con);
+                    c.ExecuteNonQuery();
+                    return entity;
+                }
+                catch (Exception e)
+                {
+                    throw e;
+                }
+            }
+
+            public void delete(Uposlenik entity)
+            {
+                try
+                {
+                    c = new MySqlCommand(String.Format("DELETE FROM uposlenici WHERE id ='{0}';", entity.IdUposlenika), con);
+                    c.ExecuteNonQuery();
+                }
+                catch (Exception e)
+                {
+                    throw e;
+                }
+            }
+
+            public Uposlenik getById(long id)
+            {
+                try
+                {
+                    c = new MySqlCommand(String.Format("SELECT * FROM uposlenici WHERE id='{0}';", id), con);
+                    MySqlDataReader r = c.ExecuteReader();
+                    if (r.Read())
+                    {
+                        Uposlenik Uposlenik = new Uposlenik
+                        (
+                            r.GetInt32("id"), r.GetString("ime"), r.GetString("prezime"), r.GetString("spol"),
+                             r.GetDateTime("datumRodjenja"), r.GetDateTime("datumZaposlenja"),
+                             r.GetDecimal("plata"), r.GetString("kontakt"), r.GetString("zaposlenje")
+                        );
+                        r.Close();
+                        return Uposlenik;
+                    }
+                    else throw
+                        new Exception("Nema podataka za prikaz");
+                }
+                catch (Exception e)
+                {
+                    throw e;
+                }
+            }
+
+            public List<Uposlenik> GetAll()
+            {
+                try
+                {
+                    c = new MySqlCommand(String.Format("SELECT * FROM uposlenici;"), con);
+                    MySqlDataReader r = c.ExecuteReader();
+                    List<Uposlenik> Filmovi = new List<Uposlenik>();
+                    while (r.Read())
+                        Filmovi.Add(new Uposlenik
+                        (
+                            r.GetInt32("id"), r.GetString("ime"), r.GetString("prezime"), r.GetString("spol"),
+                             r.GetDateTime("datumRodjenja"), r.GetDateTime("datumZaposlenja"),
+                             r.GetDecimal("plata"), r.GetString("kontakt"), r.GetString("zaposlenje")
+                        ));
+
+                    r.Close();
+                    return Filmovi;
+
+                }
+                catch (Exception e)
+                {
+                    throw e;
+                }
+            }
+
+            public List<Uposlenik> getByExample(string name, string values)
+            {
+                try
+                {
+                    c = new MySqlCommand(String.Format("SELECT * FROM uposlenici WHERE {0}='{1}';", name, values), con);
+                    MySqlDataReader r = c.ExecuteReader();
+                    List<Uposlenik> Filmovi = new List<Uposlenik>();
+                    while (r.Read())
+                        Filmovi.Add(new Uposlenik
+                        (
+                            r.GetInt32("id"), r.GetString("ime"), r.GetString("prezime"), r.GetString("spol"),
+                             r.GetDateTime("datumRodjenja"), r.GetDateTime("datumZaposlenja"),
+                             r.GetDecimal("plata"), r.GetString("kontakt"), r.GetString("zaposlenje")
+                        ));
+                    r.Close();
+                    return Filmovi;
+                }
+                catch (Exception e)
+                {
+                    throw e;
+                }
+            }
+        }
+    }
+}

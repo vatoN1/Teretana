@@ -43,7 +43,6 @@ namespace DAL
             }
 
         }
-
         public DAOFactory getDAO
         {
             get { return DAOFactory.Instanca; }

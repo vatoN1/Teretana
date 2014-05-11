@@ -8,23 +8,58 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using DAL;
 
 public class Uposlenik : Osoba
 {
+    int idUposlenika;
+    Decimal plata;
+    DateTime datumZaposlenja;
+    TipZaposlenja zaposlenje;
+    String zaposlenjeS;
+
+    
     public Uposlenik() { }
+
+    public Uposlenik(int idUposlenika, String ime, String prezime, String spol,
+        DateTime datumRodjenja, DateTime datumZaposlenja, Decimal plata, String kontakt, String zaposlenje) :
+        base(idUposlenika, ime, prezime, spol, datumRodjenja, kontakt)
+    {
+
+        IdUposlenika = idUposlenika;
+        Plata = plata;
+        DatumZaposlenja = datumZaposlenja;
+        ZaposlenjeS = zaposlenje;
+    }
     public decimal Plata
 	{
 		get;
 		set;
 	}
 
+
+    public String ZaposlenjeS
+    {
+        get { return zaposlenjeS; }
+        set { zaposlenjeS = value; }
+    }
     public DateTime DatumZaposlenja
 	{
 		get;
 		set;
     }
 
-	
+    public TipZaposlenja Zaposlenje
+    {
+        get;
+        set;
+    }
+
+    public int IdUposlenika
+    {
+        get;
+        set;
+    }
 
 	public virtual Izvjestaj kreirajIzvjestaj()
 	{

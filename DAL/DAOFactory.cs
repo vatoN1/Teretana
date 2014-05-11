@@ -15,7 +15,7 @@ namespace DAL
             {
                 get { return (instanca == null) ? instanca = new DAOFactory() : instanca; }
             }
-
+       
             private DAOFactory() { }
         }
     }

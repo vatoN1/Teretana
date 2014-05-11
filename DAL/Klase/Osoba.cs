@@ -11,6 +11,18 @@ using System.Text;
 
 public abstract class Osoba
 {
+    
+
+    public Osoba(int id, string ime, string prezime, string spol, DateTime datumrodjenja, string kontakt)
+    {
+        ID = id;
+        Ime = ime;
+        Prezime = prezime;
+        if (spol == "Musko") Spol = Spol.Musko;
+        else Spol = Spol.Zensko;
+        DatumRodjenja = datumrodjenja;
+        Kontakt = kontakt;
+    }
     public Osoba() { }
     public DateTime DatumRodjenja
 	{
@@ -19,10 +31,10 @@ public abstract class Osoba
 	}
 
     public int ID
-	{
-		get;
-		set;
-	}
+    {
+        get;
+        set;
+    }
 
     public string Ime
 	{

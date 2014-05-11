@@ -44,6 +44,9 @@
   <ItemGroup>
     <Compile Include="DAL.cs" />
     <Compile Include="DAOFactory.cs" />
+    <Compile Include="DAOklase\SuplementiDAO.cs" />
+    <Compile Include="DAOklase\UposleniciDAO.cs" />
+    <Compile Include="DAOklase\WorkoutProgramDAO.cs" />
     <Compile Include="Enumeracije\Spol.cs" />
     <Compile Include="Enumeracije\TipClanarine.cs" />
     <Compile Include="Enumeracije\TipOpreme.cs" />
@@ -52,6 +55,7 @@
     <Compile Include="Enumeracije\TipSprave.cs" />
     <Compile Include="Enumeracije\TipSuplementa.cs" />
     <Compile Include="Enumeracije\TipUsluge.cs" />
+    <Compile Include="Enumeracije\TipZaposlenja.cs" />
     <Compile Include="Interfejsi\IDaoCrud.cs" />
     <Compile Include="Klase\Administrator.cs" />
     <Compile Include="Klase\GymProgram.cs" />
@@ -74,9 +78,7 @@
     <Compile Include="Klase\WorkoutProgram.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="DAOklase\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
