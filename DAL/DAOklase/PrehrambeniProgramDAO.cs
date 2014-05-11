@@ -1,0 +1,148 @@
+﻿ 	using System.Collections.Generic;
+ 	using System.Linq;
+ 	using System.Text;
+	using MySql.Data.MySqlClient;
+	using DAL.Interfejsi;
+	using System.Threading.Tasks;
+using System;
+ 	
+	namespace DAL
+ 	{
+	    partial class DAL
+ 	    {
+	        public class PrehrambeniProgramDAO : IDaoCrud<PrehrambeniProgram>
+	        {
+	            protected MySqlCommand c;
+	 
+	            public long create(PrehrambeniProgram entity)
+	            {
+	                try
+	                {
+	                    
+	                    c = new MySqlCommand(String.Format("INSERT INTO prehrambeniprogram VALUES ('{0}','{1}','{2}','{3}');",
+	                        entity.ID1, entity.Opis, entity.TipPrograma, entity.Obroci), con);
+	                    c.ExecuteNonQuery();
+	                    return c.LastInsertedId;
+	                }
+	                catch (Exception e)
+	                {
+	                    throw e;
+	                }
+	            } 
+	
+	            public PrehrambeniProgram read(PrehrambeniProgram entity)
+	            {
+	                try
+	                {
+	                    c = new MySqlCommand(String.Format("SELECT * FROM prehrambeniprogram WHERE id='{0}'", entity.ID1), con);
+	
+	                    MySqlDataReader r = c.ExecuteReader();
+	
+	                    if (r.Read())
+	                    {
+	                        PrehrambeniProgram pprogram = new PrehrambeniProgram(r.GetInt32("id"), r.GetString("opis"), r.GetString("tipPrograma"), r.GetString("obroci"));
+	                        r.Close();
+	                        return pprogram;
+	                    }
+	                    else throw
+	                     new Exception("Nema podataka za citanje");
+	
+	                }
+	                catch (Exception e)
+	                {
+	                    throw e;
+	                }
+	            }
+	
+	            public PrehrambeniProgram update(int id, PrehrambeniProgram entity)
+	            {
+	                try
+	                {
+	                    c = new MySqlCommand(String.Format("UPDATE prehrambeniprogram SET id='{0}', opis='{1}', tipPrograma='{2}', obroci = '{3}' where id = '{8}';",
+	                        entity.ID1, entity.Opis, entity.TipPrograma, entity.Obroci, id), con);
+	                    c.ExecuteNonQuery();
+	                    return entity;
+	                }
+	                catch (Exception e)
+	                {
+	                    throw e;
+	                }
+	            }
+	
+	            public void delete(PrehrambeniProgram entity)
+	            {
+	                try
+	                {
+	                    c = new MySqlCommand(String.Format("DELETE FROM prehrambeniprogram WHERE id ='{0}';", entity.ID1), con);
+	                    c.ExecuteNonQuery();
+	                }
+	                catch (Exception e)
+	                {
+	                    throw e;
+	                }
+	            }
+	
+	            public PrehrambeniProgram getById(long id)
+	            {
+	                try
+	                {
+	                    c = new MySqlCommand(String.Format("SELECT * FROM prehrambeniprogram WHERE id='{0}';", id), con);
+	                    MySqlDataReader r = c.ExecuteReader();
+	                    if (r.Read())
+	                    {
+	                        PrehrambeniProgram a = new PrehrambeniProgram(r.GetInt32("id"), r.GetString("opis"), r.GetString("tipPrograma"),
+	                            r.GetString("obroci"));
+	                        r.Close();
+	                        return a;
+	                    }
+	                    else throw
+	                        new Exception("Nema podataka za prikaz");
+	                }
+	                catch (Exception e)
+	                {
+	                    throw e;
+	                }
+	            }
+	
+	            public List<PrehrambeniProgram> GetAll()
+	            {
+	                try
+	                {
+	                    c = new MySqlCommand(String.Format("SELECT * FROM prehrambeniprogram;"), con);
+	                    MySqlDataReader r = c.ExecuteReader();
+	                    List<PrehrambeniProgram> pprogram = new List<PrehrambeniProgram>();
+	                    while (r.Read())
+	                        pprogram.Add(new PrehrambeniProgram(r.GetInt32("id"), r.GetString("opis"), r.GetString("tipPrograma"),
+	                            r.GetString("obroci")));
+	
+	                    r.Close();
+	                    return pprogram;
+	
+	                }
+	                catch (Exception e)
+	                {
+	                    throw e;
+	                }
+	            }
+	
+	            public List<PrehrambeniProgram> getByExample(string name, string values)
+	            {
+	                try
+	                {
+	                    c = new MySqlCommand(String.Format("SELECT * FROM prehrambeniprogram WHERE {0}='{1}';", name, values), con);
+	                    MySqlDataReader r = c.ExecuteReader();
+	                    List<PrehrambeniProgram> pprogram = new List<PrehrambeniProgram>();
+	                    while (r.Read())
+	                        pprogram.Add(new PrehrambeniProgram(r.GetInt32("id"), r.GetString("opis"), r.GetString("tipPrograma"),
+	                            r.GetString("obroci")));
+	                    r.Close();
+	                    return pprogram;
+	                }
+	                catch (Exception e)
+	                {
+	                    throw e;
+	                }
+	            }
+	        }
+ 	    }
+ 	}

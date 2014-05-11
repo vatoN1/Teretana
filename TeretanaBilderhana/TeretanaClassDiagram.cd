@@ -7,5 +7,145 @@
       <FileName>Program.cs</FileName>
     </TypeIdentifier>
   </Class>
+  <Class Name="GymProgram">
+    <Position X="20.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier />
+  </Class>
+  <Class Name="Inventar">
+    <Position X="16.75" Y="7" Width="1.5" />
+    <TypeIdentifier />
+  </Class>
+  <Class Name="Izvjestaj">
+    <Position X="11.75" Y="5.25" Width="1.5" />
+    <TypeIdentifier />
+    <ShowAsAssociation>
+      <Property Name="Uposlenik" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="JednokratnaUsluga">
+    <Position X="13.75" Y="3.75" Width="1.5" />
+    <TypeIdentifier />
+  </Class>
+  <Class Name="Klijent">
+    <Position X="9.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier />
+  </Class>
+  <Class Name="Nutricionista">
+    <Position X="8.75" Y="8.75" Width="1.5" />
+    <TypeIdentifier />
+  </Class>
+  <Class Name="Oprema">
+    <Position X="19.25" Y="9.75" Width="1.5" />
+    <TypeIdentifier />
+  </Class>
+  <Class Name="Osoba">
+    <Position X="6.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier />
+  </Class>
+  <Class Name="PrehrambeniProgram">
+    <Position X="20.5" Y="3.5" Width="2" />
+    <TypeIdentifier />
+  </Class>
+  <Class Name="Prostorija">
+    <Position X="18.5" Y="0.75" Width="1.5" />
+    <TypeIdentifier />
+    <ShowAsCollectionAssociation>
+      <Property Name="Inventar" />
+    </ShowAsCollectionAssociation>
+  </Class>
+  <Class Name="Sprava">
+    <Position X="14.5" Y="9.75" Width="1.5" />
+    <TypeIdentifier />
+  </Class>
+  <Class Name="Suplement">
+    <Position X="16.75" Y="9.75" Width="1.5" />
+    <TypeIdentifier />
+  </Class>
+  <Class Name="Tehnicar">
+    <Position X="11" Y="9" Width="1.5" />
+    <TypeIdentifier />
+  </Class>
+  <Class Name="TrajnaUsluga">
+    <Position X="17" Y="3.75" Width="1.5" />
+    <AssociationLine Name="PrehrambeniProgram" Type="PrehrambeniProgram" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="18.5" Y="4.312" />
+        <Point X="18.875" Y="4.312" />
+        <Point X="18.875" Y="4.342" />
+        <Point X="19.198" Y="4.342" Type="JumpStart" />
+        <Point X="19.365" Y="4.342" Type="JumpEnd" />
+        <Point X="20.5" Y="4.342" />
+      </Path>
+    </AssociationLine>
+    <TypeIdentifier />
+    <ShowAsAssociation>
+      <Property Name="PrehrambeniProgram" />
+      <Property Name="WorkoutProgram" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="Trener">
+    <Position X="6.25" Y="8.75" Width="1.5" />
+    <TypeIdentifier />
+  </Class>
+  <Class Name="Uposlenik">
+    <Position X="8.25" Y="4.75" Width="1.5" />
+    <TypeIdentifier />
+  </Class>
+  <Class Name="Usluga">
+    <Position X="14.75" Y="0.5" Width="1.5" />
+    <AssociationLine Name="Prostorija" Type="Prostorija" FixedFromPoint="true">
+      <Path>
+        <Point X="16.25" Y="1.875" />
+        <Point X="18.5" Y="1.875" />
+      </Path>
+    </AssociationLine>
+    <TypeIdentifier />
+    <ShowAsAssociation>
+      <Property Name="Prostorija" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="WorkoutProgram">
+    <Position X="22" Y="6.5" Width="1.5" />
+    <TypeIdentifier />
+  </Class>
+  <Class Name="Administrator">
+    <Position X="11.75" Y="2" Width="1.5" />
+    <TypeIdentifier />
+    <ShowAsCollectionAssociation>
+      <Property Name="Izvjestaji" />
+    </ShowAsCollectionAssociation>
+  </Class>
+  <Enum Name="Spol">
+    <Position X="24.75" Y="3" Width="1.5" />
+    <TypeIdentifier />
+  </Enum>
+  <Enum Name="TipClanarine">
+    <Position X="28.25" Y="3" Width="1.5" />
+    <TypeIdentifier />
+  </Enum>
+  <Enum Name="TipOpreme">
+    <Position X="28.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier />
+  </Enum>
+  <Enum Name="TipPrograma">
+    <Position X="26.5" Y="3" Width="1.5" />
+    <TypeIdentifier />
+  </Enum>
+  <Enum Name="TipProstorije">
+    <Position X="23" Y="0.5" Width="1.5" />
+    <TypeIdentifier />
+  </Enum>
+  <Enum Name="TipSprave">
+    <Position X="24.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier />
+  </Enum>
+  <Enum Name="TipSuplementa">
+    <Position X="26.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier />
+  </Enum>
+  <Enum Name="TipUsluge">
+    <Position X="23" Y="3" Width="1.5" />
+    <TypeIdentifier />
+  </Enum>
   <Font Name="Segoe UI" Size="9" />
 </ClassDiagram>

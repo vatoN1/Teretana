@@ -11,16 +11,18 @@ using System.Text;
 
 public abstract class Inventar
 {
-    public Inventar(){
+    public Inventar() { }
 
-    }
     public int Kolicina
 	{
 		get;
 		set;
 	}
 
-	
+    public Inventar(int kolicina)
+    {
+        Kolicina = kolicina;
+    }
 
 	public virtual void osvjezi()
 	{

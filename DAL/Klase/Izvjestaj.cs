@@ -16,6 +16,17 @@ public class Izvjestaj
         throw new System.NotImplementedException();
     }
 
+    public Izvjestaj(int id, int idUposlenika, DateTime datum, string sadrzaj)
+    {
+        // TODO: Complete member initialization
+        this.ID = id;
+        this.IDuposlenik = idUposlenika;
+        this.DatumIzvjestaja = datum;
+        this.SadrzajIzvjestaja = sadrzaj;
+    }
+
+    public int ID { get; set; }
+
     public string SadrzajIzvjestaja
 	{
 		get;
@@ -28,19 +39,6 @@ public class Izvjestaj
 		set;
 	}
 
-    public global::Uposlenik Uposlenik
-    {
-        get
-        {
-            throw new System.NotImplementedException();
-        }
-        set
-        {
-        }
-    }
-
-	
-
-
+    public int IDuposlenik { get; set; }
 }
 

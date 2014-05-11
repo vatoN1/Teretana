@@ -11,23 +11,15 @@ using System.Text;
 
 public class Klijent : Osoba
 {
-    public double Tezina
-	{
-		get;
-		set;
-	}
+    public Klijent(int id, string ime, string prezime, string spol, DateTime datumRodjenja, string kontakt, int idTrenera, int idNutricioniste) 
+        : base(id, ime, prezime, spol, datumRodjenja, kontakt)
+    {
+        IDtrenera = idTrenera;
+        IDnutricioniste = idNutricioniste;
+    }
 
-    public double Visina
-	{
-		get;
-		set;
-	}
+    public int IDtrenera { get; set; }
 
-    public string Komentar
-	{
-		get;
-		set;
-	}
-
+    public int IDnutricioniste { get; set; }
 }
 

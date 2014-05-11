@@ -11,8 +11,11 @@ using System.Text;
 
 public abstract class Osoba
 {
+<<<<<<< HEAD
     
 
+=======
+>>>>>>> e5a5ac25cf81d0ab7cfdbb088633d54704746d7a
     public Osoba(int id, string ime, string prezime, string spol, DateTime datumrodjenja, string kontakt)
     {
         ID = id;
@@ -23,6 +26,10 @@ public abstract class Osoba
         DatumRodjenja = datumrodjenja;
         Kontakt = kontakt;
     }
+<<<<<<< HEAD
+=======
+
+>>>>>>> e5a5ac25cf81d0ab7cfdbb088633d54704746d7a
     public Osoba() { }
     public DateTime DatumRodjenja
 	{
