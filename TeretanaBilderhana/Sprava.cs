@@ -12,13 +12,13 @@ using System.Text;
 public class Sprava : Inventar
 {
     public Sprava() { }
-	private TipSprave tipSprave
+    public TipSprave TipSprave
 	{
 		get;
 		set;
 	}
 
-	private int starost
+    public int Starost
 	{
 		get;
 		set;

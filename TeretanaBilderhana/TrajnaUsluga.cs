@@ -12,17 +12,33 @@ using System.Text;
 public class TrajnaUsluga : Usluga
 {
     public TrajnaUsluga() { }
-	private TipClanarine clanarina
+    public TipClanarine Clanarina
 	{
 		get;
 		set;
-	}
+    }
 
-	public virtual IEnumerable<Program> Program
-	{
-		get;
-		set;
-	}
+    public global::PrehrambeniProgram PrehrambeniProgram
+    {
+        get
+        {
+            throw new System.NotImplementedException();
+        }
+        set
+        {
+        }
+    }
+
+    public global::WorkoutProgram WorkoutProgram
+    {
+        get
+        {
+            throw new System.NotImplementedException();
+        }
+        set
+        {
+        }
+    }
 
 	public virtual void produziClanarinu()
 	{

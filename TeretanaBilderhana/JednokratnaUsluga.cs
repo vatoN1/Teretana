@@ -11,18 +11,16 @@ using System.Text;
 
 public class JednokratnaUsluga : Usluga
 {
-    List<TipUsluge> odabraneUsluge;
 
     public List<TipUsluge> OdabraneUsluge
     {
-        get { return odabraneUsluge; }
-        set { odabraneUsluge = value; }
+        get;
+        set;
     }
     public JednokratnaUsluga()
 	{
-        odabraneUsluge = new List<TipUsluge>();
+        OdabraneUsluge = new List<TipUsluge>();
 	}
-
 
 }
 

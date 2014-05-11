@@ -12,23 +12,28 @@ using System.Text;
 public class Prostorija
 {
     public Prostorija() { }
-	private TipProstorije nazivProstorije
+    public TipProstorije NazivProstorije
 	{
 		get;
 		set;
 	}
 
-	private bool dostupnost
+    public bool Dostupnost
 	{
 		get;
 		set;
-	}
+    }
 
-	public virtual IEnumerable<Inventar> Inventar
-	{
-		get;
-		set;
-	}
+    public List<Inventar> Inventar
+    {
+        get
+        {
+            throw new System.NotImplementedException();
+        }
+        set
+        {
+        }
+    }
 
 }
 

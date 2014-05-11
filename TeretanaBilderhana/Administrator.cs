@@ -11,17 +11,12 @@ using System.Text;
 
 public class Administrator : Osoba
 {
-	private IEnumerable<Izvjestaj> izvjestaji
+	public List<Izvjestaj> Izvjestaji
 	{
 		get;
 		set;
-	}
+    }
 
-	public virtual IEnumerable<Izvjestaj> Izvjestaj
-	{
-		get;
-		set;
-	}
 
 	public virtual void registrujUposlenika(Uposlenik uposlenik)
 	{

@@ -12,13 +12,13 @@ using System.Text;
 public class Suplement : Inventar
 {
     public Suplement() { }
-	private TipSuplementa tipSuplementa
+    public TipSuplementa TipSuplementa
 	{
 		get;
 		set;
 	}
 
-	private decimal cijena
+    public decimal Cijena
 	{
 		get;
 		set;

@@ -12,17 +12,6 @@ using System.Text;
 public class Tehnicar : Uposlenik
 {
     public Tehnicar() { }
-	private string kontakt
-	{
-		get;
-		set;
-	}
-
-	public virtual IEnumerable<Sprava> Sprava
-	{
-		get;
-		set;
-	}
 
 }
 

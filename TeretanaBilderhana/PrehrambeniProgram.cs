@@ -9,14 +9,19 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
-public class PrehrambeniProgram : Program
+public class PrehrambeniProgram : GymProgram
 {
-    private string[] obroci;
 	
     public PrehrambeniProgram()
 	{
-		obroci=new string[7];
+		
 	}
+
+    public string Obroci
+    {
+        get;
+        set;
+    }
 
 }
 

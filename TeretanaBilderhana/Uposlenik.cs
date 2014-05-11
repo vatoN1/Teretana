@@ -12,23 +12,17 @@ using System.Text;
 public class Uposlenik : Osoba
 {
     public Uposlenik() { }
-	private decimal plata
+    public decimal Plata
 	{
 		get;
 		set;
 	}
 
-	private DateTime datumZaposlenja
+    public DateTime DatumZaposlenja
 	{
 		get;
 		set;
-	}
-
-	public virtual IEnumerable<Izvjestaj> Izvjestaj
-	{
-		get;
-		set;
-	}
+    }
 
 	
 
