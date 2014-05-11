@@ -70,8 +70,10 @@
     <AssociationLine Name="PrehrambeniProgram" Type="PrehrambeniProgram" FixedFromPoint="true" FixedToPoint="true">
       <Path>
         <Point X="18.5" Y="4.312" />
-        <Point X="19.198" Y="4.322" Type="JumpStart" />
-        <Point X="19.365" Y="4.325" Type="JumpEnd" />
+        <Point X="18.875" Y="4.312" />
+        <Point X="18.875" Y="4.342" />
+        <Point X="19.198" Y="4.342" Type="JumpStart" />
+        <Point X="19.365" Y="4.342" Type="JumpEnd" />
         <Point X="20.5" Y="4.342" />
       </Path>
     </AssociationLine>

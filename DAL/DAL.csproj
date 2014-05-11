@@ -49,6 +49,7 @@
     <Compile Include="DAOFactory.cs" />
     <Compile Include="DAOklase\PrehrambeniProgramDAO.cs" />
     <Compile Include="DAOklase\ProstorijaDAO.cs" />
+    <Compile Include="DAOklase\SpraveDAO.cs" />
     <Compile Include="Enumeracije\Spol.cs" />
     <Compile Include="Enumeracije\TipClanarine.cs" />
     <Compile Include="Enumeracije\TipOpreme.cs" />
