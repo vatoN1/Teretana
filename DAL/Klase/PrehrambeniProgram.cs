@@ -11,25 +11,13 @@ using System.Text;
 
 public class PrehrambeniProgram : GymProgram
 {
-    private int p1;
-    private string p2;
-    private string p3;
-    private string p4;
-
 	
     public PrehrambeniProgram()
 	{
 		
 	}
 
-    public PrehrambeniProgram(int p1, string p2, string p3, string p4)
-    {
-        // TODO: Complete member initialization
-        this.p1 = p1;
-        this.p2 = p2;
-        this.p3 = p3;
-        this.p4 = p4;
-    }
+
 
     public string Obroci
     {
