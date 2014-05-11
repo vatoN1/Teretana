@@ -12,6 +12,22 @@ using System.Text;
 public class Oprema : Inventar
 {
     public Oprema() { }
+
+    public Oprema(int id, int kolicina, string tipOpreme, decimal cijena) : base(kolicina)
+    {
+        ID = id;
+        if (tipOpreme == "Bandaze") TipOpreme = TipOpreme.Bandaze;
+        if (tipOpreme == "Flasa") TipOpreme = TipOpreme.Flasa;
+        if (tipOpreme == "Peskir") TipOpreme = TipOpreme.Peskir;
+        if (tipOpreme == "Pojas") TipOpreme = TipOpreme.Pojas;
+        if (tipOpreme == "Rukavice") TipOpreme = TipOpreme.Rukavice;
+        if (tipOpreme == "Sorts") TipOpreme = TipOpreme.Sorts;
+        if (tipOpreme == "Tene") TipOpreme = TipOpreme.Tene;
+        CijenaNajama = cijena;
+    }
+
+    public int ID { get; set; }
+
     public TipOpreme TipOpreme
 	{
 		get;

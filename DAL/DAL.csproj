@@ -50,6 +50,10 @@
     <Compile Include="DAOklase\PrehrambeniProgramDAO.cs" />
     <Compile Include="DAOklase\ProstorijaDAO.cs" />
     <Compile Include="DAOklase\SpraveDAO.cs" />
+    <Compile Include="DAOklase\IzvjestajDAO.cs" />
+    <Compile Include="DAOklase\KlijentDAO.cs" />
+    <Compile Include="DAOklase\OpremaDAO.cs" />
+    <Compile Include="DAOklase\PrehrambeniProgramDAO.cs" />
     <Compile Include="Enumeracije\Spol.cs" />
     <Compile Include="Enumeracije\TipClanarine.cs" />
     <Compile Include="Enumeracije\TipOpreme.cs" />
