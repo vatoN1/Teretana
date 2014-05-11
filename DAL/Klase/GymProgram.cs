@@ -27,12 +27,5 @@ public abstract class GymProgram
 		set;
 	}
 
-    int ID;
-
-public int ID1
-{
-  get { return ID; }
-  set { ID = value; }
-}
 }
 

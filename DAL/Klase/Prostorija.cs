@@ -13,7 +13,7 @@ public class Prostorija
 {
     public Prostorija() { }
 
-    public Prostorija(int p1, string p2, string p3, string p4)
+    public Prostorija(int p1, string p2, string p3, string p4) // UREDITI PO NAMJENI (ATRIBUTI)
     {
         // TODO: Complete member initialization
         this.p1 = p1;

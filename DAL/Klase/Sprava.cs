@@ -13,7 +13,7 @@ public class Sprava : Inventar
 {
     public Sprava() { }
 
-    public Sprava(int p1, string p2, int p3, int p4)
+    public Sprava(int p1, string p2, int p3, int p4) // UREDITI PO NAMJENI (FROM BASE ITD)
     {
         // TODO: Complete member initialization
         this.p1 = p1;
