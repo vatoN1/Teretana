@@ -59,41 +59,14 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Administrator.cs" />
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
-    <Compile Include="Inventar.cs" />
-    <Compile Include="Izvjestaj.cs" />
-    <Compile Include="JednokratnaUsluga.cs" />
-    <Compile Include="Klijent.cs" />
-    <Compile Include="Nutricionista.cs" />
-    <Compile Include="Oprema.cs" />
-    <Compile Include="Osoba.cs" />
-    <Compile Include="PrehrambeniProgram.cs" />
-    <Compile Include="GymProgram.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Prostorija.cs" />
-    <Compile Include="Spol.cs" />
-    <Compile Include="Sprava.cs" />
-    <Compile Include="Suplement.cs" />
-    <Compile Include="Tehnicar.cs" />
-    <Compile Include="TipClanarine.cs" />
-    <Compile Include="TipOpreme.cs" />
-    <Compile Include="TipPrograma.cs" />
-    <Compile Include="TipProstorije.cs" />
-    <Compile Include="TipSprave.cs" />
-    <Compile Include="TipSuplementa.cs" />
-    <Compile Include="TipUsluge.cs" />
-    <Compile Include="TrajnaUsluga.cs" />
-    <Compile Include="Trener.cs" />
-    <Compile Include="Uposlenik.cs" />
-    <Compile Include="Usluga.cs" />
-    <Compile Include="WorkoutProgram.cs" />
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
@@ -136,6 +109,12 @@
       <ProductName>.NET Framework 3.5 SP1</ProductName>
       <Install>false</Install>
     </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\DAL\DAL.csproj">
+      <Project>{9de21a27-888e-4f3c-8945-e4482bf7e1c8}</Project>
+      <Name>DAL</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

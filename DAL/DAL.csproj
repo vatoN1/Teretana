@@ -1,0 +1,86 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{9DE21A27-888E-4F3C-8945-E4482BF7E1C8}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>DAL</RootNamespace>
+    <AssemblyName>DAL</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="MySql.Data, Version=6.8.3.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL" />
+    <Reference Include="MySql.Data.Entity, Version=6.8.3.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL" />
+    <Reference Include="MySql.Web, Version=6.8.3.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Class1.cs" />
+    <Compile Include="Enumeracije\Spol.cs" />
+    <Compile Include="Enumeracije\TipClanarine.cs" />
+    <Compile Include="Enumeracije\TipOpreme.cs" />
+    <Compile Include="Enumeracije\TipPrograma.cs" />
+    <Compile Include="Enumeracije\TipProstorije.cs" />
+    <Compile Include="Enumeracije\TipSprave.cs" />
+    <Compile Include="Enumeracije\TipSuplementa.cs" />
+    <Compile Include="Enumeracije\TipUsluge.cs" />
+    <Compile Include="Klase\Administrator.cs" />
+    <Compile Include="Klase\GymProgram.cs" />
+    <Compile Include="Klase\Inventar.cs" />
+    <Compile Include="Klase\Izvjestaj.cs" />
+    <Compile Include="Klase\JednokratnaUsluga.cs" />
+    <Compile Include="Klase\Klijent.cs" />
+    <Compile Include="Klase\Nutricionista.cs" />
+    <Compile Include="Klase\Oprema.cs" />
+    <Compile Include="Klase\Osoba.cs" />
+    <Compile Include="Klase\PrehrambeniProgram.cs" />
+    <Compile Include="Klase\Prostorija.cs" />
+    <Compile Include="Klase\Sprava.cs" />
+    <Compile Include="Klase\Suplement.cs" />
+    <Compile Include="Klase\Tehnicar.cs" />
+    <Compile Include="Klase\TrajnaUsluga.cs" />
+    <Compile Include="Klase\Trener.cs" />
+    <Compile Include="Klase\Uposlenik.cs" />
+    <Compile Include="Klase\Usluga.cs" />
+    <Compile Include="Klase\WorkoutProgram.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="DAOklase\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
