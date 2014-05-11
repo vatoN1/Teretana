@@ -22,7 +22,7 @@ public class PrehrambeniProgram : GymProgram
 		
 	}
 
-    public PrehrambeniProgram(int p1, string p2, string p3, string p4) // UREDITI PO NAMJENI (FROM BASE ITD)
+    public PrehrambeniProgram(int p1, string p2, string p3, string p4)
     {
         // TODO: Complete member initialization
         this.p1 = p1;
@@ -31,18 +31,12 @@ public class PrehrambeniProgram : GymProgram
         this.p4 = p4;
     }
 
+
+
     public string Obroci
     {
         get;
         set;
-    }
-
-    int ID;
-
-    public int ID1
-    {
-        get { return ID; }
-        set { ID = value; }
     }
 }
 
