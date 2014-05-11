@@ -2,7 +2,6 @@
  	using System.Linq;
  	using System.Text;
 	using MySql.Data.MySqlClient;
-	using DAL.Interfejsi;
 	using System.Threading.Tasks;
 using System;
  	
