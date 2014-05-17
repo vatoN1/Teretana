@@ -8,7 +8,7 @@ namespace DAL
 {
     partial class DAL
     {
-        public class SpraveDAO : IDaoCrud<Sprava>
+        public class SpravaDAO : IDaoCrud<Sprava>
         {
             protected MySqlCommand c;
 
