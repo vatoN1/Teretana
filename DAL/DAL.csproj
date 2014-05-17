@@ -47,12 +47,12 @@
   <ItemGroup>
     <Compile Include="DAL.cs" />
     <Compile Include="DAOFactory.cs" />
-    <Compile Include="DAOklase\SuplementiDAO.cs" />
-    <Compile Include="DAOklase\UposleniciDAO.cs" />
+    <Compile Include="DAOklase\SuplementDAO.cs" />
+    <Compile Include="DAOklase\UposlenikDAO.cs" />
     <Compile Include="DAOklase\WorkoutProgramDAO.cs" />
     <Compile Include="DAOklase\PrehrambeniProgramDAO.cs" />
     <Compile Include="DAOklase\ProstorijaDAO.cs" />
-    <Compile Include="DAOklase\SpraveDAO.cs" />
+    <Compile Include="DAOklase\SpravaDAO.cs" />
     <Compile Include="DAOklase\IzvjestajDAO.cs" />
     <Compile Include="DAOklase\KlijentDAO.cs" />
     <Compile Include="DAOklase\OpremaDAO.cs" />

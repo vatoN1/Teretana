@@ -59,25 +59,61 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Form1.cs">
+    <Compile Include="Login.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <Compile Include="Login.Designer.cs">
+      <DependentUpon>Login.cs</DependentUpon>
     </Compile>
-    <Compile Include="Form2.cs">
+    <Compile Include="MainPage.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form2.Designer.cs">
-      <DependentUpon>Form2.cs</DependentUpon>
+    <Compile Include="MainPage.Designer.cs">
+      <DependentUpon>MainPage.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="Form1.resx">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <Compile Include="Suplementi\DodavanjeSuplemenata.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Suplementi\DodavanjeSuplemenata.Designer.cs">
+      <DependentUpon>DodavanjeSuplemenata.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Suplementi\EditovanjeSuplemenata.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Suplementi\EditovanjeSuplemenata.Designer.cs">
+      <DependentUpon>EditovanjeSuplemenata.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Uposlenici\DodavanjeUposlenika.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Uposlenici\DodavanjeUposlenika.Designer.cs">
+      <DependentUpon>DodavanjeUposlenika.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Uposlenici\EditovanjeUposlenika.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Uposlenici\EditovanjeUposlenika.Designer.cs">
+      <DependentUpon>EditovanjeUposlenika.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WorkoutProgrami\DodavanjeWorkoutPrograma.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WorkoutProgrami\DodavanjeWorkoutPrograma.Designer.cs">
+      <DependentUpon>DodavanjeWorkoutPrograma.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WorkoutProgrami\EditovanjeWorkoutPrograma.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WorkoutProgrami\EditovanjeWorkoutPrograma.Designer.cs">
+      <DependentUpon>EditovanjeWorkoutPrograma.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Login.resx">
+      <DependentUpon>Login.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Form2.resx">
-      <DependentUpon>Form2.cs</DependentUpon>
+    <EmbeddedResource Include="MainPage.resx">
+      <DependentUpon>MainPage.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -88,6 +124,9 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Uposlenici\DodavanjeUposlenika.resx">
+      <DependentUpon>DodavanjeUposlenika.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -125,6 +164,7 @@
       <Name>DAL</Name>
     </ProjectReference>
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

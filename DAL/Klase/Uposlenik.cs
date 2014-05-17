@@ -12,23 +12,19 @@ using DAL;
 
 public class Uposlenik : Osoba
 {
-    int idUposlenika;
     Decimal plata;
     DateTime datumZaposlenja;
     TipZaposlenja zaposlenje;
     String zaposlenjeS;
     String sifra;
+    int idUposlenika;
 
     
-    
-    public Uposlenik() { }
 
     public Uposlenik(int idUposlenika, String ime, String prezime, String spol, DateTime datumRodjenja, 
         DateTime datumZaposlenja, Decimal plata, String kontakt, String zaposlenje, String sifra) :
         base(idUposlenika, ime, prezime, spol, datumRodjenja, kontakt)
     {
-
-        IdUposlenika = idUposlenika;
         Plata = plata;
         DatumZaposlenja = datumZaposlenja;
         ZaposlenjeS = zaposlenje;
@@ -39,7 +35,11 @@ public class Uposlenik : Osoba
 		get;
 		set;
 	}
-
+    public int IdUposlenika
+    {
+        get { return idUposlenika; }
+        set { idUposlenika = value; }
+    }
     public String Sifra
     {
         get { return sifra; }
@@ -62,11 +62,6 @@ public class Uposlenik : Osoba
         set;
     }
 
-    public int IdUposlenika
-    {
-        get;
-        set;
-    }
 
 	public virtual Izvjestaj kreirajIzvjestaj()
 	{
