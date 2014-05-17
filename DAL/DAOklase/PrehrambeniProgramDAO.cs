@@ -18,7 +18,7 @@ using System;
 	                try
 	                {
 	                    
-	                    c = new MySqlCommand(String.Format("INSERT INTO prehrambeniprogram VALUES ('{0}','{1}','{2}','{3}');",
+	                    c = new MySqlCommand(String.Format("INSERT INTO prehrambeniprogrami VALUES ('{0}','{1}','{2}','{3}');",
 	                        entity.ID1, entity.Opis, entity.TipPrograma, entity.Obroci), con);
 	                    c.ExecuteNonQuery();
 	                    return c.LastInsertedId;
@@ -33,7 +33,7 @@ using System;
 	            {
 	                try
 	                {
-	                    c = new MySqlCommand(String.Format("SELECT * FROM prehrambeniprogram WHERE id='{0}'", entity.ID1), con);
+	                    c = new MySqlCommand(String.Format("SELECT * FROM prehrambeniprogrami WHERE id='{0}'", entity.ID1), con);
 	
 	                    MySqlDataReader r = c.ExecuteReader();
 	
@@ -57,7 +57,7 @@ using System;
 	            {
 	                try
 	                {
-	                    c = new MySqlCommand(String.Format("UPDATE prehrambeniprogram SET id='{0}', opis='{1}', tipPrograma='{2}', obroci = '{3}' where id = '{8}';",
+	                    c = new MySqlCommand(String.Format("UPDATE prehrambeniprogrami SET id='{0}', opis='{1}', tipPrograma='{2}', obroci = '{3}' where id = '{8}';",
 	                        entity.ID1, entity.Opis, entity.TipPrograma, entity.Obroci, id), con);
 	                    c.ExecuteNonQuery();
 	                    return entity;
@@ -72,7 +72,7 @@ using System;
 	            {
 	                try
 	                {
-	                    c = new MySqlCommand(String.Format("DELETE FROM prehrambeniprogram WHERE id ='{0}';", entity.ID1), con);
+	                    c = new MySqlCommand(String.Format("DELETE FROM prehrambeniprogrami WHERE id ='{0}';", entity.ID1), con);
 	                    c.ExecuteNonQuery();
 	                }
 	                catch (Exception e)
@@ -85,7 +85,7 @@ using System;
 	            {
 	                try
 	                {
-	                    c = new MySqlCommand(String.Format("SELECT * FROM prehrambeniprogram WHERE id='{0}';", id), con);
+	                    c = new MySqlCommand(String.Format("SELECT * FROM prehrambeniprogrami WHERE id='{0}';", id), con);
 	                    MySqlDataReader r = c.ExecuteReader();
 	                    if (r.Read())
 	                    {
@@ -107,7 +107,7 @@ using System;
 	            {
 	                try
 	                {
-	                    c = new MySqlCommand(String.Format("SELECT * FROM prehrambeniprogram;"), con);
+	                    c = new MySqlCommand(String.Format("SELECT * FROM prehrambeniprogrami;"), con);
 	                    MySqlDataReader r = c.ExecuteReader();
 	                    List<PrehrambeniProgram> pprogram = new List<PrehrambeniProgram>();
 	                    while (r.Read())
@@ -128,7 +128,7 @@ using System;
 	            {
 	                try
 	                {
-	                    c = new MySqlCommand(String.Format("SELECT * FROM prehrambeniprogram WHERE {0}='{1}';", name, values), con);
+	                    c = new MySqlCommand(String.Format("SELECT * FROM prehrambeniprogrami WHERE {0}='{1}';", name, values), con);
 	                    MySqlDataReader r = c.ExecuteReader();
 	                    List<PrehrambeniProgram> pprogram = new List<PrehrambeniProgram>();
 	                    while (r.Read())

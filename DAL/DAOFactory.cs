@@ -52,7 +52,7 @@ namespace DAL
                 return new SuplementDAO();
             }
 
-            public UposlenikDAO getUposleniciDAO()
+            public UposlenikDAO getUposlenikDAO()
             {
                 return new UposlenikDAO();
             }

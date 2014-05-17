@@ -17,7 +17,7 @@ namespace DAL
                 try
                 {
 
-                    c = new MySqlCommand(String.Format("INSERT INTO Sprava VALUES ('{0}','{1}','{2}','{3}');",
+                    c = new MySqlCommand(String.Format("INSERT INTO Sprave VALUES ('{0}','{1}','{2}','{3}');",
                         entity.Id, entity.TipSprave, entity.Kolicina, entity.Starost), con); // ****
                     c.ExecuteNonQuery();
                     return c.LastInsertedId;
@@ -32,7 +32,7 @@ namespace DAL
             {
                 try
                 {
-                    c = new MySqlCommand(String.Format("SELECT * FROM Sprava WHERE id='{0}'", entity.Id), con); //**
+                    c = new MySqlCommand(String.Format("SELECT * FROM Sprave WHERE id='{0}'", entity.Id), con); //**
 
                     MySqlDataReader r = c.ExecuteReader();
 
@@ -56,7 +56,7 @@ namespace DAL
             {
                 try
                 { //****************
-                    c = new MySqlCommand(String.Format("UPDATE Sprava SET Id='{0}', TipSprave='{1}', Kolicina='{2}', Starost = '{3}' where id = '{8}';",
+                    c = new MySqlCommand(String.Format("UPDATE Sprave SET Id='{0}', TipSprave='{1}', Kolicina='{2}', Starost = '{3}' where id = '{8}';",
                         entity.Id, entity.TipSprave, entity.Kolicina, entity.Starost, id), con);
                     c.ExecuteNonQuery();
                     return entity;
@@ -71,7 +71,7 @@ namespace DAL
             {
                 try
                 {
-                    c = new MySqlCommand(String.Format("DELETE FROM Sprava WHERE id ='{0}';", entity.Id), con);
+                    c = new MySqlCommand(String.Format("DELETE FROM Sprave WHERE id ='{0}';", entity.Id), con);
                     c.ExecuteNonQuery();
                 }
                 catch (Exception e)
@@ -84,7 +84,7 @@ namespace DAL
             {
                 try
                 {
-                    c = new MySqlCommand(String.Format("SELECT * FROM Sprava WHERE id='{0}';", id), con);
+                    c = new MySqlCommand(String.Format("SELECT * FROM Sprave WHERE id='{0}';", id), con);
                     MySqlDataReader r = c.ExecuteReader();
                     if (r.Read())
                     {
@@ -106,7 +106,7 @@ namespace DAL
             {
                 try
                 {
-                    c = new MySqlCommand(String.Format("SELECT * FROM Sprava;"), con);
+                    c = new MySqlCommand(String.Format("SELECT * FROM Sprave;"), con);
                     MySqlDataReader r = c.ExecuteReader();
                     List<Sprava> Sprava = new List<Sprava>();
                     while (r.Read())
@@ -127,7 +127,7 @@ namespace DAL
             {
                 try
                 {
-                    c = new MySqlCommand(String.Format("SELECT * FROM Sprava WHERE {0}='{1}';", name, values), con);
+                    c = new MySqlCommand(String.Format("SELECT * FROM Sprave WHERE {0}='{1}';", name, values), con);
                     MySqlDataReader r = c.ExecuteReader();
                     List<Sprava> Sprava = new List<Sprava>();
                     while (r.Read())

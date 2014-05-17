@@ -17,7 +17,7 @@ namespace DAL
             {
                 try
                 {
-                    c = new MySqlCommand(String.Format("INSERT INTO Izvjestaj VALUES ('{0}', '{1}', '{2}', '{3}', '{4}');",
+                    c = new MySqlCommand(String.Format("INSERT INTO Izvjestaji VALUES ('{0}', '{1}', '{2}', '{3}', '{4}');",
                         entity.ID, entity.IDuposlenik, entity.DatumIzvjestaja.ToShortDateString(), entity.SadrzajIzvjestaja), con);
                     c.ExecuteNonQuery();
                     return c.LastInsertedId;
@@ -32,7 +32,7 @@ namespace DAL
             {
                 try
                 {
-                    c = new MySqlCommand (String.Format("SELECT * FROM Izvjestaj WHERE id = '{0}';", entity.ID ), con);
+                    c = new MySqlCommand (String.Format("SELECT * FROM Izvjestaji WHERE id = '{0}';", entity.ID ), con);
 
                     MySqlDataReader r = c.ExecuteReader();
 
@@ -55,7 +55,7 @@ namespace DAL
             {
                 try
                 {
-                    c = new MySqlCommand(String.Format("UPDATE Izvjestaj SET id='{0}', Uposlenici_ID = '{1}', datumIzvjestaja = '{2}', sadrzaj = '{3}';",
+                    c = new MySqlCommand(String.Format("UPDATE Izvjestaji SET id='{0}', Uposlenici_ID = '{1}', datumIzvjestaja = '{2}', sadrzaj = '{3}';",
                         entity.ID, entity.IDuposlenik, entity.DatumIzvjestaja, entity.SadrzajIzvjestaja), con);
                     c.ExecuteNonQuery();
                     return entity;
@@ -70,7 +70,7 @@ namespace DAL
             {
                 try
                 {
-                    c = new MySqlCommand(("DELETE FROM Izvjestaj WHERE id = '" + entity.ID + "';"), con);
+                    c = new MySqlCommand(("DELETE FROM Izvjestaji WHERE id = '" + entity.ID + "';"), con);
                     c.ExecuteNonQuery();
                 }
                 catch (Exception e)
@@ -83,7 +83,7 @@ namespace DAL
             {
                 try
                 {
-                    c = new MySqlCommand(String.Format("SELECT * FROM Izvjestaj;"), con);
+                    c = new MySqlCommand(String.Format("SELECT * FROM Izvjestaji;"), con);
                     MySqlDataReader r = c.ExecuteReader();
                     List<Izvjestaj> izvjestaji = new List<Izvjestaj>();
                     while (r.Read())
@@ -103,7 +103,7 @@ namespace DAL
             {
                 try
                 {
-                    c = new MySqlCommand(("SELECT * FROM Izvjestaj WHERE id ='" + id + "';"), con);
+                    c = new MySqlCommand(("SELECT * FROM Izvjestaji WHERE id ='" + id + "';"), con);
                     MySqlDataReader r = c.ExecuteReader();
                     if (r.Read())
                     {
@@ -124,7 +124,7 @@ namespace DAL
             {
                 try
                 {
-                    c = new MySqlCommand(("SELECT * FROM Izvjestaj WHERE " + name + "='" + value + "';"), con);
+                    c = new MySqlCommand(("SELECT * FROM Izvjestaji WHERE " + name + "='" + value + "';"), con);
                     MySqlDataReader r = c.ExecuteReader();
                     List<Izvjestaj> izvjestaji = new List<Izvjestaj>();
                     while (r.Read())

@@ -17,7 +17,7 @@ namespace DAL
             {
                 try
                 {
-                    c = new MySqlCommand(String.Format("INSERT INTO Klijent VALUES ('{0}', '{1}', '{2}', '{3}', '{4}');",
+                    c = new MySqlCommand(String.Format("INSERT INTO Klijenti VALUES ('{0}', '{1}', '{2}', '{3}', '{4}');",
                         entity.ID, entity.Ime, entity.Prezime, entity.Spol.ToString(), entity.DatumRodjenja.ToShortDateString(), entity.Kontakt, entity.IDtrenera, entity.IDnutricioniste ), con);
                     c.ExecuteNonQuery();
                     return c.LastInsertedId;
@@ -32,7 +32,7 @@ namespace DAL
             {
                 try
                 {
-                    c = new MySqlCommand(String.Format("SELECT * FROM Klijent WHERE id = '{0}';", entity.ID), con);
+                    c = new MySqlCommand(String.Format("SELECT * FROM Klijenti WHERE id = '{0}';", entity.ID), con);
 
                     MySqlDataReader r = c.ExecuteReader();
 
@@ -56,7 +56,7 @@ namespace DAL
             {
                 try
                 {
-                    c = new MySqlCommand(String.Format("UPDATE Klijent SET id='{0}', ime = '{1}', prezime = '{2}', spol = '{3}', datumRodjenja = '{4}', kontakt = '{5}', id_trenera = '{6}', id_nutricioniste = '{7}';",
+                    c = new MySqlCommand(String.Format("UPDATE Klijenti SET id='{0}', ime = '{1}', prezime = '{2}', spol = '{3}', datumRodjenja = '{4}', kontakt = '{5}', id_trenera = '{6}', id_nutricioniste = '{7}';",
                         entity.ID, entity.Ime, entity.Prezime, entity.Spol.ToString(), entity.DatumRodjenja.ToShortDateString(), entity.Kontakt, entity.IDtrenera, entity.IDnutricioniste), con);
                     c.ExecuteNonQuery();
                     return entity;
@@ -71,7 +71,7 @@ namespace DAL
             {
                 try
                 {
-                    c = new MySqlCommand(("DELETE FROM Klijent WHERE id = '" + entity.ID + "';"), con);
+                    c = new MySqlCommand(("DELETE FROM Klijenti WHERE id = '" + entity.ID + "';"), con);
                     c.ExecuteNonQuery();
                 }
                 catch (Exception e)
@@ -84,7 +84,7 @@ namespace DAL
             {
                 try
                 {
-                    c = new MySqlCommand(String.Format("SELECT * FROM Klijent;"), con);
+                    c = new MySqlCommand(String.Format("SELECT * FROM Klijenti;"), con);
                     MySqlDataReader r = c.ExecuteReader();
                     List<Klijent> klijenti = new List<Klijent>();
                     while (r.Read())
@@ -105,7 +105,7 @@ namespace DAL
             {
                 try
                 {
-                    c = new MySqlCommand(("SELECT * FROM Klijent WHERE id='" + id + "';"), con);
+                    c = new MySqlCommand(("SELECT * FROM Klijenti WHERE id='" + id + "';"), con);
                     MySqlDataReader r = c.ExecuteReader();
                     if (r.Read())
                     {
@@ -127,7 +127,7 @@ namespace DAL
             {
                 try
                 {
-                    c = new MySqlCommand(("SELECT * FROM Klijent WHERE " + name + "='" + value + "';"), con);
+                    c = new MySqlCommand(("SELECT * FROM Klijenti WHERE " + name + "='" + value + "';"), con);
                     MySqlDataReader r = c.ExecuteReader();
                     List<Klijent> klijenti = new List<Klijent>();
                     while (r.Read())

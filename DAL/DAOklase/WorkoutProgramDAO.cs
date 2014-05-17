@@ -18,7 +18,7 @@ namespace DAL
                 try
                 {
 
-                    c = new MySqlCommand(String.Format("INSERT INTO workoutprogram VALUES ('{0}','{1}', '{2}');"
+                    c = new MySqlCommand(String.Format("INSERT INTO workoutprogrami VALUES ('{0}','{1}', '{2}');"
                         , entity.Opis, entity.TipPrograma, entity.Vjezbe), con);
                     c.ExecuteNonQuery();
                     return c.LastInsertedId;
@@ -33,7 +33,7 @@ namespace DAL
             {
                 try
                 {
-                    c = new MySqlCommand(String.Format("SELECT * FROM workoutprogram WHERE id='{0}'", entity.IdWorkoutPrograma)
+                    c = new MySqlCommand(String.Format("SELECT * FROM workoutprogrami WHERE id='{0}'", entity.IdWorkoutPrograma)
                         , con);
 
                     MySqlDataReader r = c.ExecuteReader();
@@ -62,7 +62,7 @@ namespace DAL
             {
                 try
                 {
-                    c = new MySqlCommand(String.Format("UPDATE wokroutprogram SET opis='{0}', tipPrograma='{1}', " +
+                    c = new MySqlCommand(String.Format("UPDATE wokroutprogrami SET opis='{0}', tipPrograma='{1}', " +
                               "vjezbe='{2}, where id = '{9}'",
                         entity.IdWorkoutPrograma, entity.Opis, entity.TipPrograma, entity.Vjezbe, id), con);
                     c.ExecuteNonQuery();
@@ -78,7 +78,7 @@ namespace DAL
             {
                 try
                 {
-                    c = new MySqlCommand(String.Format("DELETE FROM workoutprogram WHERE id ='{0}';",
+                    c = new MySqlCommand(String.Format("DELETE FROM workoutprogrami WHERE id ='{0}';",
                         entity.IdWorkoutPrograma), con);
                     c.ExecuteNonQuery();
                 }
@@ -92,7 +92,7 @@ namespace DAL
             {
                 try
                 {
-                    c = new MySqlCommand(String.Format("SELECT * FROM workoutprogram WHERE id='{0}';", id), con);
+                    c = new MySqlCommand(String.Format("SELECT * FROM workoutprogrami WHERE id='{0}';", id), con);
                     MySqlDataReader r = c.ExecuteReader();
                     if (r.Read())
                     {
@@ -116,7 +116,7 @@ namespace DAL
             {
                 try
                 {
-                    c = new MySqlCommand(String.Format("SELECT * FROM workoutprogram;"), con);
+                    c = new MySqlCommand(String.Format("SELECT * FROM workoutprogrami;"), con);
                     MySqlDataReader r = c.ExecuteReader();
                     List<WorkoutProgram> WorkoutProgrami = new List<WorkoutProgram>();
                     while (r.Read())
@@ -139,7 +139,7 @@ namespace DAL
             {
                 try
                 {
-                    c = new MySqlCommand(String.Format("SELECT * FROM workoutprogram WHERE {0}='{1}';", name, values), con);
+                    c = new MySqlCommand(String.Format("SELECT * FROM workoutprogrami WHERE {0}='{1}';", name, values), con);
                     MySqlDataReader r = c.ExecuteReader();
                     List<WorkoutProgram> WorkoutProgrami = new List<WorkoutProgram>();
                     while (r.Read())
