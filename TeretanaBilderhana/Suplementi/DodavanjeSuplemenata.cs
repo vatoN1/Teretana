@@ -8,18 +8,13 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace TeretanaBilderhana
+namespace TeretanaBilderhana.Suplementi
 {
-    public partial class Form2 : Form
+    public partial class DodavanjeSuplemenata : Form
     {
-        public Form2()
+        public DodavanjeSuplemenata()
         {
             InitializeComponent();
-        }
-
-        private void Form2_Load(object sender, EventArgs e)
-        {
-
         }
     }
 }

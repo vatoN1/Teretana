@@ -17,12 +17,14 @@ public class Uposlenik : Osoba
     DateTime datumZaposlenja;
     TipZaposlenja zaposlenje;
     String zaposlenjeS;
+    String sifra;
 
+    
     
     public Uposlenik() { }
 
-    public Uposlenik(int idUposlenika, String ime, String prezime, String spol,
-        DateTime datumRodjenja, DateTime datumZaposlenja, Decimal plata, String kontakt, String zaposlenje) :
+    public Uposlenik(int idUposlenika, String ime, String prezime, String spol, DateTime datumRodjenja, 
+        DateTime datumZaposlenja, Decimal plata, String kontakt, String zaposlenje, String sifra) :
         base(idUposlenika, ime, prezime, spol, datumRodjenja, kontakt)
     {
 
@@ -30,6 +32,7 @@ public class Uposlenik : Osoba
         Plata = plata;
         DatumZaposlenja = datumZaposlenja;
         ZaposlenjeS = zaposlenje;
+        this.sifra = sifra;
     }
     public decimal Plata
 	{
@@ -37,7 +40,11 @@ public class Uposlenik : Osoba
 		set;
 	}
 
-
+    public String Sifra
+    {
+        get { return sifra; }
+        set { sifra = value; }
+    }
     public String ZaposlenjeS
     {
         get { return zaposlenjeS; }

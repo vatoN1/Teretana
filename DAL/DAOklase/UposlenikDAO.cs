@@ -18,9 +18,9 @@ namespace DAL
                 try
                 {
 
-                    c = new MySqlCommand(String.Format("INSERT INTO uposlenici VALUES ('{0}','{1}','{2}','{3}','{4}', {5}, {6}, {7});"
+                    c = new MySqlCommand(String.Format("INSERT INTO uposlenici VALUES ('{0}','{1}','{2}','{3}','{4}', {5}, {6}, {7}, {8});"
                         , entity.Ime, entity.Prezime, entity.Spol, entity.DatumRodjenja, entity.DatumZaposlenja
-                        , entity.Plata, entity.Kontakt, entity.Zaposlenje), con);
+                        , entity.Plata, entity.Kontakt, entity.Zaposlenje, entity.Sifra), con);
                     c.ExecuteNonQuery();
                     return c.LastInsertedId;
                 }
@@ -43,9 +43,10 @@ namespace DAL
                     {
                         Uposlenik Uposlenik = new Uposlenik
                         (
-                            r.GetInt32("id"), r.GetString("ime"), r.GetString("prezime"), r.GetString("spol"),
-                             r.GetDateTime("datumRodjenja"), r.GetDateTime("datumZaposlenja"),
-                             r.GetDecimal("plata"), r.GetString("kontakt"), r.GetString("zaposlenje")
+                            r.GetInt32("id"), r.GetString("ime"), r.GetString("prezime"),
+                            r.GetString("spol"), r.GetDateTime("datumRodjenja"),
+                            r.GetDateTime("datumZaposlenja"), r.GetDecimal("plata"),
+                            r.GetString("kontakt"), r.GetString("zaposlenje"), r.GetString("sifra")
                         );
 
                         r.Close();
@@ -66,10 +67,11 @@ namespace DAL
                 try
                 {
                     c = new MySqlCommand(String.Format("UPDATE uposlenici SET id='{0}', ime='{1}', prezime='{2}', spol = '{3}', "+
-                    "datumRodjenja = '{4}', datumZaposlenja = '{5}, plata = {6}, kontakt = {7}, zaposlenje = '{8}' " +
-                    "where idUposlenika = '{9}'",
+                    "datumRodjenja = '{4}', datumZaposlenja = '{5}, plata = {6}, kontakt = {7}, zaposlenje = '{8}', " +
+                    "sifra = {9} where idUposlenika = '{10}'",
                         entity.IdUposlenika, entity.Ime, entity.Prezime, entity.Spol, entity.DatumRodjenja, 
-                        entity.DatumZaposlenja, entity.Plata, entity.Kontakt, entity.Zaposlenje, id), con);
+                        entity.DatumZaposlenja, entity.Plata, entity.Kontakt, 
+                        entity.Zaposlenje, entity.Sifra, id), con);
                     c.ExecuteNonQuery();
                     return entity;
                 }
@@ -102,9 +104,10 @@ namespace DAL
                     {
                         Uposlenik Uposlenik = new Uposlenik
                         (
-                            r.GetInt32("id"), r.GetString("ime"), r.GetString("prezime"), r.GetString("spol"),
-                             r.GetDateTime("datumRodjenja"), r.GetDateTime("datumZaposlenja"),
-                             r.GetDecimal("plata"), r.GetString("kontakt"), r.GetString("zaposlenje")
+                            r.GetInt32("id"), r.GetString("ime"), r.GetString("prezime"),
+                            r.GetString("spol"), r.GetDateTime("datumRodjenja"),
+                            r.GetDateTime("datumZaposlenja"), r.GetDecimal("plata"),
+                            r.GetString("kontakt"), r.GetString("zaposlenje"), r.GetString("sifra")
                         );
                         r.Close();
                         return Uposlenik;
@@ -124,17 +127,18 @@ namespace DAL
                 {
                     c = new MySqlCommand(String.Format("SELECT * FROM uposlenici;"), con);
                     MySqlDataReader r = c.ExecuteReader();
-                    List<Uposlenik> Filmovi = new List<Uposlenik>();
+                    List<Uposlenik> Uposlenici = new List<Uposlenik>();
                     while (r.Read())
-                        Filmovi.Add(new Uposlenik
+                        Uposlenici.Add(new Uposlenik
                         (
-                            r.GetInt32("id"), r.GetString("ime"), r.GetString("prezime"), r.GetString("spol"),
-                             r.GetDateTime("datumRodjenja"), r.GetDateTime("datumZaposlenja"),
-                             r.GetDecimal("plata"), r.GetString("kontakt"), r.GetString("zaposlenje")
+                            r.GetInt32("id"), r.GetString("ime"), r.GetString("prezime"), 
+                            r.GetString("spol"), r.GetDateTime("datumRodjenja"), 
+                            r.GetDateTime("datumZaposlenja"), r.GetDecimal("plata"),
+                            r.GetString("kontakt"), r.GetString("zaposlenje"), r.GetString("sifra")
                         ));
 
                     r.Close();
-                    return Filmovi;
+                    return Uposlenici;
 
                 }
                 catch (Exception e)
@@ -149,16 +153,17 @@ namespace DAL
                 {
                     c = new MySqlCommand(String.Format("SELECT * FROM uposlenici WHERE {0}='{1}';", name, values), con);
                     MySqlDataReader r = c.ExecuteReader();
-                    List<Uposlenik> Filmovi = new List<Uposlenik>();
+                    List<Uposlenik> Uposlenici = new List<Uposlenik>();
                     while (r.Read())
-                        Filmovi.Add(new Uposlenik
+                        Uposlenici.Add(new Uposlenik
                         (
-                            r.GetInt32("id"), r.GetString("ime"), r.GetString("prezime"), r.GetString("spol"),
-                             r.GetDateTime("datumRodjenja"), r.GetDateTime("datumZaposlenja"),
-                             r.GetDecimal("plata"), r.GetString("kontakt"), r.GetString("zaposlenje")
+                            r.GetInt32("id"), r.GetString("ime"), r.GetString("prezime"), 
+                            r.GetString("spol"), r.GetDateTime("datumRodjenja"), 
+                            r.GetDateTime("datumZaposlenja"), r.GetDecimal("plata"), 
+                            r.GetString("kontakt"), r.GetString("zaposlenje"), r.GetString("sifra")
                         ));
                     r.Close();
-                    return Filmovi;
+                    return Uposlenici;
                 }
                 catch (Exception e)
                 {
