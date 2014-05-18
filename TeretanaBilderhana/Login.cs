@@ -25,7 +25,7 @@ namespace TeretanaBilderhana
                 return false;
             }
             DAL.DAL d = DAL.DAL.Instanca;
-            d.kreirajKonekciju("localhost", "i-videoteka", "root", "");
+            d.kreirajKonekciju("localhost", "Teretana", "root", "");
             DAL.DAL.UposlenikDAO c = d.getDAO.getUposlenikDAO();
 
             try
@@ -48,7 +48,7 @@ namespace TeretanaBilderhana
             if (konektovan()) 
             {
                 DAL.DAL d = DAL.DAL.Instanca;
-                d.kreirajKonekciju("localhost", "i-videoteka", "root", "");
+                d.kreirajKonekciju("localhost", "Teretana", "root", "");
 
                 DAL.DAL.UposlenikDAO c = d.getDAO.getUposlenikDAO();
                 Uposlenik radnik = c.getById(Convert.ToInt32(IDtextbox.Text));

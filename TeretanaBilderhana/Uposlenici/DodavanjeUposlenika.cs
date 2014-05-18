@@ -23,8 +23,7 @@ namespace TeretanaBilderhana.Uposlenici
                 (errorProvider1.GetError(imetb) == "") && 
                 (errorProvider1.GetError(prezimetb) == "") && 
                 (errorProvider1.GetError(kontakttb) == "") && 
-                (errorProvider1.GetError(sifratb) == "") && 
-                (errorProvider1.GetError(IDtb) == "") && 
+                (errorProvider1.GetError(sifratb) == "") &&
                 (errorProvider1.GetError(platatb) == ""));
         }
 
@@ -43,7 +42,7 @@ namespace TeretanaBilderhana.Uposlenici
                     Convert.ToDecimal(platatb.Text), kontakttb.Text, zaposlenje, sifratb.Text);
 
                 DAL.DAL d = DAL.DAL.Instanca;
-                d.kreirajKonekciju("localhost", "i-videoteka", "root", "");
+                d.kreirajKonekciju("localhost", "Teretana", "root", "");
 
                 DAL.DAL.UposlenikDAO c = d.getDAO.getUposlenikDAO();
 
@@ -51,23 +50,9 @@ namespace TeretanaBilderhana.Uposlenici
                 d.terminirajKonekciju();
                 MessageBox.Show("Uposlenik unesen! ID je: " + r);
                 Close();
-
             }
         }
 
-        private void IDtb_Validating(object sender, CancelEventArgs e)
-        {
-            if (IDtb.Text.Length < 4)
-            {
-                errorProvider1.SetError(IDtb, "Ime prekratko");
-                toolStripStatusLabel1.Text = "Ime prekratko!";
-            }
-            else
-            {
-                errorProvider1.SetError(IDtb, "");
-                toolStripStatusLabel1.Text = "";
-            }
-        }
         private void imetb_Validating(object sender, CancelEventArgs e)
         {
             if (imetb.Text.Length < 3)
@@ -135,6 +120,11 @@ namespace TeretanaBilderhana.Uposlenici
                 errorProvider1.SetError(kontakttb, "");
                 toolStripStatusLabel1.Text = "";
             }
+        }
+
+        private void izadjiButton_Click(object sender, EventArgs e)
+        {
+            Close();
         }
 
         

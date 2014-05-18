@@ -127,6 +127,9 @@
     <EmbeddedResource Include="Uposlenici\DodavanjeUposlenika.resx">
       <DependentUpon>DodavanjeUposlenika.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Uposlenici\EditovanjeUposlenika.resx">
+      <DependentUpon>EditovanjeUposlenika.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
