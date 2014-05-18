@@ -124,6 +124,34 @@ namespace TeretanaBilderhana
             }
         }
 
+        private void zaposlenje_Validating(object sender, CancelEventArgs e)
+        {
+            if (zaposlenjecb.SelectedItem == null)
+            {
+                errorProvider1.SetError(zaposlenjecb, "Odaberite zaposlenje!");
+                toolStripStatusLabel1.Text = "Odaberite zaposlenje!";
+            }
+            else
+            {
+                errorProvider1.SetError(zaposlenjecb, "");
+                toolStripStatusLabel1.Text = "";
+            }
+        }
+
+
+        private void Spol_Validating(object sender, CancelEventArgs e)
+        {
+            if (muskoRB.Checked == false && zenskoRB.Checked == false)
+            {
+                errorProvider1.SetError(groupBox2, "Odaberite spol!");
+                toolStripStatusLabel1.Text = "Odaberite spol!";
+            }
+            else
+            {
+                errorProvider1.SetError(groupBox2, "");
+                toolStripStatusLabel1.Text = "";
+            }
+        }
         private void izadjiButton_Click(object sender, EventArgs e)
         {
             Close();

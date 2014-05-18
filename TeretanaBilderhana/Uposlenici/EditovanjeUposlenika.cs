@@ -110,6 +110,19 @@ namespace TeretanaBilderhana
             }
         }
 
+        private void Spol_Validating(object sender, CancelEventArgs e)
+        {
+            if (muskoRB.Checked==false && zenskoRB.Checked==false)
+            {
+                errorProvider1.SetError(groupBox2, "Odaberite spol!");
+                toolStripStatusLabel1.Text = "Odaberite spol!";
+            }
+            else
+            {
+                errorProvider1.SetError(groupBox2, "");
+                toolStripStatusLabel1.Text = "";
+            }
+        }
         private void kontakttb_Validating(object sender, CancelEventArgs e)
         {
             if (kontakttb.Text.Length != 9)
@@ -120,6 +133,20 @@ namespace TeretanaBilderhana
             else
             {
                 errorProvider1.SetError(kontakttb, "");
+                toolStripStatusLabel1.Text = "";
+            }
+        }
+
+        private void zaposlenje_Validating(object sender, CancelEventArgs e)
+        {
+            if (zaposlenjecb.SelectedItem==null)
+            {
+                errorProvider1.SetError(zaposlenjecb, "Odaberite zaposlenje!");
+                toolStripStatusLabel1.Text = "Odaberite zaposlenje!";
+            }
+            else
+            {
+                errorProvider1.SetError(zaposlenjecb, "");
                 toolStripStatusLabel1.Text = "";
             }
         }
@@ -155,10 +182,10 @@ namespace TeretanaBilderhana
                 DAL.DAL.UposlenikDAO c = d.getDAO.getUposlenikDAO();
 
                 Uposlenik Uposlenik = c.getById(Convert.ToInt32(maskedTextBox1.Text));
-                imetb.Text = "";
-                prezimetb.Text = "";
-                kontakttb.Text = "";
-                platatb.Text = "";
+                imetb.Text = Uposlenik.Ime;
+                prezimetb.Text = Uposlenik.Prezime;
+                kontakttb.Text = Uposlenik.Kontakt;
+                platatb.Text = Convert.ToString(Uposlenik.Plata);
                 datumRodjenjadtp.Value = Uposlenik.DatumRodjenja;
                 datumZaposlenjadtp.Value = Uposlenik.DatumZaposlenja;
                 if (Convert.ToString(Uposlenik.Spol) == "Musko") muskoRB.Checked = true;

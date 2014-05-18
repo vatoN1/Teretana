@@ -53,9 +53,9 @@
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.label2 = new System.Windows.Forms.Label();
-            this.maskedTextBox1 = new System.Windows.Forms.MaskedTextBox();
             this.label1 = new System.Windows.Forms.Label();
+            this.maskedTextBox1 = new System.Windows.Forms.MaskedTextBox();
+            this.label2 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             this.statusStrip1.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -152,6 +152,7 @@
             this.zaposlenjecb.Name = "zaposlenjecb";
             this.zaposlenjecb.Size = new System.Drawing.Size(121, 21);
             this.zaposlenjecb.TabIndex = 18;
+            this.zaposlenjecb.Validating += new System.ComponentModel.CancelEventHandler(this.zaposlenje_Validating);
             // 
             // groupBox2
             // 
@@ -170,6 +171,7 @@
             this.prezimetb.Name = "prezimetb";
             this.prezimetb.Size = new System.Drawing.Size(121, 20);
             this.prezimetb.TabIndex = 15;
+            this.prezimetb.Validating += new System.ComponentModel.CancelEventHandler(this.prezimetb_Validating);
             // 
             // imetb
             // 
@@ -177,6 +179,7 @@
             this.imetb.Name = "imetb";
             this.imetb.Size = new System.Drawing.Size(121, 20);
             this.imetb.TabIndex = 14;
+            this.imetb.Validating += new System.ComponentModel.CancelEventHandler(this.imetb_Validating);
             // 
             // kontakttb
             // 
@@ -185,6 +188,7 @@
             this.kontakttb.Name = "kontakttb";
             this.kontakttb.Size = new System.Drawing.Size(121, 20);
             this.kontakttb.TabIndex = 13;
+            this.kontakttb.Validating += new System.ComponentModel.CancelEventHandler(this.kontakttb_Validating);
             // 
             // platatb
             // 
@@ -192,6 +196,7 @@
             this.platatb.Name = "platatb";
             this.platatb.Size = new System.Drawing.Size(121, 20);
             this.platatb.TabIndex = 12;
+            this.platatb.Validating += new System.ComponentModel.CancelEventHandler(this.kontakttb_Validating);
             // 
             // label10
             // 
@@ -284,14 +289,14 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Registracija uposlenika: ";
             // 
-            // label2
+            // label1
             // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(86, 51);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(27, 13);
-            this.label2.TabIndex = 1;
-            this.label2.Text = "Ime:";
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(53, 23);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(60, 13);
+            this.label1.TabIndex = 23;
+            this.label1.Text = "Unesite ID:";
             // 
             // maskedTextBox1
             // 
@@ -302,14 +307,14 @@
             this.maskedTextBox1.TabIndex = 22;
             this.maskedTextBox1.ValidatingType = typeof(int);
             // 
-            // label1
+            // label2
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(53, 23);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(60, 13);
-            this.label1.TabIndex = 23;
-            this.label1.Text = "Unesite ID:";
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(86, 51);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(27, 13);
+            this.label2.TabIndex = 1;
+            this.label2.Text = "Ime:";
             // 
             // EditovanjeUposlenika
             // 

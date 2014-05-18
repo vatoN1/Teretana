@@ -186,6 +186,7 @@
             this.zaposlenjecb.Name = "zaposlenjecb";
             this.zaposlenjecb.Size = new System.Drawing.Size(121, 21);
             this.zaposlenjecb.TabIndex = 18;
+            this.zaposlenjecb.Validating += new System.ComponentModel.CancelEventHandler(this.zaposlenje_Validating);
             // 
             // groupBox2
             // 
@@ -197,6 +198,7 @@
             this.groupBox2.TabIndex = 16;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Spol: ";
+            this.groupBox2.Validating += new System.ComponentModel.CancelEventHandler(this.Spol_Validating);
             // 
             // zenskoRB
             // 
