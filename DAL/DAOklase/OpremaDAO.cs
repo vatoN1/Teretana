@@ -9,7 +9,7 @@ namespace DAL
 {
     partial class DAL
     {
-        class OpremaDAO : IDaoCrud<Oprema>
+        public class OpremaDAO : IDaoCrud<Oprema>
         {
             protected MySqlCommand c;
 

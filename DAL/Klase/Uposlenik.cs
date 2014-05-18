@@ -18,6 +18,10 @@ using System.Text;
         String sifra;
         int idUposlenika;
 
+        public Uposlenik()
+        {
+
+        }
 
 
         public Uposlenik(int idUposlenika, String ime, String prezime, String spol, DateTime datumRodjenja,

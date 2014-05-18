@@ -9,7 +9,7 @@ namespace DAL
 {
     partial class DAL
     {
-        class KlijentDAO : IDaoCrud<Klijent>
+        public class KlijentDAO : IDaoCrud<Klijent>
         {
             protected MySqlCommand c;
 
