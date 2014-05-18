@@ -11,7 +11,7 @@ using System.Text;
 
 public class Nutricionista : Uposlenik
 {
-    public Nutricionista() { }
+    
 
 	public virtual void azurirajProgram()
 	{

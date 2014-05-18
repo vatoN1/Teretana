@@ -7,8 +7,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using DAL;
 
-namespace TeretanaBilderhana.Uposlenici
+namespace TeretanaBilderhana
 {
     public partial class EditovanjeUposlenika : Form
     {
@@ -161,9 +162,8 @@ namespace TeretanaBilderhana.Uposlenici
                 datumRodjenjadtp.Value = Uposlenik.DatumRodjenja;
                 datumZaposlenjadtp.Value = Uposlenik.DatumZaposlenja;
                 if (Convert.ToString(Uposlenik.Spol) == "Musko") muskoRB.Checked = true;
-                else zenskoRB.Checked = false; 
+                else zenskoRB.Checked = true; 
                 
-
                 d.terminirajKonekciju();
             }
             else

@@ -5,7 +5,7 @@ using System.Text;
 
 namespace DAL
 {
-    partial class DAL
+    public partial class DAL
     {
         public class DAOFactory
         {

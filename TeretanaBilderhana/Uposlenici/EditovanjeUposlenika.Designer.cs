@@ -1,4 +1,4 @@
-﻿namespace TeretanaBilderhana.Uposlenici
+﻿namespace TeretanaBilderhana
 {
     partial class EditovanjeUposlenika
     {

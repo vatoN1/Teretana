@@ -11,7 +11,7 @@ using System.Text;
 
 public class Tehnicar : Uposlenik
 {
-    public Tehnicar() { }
+    
 
 }
 
