@@ -44,30 +44,65 @@ namespace TeretanaBilderhana
         }
 
 
+        bool IsLetterOrDigit(char c) 
+        { return (c >= 'A' && c <= 'Z') || (c >= 'a' && c <= 'z') || (c >= '0' && c <= '9'); }
+        private void baciIzuzetak(bool flag)
+        { if (flag == true) throw new Exception("HAJD BAR NEŠTO IZBACI"); }
+
         private void loginButton_Click(object sender, EventArgs e)
         {
-            if (konektovan()) 
+            try
             {
-                DAL.DAL d = DAL.DAL.Instanca;
-                d.kreirajKonekciju("localhost", "Teretana", "root", "");
-
-                DAL.DAL.UposlenikDAO c = d.getDAO.getUposlenikDAO();
-                Uposlenik radnik = c.getById(Convert.ToInt32(IDtextbox.Text));
-
-                if (radnik.Sifra == passtextbox.Text)
+                if (konektovan())
                 {
-                    MainPage f = new MainPage();
-                    f.Show();
+                    DAL.DAL d = DAL.DAL.Instanca;
+                    d.kreirajKonekciju("localhost", "Teretana", "root", "");
+
+                    DAL.DAL.UposlenikDAO c = d.getDAO.getUposlenikDAO();
+                    Uposlenik radnik = c.getById(Convert.ToInt32(IDtextbox.Text));
+
+                    if (radnik.Sifra == passtextbox.Text)
+                    {
+                        MainPage f = new MainPage();
+                        f.Show();
+                    }
+                    else if (Convert.ToInt32(IDtextbox.Text) == radnik.IdUposlenika && passtextbox.Text != radnik.Sifra)
+                    {
+                        errorProvider1.SetError(IDtextbox, "");
+                        errorProvider1.SetError(passtextbox, "Pogresna sifra");
+                    }
+                    else if (Convert.ToInt32(IDtextbox.Text) != radnik.IdUposlenika && passtextbox.Text == radnik.Sifra)
+                    {
+                        errorProvider1.SetError(IDtextbox, "Pogresan korisnicki nalog");
+                        errorProvider1.SetError(passtextbox, "");
+                    }
+                    else
+                    {
+                        MessageBox.Show("Neispravna šifra!");
+                    }
+                    d.terminirajKonekciju();
                 }
                 else
                 {
-                    MessageBox.Show("Neispravna šifra!");
+                    bool flag = false;
+                    for (int i = 0; i < passtextbox.Text.Length; i++)
+                    {
+                        char x = Convert.ToChar(passtextbox.Text[i]);
+                        if (!IsLetterOrDigit(x))
+                        {
+                            flag = true;
+                        }
+                    }
+                    baciIzuzetak(flag);
+
+                    errorProvider1.SetError(IDtextbox, "Pogresan korisnicki nalog");
+                    errorProvider1.SetError(passtextbox, "Pogresna sifra");
+                    MessageBox.Show("Neispravan korisnicki nalog i password!", "", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
-                d.terminirajKonekciju();
             }
-            else
+            catch (Exception)
             {
-                MessageBox.Show("Neispravan ID!");
+                ;
             }
         }
         
