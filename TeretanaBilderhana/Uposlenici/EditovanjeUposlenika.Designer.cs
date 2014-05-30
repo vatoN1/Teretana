@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(EditovanjeUposlenika));
             this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
             this.statusStrip1 = new System.Windows.Forms.StatusStrip();
             this.toolStripStatusLabel1 = new System.Windows.Forms.ToolStripStatusLabel();
@@ -70,9 +71,9 @@
             // 
             this.statusStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.toolStripStatusLabel1});
-            this.statusStrip1.Location = new System.Drawing.Point(0, 364);
+            this.statusStrip1.Location = new System.Drawing.Point(0, 353);
             this.statusStrip1.Name = "statusStrip1";
-            this.statusStrip1.Size = new System.Drawing.Size(329, 22);
+            this.statusStrip1.Size = new System.Drawing.Size(312, 22);
             this.statusStrip1.TabIndex = 26;
             this.statusStrip1.Text = "statusStrip1";
             // 
@@ -84,7 +85,7 @@
             // 
             // izadjiButton
             // 
-            this.izadjiButton.Location = new System.Drawing.Point(217, 320);
+            this.izadjiButton.Location = new System.Drawing.Point(217, 327);
             this.izadjiButton.Name = "izadjiButton";
             this.izadjiButton.Size = new System.Drawing.Size(83, 23);
             this.izadjiButton.TabIndex = 25;
@@ -94,7 +95,7 @@
             // 
             // unosButton
             // 
-            this.unosButton.Location = new System.Drawing.Point(114, 320);
+            this.unosButton.Location = new System.Drawing.Point(114, 327);
             this.unosButton.Name = "unosButton";
             this.unosButton.Size = new System.Drawing.Size(91, 23);
             this.unosButton.TabIndex = 24;
@@ -128,21 +129,21 @@
             // 
             this.datumZaposlenjadtp.Location = new System.Drawing.Point(119, 221);
             this.datumZaposlenjadtp.Name = "datumZaposlenjadtp";
-            this.datumZaposlenjadtp.Size = new System.Drawing.Size(120, 20);
+            this.datumZaposlenjadtp.Size = new System.Drawing.Size(136, 20);
             this.datumZaposlenjadtp.TabIndex = 21;
             // 
             // datumRodjenjadtp
             // 
             this.datumRodjenjadtp.Location = new System.Drawing.Point(120, 147);
             this.datumRodjenjadtp.Name = "datumRodjenjadtp";
-            this.datumRodjenjadtp.Size = new System.Drawing.Size(120, 20);
+            this.datumRodjenjadtp.Size = new System.Drawing.Size(136, 20);
             this.datumRodjenjadtp.TabIndex = 20;
             // 
             // sifratb
             // 
             this.sifratb.Location = new System.Drawing.Point(119, 280);
             this.sifratb.Name = "sifratb";
-            this.sifratb.Size = new System.Drawing.Size(121, 20);
+            this.sifratb.Size = new System.Drawing.Size(137, 20);
             this.sifratb.TabIndex = 19;
             // 
             // zaposlenjecb
@@ -150,7 +151,7 @@
             this.zaposlenjecb.FormattingEnabled = true;
             this.zaposlenjecb.Location = new System.Drawing.Point(119, 251);
             this.zaposlenjecb.Name = "zaposlenjecb";
-            this.zaposlenjecb.Size = new System.Drawing.Size(121, 21);
+            this.zaposlenjecb.Size = new System.Drawing.Size(137, 21);
             this.zaposlenjecb.TabIndex = 18;
             this.zaposlenjecb.Validating += new System.ComponentModel.CancelEventHandler(this.zaposlenje_Validating);
             // 
@@ -160,7 +161,7 @@
             this.groupBox2.Controls.Add(this.muskoRB);
             this.groupBox2.Location = new System.Drawing.Point(69, 99);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(171, 41);
+            this.groupBox2.Size = new System.Drawing.Size(187, 41);
             this.groupBox2.TabIndex = 16;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Spol: ";
@@ -169,7 +170,7 @@
             // 
             this.prezimetb.Location = new System.Drawing.Point(119, 73);
             this.prezimetb.Name = "prezimetb";
-            this.prezimetb.Size = new System.Drawing.Size(121, 20);
+            this.prezimetb.Size = new System.Drawing.Size(137, 20);
             this.prezimetb.TabIndex = 15;
             this.prezimetb.Validating += new System.ComponentModel.CancelEventHandler(this.prezimetb_Validating);
             // 
@@ -177,7 +178,7 @@
             // 
             this.imetb.Location = new System.Drawing.Point(119, 48);
             this.imetb.Name = "imetb";
-            this.imetb.Size = new System.Drawing.Size(121, 20);
+            this.imetb.Size = new System.Drawing.Size(137, 20);
             this.imetb.TabIndex = 14;
             this.imetb.Validating += new System.ComponentModel.CancelEventHandler(this.imetb_Validating);
             // 
@@ -186,7 +187,7 @@
             this.kontakttb.Location = new System.Drawing.Point(119, 172);
             this.kontakttb.Mask = "000000000";
             this.kontakttb.Name = "kontakttb";
-            this.kontakttb.Size = new System.Drawing.Size(121, 20);
+            this.kontakttb.Size = new System.Drawing.Size(137, 20);
             this.kontakttb.TabIndex = 13;
             this.kontakttb.Validating += new System.ComponentModel.CancelEventHandler(this.kontakttb_Validating);
             // 
@@ -194,7 +195,7 @@
             // 
             this.platatb.Location = new System.Drawing.Point(119, 198);
             this.platatb.Name = "platatb";
-            this.platatb.Size = new System.Drawing.Size(121, 20);
+            this.platatb.Size = new System.Drawing.Size(137, 20);
             this.platatb.TabIndex = 12;
             this.platatb.Validating += new System.ComponentModel.CancelEventHandler(this.kontakttb_Validating);
             // 
@@ -282,12 +283,12 @@
             this.groupBox1.Controls.Add(this.label7);
             this.groupBox1.Controls.Add(this.label5);
             this.groupBox1.Controls.Add(this.label6);
-            this.groupBox1.Location = new System.Drawing.Point(12, 6);
+            this.groupBox1.Location = new System.Drawing.Point(12, 12);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(288, 308);
             this.groupBox1.TabIndex = 23;
             this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Registracija uposlenika: ";
+            this.groupBox1.Text = "Preregistracija uposlenika: ";
             // 
             // label1
             // 
@@ -303,7 +304,7 @@
             this.maskedTextBox1.Location = new System.Drawing.Point(119, 20);
             this.maskedTextBox1.Mask = "00000";
             this.maskedTextBox1.Name = "maskedTextBox1";
-            this.maskedTextBox1.Size = new System.Drawing.Size(120, 20);
+            this.maskedTextBox1.Size = new System.Drawing.Size(136, 20);
             this.maskedTextBox1.TabIndex = 22;
             this.maskedTextBox1.ValidatingType = typeof(int);
             // 
@@ -320,13 +321,16 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(329, 386);
+            this.ClientSize = new System.Drawing.Size(312, 375);
             this.Controls.Add(this.statusStrip1);
             this.Controls.Add(this.izadjiButton);
             this.Controls.Add(this.unosButton);
             this.Controls.Add(this.groupBox1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MinimizeBox = false;
             this.Name = "EditovanjeUposlenika";
-            this.Text = "EditovanjeUposlenika";
+            this.Text = "Editovanje uposlenika";
+            this.Load += new System.EventHandler(this.EditovanjeUposlenika_Load);
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
             this.statusStrip1.ResumeLayout(false);
             this.statusStrip1.PerformLayout();

@@ -8,18 +8,13 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace TeretanaBilderhana.WorkoutProgrami
+namespace TeretanaBilderhana.Prehrambeni_programi
 {
-    public partial class DodavanjeWorkoutPrograma : Form
+    public partial class EditovanjePrehrambenihPrograma : Form
     {
-        public DodavanjeWorkoutPrograma()
+        public EditovanjePrehrambenihPrograma()
         {
             InitializeComponent();
-        }
-
-        private void groupBox1_Enter(object sender, EventArgs e)
-        {
-
         }
     }
 }

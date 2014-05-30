@@ -201,5 +201,10 @@ namespace TeretanaBilderhana
         {
             Close();
         }
+
+        private void EditovanjeUposlenika_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -71,8 +71,32 @@
     <Compile Include="MainPage.Designer.cs">
       <DependentUpon>MainPage.cs</DependentUpon>
     </Compile>
+    <Compile Include="Prehrambeni programi\DodavanjePrehrambenihPrograma.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Prehrambeni programi\DodavanjePrehrambenihPrograma.Designer.cs">
+      <DependentUpon>DodavanjePrehrambenihPrograma.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Prehrambeni programi\EditovanjePrehrambenihPrograma.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Prehrambeni programi\EditovanjePrehrambenihPrograma.Designer.cs">
+      <DependentUpon>EditovanjePrehrambenihPrograma.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Prostorije\DodavanjeProstorija.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Prostorije\DodavanjeProstorija.Designer.cs">
+      <DependentUpon>DodavanjeProstorija.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Prostorije\EditovanjeProstorija.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Prostorije\EditovanjeProstorija.Designer.cs">
+      <DependentUpon>EditovanjeProstorija.cs</DependentUpon>
+    </Compile>
     <Compile Include="Suplementi\DodavanjeSuplemenata.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -115,6 +139,12 @@
     <EmbeddedResource Include="MainPage.resx">
       <DependentUpon>MainPage.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Prehrambeni programi\DodavanjePrehrambenihPrograma.resx">
+      <DependentUpon>DodavanjePrehrambenihPrograma.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Prehrambeni programi\EditovanjePrehrambenihPrograma.resx">
+      <DependentUpon>EditovanjePrehrambenihPrograma.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -124,11 +154,29 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Prostorije\DodavanjeProstorija.resx">
+      <DependentUpon>DodavanjeProstorija.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Prostorije\EditovanjeProstorija.resx">
+      <DependentUpon>EditovanjeProstorija.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Suplementi\DodavanjeSuplemenata.resx">
+      <DependentUpon>DodavanjeSuplemenata.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Suplementi\EditovanjeSuplemenata.resx">
+      <DependentUpon>EditovanjeSuplemenata.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Uposlenici\DodavanjeUposlenika.resx">
       <DependentUpon>DodavanjeUposlenika.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Uposlenici\EditovanjeUposlenika.resx">
       <DependentUpon>EditovanjeUposlenika.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WorkoutProgrami\DodavanjeWorkoutPrograma.resx">
+      <DependentUpon>DodavanjeWorkoutPrograma.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WorkoutProgrami\EditovanjeWorkoutPrograma.resx">
+      <DependentUpon>EditovanjeWorkoutPrograma.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -167,7 +215,12 @@
       <Name>DAL</Name>
     </ProjectReference>
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Folder Include="Izvjestaji\" />
+    <Folder Include="Klijenti\" />
+    <Folder Include="Oprema\" />
+    <Folder Include="Sprave\" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
