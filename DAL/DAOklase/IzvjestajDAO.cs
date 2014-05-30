@@ -17,7 +17,7 @@ namespace DAL
             {
                 try
                 {
-                    c = new MySqlCommand(String.Format("INSERT INTO Izvjestaji VALUES ('{0}', '{1}', '{2}', '{3}', '{4}');",
+                    c = new MySqlCommand(String.Format("INSERT INTO Izvjestaji VALUES ('{0}', '{1}', '{2}', '{3}');",
                         entity.ID, entity.IDuposlenik, entity.DatumIzvjestaja.ToShortDateString(), entity.SadrzajIzvjestaja), con);
                     c.ExecuteNonQuery();
                     return c.LastInsertedId;

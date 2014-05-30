@@ -59,6 +59,30 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Izvjestaji\DodavanjeIzvjestaja.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Izvjestaji\DodavanjeIzvjestaja.Designer.cs">
+      <DependentUpon>DodavanjeIzvjestaja.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Izvjestaji\EditovanjeIzvjestaja.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Izvjestaji\EditovanjeIzvjestaja.Designer.cs">
+      <DependentUpon>EditovanjeIzvjestaja.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Klijenti\DodavanjeKlijenata.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Klijenti\DodavanjeKlijenata.Designer.cs">
+      <DependentUpon>DodavanjeKlijenata.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Klijenti\EditovanjeKlijenata.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Klijenti\EditovanjeKlijenata.Designer.cs">
+      <DependentUpon>EditovanjeKlijenata.cs</DependentUpon>
+    </Compile>
     <Compile Include="Login.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -70,6 +94,18 @@
     </Compile>
     <Compile Include="MainPage.Designer.cs">
       <DependentUpon>MainPage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Oprema\DodavanjeOpreme.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Oprema\DodavanjeOpreme.Designer.cs">
+      <DependentUpon>DodavanjeOpreme.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Oprema\EditovanjeOpreme.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Oprema\EditovanjeOpreme.Designer.cs">
+      <DependentUpon>EditovanjeOpreme.cs</DependentUpon>
     </Compile>
     <Compile Include="Prehrambeni programi\DodavanjePrehrambenihPrograma.cs">
       <SubType>Form</SubType>
@@ -96,6 +132,18 @@
     </Compile>
     <Compile Include="Prostorije\EditovanjeProstorija.Designer.cs">
       <DependentUpon>EditovanjeProstorija.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Sprave\DodavanjeSprava.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Sprave\DodavanjeSprava.Designer.cs">
+      <DependentUpon>DodavanjeSprava.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Sprave\EditovanjeSprava.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Sprave\EditovanjeSprava.Designer.cs">
+      <DependentUpon>EditovanjeSprava.cs</DependentUpon>
     </Compile>
     <Compile Include="Suplementi\DodavanjeSuplemenata.cs">
       <SubType>Form</SubType>
@@ -133,11 +181,29 @@
     <Compile Include="WorkoutProgrami\EditovanjeWorkoutPrograma.Designer.cs">
       <DependentUpon>EditovanjeWorkoutPrograma.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Izvjestaji\DodavanjeIzvjestaja.resx">
+      <DependentUpon>DodavanjeIzvjestaja.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Izvjestaji\EditovanjeIzvjestaja.resx">
+      <DependentUpon>EditovanjeIzvjestaja.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Klijenti\DodavanjeKlijenata.resx">
+      <DependentUpon>DodavanjeKlijenata.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Klijenti\EditovanjeKlijenata.resx">
+      <DependentUpon>EditovanjeKlijenata.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Login.resx">
       <DependentUpon>Login.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MainPage.resx">
       <DependentUpon>MainPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Oprema\DodavanjeOpreme.resx">
+      <DependentUpon>DodavanjeOpreme.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Oprema\EditovanjeOpreme.resx">
+      <DependentUpon>EditovanjeOpreme.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Prehrambeni programi\DodavanjePrehrambenihPrograma.resx">
       <DependentUpon>DodavanjePrehrambenihPrograma.cs</DependentUpon>
@@ -159,6 +225,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Prostorije\EditovanjeProstorija.resx">
       <DependentUpon>EditovanjeProstorija.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Sprave\DodavanjeSprava.resx">
+      <DependentUpon>DodavanjeSprava.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Sprave\EditovanjeSprava.resx">
+      <DependentUpon>EditovanjeSprava.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Suplementi\DodavanjeSuplemenata.resx">
       <DependentUpon>DodavanjeSuplemenata.cs</DependentUpon>
@@ -215,12 +287,7 @@
       <Name>DAL</Name>
     </ProjectReference>
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Izvjestaji\" />
-    <Folder Include="Klijenti\" />
-    <Folder Include="Oprema\" />
-    <Folder Include="Sprave\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
