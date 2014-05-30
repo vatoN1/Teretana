@@ -32,9 +32,9 @@
             this.izadjiButton = new System.Windows.Forms.Button();
             this.unosButton = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.richTextBox2 = new System.Windows.Forms.RichTextBox();
-            this.richTextBox1 = new System.Windows.Forms.RichTextBox();
-            this.imetb = new System.Windows.Forms.TextBox();
+            this.obroci_pprogram_rich_box = new System.Windows.Forms.RichTextBox();
+            this.opis_pprogram_rich_box = new System.Windows.Forms.RichTextBox();
+            this.tip_pprogram_box = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
@@ -64,9 +64,9 @@
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.richTextBox2);
-            this.groupBox1.Controls.Add(this.richTextBox1);
-            this.groupBox1.Controls.Add(this.imetb);
+            this.groupBox1.Controls.Add(this.obroci_pprogram_rich_box);
+            this.groupBox1.Controls.Add(this.opis_pprogram_rich_box);
+            this.groupBox1.Controls.Add(this.tip_pprogram_box);
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Controls.Add(this.label3);
             this.groupBox1.Controls.Add(this.label5);
@@ -77,28 +77,28 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Unos prehrambenog programa:";
             // 
-            // richTextBox2
+            // obroci_pprogram_rich_box
             // 
-            this.richTextBox2.Location = new System.Drawing.Point(166, 152);
-            this.richTextBox2.Name = "richTextBox2";
-            this.richTextBox2.Size = new System.Drawing.Size(144, 80);
-            this.richTextBox2.TabIndex = 23;
-            this.richTextBox2.Text = "";
+            this.obroci_pprogram_rich_box.Location = new System.Drawing.Point(166, 152);
+            this.obroci_pprogram_rich_box.Name = "obroci_pprogram_rich_box";
+            this.obroci_pprogram_rich_box.Size = new System.Drawing.Size(144, 80);
+            this.obroci_pprogram_rich_box.TabIndex = 23;
+            this.obroci_pprogram_rich_box.Text = "";
             // 
-            // richTextBox1
+            // opis_pprogram_rich_box
             // 
-            this.richTextBox1.Location = new System.Drawing.Point(166, 58);
-            this.richTextBox1.Name = "richTextBox1";
-            this.richTextBox1.Size = new System.Drawing.Size(144, 88);
-            this.richTextBox1.TabIndex = 22;
-            this.richTextBox1.Text = "";
+            this.opis_pprogram_rich_box.Location = new System.Drawing.Point(166, 58);
+            this.opis_pprogram_rich_box.Name = "opis_pprogram_rich_box";
+            this.opis_pprogram_rich_box.Size = new System.Drawing.Size(144, 88);
+            this.opis_pprogram_rich_box.TabIndex = 22;
+            this.opis_pprogram_rich_box.Text = "";
             // 
-            // imetb
+            // tip_pprogram_box
             // 
-            this.imetb.Location = new System.Drawing.Point(166, 30);
-            this.imetb.Name = "imetb";
-            this.imetb.Size = new System.Drawing.Size(144, 20);
-            this.imetb.TabIndex = 21;
+            this.tip_pprogram_box.Location = new System.Drawing.Point(166, 30);
+            this.tip_pprogram_box.Name = "tip_pprogram_box";
+            this.tip_pprogram_box.Size = new System.Drawing.Size(144, 20);
+            this.tip_pprogram_box.TabIndex = 21;
             // 
             // label2
             // 
@@ -169,9 +169,9 @@
         private System.Windows.Forms.Button izadjiButton;
         private System.Windows.Forms.Button unosButton;
         private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.RichTextBox richTextBox2;
-        private System.Windows.Forms.RichTextBox richTextBox1;
-        private System.Windows.Forms.TextBox imetb;
+        private System.Windows.Forms.RichTextBox obroci_pprogram_rich_box;
+        private System.Windows.Forms.RichTextBox opis_pprogram_rich_box;
+        private System.Windows.Forms.TextBox tip_pprogram_box;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label5;

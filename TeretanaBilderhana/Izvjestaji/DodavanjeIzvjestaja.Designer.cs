@@ -30,10 +30,10 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(DodavanjeIzvjestaja));
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.richTextBox1 = new System.Windows.Forms.RichTextBox();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.sadrzaj_rich_box = new System.Windows.Forms.RichTextBox();
+            this.izvjestaj_datetime = new System.Windows.Forms.DateTimePicker();
             this.label5 = new System.Windows.Forms.Label();
-            this.maskedTextBox2 = new System.Windows.Forms.MaskedTextBox();
+            this.id_uposlenik_masked_box = new System.Windows.Forms.MaskedTextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.izadjiButton = new System.Windows.Forms.Button();
@@ -46,10 +46,10 @@
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.richTextBox1);
-            this.groupBox1.Controls.Add(this.dateTimePicker1);
+            this.groupBox1.Controls.Add(this.sadrzaj_rich_box);
+            this.groupBox1.Controls.Add(this.izvjestaj_datetime);
             this.groupBox1.Controls.Add(this.label5);
-            this.groupBox1.Controls.Add(this.maskedTextBox2);
+            this.groupBox1.Controls.Add(this.id_uposlenik_masked_box);
             this.groupBox1.Controls.Add(this.label3);
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Location = new System.Drawing.Point(12, 12);
@@ -59,20 +59,20 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Dodavanje izvjestaja:";
             // 
-            // richTextBox1
+            // sadrzaj_rich_box
             // 
-            this.richTextBox1.Location = new System.Drawing.Point(120, 73);
-            this.richTextBox1.Name = "richTextBox1";
-            this.richTextBox1.Size = new System.Drawing.Size(144, 96);
-            this.richTextBox1.TabIndex = 31;
-            this.richTextBox1.Text = "";
+            this.sadrzaj_rich_box.Location = new System.Drawing.Point(120, 73);
+            this.sadrzaj_rich_box.Name = "sadrzaj_rich_box";
+            this.sadrzaj_rich_box.Size = new System.Drawing.Size(144, 96);
+            this.sadrzaj_rich_box.TabIndex = 31;
+            this.sadrzaj_rich_box.Text = "";
             // 
-            // dateTimePicker1
+            // izvjestaj_datetime
             // 
-            this.dateTimePicker1.Location = new System.Drawing.Point(120, 45);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(144, 20);
-            this.dateTimePicker1.TabIndex = 30;
+            this.izvjestaj_datetime.Location = new System.Drawing.Point(120, 45);
+            this.izvjestaj_datetime.Name = "izvjestaj_datetime";
+            this.izvjestaj_datetime.Size = new System.Drawing.Size(144, 20);
+            this.izvjestaj_datetime.TabIndex = 30;
             // 
             // label5
             // 
@@ -83,14 +83,14 @@
             this.label5.TabIndex = 29;
             this.label5.Text = "ID uposlenika:";
             // 
-            // maskedTextBox2
+            // id_uposlenik_masked_box
             // 
-            this.maskedTextBox2.Location = new System.Drawing.Point(120, 19);
-            this.maskedTextBox2.Mask = "00000";
-            this.maskedTextBox2.Name = "maskedTextBox2";
-            this.maskedTextBox2.Size = new System.Drawing.Size(144, 20);
-            this.maskedTextBox2.TabIndex = 28;
-            this.maskedTextBox2.ValidatingType = typeof(int);
+            this.id_uposlenik_masked_box.Location = new System.Drawing.Point(120, 19);
+            this.id_uposlenik_masked_box.Mask = "00000";
+            this.id_uposlenik_masked_box.Name = "id_uposlenik_masked_box";
+            this.id_uposlenik_masked_box.Size = new System.Drawing.Size(144, 20);
+            this.id_uposlenik_masked_box.TabIndex = 28;
+            this.id_uposlenik_masked_box.ValidatingType = typeof(int);
             // 
             // label3
             // 
@@ -169,10 +169,10 @@
         #endregion
 
         private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.RichTextBox richTextBox1;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
+        private System.Windows.Forms.RichTextBox sadrzaj_rich_box;
+        private System.Windows.Forms.DateTimePicker izvjestaj_datetime;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.MaskedTextBox maskedTextBox2;
+        private System.Windows.Forms.MaskedTextBox id_uposlenik_masked_box;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button izadjiButton;

@@ -33,16 +33,16 @@
             this.unosButton = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.label5 = new System.Windows.Forms.Label();
-            this.numericUpDown2 = new System.Windows.Forms.NumericUpDown();
+            this.kolicina_numeric = new System.Windows.Forms.NumericUpDown();
             this.label4 = new System.Windows.Forms.Label();
-            this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
-            this.imetb = new System.Windows.Forms.TextBox();
+            this.starost_numeric = new System.Windows.Forms.NumericUpDown();
+            this.tip_sprave_box = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.toolStripStatusLabel1 = new System.Windows.Forms.ToolStripStatusLabel();
             this.statusStrip1 = new System.Windows.Forms.StatusStrip();
             this.groupBox1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.kolicina_numeric)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.starost_numeric)).BeginInit();
             this.statusStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -67,10 +67,10 @@
             // groupBox1
             // 
             this.groupBox1.Controls.Add(this.label5);
-            this.groupBox1.Controls.Add(this.numericUpDown2);
+            this.groupBox1.Controls.Add(this.kolicina_numeric);
             this.groupBox1.Controls.Add(this.label4);
-            this.groupBox1.Controls.Add(this.numericUpDown1);
-            this.groupBox1.Controls.Add(this.imetb);
+            this.groupBox1.Controls.Add(this.starost_numeric);
+            this.groupBox1.Controls.Add(this.tip_sprave_box);
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Location = new System.Drawing.Point(12, 12);
             this.groupBox1.Name = "groupBox1";
@@ -88,12 +88,12 @@
             this.label5.TabIndex = 31;
             this.label5.Text = "Kolicina:";
             // 
-            // numericUpDown2
+            // kolicina_numeric
             // 
-            this.numericUpDown2.Location = new System.Drawing.Point(116, 47);
-            this.numericUpDown2.Name = "numericUpDown2";
-            this.numericUpDown2.Size = new System.Drawing.Size(144, 20);
-            this.numericUpDown2.TabIndex = 30;
+            this.kolicina_numeric.Location = new System.Drawing.Point(116, 47);
+            this.kolicina_numeric.Name = "kolicina_numeric";
+            this.kolicina_numeric.Size = new System.Drawing.Size(144, 20);
+            this.kolicina_numeric.TabIndex = 30;
             // 
             // label4
             // 
@@ -104,19 +104,19 @@
             this.label4.TabIndex = 29;
             this.label4.Text = "Starost:";
             // 
-            // numericUpDown1
+            // starost_numeric
             // 
-            this.numericUpDown1.Location = new System.Drawing.Point(116, 73);
-            this.numericUpDown1.Name = "numericUpDown1";
-            this.numericUpDown1.Size = new System.Drawing.Size(144, 20);
-            this.numericUpDown1.TabIndex = 28;
+            this.starost_numeric.Location = new System.Drawing.Point(116, 73);
+            this.starost_numeric.Name = "starost_numeric";
+            this.starost_numeric.Size = new System.Drawing.Size(144, 20);
+            this.starost_numeric.TabIndex = 28;
             // 
-            // imetb
+            // tip_sprave_box
             // 
-            this.imetb.Location = new System.Drawing.Point(116, 21);
-            this.imetb.Name = "imetb";
-            this.imetb.Size = new System.Drawing.Size(144, 20);
-            this.imetb.TabIndex = 14;
+            this.tip_sprave_box.Location = new System.Drawing.Point(116, 21);
+            this.tip_sprave_box.Name = "tip_sprave_box";
+            this.tip_sprave_box.Size = new System.Drawing.Size(144, 20);
+            this.tip_sprave_box.TabIndex = 14;
             // 
             // label2
             // 
@@ -158,8 +158,8 @@
             this.Text = "Dodavanje sprava";
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.kolicina_numeric)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.starost_numeric)).EndInit();
             this.statusStrip1.ResumeLayout(false);
             this.statusStrip1.PerformLayout();
             this.ResumeLayout(false);
@@ -173,10 +173,10 @@
         private System.Windows.Forms.Button unosButton;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.NumericUpDown numericUpDown2;
+        private System.Windows.Forms.NumericUpDown kolicina_numeric;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.NumericUpDown numericUpDown1;
-        private System.Windows.Forms.TextBox imetb;
+        private System.Windows.Forms.NumericUpDown starost_numeric;
+        private System.Windows.Forms.TextBox tip_sprave_box;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.ToolStripStatusLabel toolStripStatusLabel1;
         private System.Windows.Forms.StatusStrip statusStrip1;

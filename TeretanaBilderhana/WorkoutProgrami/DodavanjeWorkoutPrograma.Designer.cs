@@ -30,9 +30,9 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(DodavanjeWorkoutPrograma));
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.richTextBox2 = new System.Windows.Forms.RichTextBox();
-            this.richTextBox1 = new System.Windows.Forms.RichTextBox();
-            this.imetb = new System.Windows.Forms.TextBox();
+            this.vjezbe_rich_box = new System.Windows.Forms.RichTextBox();
+            this.opis_wprogram_rich_box = new System.Windows.Forms.RichTextBox();
+            this.tip_wprogram_box = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
@@ -46,9 +46,9 @@
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.richTextBox2);
-            this.groupBox1.Controls.Add(this.richTextBox1);
-            this.groupBox1.Controls.Add(this.imetb);
+            this.groupBox1.Controls.Add(this.vjezbe_rich_box);
+            this.groupBox1.Controls.Add(this.opis_wprogram_rich_box);
+            this.groupBox1.Controls.Add(this.tip_wprogram_box);
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Controls.Add(this.label3);
             this.groupBox1.Controls.Add(this.label5);
@@ -60,28 +60,28 @@
             this.groupBox1.Text = "Unos workout programa:";
             this.groupBox1.Enter += new System.EventHandler(this.groupBox1_Enter);
             // 
-            // richTextBox2
+            // vjezbe_rich_box
             // 
-            this.richTextBox2.Location = new System.Drawing.Point(141, 152);
-            this.richTextBox2.Name = "richTextBox2";
-            this.richTextBox2.Size = new System.Drawing.Size(144, 80);
-            this.richTextBox2.TabIndex = 17;
-            this.richTextBox2.Text = "";
+            this.vjezbe_rich_box.Location = new System.Drawing.Point(141, 152);
+            this.vjezbe_rich_box.Name = "vjezbe_rich_box";
+            this.vjezbe_rich_box.Size = new System.Drawing.Size(144, 80);
+            this.vjezbe_rich_box.TabIndex = 17;
+            this.vjezbe_rich_box.Text = "";
             // 
-            // richTextBox1
+            // opis_wprogram_rich_box
             // 
-            this.richTextBox1.Location = new System.Drawing.Point(141, 58);
-            this.richTextBox1.Name = "richTextBox1";
-            this.richTextBox1.Size = new System.Drawing.Size(144, 88);
-            this.richTextBox1.TabIndex = 16;
-            this.richTextBox1.Text = "";
+            this.opis_wprogram_rich_box.Location = new System.Drawing.Point(141, 58);
+            this.opis_wprogram_rich_box.Name = "opis_wprogram_rich_box";
+            this.opis_wprogram_rich_box.Size = new System.Drawing.Size(144, 88);
+            this.opis_wprogram_rich_box.TabIndex = 16;
+            this.opis_wprogram_rich_box.Text = "";
             // 
-            // imetb
+            // tip_wprogram_box
             // 
-            this.imetb.Location = new System.Drawing.Point(141, 30);
-            this.imetb.Name = "imetb";
-            this.imetb.Size = new System.Drawing.Size(144, 20);
-            this.imetb.TabIndex = 14;
+            this.tip_wprogram_box.Location = new System.Drawing.Point(141, 30);
+            this.tip_wprogram_box.Name = "tip_wprogram_box";
+            this.tip_wprogram_box.Size = new System.Drawing.Size(144, 20);
+            this.tip_wprogram_box.TabIndex = 14;
             // 
             // label2
             // 
@@ -169,12 +169,12 @@
         #endregion
 
         private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.TextBox imetb;
+        private System.Windows.Forms.TextBox tip_wprogram_box;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.RichTextBox richTextBox2;
-        private System.Windows.Forms.RichTextBox richTextBox1;
+        private System.Windows.Forms.RichTextBox vjezbe_rich_box;
+        private System.Windows.Forms.RichTextBox opis_wprogram_rich_box;
         private System.Windows.Forms.Button izadjiButton;
         private System.Windows.Forms.Button unosButton;
         private System.Windows.Forms.StatusStrip statusStrip1;

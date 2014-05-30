@@ -29,12 +29,13 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Login));
             this.loginButton = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.IDtextbox = new System.Windows.Forms.TextBox();
             this.passtextbox = new System.Windows.Forms.TextBox();
-            this.button2 = new System.Windows.Forms.Button();
+            this.izadjiButton = new System.Windows.Forms.Button();
             this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             this.SuspendLayout();
@@ -98,18 +99,18 @@
             this.passtextbox.Size = new System.Drawing.Size(112, 20);
             this.passtextbox.TabIndex = 4;
             // 
-            // button2
+            // izadjiButton
             // 
-            this.button2.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.izadjiButton.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.button2.Location = new System.Drawing.Point(225, 137);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(75, 23);
-            this.button2.TabIndex = 5;
-            this.button2.Text = "Izadji";
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
+            this.izadjiButton.Location = new System.Drawing.Point(225, 137);
+            this.izadjiButton.Name = "izadjiButton";
+            this.izadjiButton.Size = new System.Drawing.Size(75, 23);
+            this.izadjiButton.TabIndex = 5;
+            this.izadjiButton.Text = "Izadji";
+            this.izadjiButton.UseVisualStyleBackColor = true;
+            this.izadjiButton.Click += new System.EventHandler(this.button2_Click);
             // 
             // errorProvider1
             // 
@@ -122,17 +123,17 @@
             this.AutoSize = true;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.ClientSize = new System.Drawing.Size(421, 189);
-            this.Controls.Add(this.button2);
+            this.Controls.Add(this.izadjiButton);
             this.Controls.Add(this.passtextbox);
             this.Controls.Add(this.IDtextbox);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.loginButton);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximumSize = new System.Drawing.Size(437, 228);
             this.MinimizeBox = false;
             this.MinimumSize = new System.Drawing.Size(437, 228);
             this.Name = "Login";
-            this.ShowIcon = false;
             this.Text = "Bilderhana v1.2";
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
             this.ResumeLayout(false);
@@ -147,7 +148,7 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox IDtextbox;
         private System.Windows.Forms.TextBox passtextbox;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button izadjiButton;
         private System.Windows.Forms.ErrorProvider errorProvider1;
     }
 }

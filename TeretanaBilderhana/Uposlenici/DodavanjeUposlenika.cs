@@ -23,8 +23,8 @@ namespace TeretanaBilderhana
             return (
                 (errorProvider1.GetError(imetb) == "") && 
                 (errorProvider1.GetError(prezimetb) == "") && 
-                (errorProvider1.GetError(kontakttb) == "") && 
-                (errorProvider1.GetError(sifratb) == "") &&
+                (errorProvider1.GetError(kontakt_masked_box) == "") && 
+                (errorProvider1.GetError(sifra_box) == "") &&
                 (errorProvider1.GetError(platatb) == ""));
         }
 
@@ -33,14 +33,14 @@ namespace TeretanaBilderhana
         {
             if (validiraj())
             {
-                String zaposlenje = zaposlenjecb.SelectedValue as String;
+                String zaposlenje = zaposlenje_combo.SelectedValue as String;
                 String Spol="Musko";
                 Random id = new Random();
                 int r = id.Next(11111, 99999);
                 if(zenskoRB.Checked) Spol="Zensko"; 
                 Uposlenik Uposlenik = new Uposlenik(
-                    r, imetb.Text, prezimetb.Text, Spol, datumRodjenjadtp.Value, datumZaposlenjadtp.Value,
-                    Convert.ToDecimal(platatb.Text), kontakttb.Text, zaposlenje, sifratb.Text);
+                    r, imetb.Text, prezimetb.Text, Spol, rodjenje_datetime.Value, zaposlenje_datetime.Value,
+                    Convert.ToDecimal(platatb.Text), kontakt_masked_box.Text, zaposlenje, sifra_box.Text);
 
                 DAL.DAL d = DAL.DAL.Instanca;
                 
@@ -98,42 +98,42 @@ namespace TeretanaBilderhana
 
         private void sifratb_Validating(object sender, CancelEventArgs e)
         {
-            if (sifratb.Text.Length < 5)
+            if (sifra_box.Text.Length < 5)
             {
-                errorProvider1.SetError(sifratb, "Prekratka sifra!");
+                errorProvider1.SetError(sifra_box, "Prekratka sifra!");
                 toolStripStatusLabel1.Text = "Prekratka sifra!";
             }
             else
             {
-                errorProvider1.SetError(sifratb, "");
+                errorProvider1.SetError(sifra_box, "");
                 toolStripStatusLabel1.Text = "";
             }
         }
 
         private void kontakttb_Validating(object sender, CancelEventArgs e)
         {
-            if (kontakttb.Text.Length != 9)
+            if (kontakt_masked_box.Text.Length != 9)
             {
-                errorProvider1.SetError(kontakttb, "Nedovoljan broj karaktera!");
+                errorProvider1.SetError(kontakt_masked_box, "Nedovoljan broj karaktera!");
                 toolStripStatusLabel1.Text = "Nedovoljan broj karaktera!";
             }
             else
             {
-                errorProvider1.SetError(kontakttb, "");
+                errorProvider1.SetError(kontakt_masked_box, "");
                 toolStripStatusLabel1.Text = "";
             }
         }
 
         private void zaposlenje_Validating(object sender, CancelEventArgs e)
         {
-            if (zaposlenjecb.SelectedItem == null)
+            if (zaposlenje_combo.SelectedItem == null)
             {
-                errorProvider1.SetError(zaposlenjecb, "Odaberite zaposlenje!");
+                errorProvider1.SetError(zaposlenje_combo, "Odaberite zaposlenje!");
                 toolStripStatusLabel1.Text = "Odaberite zaposlenje!";
             }
             else
             {
-                errorProvider1.SetError(zaposlenjecb, "");
+                errorProvider1.SetError(zaposlenje_combo, "");
                 toolStripStatusLabel1.Text = "";
             }
         }

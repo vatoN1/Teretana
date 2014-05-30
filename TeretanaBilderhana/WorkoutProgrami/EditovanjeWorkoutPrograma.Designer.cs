@@ -28,14 +28,15 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(EditovanjeWorkoutPrograma));
             this.izadjiButton = new System.Windows.Forms.Button();
             this.unosButton = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.maskedTextBox1 = new System.Windows.Forms.MaskedTextBox();
+            this.wprogramID_masked_box = new System.Windows.Forms.MaskedTextBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.richTextBox2 = new System.Windows.Forms.RichTextBox();
-            this.richTextBox1 = new System.Windows.Forms.RichTextBox();
-            this.imetb = new System.Windows.Forms.TextBox();
+            this.vjezbe_rich_box = new System.Windows.Forms.RichTextBox();
+            this.opis_wprogram_rich_box = new System.Windows.Forms.RichTextBox();
+            this.tip_wprogram_box = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
@@ -65,11 +66,11 @@
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.maskedTextBox1);
+            this.groupBox1.Controls.Add(this.wprogramID_masked_box);
             this.groupBox1.Controls.Add(this.label1);
-            this.groupBox1.Controls.Add(this.richTextBox2);
-            this.groupBox1.Controls.Add(this.richTextBox1);
-            this.groupBox1.Controls.Add(this.imetb);
+            this.groupBox1.Controls.Add(this.vjezbe_rich_box);
+            this.groupBox1.Controls.Add(this.opis_wprogram_rich_box);
+            this.groupBox1.Controls.Add(this.tip_wprogram_box);
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Controls.Add(this.label3);
             this.groupBox1.Controls.Add(this.label5);
@@ -80,14 +81,14 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Editovanje workout programa:";
             // 
-            // maskedTextBox1
+            // wprogramID_masked_box
             // 
-            this.maskedTextBox1.Location = new System.Drawing.Point(139, 23);
-            this.maskedTextBox1.Mask = "00000";
-            this.maskedTextBox1.Name = "maskedTextBox1";
-            this.maskedTextBox1.Size = new System.Drawing.Size(144, 20);
-            this.maskedTextBox1.TabIndex = 23;
-            this.maskedTextBox1.ValidatingType = typeof(int);
+            this.wprogramID_masked_box.Location = new System.Drawing.Point(139, 23);
+            this.wprogramID_masked_box.Mask = "00000";
+            this.wprogramID_masked_box.Name = "wprogramID_masked_box";
+            this.wprogramID_masked_box.Size = new System.Drawing.Size(144, 20);
+            this.wprogramID_masked_box.TabIndex = 23;
+            this.wprogramID_masked_box.ValidatingType = typeof(int);
             // 
             // label1
             // 
@@ -98,28 +99,28 @@
             this.label1.TabIndex = 18;
             this.label1.Text = "Unesite ID:";
             // 
-            // richTextBox2
+            // vjezbe_rich_box
             // 
-            this.richTextBox2.Location = new System.Drawing.Point(139, 176);
-            this.richTextBox2.Name = "richTextBox2";
-            this.richTextBox2.Size = new System.Drawing.Size(144, 80);
-            this.richTextBox2.TabIndex = 17;
-            this.richTextBox2.Text = "";
+            this.vjezbe_rich_box.Location = new System.Drawing.Point(139, 176);
+            this.vjezbe_rich_box.Name = "vjezbe_rich_box";
+            this.vjezbe_rich_box.Size = new System.Drawing.Size(144, 80);
+            this.vjezbe_rich_box.TabIndex = 17;
+            this.vjezbe_rich_box.Text = "";
             // 
-            // richTextBox1
+            // opis_wprogram_rich_box
             // 
-            this.richTextBox1.Location = new System.Drawing.Point(139, 82);
-            this.richTextBox1.Name = "richTextBox1";
-            this.richTextBox1.Size = new System.Drawing.Size(144, 88);
-            this.richTextBox1.TabIndex = 16;
-            this.richTextBox1.Text = "";
+            this.opis_wprogram_rich_box.Location = new System.Drawing.Point(139, 82);
+            this.opis_wprogram_rich_box.Name = "opis_wprogram_rich_box";
+            this.opis_wprogram_rich_box.Size = new System.Drawing.Size(144, 88);
+            this.opis_wprogram_rich_box.TabIndex = 16;
+            this.opis_wprogram_rich_box.Text = "";
             // 
-            // imetb
+            // tip_wprogram_box
             // 
-            this.imetb.Location = new System.Drawing.Point(139, 54);
-            this.imetb.Name = "imetb";
-            this.imetb.Size = new System.Drawing.Size(144, 20);
-            this.imetb.TabIndex = 14;
+            this.tip_wprogram_box.Location = new System.Drawing.Point(139, 54);
+            this.tip_wprogram_box.Name = "tip_wprogram_box";
+            this.tip_wprogram_box.Size = new System.Drawing.Size(144, 20);
+            this.tip_wprogram_box.TabIndex = 14;
             // 
             // label2
             // 
@@ -173,6 +174,7 @@
             this.Controls.Add(this.izadjiButton);
             this.Controls.Add(this.unosButton);
             this.Controls.Add(this.groupBox1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MinimizeBox = false;
             this.Name = "EditovanjeWorkoutPrograma";
             this.Text = "EditovanjeWorkoutPrograma";
@@ -190,14 +192,14 @@
         private System.Windows.Forms.Button izadjiButton;
         private System.Windows.Forms.Button unosButton;
         private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.RichTextBox richTextBox2;
-        private System.Windows.Forms.RichTextBox richTextBox1;
-        private System.Windows.Forms.TextBox imetb;
+        private System.Windows.Forms.RichTextBox vjezbe_rich_box;
+        private System.Windows.Forms.RichTextBox opis_wprogram_rich_box;
+        private System.Windows.Forms.TextBox tip_wprogram_box;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.MaskedTextBox maskedTextBox1;
+        private System.Windows.Forms.MaskedTextBox wprogramID_masked_box;
         private System.Windows.Forms.StatusStrip statusStrip1;
         private System.Windows.Forms.ToolStripStatusLabel toolStripStatusLabel1;
     }

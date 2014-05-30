@@ -30,15 +30,15 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(EditovanjeProstorija));
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.maskedTextBox1 = new System.Windows.Forms.MaskedTextBox();
-            this.imetb = new System.Windows.Forms.TextBox();
-            this.label2 = new System.Windows.Forms.Label();
-            this.muskoRB = new System.Windows.Forms.RadioButton();
-            this.zenskoRB = new System.Windows.Forms.RadioButton();
-            this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.richTextBox1 = new System.Windows.Forms.RichTextBox();
+            this.inventar_rich_box = new System.Windows.Forms.RichTextBox();
             this.label3 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.prostorijaID_masked_box = new System.Windows.Forms.MaskedTextBox();
+            this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.dostupna_NE = new System.Windows.Forms.RadioButton();
+            this.dostupna_DA = new System.Windows.Forms.RadioButton();
+            this.naziv_prostorije_box = new System.Windows.Forms.TextBox();
+            this.label2 = new System.Windows.Forms.Label();
             this.statusStrip1 = new System.Windows.Forms.StatusStrip();
             this.toolStripStatusLabel1 = new System.Windows.Forms.ToolStripStatusLabel();
             this.izadjiButton = new System.Windows.Forms.Button();
@@ -50,12 +50,12 @@
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.richTextBox1);
+            this.groupBox1.Controls.Add(this.inventar_rich_box);
             this.groupBox1.Controls.Add(this.label3);
             this.groupBox1.Controls.Add(this.label1);
-            this.groupBox1.Controls.Add(this.maskedTextBox1);
+            this.groupBox1.Controls.Add(this.prostorijaID_masked_box);
             this.groupBox1.Controls.Add(this.groupBox2);
-            this.groupBox1.Controls.Add(this.imetb);
+            this.groupBox1.Controls.Add(this.naziv_prostorije_box);
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Location = new System.Drawing.Point(12, 12);
             this.groupBox1.Name = "groupBox1";
@@ -64,6 +64,23 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Editovanje prostorije:";
             this.groupBox1.Enter += new System.EventHandler(this.groupBox1_Enter);
+            // 
+            // inventar_rich_box
+            // 
+            this.inventar_rich_box.Location = new System.Drawing.Point(119, 132);
+            this.inventar_rich_box.Name = "inventar_rich_box";
+            this.inventar_rich_box.Size = new System.Drawing.Size(144, 88);
+            this.inventar_rich_box.TabIndex = 25;
+            this.inventar_rich_box.Text = "";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(64, 135);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(49, 13);
+            this.label3.TabIndex = 24;
+            this.label3.Text = "Inventar:";
             // 
             // label1
             // 
@@ -74,21 +91,55 @@
             this.label1.TabIndex = 23;
             this.label1.Text = "Unesite ID:";
             // 
-            // maskedTextBox1
+            // prostorijaID_masked_box
             // 
-            this.maskedTextBox1.Location = new System.Drawing.Point(119, 20);
-            this.maskedTextBox1.Mask = "00000";
-            this.maskedTextBox1.Name = "maskedTextBox1";
-            this.maskedTextBox1.Size = new System.Drawing.Size(144, 20);
-            this.maskedTextBox1.TabIndex = 22;
-            this.maskedTextBox1.ValidatingType = typeof(int);
+            this.prostorijaID_masked_box.Location = new System.Drawing.Point(119, 20);
+            this.prostorijaID_masked_box.Mask = "00000";
+            this.prostorijaID_masked_box.Name = "prostorijaID_masked_box";
+            this.prostorijaID_masked_box.Size = new System.Drawing.Size(144, 20);
+            this.prostorijaID_masked_box.TabIndex = 22;
+            this.prostorijaID_masked_box.ValidatingType = typeof(int);
             // 
-            // imetb
+            // groupBox2
             // 
-            this.imetb.Location = new System.Drawing.Point(119, 48);
-            this.imetb.Name = "imetb";
-            this.imetb.Size = new System.Drawing.Size(144, 20);
-            this.imetb.TabIndex = 14;
+            this.groupBox2.Controls.Add(this.dostupna_NE);
+            this.groupBox2.Controls.Add(this.dostupna_DA);
+            this.groupBox2.Location = new System.Drawing.Point(76, 74);
+            this.groupBox2.Name = "groupBox2";
+            this.groupBox2.Size = new System.Drawing.Size(187, 52);
+            this.groupBox2.TabIndex = 16;
+            this.groupBox2.TabStop = false;
+            this.groupBox2.Text = "Dostupnost:";
+            this.groupBox2.Enter += new System.EventHandler(this.groupBox2_Enter);
+            // 
+            // dostupna_NE
+            // 
+            this.dostupna_NE.AutoSize = true;
+            this.dostupna_NE.Location = new System.Drawing.Point(115, 19);
+            this.dostupna_NE.Name = "dostupna_NE";
+            this.dostupna_NE.Size = new System.Drawing.Size(39, 17);
+            this.dostupna_NE.TabIndex = 1;
+            this.dostupna_NE.TabStop = true;
+            this.dostupna_NE.Text = "Ne";
+            this.dostupna_NE.UseVisualStyleBackColor = true;
+            // 
+            // dostupna_DA
+            // 
+            this.dostupna_DA.AutoSize = true;
+            this.dostupna_DA.Location = new System.Drawing.Point(43, 19);
+            this.dostupna_DA.Name = "dostupna_DA";
+            this.dostupna_DA.Size = new System.Drawing.Size(39, 17);
+            this.dostupna_DA.TabIndex = 0;
+            this.dostupna_DA.TabStop = true;
+            this.dostupna_DA.Text = "Da";
+            this.dostupna_DA.UseVisualStyleBackColor = true;
+            // 
+            // naziv_prostorije_box
+            // 
+            this.naziv_prostorije_box.Location = new System.Drawing.Point(119, 48);
+            this.naziv_prostorije_box.Name = "naziv_prostorije_box";
+            this.naziv_prostorije_box.Size = new System.Drawing.Size(144, 20);
+            this.naziv_prostorije_box.TabIndex = 14;
             // 
             // label2
             // 
@@ -98,57 +149,6 @@
             this.label2.Size = new System.Drawing.Size(82, 13);
             this.label2.TabIndex = 1;
             this.label2.Text = "Naziv prostorije:";
-            // 
-            // muskoRB
-            // 
-            this.muskoRB.AutoSize = true;
-            this.muskoRB.Location = new System.Drawing.Point(43, 19);
-            this.muskoRB.Name = "muskoRB";
-            this.muskoRB.Size = new System.Drawing.Size(39, 17);
-            this.muskoRB.TabIndex = 0;
-            this.muskoRB.TabStop = true;
-            this.muskoRB.Text = "Da";
-            this.muskoRB.UseVisualStyleBackColor = true;
-            // 
-            // zenskoRB
-            // 
-            this.zenskoRB.AutoSize = true;
-            this.zenskoRB.Location = new System.Drawing.Point(115, 19);
-            this.zenskoRB.Name = "zenskoRB";
-            this.zenskoRB.Size = new System.Drawing.Size(39, 17);
-            this.zenskoRB.TabIndex = 1;
-            this.zenskoRB.TabStop = true;
-            this.zenskoRB.Text = "Ne";
-            this.zenskoRB.UseVisualStyleBackColor = true;
-            // 
-            // groupBox2
-            // 
-            this.groupBox2.Controls.Add(this.zenskoRB);
-            this.groupBox2.Controls.Add(this.muskoRB);
-            this.groupBox2.Location = new System.Drawing.Point(76, 74);
-            this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(187, 52);
-            this.groupBox2.TabIndex = 16;
-            this.groupBox2.TabStop = false;
-            this.groupBox2.Text = "Dostupnost:";
-            this.groupBox2.Enter += new System.EventHandler(this.groupBox2_Enter);
-            // 
-            // richTextBox1
-            // 
-            this.richTextBox1.Location = new System.Drawing.Point(119, 132);
-            this.richTextBox1.Name = "richTextBox1";
-            this.richTextBox1.Size = new System.Drawing.Size(144, 88);
-            this.richTextBox1.TabIndex = 25;
-            this.richTextBox1.Text = "";
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(64, 135);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(49, 13);
-            this.label3.TabIndex = 24;
-            this.label3.Text = "Inventar:";
             // 
             // statusStrip1
             // 
@@ -212,13 +212,13 @@
 
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.MaskedTextBox maskedTextBox1;
-        private System.Windows.Forms.TextBox imetb;
+        private System.Windows.Forms.MaskedTextBox prostorijaID_masked_box;
+        private System.Windows.Forms.TextBox naziv_prostorije_box;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.GroupBox groupBox2;
-        private System.Windows.Forms.RadioButton zenskoRB;
-        private System.Windows.Forms.RadioButton muskoRB;
-        private System.Windows.Forms.RichTextBox richTextBox1;
+        private System.Windows.Forms.RadioButton dostupna_NE;
+        private System.Windows.Forms.RadioButton dostupna_DA;
+        private System.Windows.Forms.RichTextBox inventar_rich_box;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.StatusStrip statusStrip1;
         private System.Windows.Forms.ToolStripStatusLabel toolStripStatusLabel1;

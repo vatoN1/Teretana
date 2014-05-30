@@ -30,7 +30,7 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(DodavanjeKlijenata));
-            this.maskedTextBox3 = new System.Windows.Forms.MaskedTextBox();
+            this.nutricionstaID_masked_box = new System.Windows.Forms.MaskedTextBox();
             this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
             this.label3 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
@@ -38,7 +38,7 @@
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.toolStripStatusLabel1 = new System.Windows.Forms.ToolStripStatusLabel();
-            this.maskedTextBox2 = new System.Windows.Forms.MaskedTextBox();
+            this.trenerID_masked_box = new System.Windows.Forms.MaskedTextBox();
             this.izadjiButton = new System.Windows.Forms.Button();
             this.unosButton = new System.Windows.Forms.Button();
             this.imetb = new System.Windows.Forms.TextBox();
@@ -57,14 +57,14 @@
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
-            // maskedTextBox3
+            // nutricionstaID_masked_box
             // 
-            this.maskedTextBox3.Location = new System.Drawing.Point(119, 195);
-            this.maskedTextBox3.Mask = "00000";
-            this.maskedTextBox3.Name = "maskedTextBox3";
-            this.maskedTextBox3.Size = new System.Drawing.Size(136, 20);
-            this.maskedTextBox3.TabIndex = 25;
-            this.maskedTextBox3.ValidatingType = typeof(int);
+            this.nutricionstaID_masked_box.Location = new System.Drawing.Point(119, 195);
+            this.nutricionstaID_masked_box.Mask = "00000";
+            this.nutricionstaID_masked_box.Name = "nutricionstaID_masked_box";
+            this.nutricionstaID_masked_box.Size = new System.Drawing.Size(136, 20);
+            this.nutricionstaID_masked_box.TabIndex = 25;
+            this.nutricionstaID_masked_box.ValidatingType = typeof(int);
             // 
             // errorProvider1
             // 
@@ -121,14 +121,14 @@
             this.toolStripStatusLabel1.Size = new System.Drawing.Size(118, 17);
             this.toolStripStatusLabel1.Text = "toolStripStatusLabel1";
             // 
-            // maskedTextBox2
+            // trenerID_masked_box
             // 
-            this.maskedTextBox2.Location = new System.Drawing.Point(119, 169);
-            this.maskedTextBox2.Mask = "00000";
-            this.maskedTextBox2.Name = "maskedTextBox2";
-            this.maskedTextBox2.Size = new System.Drawing.Size(136, 20);
-            this.maskedTextBox2.TabIndex = 24;
-            this.maskedTextBox2.ValidatingType = typeof(int);
+            this.trenerID_masked_box.Location = new System.Drawing.Point(119, 169);
+            this.trenerID_masked_box.Mask = "00000";
+            this.trenerID_masked_box.Name = "trenerID_masked_box";
+            this.trenerID_masked_box.Size = new System.Drawing.Size(136, 20);
+            this.trenerID_masked_box.TabIndex = 24;
+            this.trenerID_masked_box.ValidatingType = typeof(int);
             // 
             // izadjiButton
             // 
@@ -222,8 +222,8 @@
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.maskedTextBox3);
-            this.groupBox1.Controls.Add(this.maskedTextBox2);
+            this.groupBox1.Controls.Add(this.nutricionstaID_masked_box);
+            this.groupBox1.Controls.Add(this.trenerID_masked_box);
             this.groupBox1.Controls.Add(this.datumRodjenjadtp);
             this.groupBox1.Controls.Add(this.groupBox2);
             this.groupBox1.Controls.Add(this.prezimetb);
@@ -278,14 +278,14 @@
 
         #endregion
 
-        private System.Windows.Forms.MaskedTextBox maskedTextBox3;
+        private System.Windows.Forms.MaskedTextBox nutricionstaID_masked_box;
         private System.Windows.Forms.ErrorProvider errorProvider1;
         private System.Windows.Forms.Button izadjiButton;
         private System.Windows.Forms.Button unosButton;
         private System.Windows.Forms.StatusStrip statusStrip1;
         private System.Windows.Forms.ToolStripStatusLabel toolStripStatusLabel1;
         private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.MaskedTextBox maskedTextBox2;
+        private System.Windows.Forms.MaskedTextBox trenerID_masked_box;
         private System.Windows.Forms.DateTimePicker datumRodjenjadtp;
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.RadioButton zenskoRB;

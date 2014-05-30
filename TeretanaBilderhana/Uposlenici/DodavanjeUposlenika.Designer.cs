@@ -39,16 +39,16 @@
             this.label9 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.datumZaposlenjadtp = new System.Windows.Forms.DateTimePicker();
-            this.datumRodjenjadtp = new System.Windows.Forms.DateTimePicker();
-            this.sifratb = new System.Windows.Forms.TextBox();
-            this.zaposlenjecb = new System.Windows.Forms.ComboBox();
+            this.zaposlenje_datetime = new System.Windows.Forms.DateTimePicker();
+            this.rodjenje_datetime = new System.Windows.Forms.DateTimePicker();
+            this.sifra_box = new System.Windows.Forms.TextBox();
+            this.zaposlenje_combo = new System.Windows.Forms.ComboBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.zenskoRB = new System.Windows.Forms.RadioButton();
             this.muskoRB = new System.Windows.Forms.RadioButton();
             this.prezimetb = new System.Windows.Forms.TextBox();
             this.imetb = new System.Windows.Forms.TextBox();
-            this.kontakttb = new System.Windows.Forms.MaskedTextBox();
+            this.kontakt_masked_box = new System.Windows.Forms.MaskedTextBox();
             this.platatb = new System.Windows.Forms.MaskedTextBox();
             this.unosButton = new System.Windows.Forms.Button();
             this.izadjiButton = new System.Windows.Forms.Button();
@@ -135,14 +135,14 @@
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.datumZaposlenjadtp);
-            this.groupBox1.Controls.Add(this.datumRodjenjadtp);
-            this.groupBox1.Controls.Add(this.sifratb);
-            this.groupBox1.Controls.Add(this.zaposlenjecb);
+            this.groupBox1.Controls.Add(this.zaposlenje_datetime);
+            this.groupBox1.Controls.Add(this.rodjenje_datetime);
+            this.groupBox1.Controls.Add(this.sifra_box);
+            this.groupBox1.Controls.Add(this.zaposlenje_combo);
             this.groupBox1.Controls.Add(this.groupBox2);
             this.groupBox1.Controls.Add(this.prezimetb);
             this.groupBox1.Controls.Add(this.imetb);
-            this.groupBox1.Controls.Add(this.kontakttb);
+            this.groupBox1.Controls.Add(this.kontakt_masked_box);
             this.groupBox1.Controls.Add(this.platatb);
             this.groupBox1.Controls.Add(this.label10);
             this.groupBox1.Controls.Add(this.label2);
@@ -160,35 +160,35 @@
             this.groupBox1.Text = "Registracija uposlenika: ";
             this.groupBox1.Enter += new System.EventHandler(this.groupBox1_Enter);
             // 
-            // datumZaposlenjadtp
+            // zaposlenje_datetime
             // 
-            this.datumZaposlenjadtp.Location = new System.Drawing.Point(119, 192);
-            this.datumZaposlenjadtp.Name = "datumZaposlenjadtp";
-            this.datumZaposlenjadtp.Size = new System.Drawing.Size(120, 20);
-            this.datumZaposlenjadtp.TabIndex = 21;
+            this.zaposlenje_datetime.Location = new System.Drawing.Point(119, 192);
+            this.zaposlenje_datetime.Name = "zaposlenje_datetime";
+            this.zaposlenje_datetime.Size = new System.Drawing.Size(120, 20);
+            this.zaposlenje_datetime.TabIndex = 21;
             // 
-            // datumRodjenjadtp
+            // rodjenje_datetime
             // 
-            this.datumRodjenjadtp.Location = new System.Drawing.Point(120, 118);
-            this.datumRodjenjadtp.Name = "datumRodjenjadtp";
-            this.datumRodjenjadtp.Size = new System.Drawing.Size(120, 20);
-            this.datumRodjenjadtp.TabIndex = 20;
+            this.rodjenje_datetime.Location = new System.Drawing.Point(120, 118);
+            this.rodjenje_datetime.Name = "rodjenje_datetime";
+            this.rodjenje_datetime.Size = new System.Drawing.Size(120, 20);
+            this.rodjenje_datetime.TabIndex = 20;
             // 
-            // sifratb
+            // sifra_box
             // 
-            this.sifratb.Location = new System.Drawing.Point(119, 251);
-            this.sifratb.Name = "sifratb";
-            this.sifratb.Size = new System.Drawing.Size(121, 20);
-            this.sifratb.TabIndex = 19;
+            this.sifra_box.Location = new System.Drawing.Point(119, 251);
+            this.sifra_box.Name = "sifra_box";
+            this.sifra_box.Size = new System.Drawing.Size(121, 20);
+            this.sifra_box.TabIndex = 19;
             // 
-            // zaposlenjecb
+            // zaposlenje_combo
             // 
-            this.zaposlenjecb.FormattingEnabled = true;
-            this.zaposlenjecb.Location = new System.Drawing.Point(119, 222);
-            this.zaposlenjecb.Name = "zaposlenjecb";
-            this.zaposlenjecb.Size = new System.Drawing.Size(121, 21);
-            this.zaposlenjecb.TabIndex = 18;
-            this.zaposlenjecb.Validating += new System.ComponentModel.CancelEventHandler(this.zaposlenje_Validating);
+            this.zaposlenje_combo.FormattingEnabled = true;
+            this.zaposlenje_combo.Location = new System.Drawing.Point(119, 222);
+            this.zaposlenje_combo.Name = "zaposlenje_combo";
+            this.zaposlenje_combo.Size = new System.Drawing.Size(121, 21);
+            this.zaposlenje_combo.TabIndex = 18;
+            this.zaposlenje_combo.Validating += new System.ComponentModel.CancelEventHandler(this.zaposlenje_Validating);
             // 
             // groupBox2
             // 
@@ -240,13 +240,13 @@
             this.imetb.TabIndex = 14;
             this.imetb.Validating += new System.ComponentModel.CancelEventHandler(this.imetb_Validating);
             // 
-            // kontakttb
+            // kontakt_masked_box
             // 
-            this.kontakttb.Location = new System.Drawing.Point(119, 143);
-            this.kontakttb.Mask = "000000000";
-            this.kontakttb.Name = "kontakttb";
-            this.kontakttb.Size = new System.Drawing.Size(121, 20);
-            this.kontakttb.TabIndex = 13;
+            this.kontakt_masked_box.Location = new System.Drawing.Point(119, 143);
+            this.kontakt_masked_box.Mask = "000000000";
+            this.kontakt_masked_box.Name = "kontakt_masked_box";
+            this.kontakt_masked_box.Size = new System.Drawing.Size(121, 20);
+            this.kontakt_masked_box.TabIndex = 13;
             // 
             // platatb
             // 
@@ -334,10 +334,10 @@
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.TextBox prezimetb;
         private System.Windows.Forms.TextBox imetb;
-        private System.Windows.Forms.MaskedTextBox kontakttb;
+        private System.Windows.Forms.MaskedTextBox kontakt_masked_box;
         private System.Windows.Forms.MaskedTextBox platatb;
-        private System.Windows.Forms.TextBox sifratb;
-        private System.Windows.Forms.ComboBox zaposlenjecb;
+        private System.Windows.Forms.TextBox sifra_box;
+        private System.Windows.Forms.ComboBox zaposlenje_combo;
         private System.Windows.Forms.RadioButton zenskoRB;
         private System.Windows.Forms.RadioButton muskoRB;
         private System.Windows.Forms.Button unosButton;
@@ -345,7 +345,7 @@
         private System.Windows.Forms.StatusStrip statusStrip1;
         private System.Windows.Forms.ErrorProvider errorProvider1;
         private System.Windows.Forms.ToolStripStatusLabel toolStripStatusLabel1;
-        private System.Windows.Forms.DateTimePicker datumZaposlenjadtp;
-        private System.Windows.Forms.DateTimePicker datumRodjenjadtp;
+        private System.Windows.Forms.DateTimePicker zaposlenje_datetime;
+        private System.Windows.Forms.DateTimePicker rodjenje_datetime;
     }
 }

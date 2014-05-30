@@ -33,15 +33,15 @@
             this.unosButton = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.maskedTextBox1 = new System.Windows.Forms.MaskedTextBox();
-            this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
-            this.imetb = new System.Windows.Forms.TextBox();
+            this.suplementID_masked_box = new System.Windows.Forms.MaskedTextBox();
+            this.cijena_numeric = new System.Windows.Forms.NumericUpDown();
+            this.tip_suplementa_box = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.statusStrip1 = new System.Windows.Forms.StatusStrip();
             this.toolStripStatusLabel1 = new System.Windows.Forms.ToolStripStatusLabel();
             this.groupBox1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cijena_numeric)).BeginInit();
             this.statusStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -66,9 +66,9 @@
             // groupBox1
             // 
             this.groupBox1.Controls.Add(this.label1);
-            this.groupBox1.Controls.Add(this.maskedTextBox1);
-            this.groupBox1.Controls.Add(this.numericUpDown1);
-            this.groupBox1.Controls.Add(this.imetb);
+            this.groupBox1.Controls.Add(this.suplementID_masked_box);
+            this.groupBox1.Controls.Add(this.cijena_numeric);
+            this.groupBox1.Controls.Add(this.tip_suplementa_box);
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Controls.Add(this.label3);
             this.groupBox1.Location = new System.Drawing.Point(12, 12);
@@ -88,29 +88,29 @@
             this.label1.TabIndex = 25;
             this.label1.Text = "Unesite ID:";
             // 
-            // maskedTextBox1
+            // suplementID_masked_box
             // 
-            this.maskedTextBox1.Location = new System.Drawing.Point(141, 19);
-            this.maskedTextBox1.Mask = "00000";
-            this.maskedTextBox1.Name = "maskedTextBox1";
-            this.maskedTextBox1.Size = new System.Drawing.Size(144, 20);
-            this.maskedTextBox1.TabIndex = 24;
-            this.maskedTextBox1.ValidatingType = typeof(int);
+            this.suplementID_masked_box.Location = new System.Drawing.Point(141, 19);
+            this.suplementID_masked_box.Mask = "00000";
+            this.suplementID_masked_box.Name = "suplementID_masked_box";
+            this.suplementID_masked_box.Size = new System.Drawing.Size(144, 20);
+            this.suplementID_masked_box.TabIndex = 24;
+            this.suplementID_masked_box.ValidatingType = typeof(int);
             // 
-            // numericUpDown1
+            // cijena_numeric
             // 
-            this.numericUpDown1.DecimalPlaces = 2;
-            this.numericUpDown1.Location = new System.Drawing.Point(141, 89);
-            this.numericUpDown1.Name = "numericUpDown1";
-            this.numericUpDown1.Size = new System.Drawing.Size(144, 20);
-            this.numericUpDown1.TabIndex = 15;
+            this.cijena_numeric.DecimalPlaces = 2;
+            this.cijena_numeric.Location = new System.Drawing.Point(141, 89);
+            this.cijena_numeric.Name = "cijena_numeric";
+            this.cijena_numeric.Size = new System.Drawing.Size(144, 20);
+            this.cijena_numeric.TabIndex = 15;
             // 
-            // imetb
+            // tip_suplementa_box
             // 
-            this.imetb.Location = new System.Drawing.Point(141, 53);
-            this.imetb.Name = "imetb";
-            this.imetb.Size = new System.Drawing.Size(144, 20);
-            this.imetb.TabIndex = 14;
+            this.tip_suplementa_box.Location = new System.Drawing.Point(141, 53);
+            this.tip_suplementa_box.Name = "tip_suplementa_box";
+            this.tip_suplementa_box.Size = new System.Drawing.Size(144, 20);
+            this.tip_suplementa_box.TabIndex = 14;
             // 
             // label2
             // 
@@ -161,7 +161,7 @@
             this.Text = "EditovanjeSuplemenata";
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cijena_numeric)).EndInit();
             this.statusStrip1.ResumeLayout(false);
             this.statusStrip1.PerformLayout();
             this.ResumeLayout(false);
@@ -174,13 +174,13 @@
         private System.Windows.Forms.Button izadjiButton;
         private System.Windows.Forms.Button unosButton;
         private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.NumericUpDown numericUpDown1;
-        private System.Windows.Forms.TextBox imetb;
+        private System.Windows.Forms.NumericUpDown cijena_numeric;
+        private System.Windows.Forms.TextBox tip_suplementa_box;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.StatusStrip statusStrip1;
         private System.Windows.Forms.ToolStripStatusLabel toolStripStatusLabel1;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.MaskedTextBox maskedTextBox1;
+        private System.Windows.Forms.MaskedTextBox suplementID_masked_box;
     }
 }

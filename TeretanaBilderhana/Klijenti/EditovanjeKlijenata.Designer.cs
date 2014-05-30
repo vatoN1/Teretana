@@ -31,7 +31,7 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(EditovanjeKlijenata));
             this.label1 = new System.Windows.Forms.Label();
-            this.maskedTextBox1 = new System.Windows.Forms.MaskedTextBox();
+            this.klijentID_masked_box = new System.Windows.Forms.MaskedTextBox();
             this.datumRodjenjadtp = new System.Windows.Forms.DateTimePicker();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.zenskoRB = new System.Windows.Forms.RadioButton();
@@ -51,8 +51,8 @@
             this.label6 = new System.Windows.Forms.Label();
             this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.maskedTextBox2 = new System.Windows.Forms.MaskedTextBox();
-            this.maskedTextBox3 = new System.Windows.Forms.MaskedTextBox();
+            this.nutricionistaID_masked_box = new System.Windows.Forms.MaskedTextBox();
+            this.trenerID_masked_box = new System.Windows.Forms.MaskedTextBox();
             this.groupBox2.SuspendLayout();
             this.statusStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
@@ -68,14 +68,14 @@
             this.label1.TabIndex = 23;
             this.label1.Text = "Unesite ID:";
             // 
-            // maskedTextBox1
+            // klijentID_masked_box
             // 
-            this.maskedTextBox1.Location = new System.Drawing.Point(119, 20);
-            this.maskedTextBox1.Mask = "00000";
-            this.maskedTextBox1.Name = "maskedTextBox1";
-            this.maskedTextBox1.Size = new System.Drawing.Size(136, 20);
-            this.maskedTextBox1.TabIndex = 22;
-            this.maskedTextBox1.ValidatingType = typeof(int);
+            this.klijentID_masked_box.Location = new System.Drawing.Point(119, 20);
+            this.klijentID_masked_box.Mask = "00000";
+            this.klijentID_masked_box.Name = "klijentID_masked_box";
+            this.klijentID_masked_box.Size = new System.Drawing.Size(136, 20);
+            this.klijentID_masked_box.TabIndex = 22;
+            this.klijentID_masked_box.ValidatingType = typeof(int);
             // 
             // datumRodjenjadtp
             // 
@@ -233,10 +233,10 @@
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.maskedTextBox3);
-            this.groupBox1.Controls.Add(this.maskedTextBox2);
+            this.groupBox1.Controls.Add(this.nutricionistaID_masked_box);
+            this.groupBox1.Controls.Add(this.trenerID_masked_box);
             this.groupBox1.Controls.Add(this.label1);
-            this.groupBox1.Controls.Add(this.maskedTextBox1);
+            this.groupBox1.Controls.Add(this.klijentID_masked_box);
             this.groupBox1.Controls.Add(this.datumRodjenjadtp);
             this.groupBox1.Controls.Add(this.groupBox2);
             this.groupBox1.Controls.Add(this.prezimetb);
@@ -255,23 +255,23 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Editovanje klijenta:";
             // 
-            // maskedTextBox2
+            // nutricionistaID_masked_box
             // 
-            this.maskedTextBox2.Location = new System.Drawing.Point(119, 198);
-            this.maskedTextBox2.Mask = "00000";
-            this.maskedTextBox2.Name = "maskedTextBox2";
-            this.maskedTextBox2.Size = new System.Drawing.Size(136, 20);
-            this.maskedTextBox2.TabIndex = 24;
-            this.maskedTextBox2.ValidatingType = typeof(int);
+            this.nutricionistaID_masked_box.Location = new System.Drawing.Point(119, 224);
+            this.nutricionistaID_masked_box.Mask = "00000";
+            this.nutricionistaID_masked_box.Name = "nutricionistaID_masked_box";
+            this.nutricionistaID_masked_box.Size = new System.Drawing.Size(136, 20);
+            this.nutricionistaID_masked_box.TabIndex = 25;
+            this.nutricionistaID_masked_box.ValidatingType = typeof(int);
             // 
-            // maskedTextBox3
+            // trenerID_masked_box
             // 
-            this.maskedTextBox3.Location = new System.Drawing.Point(119, 224);
-            this.maskedTextBox3.Mask = "00000";
-            this.maskedTextBox3.Name = "maskedTextBox3";
-            this.maskedTextBox3.Size = new System.Drawing.Size(136, 20);
-            this.maskedTextBox3.TabIndex = 25;
-            this.maskedTextBox3.ValidatingType = typeof(int);
+            this.trenerID_masked_box.Location = new System.Drawing.Point(119, 198);
+            this.trenerID_masked_box.Mask = "00000";
+            this.trenerID_masked_box.Name = "trenerID_masked_box";
+            this.trenerID_masked_box.Size = new System.Drawing.Size(136, 20);
+            this.trenerID_masked_box.TabIndex = 24;
+            this.trenerID_masked_box.ValidatingType = typeof(int);
             // 
             // EditovanjeKlijenata
             // 
@@ -301,7 +301,7 @@
         #endregion
 
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.MaskedTextBox maskedTextBox1;
+        private System.Windows.Forms.MaskedTextBox klijentID_masked_box;
         private System.Windows.Forms.DateTimePicker datumRodjenjadtp;
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.RadioButton zenskoRB;
@@ -321,7 +321,7 @@
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.ErrorProvider errorProvider1;
         private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.MaskedTextBox maskedTextBox2;
-        private System.Windows.Forms.MaskedTextBox maskedTextBox3;
+        private System.Windows.Forms.MaskedTextBox trenerID_masked_box;
+        private System.Windows.Forms.MaskedTextBox nutricionistaID_masked_box;
     }
 }
