@@ -75,9 +75,10 @@
             this.label2.AutoSize = true;
             this.label2.Location = new System.Drawing.Point(127, 87);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(55, 13);
+            this.label2.Size = new System.Drawing.Size(56, 13);
             this.label2.TabIndex = 2;
-            this.label2.Text = "password:";
+            this.label2.Text = "Password:";
+            this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
             // IDtextbox
             // 
@@ -96,8 +97,10 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.passtextbox.Location = new System.Drawing.Point(188, 84);
             this.passtextbox.Name = "passtextbox";
+            this.passtextbox.PasswordChar = '*';
             this.passtextbox.Size = new System.Drawing.Size(112, 20);
             this.passtextbox.TabIndex = 4;
+            this.passtextbox.UseSystemPasswordChar = true;
             // 
             // izadjiButton
             // 
@@ -108,7 +111,7 @@
             this.izadjiButton.Name = "izadjiButton";
             this.izadjiButton.Size = new System.Drawing.Size(75, 23);
             this.izadjiButton.TabIndex = 5;
-            this.izadjiButton.Text = "Izadji";
+            this.izadjiButton.Text = "Izađi";
             this.izadjiButton.UseVisualStyleBackColor = true;
             this.izadjiButton.Click += new System.EventHandler(this.button2_Click);
             // 
@@ -122,7 +125,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSize = true;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.ClientSize = new System.Drawing.Size(421, 189);
+            this.ClientSize = new System.Drawing.Size(421, 190);
             this.Controls.Add(this.izadjiButton);
             this.Controls.Add(this.passtextbox);
             this.Controls.Add(this.IDtextbox);

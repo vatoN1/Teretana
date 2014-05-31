@@ -18,8 +18,8 @@ namespace DAL
                 try
                 {
 
-                    c = new MySqlCommand(String.Format("INSERT INTO uposlenici VALUES ('{0}','{1}','{2}','{3}','{4}', {5}, {6}, {7}, {8});"
-                        , entity.Ime, entity.Prezime, entity.Spol, entity.DatumRodjenja, entity.DatumZaposlenja
+                    c = new MySqlCommand(String.Format("INSERT INTO uposlenici VALUES ('{0}','{1}','{2}','{3}','{4}', {5}, {6}, {7}, {8}, {9});",
+                        entity.ID , entity.Ime, entity.Prezime, entity.Spol, entity.DatumRodjenja, entity.DatumZaposlenja
                         , entity.Plata, entity.Kontakt, entity.Zaposlenje, entity.Sifra), con);
                     c.ExecuteNonQuery();
                     return c.LastInsertedId;
