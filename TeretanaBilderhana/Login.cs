@@ -68,7 +68,6 @@ namespace TeretanaBilderhana
                         f.Show();
                         MainPage mp = new MainPage();
                         mp.Show();
-                        this.Hide();
                     }
                     else if (Convert.ToInt32(IDtextbox.Text) == radnik.IdUposlenika && passtextbox.Text != radnik.Sifra)
                     {
