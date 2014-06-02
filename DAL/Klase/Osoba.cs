@@ -56,13 +56,13 @@ public abstract class Osoba
 
     public string Kontakt
     {
-        get
-        {
-            throw new System.NotImplementedException();
-        }
-        set
-        {
-        }
+        get;
+
+        //throw new System.NotImplementedException();
+
+        set;
+
+
     }
 
 }

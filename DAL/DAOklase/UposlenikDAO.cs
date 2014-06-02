@@ -1,8 +1,12 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
 using System.Linq;
 using System.Text;
+using System.Drawing;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 using MySql.Data.MySqlClient;
 
 namespace DAL
@@ -17,10 +21,11 @@ namespace DAL
             {
                 try
                 {
-
+                    var datumRodjenja = entity.DatumRodjenja.Date.ToString("yyyy-MM-dd");
+                    var datumZaposlenja = entity.DatumRodjenja.Date.ToString("yyyy-MM-dd");
                     c = new MySqlCommand(String.Format("INSERT INTO uposlenici VALUES ('{0}','{1}','{2}','{3}','{4}', {5}, {6}, {7}, {8}, {9});",
-                        entity.ID , entity.Ime, entity.Prezime, entity.Spol, entity.DatumRodjenja, entity.DatumZaposlenja
-                        , entity.Plata, entity.Kontakt, entity.Zaposlenje, entity.Sifra), con);
+                        entity.ID , entity.Ime, entity.Prezime, entity.Spol, datumRodjenja, datumZaposlenja
+                        , Convert.ToDouble(entity.Plata), entity.Kontakt, entity.ZaposlenjeS, entity.Sifra), con);
                     c.ExecuteNonQuery();
                     return c.LastInsertedId;
                 }

@@ -11,11 +11,13 @@ using DAL;
 
 namespace TeretanaBilderhana
 {
+    
     public partial class DodavanjeUposlenika : Form
     {
         public DodavanjeUposlenika()
         {
             InitializeComponent();
+            zaposlenje_combo.Items.Add("Trener");
         }
 
         public bool validiraj()
@@ -33,10 +35,10 @@ namespace TeretanaBilderhana
         {
             if (validiraj())
             {
-                String zaposlenje = zaposlenje_combo.SelectedValue as String;
+                String zaposlenje = zaposlenje_combo.SelectedText as String;
                 String Spol="Musko";
                 Random id = new Random();
-                int r = id.Next(11111, 99999);
+                int r = id.Next(1111, 9999);
                 if(zenskoRB.Checked) Spol="Zensko"; 
                 Uposlenik Uposlenik = new Uposlenik(
                     r, imetb.Text, prezimetb.Text, Spol, rodjenje_datetime.Value, zaposlenje_datetime.Value,

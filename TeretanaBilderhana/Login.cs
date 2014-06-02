@@ -63,7 +63,7 @@ namespace TeretanaBilderhana
 
                     if (radnik.Sifra == passtextbox.Text)
                     {
-                        MainPage f = new MainPage();
+                        DodavanjeUposlenika f = new DodavanjeUposlenika();
                         f.Show();
                     }
                     else if (Convert.ToInt32(IDtextbox.Text) == radnik.IdUposlenika && passtextbox.Text != radnik.Sifra)
