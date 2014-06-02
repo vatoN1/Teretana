@@ -23,7 +23,7 @@ namespace DAL
                 {
                     var datumRodjenja = entity.DatumRodjenja.Date.ToString("yyyy-MM-dd");
                     var datumZaposlenja = entity.DatumRodjenja.Date.ToString("yyyy-MM-dd");
-                    c = new MySqlCommand(String.Format("INSERT INTO uposlenici VALUES ('{0}','{1}','{2}','{3}','{4}', {5}, {6}, {7}, {8}, {9});",
+                    c = new MySqlCommand(String.Format("INSERT INTO uposlenici VALUES ('{0}','{1}','{2}','{3}','{4}', '{5}', '{6}', '{7}', '{8}', '{9}');",
                         entity.ID , entity.Ime, entity.Prezime, entity.Spol, datumRodjenja, datumZaposlenja
                         , Convert.ToDouble(entity.Plata), entity.Kontakt, entity.ZaposlenjeS, entity.Sifra), con);
                     c.ExecuteNonQuery();

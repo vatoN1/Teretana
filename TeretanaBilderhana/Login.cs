@@ -36,6 +36,7 @@ namespace TeretanaBilderhana
             catch (System.Exception ex)
             {
                 MessageBox.Show(Convert.ToString(ex));
+                d.terminirajKonekciju();
                 return false;
             }
 
@@ -65,6 +66,9 @@ namespace TeretanaBilderhana
                     {
                         DodavanjeUposlenika f = new DodavanjeUposlenika();
                         f.Show();
+                        MainPage mp = new MainPage();
+                        mp.Show();
+                        this.Hide();
                     }
                     else if (Convert.ToInt32(IDtextbox.Text) == radnik.IdUposlenika && passtextbox.Text != radnik.Sifra)
                     {
