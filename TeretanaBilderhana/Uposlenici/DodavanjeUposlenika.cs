@@ -17,7 +17,7 @@ namespace TeretanaBilderhana
         public DodavanjeUposlenika()
         {
             InitializeComponent();
-            zaposlenje_combo.Items.Add("Trener");
+
         }
 
         public bool validiraj()
@@ -38,14 +38,14 @@ namespace TeretanaBilderhana
         {
             if (validiraj())
             {
-                String zaposlenje = zaposlenje_combo.SelectedText as String;
+                String zaposlenje = zaposlenje_combo.Text;
                 String Spol="Musko";
                 Random id = new Random();
                 int r = id.Next(1111, 9999);
                 if(zenskoRB.Checked) Spol="Zensko"; 
                 Uposlenik Uposlenik = new Uposlenik(
                     r, imetb.Text, prezimetb.Text, Spol, rodjenje_datetime.Value, zaposlenje_datetime.Value,
-                    Convert.ToDecimal(plata_npd.Value), kontakt_masked_box.Text, zaposlenje, sifra_box.Text);
+                    Convert.ToDecimal(plata_npd.Value), kontakt_masked_box.Text, zaposlenje_combo.Text, sifra_box.Text);
 
                 DAL.DAL d = DAL.DAL.Instanca;
                 
@@ -148,11 +148,5 @@ namespace TeretanaBilderhana
             Close();
         }
 
-        private void groupBox1_Enter(object sender, EventArgs e)
-        {
-
-        }
-
-        
     }
 }

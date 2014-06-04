@@ -119,6 +119,12 @@
     <Compile Include="Prehrambeni programi\EditovanjePrehrambenihPrograma.Designer.cs">
       <DependentUpon>EditovanjePrehrambenihPrograma.cs</DependentUpon>
     </Compile>
+    <Compile Include="PristupneForme\AdministratorskiPanel.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PristupneForme\AdministratorskiPanel.Designer.cs">
+      <DependentUpon>AdministratorskiPanel.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Prostorije\DodavanjeProstorija.cs">
@@ -210,6 +216,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Prehrambeni programi\EditovanjePrehrambenihPrograma.resx">
       <DependentUpon>EditovanjePrehrambenihPrograma.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PristupneForme\AdministratorskiPanel.resx">
+      <DependentUpon>AdministratorskiPanel.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Runtime.ExceptionServices;
 using DAL;
+using TeretanaBilderhana.PristupneForme;
 
 namespace TeretanaBilderhana
 {
@@ -62,7 +63,12 @@ namespace TeretanaBilderhana
                     DAL.DAL.UposlenikDAO c = d.getDAO.getUposlenikDAO();
                     Uposlenik radnik = c.getById(Convert.ToInt32(IDtextbox.Text));
 
-                    if (radnik.Sifra == passtextbox.Text)
+                    if (radnik.Sifra == passtextbox.Text && radnik.ZaposlenjeS == "Administrator")
+                    {
+                        AdministratorskiPanel a = new AdministratorskiPanel();
+                        a.Show();
+                    }
+                    else if (radnik.Sifra == passtextbox.Text)
                     {
                         MainPage mp = new MainPage();
                         mp.Show();

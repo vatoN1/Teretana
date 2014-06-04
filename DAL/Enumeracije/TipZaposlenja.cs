@@ -13,5 +13,6 @@ using System.Text;
     {
         Trener,
         Nutricionista,
-        Tehnicar
+        Tehnicar,
+        Administrator
     }

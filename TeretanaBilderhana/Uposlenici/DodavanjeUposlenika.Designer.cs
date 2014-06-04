@@ -39,6 +39,7 @@
             this.label9 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.plata_npd = new System.Windows.Forms.NumericUpDown();
             this.zaposlenje_datetime = new System.Windows.Forms.DateTimePicker();
             this.rodjenje_datetime = new System.Windows.Forms.DateTimePicker();
             this.sifra_box = new System.Windows.Forms.TextBox();
@@ -54,12 +55,11 @@
             this.statusStrip1 = new System.Windows.Forms.StatusStrip();
             this.toolStripStatusLabel1 = new System.Windows.Forms.ToolStripStatusLabel();
             this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
-            this.plata_npd = new System.Windows.Forms.NumericUpDown();
             this.groupBox1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.plata_npd)).BeginInit();
             this.groupBox2.SuspendLayout();
             this.statusStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.plata_npd)).BeginInit();
             this.SuspendLayout();
             // 
             // label2
@@ -159,7 +159,28 @@
             this.groupBox1.TabIndex = 10;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Registracija uposlenika: ";
-            this.groupBox1.Enter += new System.EventHandler(this.groupBox1_Enter);
+            // 
+            // plata_npd
+            // 
+            this.plata_npd.Location = new System.Drawing.Point(119, 166);
+            this.plata_npd.Maximum = new decimal(new int[] {
+            7000,
+            0,
+            0,
+            0});
+            this.plata_npd.Minimum = new decimal(new int[] {
+            1000,
+            0,
+            0,
+            0});
+            this.plata_npd.Name = "plata_npd";
+            this.plata_npd.Size = new System.Drawing.Size(120, 20);
+            this.plata_npd.TabIndex = 22;
+            this.plata_npd.Value = new decimal(new int[] {
+            1000,
+            0,
+            0,
+            0});
             // 
             // zaposlenje_datetime
             // 
@@ -185,6 +206,10 @@
             // zaposlenje_combo
             // 
             this.zaposlenje_combo.FormattingEnabled = true;
+            this.zaposlenje_combo.Items.AddRange(new object[] {
+            "Trener",
+            "Nutricionista",
+            "Tehnicar"});
             this.zaposlenje_combo.Location = new System.Drawing.Point(119, 222);
             this.zaposlenje_combo.Name = "zaposlenje_combo";
             this.zaposlenje_combo.Size = new System.Drawing.Size(121, 21);
@@ -289,28 +314,6 @@
             // 
             this.errorProvider1.ContainerControl = this;
             // 
-            // plata_npd
-            // 
-            this.plata_npd.Location = new System.Drawing.Point(119, 166);
-            this.plata_npd.Maximum = new decimal(new int[] {
-            7000,
-            0,
-            0,
-            0});
-            this.plata_npd.Minimum = new decimal(new int[] {
-            1000,
-            0,
-            0,
-            0});
-            this.plata_npd.Name = "plata_npd";
-            this.plata_npd.Size = new System.Drawing.Size(120, 20);
-            this.plata_npd.TabIndex = 22;
-            this.plata_npd.Value = new decimal(new int[] {
-            1000,
-            0,
-            0,
-            0});
-            // 
             // DodavanjeUposlenika
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -326,12 +329,12 @@
             this.Text = "Dodavanje uposlenika";
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.plata_npd)).EndInit();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
             this.statusStrip1.ResumeLayout(false);
             this.statusStrip1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.plata_npd)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

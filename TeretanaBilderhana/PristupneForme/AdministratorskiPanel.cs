@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
+
 namespace TeretanaBilderhana.PristupneForme
 {
     public partial class AdministratorskiPanel : Form
@@ -16,5 +17,13 @@ namespace TeretanaBilderhana.PristupneForme
         {
             InitializeComponent();
         }
+
+        private void unosuposlenicibutton_Click(object sender, EventArgs e)
+        {
+            DodavanjeUposlenika a = new DodavanjeUposlenika();
+            a.Show();
+        }
+
+
     }
 }
