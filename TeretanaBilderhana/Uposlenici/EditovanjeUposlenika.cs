@@ -16,6 +16,7 @@ namespace TeretanaBilderhana
         public EditovanjeUposlenika()
         {
             InitializeComponent();
+            
         }
 
         public bool validiraj()
@@ -35,20 +36,32 @@ namespace TeretanaBilderhana
             if (validiraj())
             {
                 String zaposlenje = zaposlenje_combo.SelectedValue as String;
-                String Spol="Musko";
-                if(zenskoRB.Checked) Spol="Zensko";
+                String Spoll="Musko";
+                if(zenskoRB.Checked) Spoll="Zensko";
                
                 Uposlenik Uposlenik = new Uposlenik(
-                    Convert.ToInt32(uposlenikID_masked_box.Text), imetb.Text, prezimetb.Text, Spol, rodjenje_datetime.Value, 
+                    Convert.ToInt32(uposlenikID_masked_box.Text), imetb.Text, prezimetb.Text, Spoll, rodjenje_datetime.Value, 
                     zaposlenje_datetime.Value, plata_npd.Value, kontakt_masked_box.Text, zaposlenje, sifra_box.Text);
 
                 DAL.DAL d = DAL.DAL.Instanca;
                 d.kreirajKonekciju("localhost", "Teretana", "root", "");
                 DAL.DAL.UposlenikDAO c = d.getDAO.getUposlenikDAO();
 
+                /*Uposlenik Uposlenik = c.getById(Convert.ToInt32(uposlenikID_masked_box.Text));
+                Uposlenik.Ime = imetb.Text;
+                Uposlenik.Prezime = prezimetb.Text;
+                if (muskoRB.Checked == true) Uposlenik.Spol = Spol.Musko;
+                else Uposlenik.Spol = Spol.Zensko;
+                Uposlenik.DatumRodjenja= rodjenje_datetime.Value;
+                Uposlenik.Kontakt = kontakt_masked_box.Text;
+                Uposlenik.Plata = plata_npd.Value;
+                Uposlenik.DatumZaposlenja = zaposlenje_datetime.Value;
+                Uposlenik.ZaposlenjeS = zaposlenje_combo.SelectedText;
+                Uposlenik.Sifra = sifra_box.Text;*/
+
                 c.update(Uposlenik.IdUposlenika, Uposlenik);
                 d.terminirajKonekciju();
-                Close();
+                //Close();
             }
             else
             {
