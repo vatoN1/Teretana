@@ -73,13 +73,37 @@ namespace DAL
                 {
                     var datumRodjenja = entity.DatumRodjenja.Date.ToString("yyyy-MM-dd");
                     var datumZaposlenja = entity.DatumRodjenja.Date.ToString("yyyy-MM-dd");
+<<<<<<< HEAD
                     c = new MySqlCommand(String.Format("UPDATE uposlenici SET id={0}, ime='{1}', prezime='{2}', spol='{3}', "+
                     "datumRodjenja = '{4}', datumZaposlenja = '{5}', plata = {6}, kontakt = '{7}', zaposlenje='{8}', " +
                     "sifra = '{9}' where id = {10};",
                         entity.IdUposlenika, entity.Ime, entity.Prezime, entity.Spol, datumRodjenja, 
                         datumZaposlenja, entity.Plata, entity.Kontakt, 
                         entity.Zaposlenje, entity.Sifra, id), con);
+=======
+
+                    /*c = new MySqlCommand("UPDATE uposlenici set id=" + entity.IdUposlenika 
+                                            + ", ime= '" + entity.Ime
+                                            + "', prezime= '" + entity.Prezime
+                                            + "', spol= '" + Convert.ToString(entity.Spol)
+                                            + "', datumRodjenja= '" + entity.DatumRodjenja
+                                            + "', datumZaposlenja= '" + entity.DatumZaposlenja
+                                            + "', plata= " + entity.Plata
+                                            + ", kontakt= '" + entity.Kontakt
+                                            + "', zaposlenje= '" + entity.ZaposlenjeS
+                                            + "', sifra= '" + entity.Sifra
+                                            + "' where id = " + id, con
+                                            );*/
+                    c = new MySqlCommand(String.Format("UPDATE uposlenici SET id='{0}', ime='{1}', prezime='{2}', spol='{3}', "+
+                    "datumRodjenja = '{4}', datumZaposlenja = '{5}', plata = '{6}', kontakt = '{7}', zaposlenje='{8}', " +
+                    "sifra = '{9}' where id = '{10}';",
+                        Convert.ToInt32(entity.IdUposlenika), entity.Ime, entity.Prezime, Convert.ToString(entity.Spol), datumRodjenja, 
+                        datumZaposlenja, entity.Plata, entity.Kontakt,
+                        entity.ZaposlenjeS, entity.Sifra, Convert.ToInt32(id)), con);
+>>>>>>> 9f96aea2115cb91c886a306a68ba1c667e5c9428
                     c.ExecuteNonQuery();
+                    //MessageBox.Show("Promjenjen");
+                    MessageBox.Show(entity.Prezime);
                     return entity;
                 }
                 catch (Exception e)
