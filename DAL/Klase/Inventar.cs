@@ -11,6 +11,11 @@ using System.Text;
 
 public abstract class Inventar
 {
+    private int r;
+    private int p1;
+    private double p2;
+    private string p3;
+
     public Inventar() { }
 
     public int Kolicina
@@ -22,6 +27,15 @@ public abstract class Inventar
     public Inventar(int kolicina)
     {
         Kolicina = kolicina;
+    }
+
+    public Inventar(int r, int p1, double p2, string p3)
+    {
+        // TODO: Complete member initialization
+        this.r = r;
+        this.p1 = p1;
+        this.p2 = p2;
+        this.p3 = p3;
     }
 
 	public virtual void osvjezi()

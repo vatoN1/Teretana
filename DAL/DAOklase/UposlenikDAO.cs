@@ -39,7 +39,7 @@ namespace DAL
             {
                 try
                 {
-                    c = new MySqlCommand(String.Format("SELECT * FROM uposlenici WHERE id='{0}'", entity.IdUposlenika)
+                    c = new MySqlCommand(String.Format("SELECT * FROM uposlenici WHERE id='{0}';", entity.IdUposlenika)
                         , con);
 
                     MySqlDataReader r = c.ExecuteReader();
@@ -75,7 +75,7 @@ namespace DAL
                     var datumZaposlenja = entity.DatumRodjenja.Date.ToString("yyyy-MM-dd");
                     c = new MySqlCommand(String.Format("UPDATE uposlenici SET id={0}, ime='{1}', prezime='{2}', spol='{3}', "+
                     "datumRodjenja = '{4}', datumZaposlenja = '{5}', plata = {6}, kontakt = '{7}', zaposlenje='{8}', " +
-                    "sifra = '{9}' where id = {10}",
+                    "sifra = '{9}' where id = {10};",
                         entity.IdUposlenika, entity.Ime, entity.Prezime, entity.Spol, datumRodjenja, 
                         datumZaposlenja, entity.Plata, entity.Kontakt, 
                         entity.Zaposlenje, entity.Sifra, id), con);

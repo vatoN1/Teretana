@@ -56,17 +56,18 @@ namespace TeretanaBilderhana
             try
             {
                 if (konektovan())
-                {
+                { 
                     DAL.DAL d = DAL.DAL.Instanca;
                     d.kreirajKonekciju("localhost", "Teretana", "root", "");
-
+                    
                     DAL.DAL.UposlenikDAO c = d.getDAO.getUposlenikDAO();
                     Uposlenik radnik = c.getById(Convert.ToInt32(IDtextbox.Text));
-
+                   
                     if (radnik.Sifra == passtextbox.Text && radnik.ZaposlenjeS == "Administrator")
                     {
                         AdministratorskiPanel a = new AdministratorskiPanel();
                         a.Show();
+                        errorProvider1.Clear();
                     }
                     else if (radnik.Sifra == passtextbox.Text)
                     {
@@ -74,6 +75,7 @@ namespace TeretanaBilderhana
                         mp.Show();
                         EditovanjeUposlenika f = new EditovanjeUposlenika();
                         f.Show();
+                        errorProvider1.Clear();
                     }
                     else if (Convert.ToInt32(IDtextbox.Text) == radnik.IdUposlenika && passtextbox.Text != radnik.Sifra)
                     {

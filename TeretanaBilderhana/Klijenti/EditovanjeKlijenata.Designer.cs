@@ -165,6 +165,7 @@
             this.unosButton.TabIndex = 28;
             this.unosButton.Text = "Unesi";
             this.unosButton.UseVisualStyleBackColor = true;
+            this.unosButton.Click += new System.EventHandler(this.unosButton_Click);
             // 
             // toolStripStatusLabel1
             // 

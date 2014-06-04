@@ -28,31 +28,34 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(DodavanjeOpreme));
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.cijena_numeric = new System.Windows.Forms.NumericUpDown();
             this.kolicina_numeric = new System.Windows.Forms.NumericUpDown();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.tip_opreme_box = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.izadjiButton = new System.Windows.Forms.Button();
             this.unosButton = new System.Windows.Forms.Button();
             this.statusStrip1 = new System.Windows.Forms.StatusStrip();
             this.toolStripStatusLabel1 = new System.Windows.Forms.ToolStripStatusLabel();
+            this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
+            this.tipopremecombo = new System.Windows.Forms.ComboBox();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.cijena_numeric)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.kolicina_numeric)).BeginInit();
             this.statusStrip1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             this.SuspendLayout();
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.tipopremecombo);
             this.groupBox1.Controls.Add(this.cijena_numeric);
             this.groupBox1.Controls.Add(this.kolicina_numeric);
             this.groupBox1.Controls.Add(this.label4);
             this.groupBox1.Controls.Add(this.label3);
-            this.groupBox1.Controls.Add(this.tip_opreme_box);
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Location = new System.Drawing.Point(12, 12);
             this.groupBox1.Name = "groupBox1";
@@ -63,18 +66,37 @@
             // 
             // cijena_numeric
             // 
-            this.cijena_numeric.DecimalPlaces = 2;
             this.cijena_numeric.Location = new System.Drawing.Point(120, 74);
+            this.cijena_numeric.Maximum = new decimal(new int[] {
+            1000,
+            0,
+            0,
+            0});
             this.cijena_numeric.Name = "cijena_numeric";
             this.cijena_numeric.Size = new System.Drawing.Size(144, 20);
             this.cijena_numeric.TabIndex = 27;
+            this.cijena_numeric.Value = new decimal(new int[] {
+            5,
+            0,
+            0,
+            0});
             // 
             // kolicina_numeric
             // 
             this.kolicina_numeric.Location = new System.Drawing.Point(120, 45);
+            this.kolicina_numeric.Minimum = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
             this.kolicina_numeric.Name = "kolicina_numeric";
             this.kolicina_numeric.Size = new System.Drawing.Size(144, 20);
             this.kolicina_numeric.TabIndex = 26;
+            this.kolicina_numeric.Value = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
             // 
             // label4
             // 
@@ -93,13 +115,6 @@
             this.label3.Size = new System.Drawing.Size(47, 13);
             this.label3.TabIndex = 24;
             this.label3.Text = "Kolicina:";
-            // 
-            // tip_opreme_box
-            // 
-            this.tip_opreme_box.Location = new System.Drawing.Point(120, 19);
-            this.tip_opreme_box.Name = "tip_opreme_box";
-            this.tip_opreme_box.Size = new System.Drawing.Size(144, 20);
-            this.tip_opreme_box.TabIndex = 14;
             // 
             // label2
             // 
@@ -127,6 +142,7 @@
             this.unosButton.TabIndex = 33;
             this.unosButton.Text = "Unesi";
             this.unosButton.UseVisualStyleBackColor = true;
+            this.unosButton.Click += new System.EventHandler(this.unosButton_Click);
             // 
             // statusStrip1
             // 
@@ -144,6 +160,26 @@
             this.toolStripStatusLabel1.Size = new System.Drawing.Size(118, 17);
             this.toolStripStatusLabel1.Text = "toolStripStatusLabel1";
             // 
+            // errorProvider1
+            // 
+            this.errorProvider1.ContainerControl = this;
+            // 
+            // tipopremecombo
+            // 
+            this.tipopremecombo.FormattingEnabled = true;
+            this.tipopremecombo.Items.AddRange(new object[] {
+            "Bandaze",
+            "Flasa",
+            "Peskir",
+            "Pojas",
+            "Rukavice",
+            "Sorts",
+            "Tene"});
+            this.tipopremecombo.Location = new System.Drawing.Point(120, 19);
+            this.tipopremecombo.Name = "tipopremecombo";
+            this.tipopremecombo.Size = new System.Drawing.Size(144, 21);
+            this.tipopremecombo.TabIndex = 28;
+            // 
             // DodavanjeOpreme
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -157,13 +193,13 @@
             this.MinimizeBox = false;
             this.Name = "DodavanjeOpreme";
             this.Text = "Dodavanje opreme";
-            this.Load += new System.EventHandler(this.DodavanjeOpreme_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.cijena_numeric)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.kolicina_numeric)).EndInit();
             this.statusStrip1.ResumeLayout(false);
             this.statusStrip1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -176,11 +212,12 @@
         private System.Windows.Forms.NumericUpDown kolicina_numeric;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox tip_opreme_box;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button izadjiButton;
         private System.Windows.Forms.Button unosButton;
         private System.Windows.Forms.StatusStrip statusStrip1;
         private System.Windows.Forms.ToolStripStatusLabel toolStripStatusLabel1;
+        private System.Windows.Forms.ErrorProvider errorProvider1;
+        private System.Windows.Forms.ComboBox tipopremecombo;
     }
 }

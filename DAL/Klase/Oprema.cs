@@ -12,8 +12,8 @@ using System.Text;
 public class Oprema : Inventar
 {
     public Oprema() { }
-
-    public Oprema(int id, int kolicina, string tipOpreme, decimal cijena) : base(kolicina)
+    string tipopremes;
+    public Oprema(int id, int kolicina, double cijena, string tipOpreme) : base(kolicina)
     {
         ID = id;
         if (tipOpreme == "Bandaze") TipOpreme = TipOpreme.Bandaze;
@@ -24,6 +24,7 @@ public class Oprema : Inventar
         if (tipOpreme == "Sorts") TipOpreme = TipOpreme.Sorts;
         if (tipOpreme == "Tene") TipOpreme = TipOpreme.Tene;
         CijenaNajama = cijena;
+        tipopremes = tipOpreme;
     }
 
     public int ID { get; set; }
@@ -34,11 +35,18 @@ public class Oprema : Inventar
 		set;
 	}
 
-    public decimal CijenaNajama
+    public double CijenaNajama
 	{
 		get;
 		set;
 	}
 
+    
+    public string TipOpremeS
+    {
+        get { return tipopremes; }
+        set {tipopremes = value; }
+    }
+    
 }
 

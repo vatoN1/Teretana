@@ -317,6 +317,7 @@
             this.unoswprogramibutton.TabIndex = 21;
             this.unoswprogramibutton.Text = "Workout programi";
             this.unoswprogramibutton.UseVisualStyleBackColor = true;
+            this.unoswprogramibutton.Click += new System.EventHandler(this.unoswprogramibutton_Click);
             // 
             // unospprogramibutton
             // 
@@ -326,6 +327,7 @@
             this.unospprogramibutton.TabIndex = 20;
             this.unospprogramibutton.Text = "Prehrambeni programi";
             this.unospprogramibutton.UseVisualStyleBackColor = true;
+            this.unospprogramibutton.Click += new System.EventHandler(this.unospprogramibutton_Click);
             // 
             // unosizvjestajibutton
             // 
@@ -335,6 +337,7 @@
             this.unosizvjestajibutton.TabIndex = 19;
             this.unosizvjestajibutton.Text = "Izvjestaji";
             this.unosizvjestajibutton.UseVisualStyleBackColor = true;
+            this.unosizvjestajibutton.Click += new System.EventHandler(this.unosizvjestajibutton_Click);
             // 
             // unosklijentibutton
             // 
@@ -344,6 +347,7 @@
             this.unosklijentibutton.TabIndex = 18;
             this.unosklijentibutton.Text = "Klijenti";
             this.unosklijentibutton.UseVisualStyleBackColor = true;
+            this.unosklijentibutton.Click += new System.EventHandler(this.unosklijentibutton_Click);
             // 
             // unosprostorijebutton
             // 
@@ -353,6 +357,7 @@
             this.unosprostorijebutton.TabIndex = 17;
             this.unosprostorijebutton.Text = "Prostorije";
             this.unosprostorijebutton.UseVisualStyleBackColor = true;
+            this.unosprostorijebutton.Click += new System.EventHandler(this.unosprostorijebutton_Click);
             // 
             // unosopremabutton
             // 
@@ -362,6 +367,7 @@
             this.unosopremabutton.TabIndex = 16;
             this.unosopremabutton.Text = "Oprema";
             this.unosopremabutton.UseVisualStyleBackColor = true;
+            this.unosopremabutton.Click += new System.EventHandler(this.unosopremabutton_Click);
             // 
             // unossuplementibutton
             // 
@@ -371,6 +377,7 @@
             this.unossuplementibutton.TabIndex = 15;
             this.unossuplementibutton.Text = "Suplementi";
             this.unossuplementibutton.UseVisualStyleBackColor = true;
+            this.unossuplementibutton.Click += new System.EventHandler(this.unossuplementibutton_Click);
             // 
             // unosspavebutton
             // 
@@ -380,6 +387,7 @@
             this.unosspavebutton.TabIndex = 14;
             this.unosspavebutton.Text = "Sprave";
             this.unosspavebutton.UseVisualStyleBackColor = true;
+            this.unosspavebutton.Click += new System.EventHandler(this.unosspavebutton_Click);
             // 
             // unosuposlenicibutton
             // 

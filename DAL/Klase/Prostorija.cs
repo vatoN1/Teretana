@@ -13,7 +13,7 @@ public class Prostorija
 {
     public Prostorija() { }
 
-    public Prostorija(int p1, string p2, string p3, string p4)
+    public Prostorija(int p1, string p2, bool p3, string p4)
     {
         // TODO: Complete member initialization
         this.p1 = p1;
@@ -21,10 +21,11 @@ public class Prostorija
         this.p3 = p3;
         this.p4 = p4;
     }
+
     int id;
     private int p1;
     private string p2;
-    private string p3;
+    private bool p3;
     private string p4;
 
     public int Id
@@ -54,6 +55,13 @@ public class Prostorija
         {
         }
     }
+
+    public string InventarS
+    {
+        get { return p4; }
+        set { p4 = value; }
+    }
+
 
 }
 

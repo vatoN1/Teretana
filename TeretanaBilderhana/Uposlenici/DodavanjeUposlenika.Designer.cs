@@ -162,7 +162,8 @@
             // 
             // plata_npd
             // 
-            this.plata_npd.Location = new System.Drawing.Point(119, 166);
+            this.plata_npd.DecimalPlaces = 2;
+            this.plata_npd.Location = new System.Drawing.Point(119, 170);
             this.plata_npd.Maximum = new decimal(new int[] {
             7000,
             0,
@@ -184,7 +185,7 @@
             // 
             // zaposlenje_datetime
             // 
-            this.zaposlenje_datetime.Location = new System.Drawing.Point(119, 192);
+            this.zaposlenje_datetime.Location = new System.Drawing.Point(119, 196);
             this.zaposlenje_datetime.Name = "zaposlenje_datetime";
             this.zaposlenje_datetime.Size = new System.Drawing.Size(120, 20);
             this.zaposlenje_datetime.TabIndex = 21;
@@ -235,13 +236,13 @@
             this.zenskoRB.Name = "zenskoRB";
             this.zenskoRB.Size = new System.Drawing.Size(61, 17);
             this.zenskoRB.TabIndex = 1;
-            this.zenskoRB.TabStop = true;
             this.zenskoRB.Text = "Zensko";
             this.zenskoRB.UseVisualStyleBackColor = true;
             // 
             // muskoRB
             // 
             this.muskoRB.AutoSize = true;
+            this.muskoRB.Checked = true;
             this.muskoRB.Location = new System.Drawing.Point(18, 19);
             this.muskoRB.Name = "muskoRB";
             this.muskoRB.Size = new System.Drawing.Size(57, 17);

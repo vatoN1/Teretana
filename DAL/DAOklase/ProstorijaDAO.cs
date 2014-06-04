@@ -16,9 +16,8 @@ namespace DAL
             {
                 try
                 {
-
                     c = new MySqlCommand(String.Format("INSERT INTO Prostorije VALUES ('{0}','{1}','{2}','{3}');",
-                        entity.Id, entity.NazivProstorije, entity.Dostupnost, entity.Inventar), con);
+                        entity.Id, entity.NazivProstorije, entity.Dostupnost, entity.InventarS), con);
                     c.ExecuteNonQuery();
                     return c.LastInsertedId;
                 }
@@ -32,13 +31,13 @@ namespace DAL
             {
                 try
                 {
-                    c = new MySqlCommand(String.Format("SELECT * FROM Prostorije WHERE id='{0}'", entity.Id), con);
+                    c = new MySqlCommand(String.Format("SELECT * FROM Prostorije WHERE id='{0}';", entity.Id), con);
 
                     MySqlDataReader r = c.ExecuteReader();
 
                     if (r.Read())
                     {
-                        Prostorija prostorija = new Prostorija(r.GetInt32("id"), r.GetString("nazivProstorije"), r.GetString("dostupnost"), r.GetString("inventar"));
+                        Prostorija prostorija = new Prostorija(r.GetInt32("id"), r.GetString("nazivProstorije"), r.GetBoolean("dostupnost"), r.GetString("inventar"));
                         r.Close();
                         return prostorija;
                     }
@@ -88,7 +87,7 @@ namespace DAL
                     MySqlDataReader r = c.ExecuteReader();
                     if (r.Read())
                     {
-                        Prostorija a = new Prostorija(r.GetInt32("id"), r.GetString("NazivProstorije"), r.GetString("Dostupnost"),
+                        Prostorija a = new Prostorija(r.GetInt32("id"), r.GetString("NazivProstorije"), r.GetBoolean("Dostupnost"),
                             r.GetString("Inventar"));
                         r.Close();
                         return a;
@@ -110,7 +109,7 @@ namespace DAL
                     MySqlDataReader r = c.ExecuteReader();
                     List<Prostorija> prostorija = new List<Prostorija>();
                     while (r.Read())
-                        prostorija.Add(new Prostorija(r.GetInt32("id"), r.GetString("NazivProstorije"), r.GetString("Dostupnost"),
+                        prostorija.Add(new Prostorija(r.GetInt32("id"), r.GetString("NazivProstorije"), r.GetBoolean("Dostupnost"),
                             r.GetString("Inventar")));
 
                     r.Close();
@@ -131,7 +130,7 @@ namespace DAL
                     MySqlDataReader r = c.ExecuteReader();
                     List<Prostorija> prostorija = new List<Prostorija>();
                     while (r.Read())
-                        prostorija.Add(new Prostorija(r.GetInt32("id"), r.GetString("NazivProstorije"), r.GetString("Dostupnost"),
+                        prostorija.Add(new Prostorija(r.GetInt32("id"), r.GetString("NazivProstorije"), r.GetBoolean("Dostupnost"),
                             r.GetString("Inventar")));
                     r.Close();
                     return prostorija;

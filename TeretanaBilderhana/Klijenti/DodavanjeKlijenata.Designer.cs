@@ -147,6 +147,7 @@
             this.unosButton.TabIndex = 32;
             this.unosButton.Text = "Unesi";
             this.unosButton.UseVisualStyleBackColor = true;
+            this.unosButton.Click += new System.EventHandler(this.unosButton_Click);
             // 
             // imetb
             // 
@@ -187,13 +188,13 @@
             this.zenskoRB.Name = "zenskoRB";
             this.zenskoRB.Size = new System.Drawing.Size(61, 17);
             this.zenskoRB.TabIndex = 1;
-            this.zenskoRB.TabStop = true;
             this.zenskoRB.Text = "Zensko";
             this.zenskoRB.UseVisualStyleBackColor = true;
             // 
             // muskoRB
             // 
             this.muskoRB.AutoSize = true;
+            this.muskoRB.Checked = true;
             this.muskoRB.Location = new System.Drawing.Point(18, 19);
             this.muskoRB.Name = "muskoRB";
             this.muskoRB.Size = new System.Drawing.Size(57, 17);

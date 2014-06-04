@@ -16,5 +16,10 @@ namespace TeretanaBilderhana.Klijenti
         {
             InitializeComponent();
         }
+
+        private void unosButton_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

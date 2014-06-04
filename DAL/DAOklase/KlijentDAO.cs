@@ -17,7 +17,7 @@ namespace DAL
             {
                 try
                 {
-                    c = new MySqlCommand(String.Format("INSERT INTO Klijenti VALUES ('{0}', '{1}', '{2}', '{3}', '{4}');",
+                    c = new MySqlCommand(String.Format("INSERT INTO Klijenti VALUES ('{0}', '{1}', '{2}', '{3}', '{4}', '{5}', '{6}', '{7}');",
                         entity.ID, entity.Ime, entity.Prezime, entity.Spol.ToString(), entity.DatumRodjenja.ToShortDateString(), entity.Kontakt, entity.IDtrenera, entity.IDnutricioniste ), con);
                     c.ExecuteNonQuery();
                     return c.LastInsertedId;

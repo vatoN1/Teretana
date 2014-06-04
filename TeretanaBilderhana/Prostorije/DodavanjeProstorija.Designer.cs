@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(DodavanjeProstorija));
             this.statusStrip1 = new System.Windows.Forms.StatusStrip();
             this.toolStripStatusLabel1 = new System.Windows.Forms.ToolStripStatusLabel();
@@ -37,13 +38,15 @@
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.dostupna_NE = new System.Windows.Forms.RadioButton();
             this.dostupna_DA = new System.Windows.Forms.RadioButton();
-            this.naziv_prostorije_box = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.izadjiButton = new System.Windows.Forms.Button();
             this.unosButton = new System.Windows.Forms.Button();
+            this.prostorijacombo = new System.Windows.Forms.ComboBox();
+            this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
             this.statusStrip1.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             this.SuspendLayout();
             // 
             // statusStrip1
@@ -64,10 +67,10 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.prostorijacombo);
             this.groupBox1.Controls.Add(this.inventar_rich_box);
             this.groupBox1.Controls.Add(this.label3);
             this.groupBox1.Controls.Add(this.groupBox2);
-            this.groupBox1.Controls.Add(this.naziv_prostorije_box);
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Location = new System.Drawing.Point(12, 12);
             this.groupBox1.Name = "groupBox1";
@@ -111,13 +114,13 @@
             this.dostupna_NE.Name = "dostupna_NE";
             this.dostupna_NE.Size = new System.Drawing.Size(39, 17);
             this.dostupna_NE.TabIndex = 1;
-            this.dostupna_NE.TabStop = true;
             this.dostupna_NE.Text = "Ne";
             this.dostupna_NE.UseVisualStyleBackColor = true;
             // 
             // dostupna_DA
             // 
             this.dostupna_DA.AutoSize = true;
+            this.dostupna_DA.Checked = true;
             this.dostupna_DA.Location = new System.Drawing.Point(43, 19);
             this.dostupna_DA.Name = "dostupna_DA";
             this.dostupna_DA.Size = new System.Drawing.Size(39, 17);
@@ -125,13 +128,6 @@
             this.dostupna_DA.TabStop = true;
             this.dostupna_DA.Text = "Da";
             this.dostupna_DA.UseVisualStyleBackColor = true;
-            // 
-            // naziv_prostorije_box
-            // 
-            this.naziv_prostorije_box.Location = new System.Drawing.Point(119, 26);
-            this.naziv_prostorije_box.Name = "naziv_prostorije_box";
-            this.naziv_prostorije_box.Size = new System.Drawing.Size(144, 20);
-            this.naziv_prostorije_box.TabIndex = 14;
             // 
             // label2
             // 
@@ -159,6 +155,26 @@
             this.unosButton.TabIndex = 30;
             this.unosButton.Text = "Unesi";
             this.unosButton.UseVisualStyleBackColor = true;
+            this.unosButton.Click += new System.EventHandler(this.unosButton_Click);
+            // 
+            // prostorijacombo
+            // 
+            this.prostorijacombo.FormattingEnabled = true;
+            this.prostorijacombo.Items.AddRange(new object[] {
+            "KardioSoba",
+            "Magacin",
+            "Milkbar",
+            "SobaZaMasazu",
+            "Svlacionica",
+            "WeightLiftingSoba"});
+            this.prostorijacombo.Location = new System.Drawing.Point(119, 26);
+            this.prostorijacombo.Name = "prostorijacombo";
+            this.prostorijacombo.Size = new System.Drawing.Size(144, 21);
+            this.prostorijacombo.TabIndex = 26;
+            // 
+            // errorProvider1
+            // 
+            this.errorProvider1.ContainerControl = this;
             // 
             // DodavanjeProstorija
             // 
@@ -179,6 +195,7 @@
             this.groupBox1.PerformLayout();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -194,9 +211,10 @@
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.RadioButton dostupna_NE;
         private System.Windows.Forms.RadioButton dostupna_DA;
-        private System.Windows.Forms.TextBox naziv_prostorije_box;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button izadjiButton;
         private System.Windows.Forms.Button unosButton;
+        private System.Windows.Forms.ComboBox prostorijacombo;
+        private System.Windows.Forms.ErrorProvider errorProvider1;
     }
 }
