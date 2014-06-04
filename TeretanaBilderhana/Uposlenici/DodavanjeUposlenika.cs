@@ -145,7 +145,7 @@ namespace TeretanaBilderhana
         }
         private void izadjiButton_Click(object sender, EventArgs e)
         {
-            Close();
+            this.Close();
         }
 
     }

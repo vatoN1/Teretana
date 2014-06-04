@@ -16,5 +16,10 @@ namespace TeretanaBilderhana.WorkoutProgrami
         {
             InitializeComponent();
         }
+
+        private void izadjiButton_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }

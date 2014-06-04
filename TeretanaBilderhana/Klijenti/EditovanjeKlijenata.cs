@@ -21,5 +21,10 @@ namespace TeretanaBilderhana.Klijenti
         {
 
         }
+
+        private void izadjiButton_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }

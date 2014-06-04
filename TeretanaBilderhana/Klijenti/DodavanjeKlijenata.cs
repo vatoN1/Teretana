@@ -82,5 +82,10 @@ namespace TeretanaBilderhana.Klijenti
                 toolStripStatusLabel1.Text = "";
             }
         }
+
+        private void izadjiButton_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }

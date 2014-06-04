@@ -68,11 +68,13 @@ namespace TeretanaBilderhana
                         AdministratorskiPanel a = new AdministratorskiPanel();
                         a.Show();
                         errorProvider1.Clear();
+                        passtextbox.Clear();
+                        IDtextbox.Clear();
                     }
                     else if (radnik.Sifra == passtextbox.Text)
                     {
-                        MainPage mp = new MainPage();
-                        mp.Show();
+//                        MainPage mp = new MainPage();
+//                        mp.Show();
                         EditovanjeUposlenika f = new EditovanjeUposlenika();
                         f.Show();
                         errorProvider1.Clear();

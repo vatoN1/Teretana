@@ -140,6 +140,7 @@
             this.izadjiButton.TabIndex = 33;
             this.izadjiButton.Text = "Izadji";
             this.izadjiButton.UseVisualStyleBackColor = true;
+            this.izadjiButton.Click += new System.EventHandler(this.izadjiButton_Click);
             // 
             // unosButton
             // 

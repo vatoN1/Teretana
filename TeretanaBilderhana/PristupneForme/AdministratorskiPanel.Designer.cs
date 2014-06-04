@@ -137,6 +137,7 @@
             this.pregledsljedecibutton.TabIndex = 9;
             this.pregledsljedecibutton.Text = "Sljedeci tab";
             this.pregledsljedecibutton.UseVisualStyleBackColor = true;
+            this.pregledsljedecibutton.Click += new System.EventHandler(this.pregledsljedecibutton_Click);
             // 
             // pregledprethodnibutton
             // 
@@ -275,6 +276,7 @@
             this.unossljedecitab.TabIndex = 9;
             this.unossljedecitab.Text = "Sljedeci tab";
             this.unossljedecitab.UseVisualStyleBackColor = true;
+            this.unossljedecitab.Click += new System.EventHandler(this.unossljedecitab_Click);
             // 
             // unosprethodnibutton
             // 
@@ -284,6 +286,7 @@
             this.unosprethodnibutton.TabIndex = 8;
             this.unosprethodnibutton.Text = "Prethodni tab";
             this.unosprethodnibutton.UseVisualStyleBackColor = true;
+            this.unosprethodnibutton.Click += new System.EventHandler(this.unosprethodnibutton_Click);
             // 
             // monthCalendar2
             // 
@@ -421,6 +424,7 @@
             this.azuriranjesljedecibutton.TabIndex = 9;
             this.azuriranjesljedecibutton.Text = "Sljedeci tab";
             this.azuriranjesljedecibutton.UseVisualStyleBackColor = true;
+            this.azuriranjesljedecibutton.Click += new System.EventHandler(this.azuriranjesljedecibutton_Click);
             // 
             // azuriranjeprethodnibutton
             // 
@@ -430,6 +434,7 @@
             this.azuriranjeprethodnibutton.TabIndex = 8;
             this.azuriranjeprethodnibutton.Text = "Prethodni tab";
             this.azuriranjeprethodnibutton.UseVisualStyleBackColor = true;
+            this.azuriranjeprethodnibutton.Click += new System.EventHandler(this.azuriranjeprethodnibutton_Click);
             // 
             // monthCalendar3
             // 
@@ -463,6 +468,7 @@
             this.azuriranjewprogramibutton.TabIndex = 30;
             this.azuriranjewprogramibutton.Text = "Workout programi";
             this.azuriranjewprogramibutton.UseVisualStyleBackColor = true;
+            this.azuriranjewprogramibutton.Click += new System.EventHandler(this.azuriranjewprogramibutton_Click);
             // 
             // azuriranjepprogramibutton
             // 
@@ -472,6 +478,7 @@
             this.azuriranjepprogramibutton.TabIndex = 29;
             this.azuriranjepprogramibutton.Text = "Prehrambeni programi";
             this.azuriranjepprogramibutton.UseVisualStyleBackColor = true;
+            this.azuriranjepprogramibutton.Click += new System.EventHandler(this.azuriranjepprogramibutton_Click);
             // 
             // izjestajiazuriranjebutton
             // 
@@ -481,6 +488,7 @@
             this.izjestajiazuriranjebutton.TabIndex = 28;
             this.izjestajiazuriranjebutton.Text = "Izvjestaji";
             this.izjestajiazuriranjebutton.UseVisualStyleBackColor = true;
+            this.izjestajiazuriranjebutton.Click += new System.EventHandler(this.izjestajiazuriranjebutton_Click);
             // 
             // azuriranjeklijentibutton
             // 
@@ -490,6 +498,7 @@
             this.azuriranjeklijentibutton.TabIndex = 27;
             this.azuriranjeklijentibutton.Text = "Klijenti";
             this.azuriranjeklijentibutton.UseVisualStyleBackColor = true;
+            this.azuriranjeklijentibutton.Click += new System.EventHandler(this.azuriranjeklijentibutton_Click);
             // 
             // azuriranjeprostorijebutton
             // 
@@ -499,6 +508,7 @@
             this.azuriranjeprostorijebutton.TabIndex = 26;
             this.azuriranjeprostorijebutton.Text = "Prostorije";
             this.azuriranjeprostorijebutton.UseVisualStyleBackColor = true;
+            this.azuriranjeprostorijebutton.Click += new System.EventHandler(this.azuriranjeprostorijebutton_Click);
             // 
             // a
             // 
@@ -508,6 +518,7 @@
             this.a.TabIndex = 25;
             this.a.Text = "Oprema";
             this.a.UseVisualStyleBackColor = true;
+            this.a.Click += new System.EventHandler(this.a_Click);
             // 
             // azuriranjesuplementibutton
             // 
@@ -517,6 +528,7 @@
             this.azuriranjesuplementibutton.TabIndex = 24;
             this.azuriranjesuplementibutton.Text = "Suplementi";
             this.azuriranjesuplementibutton.UseVisualStyleBackColor = true;
+            this.azuriranjesuplementibutton.Click += new System.EventHandler(this.azuriranjesuplementibutton_Click);
             // 
             // azuriranjespravebutton
             // 
@@ -526,6 +538,7 @@
             this.azuriranjespravebutton.TabIndex = 23;
             this.azuriranjespravebutton.Text = "Sprave";
             this.azuriranjespravebutton.UseVisualStyleBackColor = true;
+            this.azuriranjespravebutton.Click += new System.EventHandler(this.azuriranjespravebutton_Click);
             // 
             // azuriranjeuposlenicibutton
             // 
@@ -535,6 +548,7 @@
             this.azuriranjeuposlenicibutton.TabIndex = 22;
             this.azuriranjeuposlenicibutton.Text = "Uposlenici";
             this.azuriranjeuposlenicibutton.UseVisualStyleBackColor = true;
+            this.azuriranjeuposlenicibutton.Click += new System.EventHandler(this.azuriranjeuposlenicibutton_Click);
             // 
             // brisanjetab
             // 
@@ -558,6 +572,7 @@
             this.brisanjesljedecibutton.TabIndex = 7;
             this.brisanjesljedecibutton.Text = "Sljedeci tab";
             this.brisanjesljedecibutton.UseVisualStyleBackColor = true;
+            this.brisanjesljedecibutton.Click += new System.EventHandler(this.brisanjesljedecibutton_Click);
             // 
             // brisanjeprethodnibutton
             // 
@@ -567,6 +582,7 @@
             this.brisanjeprethodnibutton.TabIndex = 6;
             this.brisanjeprethodnibutton.Text = "Prethodni tab";
             this.brisanjeprethodnibutton.UseVisualStyleBackColor = true;
+            this.brisanjeprethodnibutton.Click += new System.EventHandler(this.brisanjeprethodnibutton_Click);
             // 
             // monthCalendar4
             // 
@@ -704,6 +720,7 @@
             this.uplateprethodnibutton.TabIndex = 8;
             this.uplateprethodnibutton.Text = "Prethodni tab";
             this.uplateprethodnibutton.UseVisualStyleBackColor = true;
+            this.uplateprethodnibutton.Click += new System.EventHandler(this.uplateprethodnibutton_Click);
             // 
             // monthCalendar5
             // 

@@ -8,23 +8,23 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace TeretanaBilderhana.Suplementi
+namespace TeretanaBilderhana.PristupneForme
 {
-    public partial class EditovanjeSuplemenata : Form
+    public partial class Recepcija : Form
     {
-        public EditovanjeSuplemenata()
+        public Recepcija()
         {
             InitializeComponent();
         }
 
-        private void groupBox1_Enter(object sender, EventArgs e)
+        private void backgroundWorker1_DoWork(object sender, DoWorkEventArgs e)
         {
 
         }
 
-        private void izadjiButton_Click(object sender, EventArgs e)
+        private void dateTimePicker1_ValueChanged(object sender, EventArgs e)
         {
-            this.Close();
+
         }
     }
 }

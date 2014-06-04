@@ -79,5 +79,100 @@ namespace TeretanaBilderhana.PristupneForme
             wp.Show();
         }
 
+        private void azuriranjeuposlenicibutton_Click(object sender, EventArgs e)
+        {
+            EditovanjeUposlenika u = new EditovanjeUposlenika();
+            u.Show();
+        }
+
+        private void izjestajiazuriranjebutton_Click(object sender, EventArgs e)
+        {
+            EditovanjeIzvjestaja i = new EditovanjeIzvjestaja();
+            i.Show();
+        }
+
+        private void azuriranjeklijentibutton_Click(object sender, EventArgs e)
+        {
+            EditovanjeKlijenata k = new EditovanjeKlijenata();
+            k.Show();
+        }
+
+        private void a_Click(object sender, EventArgs e)
+        {
+            EditovanjeOpreme o = new EditovanjeOpreme();
+            o.Show();
+        }
+
+        private void azuriranjespravebutton_Click(object sender, EventArgs e)
+        {
+            EditovanjeSprava s = new EditovanjeSprava();
+            s.Show();
+        }
+
+        private void azuriranjesuplementibutton_Click(object sender, EventArgs e)
+        {
+            EditovanjeSuplemenata s = new EditovanjeSuplemenata();
+            s.Show();
+        }
+
+        private void azuriranjeprostorijebutton_Click(object sender, EventArgs e)
+        {
+            EditovanjeProstorija p = new EditovanjeProstorija();
+            p.Show();
+        }
+
+        private void azuriranjepprogramibutton_Click(object sender, EventArgs e)
+        {
+            EditovanjePrehrambenihPrograma pp = new EditovanjePrehrambenihPrograma();
+            pp.Show();
+        }
+
+        private void azuriranjewprogramibutton_Click(object sender, EventArgs e)
+        {
+            EditovanjeWorkoutPrograma wp = new EditovanjeWorkoutPrograma();
+            wp.Show();
+        }
+
+        private void pregledsljedecibutton_Click(object sender, EventArgs e)
+        {
+            Admintabcontrol.SelectedTab = unostab;
+        }
+
+        private void unosprethodnibutton_Click(object sender, EventArgs e)
+        {
+            Admintabcontrol.SelectedTab = pregledtab;
+        }
+
+        private void unossljedecitab_Click(object sender, EventArgs e)
+        {
+            Admintabcontrol.SelectedTab = azuriranjetab;
+        }
+
+        private void azuriranjeprethodnibutton_Click(object sender, EventArgs e)
+        {
+            Admintabcontrol.SelectedTab = unostab;
+        }
+
+        private void azuriranjesljedecibutton_Click(object sender, EventArgs e)
+        {
+            Admintabcontrol.SelectedTab = brisanjetab;
+        }
+
+        private void brisanjeprethodnibutton_Click(object sender, EventArgs e)
+        {
+            Admintabcontrol.SelectedTab = azuriranjetab;
+        }
+
+        private void brisanjesljedecibutton_Click(object sender, EventArgs e)
+        {
+            Admintabcontrol.SelectedTab = uplateisplatetab;
+        }
+
+        private void uplateprethodnibutton_Click(object sender, EventArgs e)
+        {
+            Admintabcontrol.SelectedTab = brisanjetab;
+        }
+
+
     }
 }
