@@ -49,16 +49,17 @@
             this.prezimetb = new System.Windows.Forms.TextBox();
             this.imetb = new System.Windows.Forms.TextBox();
             this.kontakt_masked_box = new System.Windows.Forms.MaskedTextBox();
-            this.platatb = new System.Windows.Forms.MaskedTextBox();
             this.unosButton = new System.Windows.Forms.Button();
             this.izadjiButton = new System.Windows.Forms.Button();
             this.statusStrip1 = new System.Windows.Forms.StatusStrip();
             this.toolStripStatusLabel1 = new System.Windows.Forms.ToolStripStatusLabel();
             this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
+            this.plata_npd = new System.Windows.Forms.NumericUpDown();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.statusStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.plata_npd)).BeginInit();
             this.SuspendLayout();
             // 
             // label2
@@ -135,6 +136,7 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.plata_npd);
             this.groupBox1.Controls.Add(this.zaposlenje_datetime);
             this.groupBox1.Controls.Add(this.rodjenje_datetime);
             this.groupBox1.Controls.Add(this.sifra_box);
@@ -143,7 +145,6 @@
             this.groupBox1.Controls.Add(this.prezimetb);
             this.groupBox1.Controls.Add(this.imetb);
             this.groupBox1.Controls.Add(this.kontakt_masked_box);
-            this.groupBox1.Controls.Add(this.platatb);
             this.groupBox1.Controls.Add(this.label10);
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Controls.Add(this.label9);
@@ -248,13 +249,6 @@
             this.kontakt_masked_box.Size = new System.Drawing.Size(121, 20);
             this.kontakt_masked_box.TabIndex = 13;
             // 
-            // platatb
-            // 
-            this.platatb.Location = new System.Drawing.Point(119, 169);
-            this.platatb.Name = "platatb";
-            this.platatb.Size = new System.Drawing.Size(121, 20);
-            this.platatb.TabIndex = 12;
-            // 
             // unosButton
             // 
             this.unosButton.Location = new System.Drawing.Point(114, 300);
@@ -295,6 +289,28 @@
             // 
             this.errorProvider1.ContainerControl = this;
             // 
+            // plata_npd
+            // 
+            this.plata_npd.Location = new System.Drawing.Point(119, 166);
+            this.plata_npd.Maximum = new decimal(new int[] {
+            7000,
+            0,
+            0,
+            0});
+            this.plata_npd.Minimum = new decimal(new int[] {
+            1000,
+            0,
+            0,
+            0});
+            this.plata_npd.Name = "plata_npd";
+            this.plata_npd.Size = new System.Drawing.Size(120, 20);
+            this.plata_npd.TabIndex = 22;
+            this.plata_npd.Value = new decimal(new int[] {
+            1000,
+            0,
+            0,
+            0});
+            // 
             // DodavanjeUposlenika
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -315,6 +331,7 @@
             this.statusStrip1.ResumeLayout(false);
             this.statusStrip1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.plata_npd)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -335,7 +352,6 @@
         private System.Windows.Forms.TextBox prezimetb;
         private System.Windows.Forms.TextBox imetb;
         private System.Windows.Forms.MaskedTextBox kontakt_masked_box;
-        private System.Windows.Forms.MaskedTextBox platatb;
         private System.Windows.Forms.TextBox sifra_box;
         private System.Windows.Forms.ComboBox zaposlenje_combo;
         private System.Windows.Forms.RadioButton zenskoRB;
@@ -347,5 +363,6 @@
         private System.Windows.Forms.ToolStripStatusLabel toolStripStatusLabel1;
         private System.Windows.Forms.DateTimePicker zaposlenje_datetime;
         private System.Windows.Forms.DateTimePicker rodjenje_datetime;
+        private System.Windows.Forms.NumericUpDown plata_npd;
     }
 }

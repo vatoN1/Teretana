@@ -22,12 +22,15 @@ namespace TeretanaBilderhana
 
         public bool validiraj()
         {
-            return (
+            return 
+            (
                 (errorProvider1.GetError(imetb) == "") && 
                 (errorProvider1.GetError(prezimetb) == "") && 
                 (errorProvider1.GetError(kontakt_masked_box) == "") && 
                 (errorProvider1.GetError(sifra_box) == "") &&
-                (errorProvider1.GetError(platatb) == ""));
+                (errorProvider1.GetError(zaposlenje_combo) == "") &&
+                (errorProvider1.GetError(groupBox2) == "")
+            );
         }
 
 
@@ -42,7 +45,7 @@ namespace TeretanaBilderhana
                 if(zenskoRB.Checked) Spol="Zensko"; 
                 Uposlenik Uposlenik = new Uposlenik(
                     r, imetb.Text, prezimetb.Text, Spol, rodjenje_datetime.Value, zaposlenje_datetime.Value,
-                    Convert.ToDecimal(platatb.Text), kontakt_masked_box.Text, zaposlenje, sifra_box.Text);
+                    Convert.ToDecimal(plata_npd.Value), kontakt_masked_box.Text, zaposlenje, sifra_box.Text);
 
                 DAL.DAL d = DAL.DAL.Instanca;
                 
@@ -76,20 +79,6 @@ namespace TeretanaBilderhana
             {
                 errorProvider1.SetError(prezimetb, "Ime prekratko");
                 toolStripStatusLabel1.Text = "Ime prekratko!";
-            }
-            else
-            {
-                errorProvider1.SetError(prezimetb, "");
-                toolStripStatusLabel1.Text = "";
-            }
-        }
-
-        private void platatb_Validating(object sender, CancelEventArgs e)
-        {
-            if (prezimetb.Text.Length < 3)
-            {
-                errorProvider1.SetError(prezimetb, "Premala plata!");
-                toolStripStatusLabel1.Text = "Premala plata!";
             }
             else
             {

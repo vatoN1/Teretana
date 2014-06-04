@@ -45,7 +45,6 @@
             this.prezimetb = new System.Windows.Forms.TextBox();
             this.imetb = new System.Windows.Forms.TextBox();
             this.kontakt_masked_box = new System.Windows.Forms.MaskedTextBox();
-            this.platatb = new System.Windows.Forms.MaskedTextBox();
             this.label10 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -57,10 +56,12 @@
             this.label1 = new System.Windows.Forms.Label();
             this.uposlenikID_masked_box = new System.Windows.Forms.MaskedTextBox();
             this.label2 = new System.Windows.Forms.Label();
+            this.plata_npd = new System.Windows.Forms.NumericUpDown();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             this.statusStrip1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.plata_npd)).BeginInit();
             this.SuspendLayout();
             // 
             // errorProvider1
@@ -191,14 +192,6 @@
             this.kontakt_masked_box.TabIndex = 13;
             this.kontakt_masked_box.Validating += new System.ComponentModel.CancelEventHandler(this.kontakttb_Validating);
             // 
-            // platatb
-            // 
-            this.platatb.Location = new System.Drawing.Point(119, 198);
-            this.platatb.Name = "platatb";
-            this.platatb.Size = new System.Drawing.Size(137, 20);
-            this.platatb.TabIndex = 12;
-            this.platatb.Validating += new System.ComponentModel.CancelEventHandler(this.kontakttb_Validating);
-            // 
             // label10
             // 
             this.label10.AutoSize = true;
@@ -264,6 +257,7 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.plata_npd);
             this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Controls.Add(this.uposlenikID_masked_box);
             this.groupBox1.Controls.Add(this.zaposlenje_datetime);
@@ -274,7 +268,6 @@
             this.groupBox1.Controls.Add(this.prezimetb);
             this.groupBox1.Controls.Add(this.imetb);
             this.groupBox1.Controls.Add(this.kontakt_masked_box);
-            this.groupBox1.Controls.Add(this.platatb);
             this.groupBox1.Controls.Add(this.label10);
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Controls.Add(this.label9);
@@ -302,11 +295,11 @@
             // uposlenikID_masked_box
             // 
             this.uposlenikID_masked_box.Location = new System.Drawing.Point(119, 20);
-            this.uposlenikID_masked_box.Mask = "00000";
+            this.uposlenikID_masked_box.Mask = "0000";
             this.uposlenikID_masked_box.Name = "uposlenikID_masked_box";
             this.uposlenikID_masked_box.Size = new System.Drawing.Size(136, 20);
             this.uposlenikID_masked_box.TabIndex = 22;
-            this.uposlenikID_masked_box.ValidatingType = typeof(int);
+            this.uposlenikID_masked_box.Leave += new System.EventHandler(this.uposlenikID_masked_box_Leave);
             // 
             // label2
             // 
@@ -316,6 +309,28 @@
             this.label2.Size = new System.Drawing.Size(27, 13);
             this.label2.TabIndex = 1;
             this.label2.Text = "Ime:";
+            // 
+            // plata_npd
+            // 
+            this.plata_npd.Location = new System.Drawing.Point(120, 195);
+            this.plata_npd.Maximum = new decimal(new int[] {
+            7000,
+            0,
+            0,
+            0});
+            this.plata_npd.Minimum = new decimal(new int[] {
+            1000,
+            0,
+            0,
+            0});
+            this.plata_npd.Name = "plata_npd";
+            this.plata_npd.Size = new System.Drawing.Size(135, 20);
+            this.plata_npd.TabIndex = 24;
+            this.plata_npd.Value = new decimal(new int[] {
+            1000,
+            0,
+            0,
+            0});
             // 
             // EditovanjeUposlenika
             // 
@@ -338,6 +353,7 @@
             this.groupBox2.PerformLayout();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.plata_npd)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -363,7 +379,6 @@
         private System.Windows.Forms.TextBox prezimetb;
         private System.Windows.Forms.TextBox imetb;
         private System.Windows.Forms.MaskedTextBox kontakt_masked_box;
-        private System.Windows.Forms.MaskedTextBox platatb;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label9;
@@ -372,5 +387,6 @@
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.NumericUpDown plata_npd;
     }
 }

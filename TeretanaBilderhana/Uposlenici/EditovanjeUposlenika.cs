@@ -25,7 +25,8 @@ namespace TeretanaBilderhana
                 (errorProvider1.GetError(prezimetb) == "") &&
                 (errorProvider1.GetError(kontakt_masked_box) == "") &&
                 (errorProvider1.GetError(sifra_box) == "") &&
-                (errorProvider1.GetError(platatb) == "")
+                (errorProvider1.GetError(zaposlenje_combo) == "") &&
+                (errorProvider1.GetError(groupBox2) == "")
             );
         }
 
@@ -38,8 +39,8 @@ namespace TeretanaBilderhana
                 if(zenskoRB.Checked) Spol="Zensko";
                
                 Uposlenik Uposlenik = new Uposlenik(
-                    Convert.ToInt32(uposlenikID_masked_box.Text), imetb.Text, prezimetb.Text, Spol, rodjenje_datetime.Value, zaposlenje_datetime.Value,
-                    Convert.ToDecimal(platatb.Text), kontakt_masked_box.Text, zaposlenje, sifra_box.Text);
+                    Convert.ToInt32(uposlenikID_masked_box.Text), imetb.Text, prezimetb.Text, Spol, rodjenje_datetime.Value, 
+                    zaposlenje_datetime.Value, plata_npd.Value, kontakt_masked_box.Text, zaposlenje, sifra_box.Text);
 
                 DAL.DAL d = DAL.DAL.Instanca;
                 d.kreirajKonekciju("localhost", "Teretana", "root", "");
@@ -74,20 +75,6 @@ namespace TeretanaBilderhana
             {
                 errorProvider1.SetError(prezimetb, "Ime prekratko");
                 toolStripStatusLabel1.Text = "Ime prekratko!";
-            }
-            else
-            {
-                errorProvider1.SetError(prezimetb, "");
-                toolStripStatusLabel1.Text = "";
-            }
-        }
-
-        private void platatb_Validating(object sender, CancelEventArgs e)
-        {
-            if (prezimetb.Text.Length < 3)
-            {
-                errorProvider1.SetError(prezimetb, "Premala plata!");
-                toolStripStatusLabel1.Text = "Premala plata!";
             }
             else
             {
@@ -173,7 +160,7 @@ namespace TeretanaBilderhana
             return true;
         }
 
-        private void maskedTextBox4_Leave(object sender, EventArgs e)
+        private void uposlenikID_masked_box_Leave(object sender, EventArgs e)
         {
             if (ima())
             {
@@ -184,13 +171,14 @@ namespace TeretanaBilderhana
                 Uposlenik Uposlenik = c.getById(Convert.ToInt32(uposlenikID_masked_box.Text));
                 imetb.Text = Uposlenik.Ime;
                 prezimetb.Text = Uposlenik.Prezime;
-                kontakt_masked_box.Text = Uposlenik.Kontakt;
-                platatb.Text = Convert.ToString(Uposlenik.Plata);
-                rodjenje_datetime.Value = Uposlenik.DatumRodjenja;
-                zaposlenje_datetime.Value = Uposlenik.DatumZaposlenja;
                 if (Convert.ToString(Uposlenik.Spol) == "Musko") muskoRB.Checked = true;
-                else zenskoRB.Checked = true; 
-                
+                else zenskoRB.Checked = true;
+                rodjenje_datetime.Value = Uposlenik.DatumRodjenja;
+                kontakt_masked_box.Text = Uposlenik.Kontakt;
+                plata_npd.Value = Uposlenik.Plata;
+                zaposlenje_datetime.Value = Uposlenik.DatumZaposlenja;
+                zaposlenje_combo.SelectedText = Uposlenik.ZaposlenjeS;
+                sifra_box.Text = Uposlenik.Sifra;
                 d.terminirajKonekciju();
             }
             else
@@ -206,5 +194,6 @@ namespace TeretanaBilderhana
         {
 
         }
+
     }
 }
