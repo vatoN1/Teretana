@@ -16,5 +16,31 @@ namespace TeretanaBilderhana.PristupneForme
         {
             InitializeComponent();
         }
+
+        private void toolStripButton3_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void toolStripButton2_Click(object sender, EventArgs e)
+        {
+            EditovanjeUposlenika ex = new EditovanjeUposlenika();
+            ex.Show();
+        }
+
+        private void toolStripButton1_Click(object sender, EventArgs e)
+        {
+            // PREGLED UPOSLENIKA
+        }
+
+        private void toolStripButton1_MouseHover(object sender, EventArgs e)
+        {
+            toolStripButton1.ToolTipText = "Pregled uposlenih";
+        }
+
+        private void toolStripButton2_MouseHover(object sender, EventArgs e)
+        {
+            toolStripButton2.ToolTipText = "Editovanje klijenata";
+        }
     }
 }

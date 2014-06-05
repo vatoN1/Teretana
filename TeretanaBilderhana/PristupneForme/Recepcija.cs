@@ -70,5 +70,10 @@ namespace TeretanaBilderhana.PristupneForme
         {
             dateTimePicker1.Value.TimeOfDay.Equals(DateTime.Now.TimeOfDay);
         }
+
+        private void toolStripButton4_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }

@@ -131,6 +131,12 @@
     <Compile Include="PristupneForme\IzvjestajForma.Designer.cs">
       <DependentUpon>IzvjestajForma.cs</DependentUpon>
     </Compile>
+    <Compile Include="PristupneForme\NutricionistaPanel.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PristupneForme\NutricionistaPanel.Designer.cs">
+      <DependentUpon>NutricionistaPanel.cs</DependentUpon>
+    </Compile>
     <Compile Include="PristupneForme\RacunPrikaz.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -148,6 +154,12 @@
     </Compile>
     <Compile Include="PristupneForme\Recepcija.Designer.cs">
       <DependentUpon>Recepcija.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PristupneForme\TrenerPanel.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PristupneForme\TrenerPanel.Designer.cs">
+      <DependentUpon>TrenerPanel.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -247,6 +259,9 @@
     <EmbeddedResource Include="PristupneForme\IzvjestajForma.resx">
       <DependentUpon>IzvjestajForma.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="PristupneForme\NutricionistaPanel.resx">
+      <DependentUpon>NutricionistaPanel.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="PristupneForme\RacunPrikaz.resx">
       <DependentUpon>RacunPrikaz.cs</DependentUpon>
     </EmbeddedResource>
@@ -255,6 +270,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="PristupneForme\Recepcija.resx">
       <DependentUpon>Recepcija.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PristupneForme\TrenerPanel.resx">
+      <DependentUpon>TrenerPanel.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

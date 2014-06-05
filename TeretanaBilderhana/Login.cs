@@ -76,19 +76,31 @@ namespace TeretanaBilderhana
                         Recepcija r = new Recepcija();
                         r.Show();
                         errorProvider1.Clear();
+                        passtextbox.Clear();
+                        errorProvider1.Clear();
                     }
                     else if (radnik.Sifra == passtextbox.Text && radnik.ZaposlenjeS == "Tehnicar")
                     {
                         IzvjestajForma i = new IzvjestajForma();
                         i.Show();
                         errorProvider1.Clear();
+                        passtextbox.Clear();
+                        errorProvider1.Clear();
                     }
                     else if (radnik.Sifra == passtextbox.Text && radnik.ZaposlenjeS == "Trener")
                     {
+                        TrenerPanel t = new TrenerPanel();
+                        t.Show();
+                        errorProvider1.Clear();
+                        passtextbox.Clear();
                         errorProvider1.Clear();
                     }
                     else if (radnik.Sifra == passtextbox.Text && radnik.ZaposlenjeS == "Nutricionista")
                     {
+                        NutricionistaPanel n = new NutricionistaPanel();
+                        n.Show();
+                        errorProvider1.Clear();
+                        passtextbox.Clear();
                         errorProvider1.Clear();
                     }
                     else if (Convert.ToInt32(IDtextbox.Text) == radnik.IdUposlenika && passtextbox.Text != radnik.Sifra)
@@ -130,8 +142,6 @@ namespace TeretanaBilderhana
                 ;
             }
         }
-        
-
         private void button2_Click(object sender, EventArgs e)
         {
             Application.Exit();
@@ -140,8 +150,6 @@ namespace TeretanaBilderhana
         private void label2_Click(object sender, EventArgs e)
         {
 
-        }
-
-        
+        }        
     }
 }

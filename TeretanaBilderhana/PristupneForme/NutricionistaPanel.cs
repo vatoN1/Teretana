@@ -16,5 +16,21 @@ namespace TeretanaBilderhana.PristupneForme
         {
             InitializeComponent();
         }
+
+        private void toolStripButton1_Click(object sender, EventArgs e)
+        {
+            // PREGLED KLIJENATA DATA GRID
+        }
+
+        private void toolStripButton2_Click(object sender, EventArgs e)
+        {
+            Klijenti.EditovanjeKlijenata ex = new Klijenti.EditovanjeKlijenata();
+            ex.Show();
+        }
+
+        private void toolStripButton3_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }
