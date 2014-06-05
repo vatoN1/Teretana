@@ -28,7 +28,7 @@ namespace DAL
                     throw e;
                 }
             }
-
+            public WorkoutProgram update(WorkoutProgram entity) { throw new NotImplementedException(); }
             public WorkoutProgram read(WorkoutProgram entity)
             {
                 try

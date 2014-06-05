@@ -27,7 +27,7 @@ namespace DAL
                     throw e;
                 }
             }
-
+            public Sprava update(Sprava entity) { throw new NotImplementedException(); }
             public Sprava read(Sprava entity)
             {
                 try

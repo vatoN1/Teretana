@@ -27,7 +27,7 @@ namespace DAL
                     throw e;
                 }
             }
-
+            public Oprema update(Oprema entity) { throw new NotImplementedException(); }
             public Oprema read(Oprema entity)
             {
                 try

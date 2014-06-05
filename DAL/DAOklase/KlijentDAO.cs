@@ -27,7 +27,7 @@ namespace DAL
                     throw e;
                 }
             }
-
+            public Klijent update(Klijent entity) { throw new NotImplementedException(); }
             public Klijent read(Klijent entity)
             {
                 try

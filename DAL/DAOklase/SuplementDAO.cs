@@ -28,7 +28,7 @@ namespace DAL
                     throw e;
                 }
             }
-
+            public Suplement update(Suplement entity) { throw new NotImplementedException(); }
             public Suplement read(Suplement entity)
             {
                 try

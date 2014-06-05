@@ -27,8 +27,8 @@ using System;
 	                {
 	                    throw e;
 	                }
-	            } 
-	
+	            }
+                public PrehrambeniProgram update(PrehrambeniProgram entity) { throw new NotImplementedException(); }
 	            public PrehrambeniProgram read(PrehrambeniProgram entity)
 	            {
 	                try

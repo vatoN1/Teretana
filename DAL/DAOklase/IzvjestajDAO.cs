@@ -65,7 +65,7 @@ namespace DAL
                     throw e;
                 }
             }
-
+            public Izvjestaj update(Izvjestaj entity) { throw new NotImplementedException(); }
             public void delete(Izvjestaj entity)
             {
                 try

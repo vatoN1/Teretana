@@ -16,7 +16,9 @@ namespace TeretanaBilderhana
         public EditovanjeUposlenika()
         {
             InitializeComponent();
-            
+            zaposlenje_combo.Items.Add("Trener");
+            zaposlenje_combo.Items.Add("Nutricionista");
+            zaposlenje_combo.Items.Add("Tehnicar");
         }
 
         public bool validiraj()
@@ -59,7 +61,7 @@ namespace TeretanaBilderhana
                 Uposlenik.ZaposlenjeS = zaposlenje_combo.SelectedText;
                 Uposlenik.Sifra = sifra_box.Text;*/
 
-                c.update(Uposlenik.IdUposlenika, Uposlenik);
+                c.update(Uposlenik);
                 d.terminirajKonekciju();
                 //Close();
             }

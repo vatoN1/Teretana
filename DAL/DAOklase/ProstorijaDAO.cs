@@ -26,7 +26,7 @@ namespace DAL
                     throw e;
                 }
             }
-
+            public Prostorija update(Prostorija entity) { throw new NotImplementedException(); }
             public Prostorija read(Prostorija entity)
             {
                 try
