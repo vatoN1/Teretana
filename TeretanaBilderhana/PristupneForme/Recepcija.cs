@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using TeretanaBilderhana.PristupneForme;
 
 namespace TeretanaBilderhana.PristupneForme
 {
@@ -40,6 +41,34 @@ namespace TeretanaBilderhana.PristupneForme
         private void toolStripButton3_MouseHover(object sender, EventArgs e)
         {
             toolStripButton3.Text = "Recepcioner izvjestaj";
+        }
+
+        private void toolStripButton1_Click(object sender, EventArgs e)
+        {
+            Klijenti.DodavanjeKlijenata k = new Klijenti.DodavanjeKlijenata();
+            k.Show();
+        }
+
+        private void toolStripButton2_Click(object sender, EventArgs e)
+        {
+            RacunUnos r = new RacunUnos();
+            r.Show();
+        }
+
+        private void toolStripButton3_Click(object sender, EventArgs e)
+        {
+            IzvjestajForma i = new IzvjestajForma();
+            i.Show();
+        }
+
+        private void dateTimePicker1_ControlAdded(object sender, ControlEventArgs e)
+        {
+            dateTimePicker1.Value.AddHours(DateTime.Now.Hour);
+        }
+
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+            dateTimePicker1.Value.TimeOfDay.Equals(DateTime.Now.TimeOfDay);
         }
     }
 }

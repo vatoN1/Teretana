@@ -15,6 +15,31 @@ namespace TeretanaBilderhana
         public MainPage()
         {
             InitializeComponent();
+            this.SendToBack(); 
         }
+
+        private void MainPage_Load(object sender, EventArgs e)
+        {
+        }
+
+        private void MainPage_MouseClick(object sender, MouseEventArgs e)
+        {
+            Login l = new Login();
+            l.Show();
+            l.BringToFront();
+
+        }
+        bool flag = false;
+        private void MainPage_MouseEnter(object sender, EventArgs e)
+        {
+            if (flag == false)
+            { 
+            Login l = new Login();
+            l.Show();
+            l.BringToFront();
+            flag = true;
+            }
+        }
+
     }
 }

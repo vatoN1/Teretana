@@ -10,16 +10,11 @@ using System.Windows.Forms;
 
 namespace TeretanaBilderhana.PristupneForme
 {
-    public partial class Izvjestaj : Form
+    public partial class NutricionistaPanel : Form
     {
-        public Izvjestaj()
+        public NutricionistaPanel()
         {
             InitializeComponent();
-        }
-
-        private void label5_Click(object sender, EventArgs e)
-        {
-
         }
     }
 }

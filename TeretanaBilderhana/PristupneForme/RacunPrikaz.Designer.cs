@@ -465,7 +465,7 @@
             this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
             this.pictureBox2.Location = new System.Drawing.Point(77, 399);
             this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(34, 29);
+            this.pictureBox2.Size = new System.Drawing.Size(35, 29);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox2.TabIndex = 42;
             this.pictureBox2.TabStop = false;
@@ -497,11 +497,11 @@
             this.label45.TabIndex = 46;
             this.label45.Text = "Vrijeme izlaska:";
             // 
-            // Racun
+            // RacunPrikaz
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(191, 514);
+            this.ClientSize = new System.Drawing.Size(192, 514);
             this.Controls.Add(this.label45);
             this.Controls.Add(this.label44);
             this.Controls.Add(this.label43);
@@ -548,8 +548,10 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MaximumSize = new System.Drawing.Size(208, 553);
             this.MinimizeBox = false;
-            this.Name = "Racun";
+            this.MinimumSize = new System.Drawing.Size(208, 553);
+            this.Name = "RacunPrikaz";
             this.Text = "Racun";
             this.Load += new System.EventHandler(this.Racun_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();

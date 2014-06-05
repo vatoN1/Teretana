@@ -33,18 +33,20 @@
             // 
             // MainPage
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.AutoSize = true;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(588, 448);
-            this.DoubleBuffered = true;
+            this.ClientSize = new System.Drawing.Size(1349, 728);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MinimizeBox = false;
             this.Name = "MainPage";
             this.Text = "Bilderhana";
             this.TransparencyKey = System.Drawing.Color.SteelBlue;
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+            this.Load += new System.EventHandler(this.MainPage_Load);
+            this.MouseClick += new System.Windows.Forms.MouseEventHandler(this.MainPage_MouseClick);
+            this.MouseEnter += new System.EventHandler(this.MainPage_MouseEnter);
             this.ResumeLayout(false);
 
         }

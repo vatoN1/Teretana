@@ -71,12 +71,24 @@ namespace TeretanaBilderhana
                         passtextbox.Clear();
                         IDtextbox.Clear();
                     }
-                    else if (radnik.Sifra == passtextbox.Text)
+                    else if (radnik.Sifra == passtextbox.Text && radnik.ZaposlenjeS == "Recepcioner")
                     {
-//                        MainPage mp = new MainPage();
-//                        mp.Show();
-                        EditovanjeUposlenika f = new EditovanjeUposlenika();
-                        f.Show();
+                        Recepcija r = new Recepcija();
+                        r.Show();
+                        errorProvider1.Clear();
+                    }
+                    else if (radnik.Sifra == passtextbox.Text && radnik.ZaposlenjeS == "Tehnicar")
+                    {
+                        IzvjestajForma i = new IzvjestajForma();
+                        i.Show();
+                        errorProvider1.Clear();
+                    }
+                    else if (radnik.Sifra == passtextbox.Text && radnik.ZaposlenjeS == "Trener")
+                    {
+                        errorProvider1.Clear();
+                    }
+                    else if (radnik.Sifra == passtextbox.Text && radnik.ZaposlenjeS == "Nutricionista")
+                    {
                         errorProvider1.Clear();
                     }
                     else if (Convert.ToInt32(IDtextbox.Text) == radnik.IdUposlenika && passtextbox.Text != radnik.Sifra)
