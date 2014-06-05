@@ -26,5 +26,20 @@ namespace TeretanaBilderhana.PristupneForme
         {
 
         }
+
+        private void toolStripButton1_MouseHover(object sender, EventArgs e)
+        {
+            toolStripButton1.Text = "Unos novog klijenta";
+        }
+
+        private void toolStripButton2_MouseHover(object sender, EventArgs e)
+        {
+            toolStripButton2.Text = "Formiranje racuna za jednokratnog korisnika";
+        }
+
+        private void toolStripButton3_MouseHover(object sender, EventArgs e)
+        {
+            toolStripButton3.Text = "Recepcioner izvjestaj";
+        }
     }
 }

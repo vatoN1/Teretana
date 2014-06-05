@@ -67,6 +67,7 @@
             this.toolStripButton1.Name = "toolStripButton1";
             this.toolStripButton1.Size = new System.Drawing.Size(36, 36);
             this.toolStripButton1.Text = "toolStripButton1";
+            this.toolStripButton1.MouseHover += new System.EventHandler(this.toolStripButton1_MouseHover);
             // 
             // toolStripSeparator1
             // 
@@ -81,6 +82,7 @@
             this.toolStripButton2.Name = "toolStripButton2";
             this.toolStripButton2.Size = new System.Drawing.Size(36, 36);
             this.toolStripButton2.Text = "toolStripButton2";
+            this.toolStripButton2.MouseHover += new System.EventHandler(this.toolStripButton2_MouseHover);
             // 
             // toolStripSeparator2
             // 
@@ -95,6 +97,7 @@
             this.toolStripButton3.Name = "toolStripButton3";
             this.toolStripButton3.Size = new System.Drawing.Size(36, 36);
             this.toolStripButton3.Text = "toolStripButton3";
+            this.toolStripButton3.MouseHover += new System.EventHandler(this.toolStripButton3_MouseHover);
             // 
             // toolStripSeparator3
             // 

@@ -125,6 +125,24 @@
     <Compile Include="PristupneForme\AdministratorskiPanel.Designer.cs">
       <DependentUpon>AdministratorskiPanel.cs</DependentUpon>
     </Compile>
+    <Compile Include="PristupneForme\Izvjestaj.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PristupneForme\Izvjestaj.Designer.cs">
+      <DependentUpon>Izvjestaj.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PristupneForme\RacunPrikaz.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PristupneForme\RacunPrikaz.Designer.cs">
+      <DependentUpon>RacunPrikaz.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PristupneForme\RacunUnos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PristupneForme\RacunUnos.Designer.cs">
+      <DependentUpon>RacunUnos.cs</DependentUpon>
+    </Compile>
     <Compile Include="PristupneForme\Recepcija.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -225,6 +243,15 @@
     </EmbeddedResource>
     <EmbeddedResource Include="PristupneForme\AdministratorskiPanel.resx">
       <DependentUpon>AdministratorskiPanel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PristupneForme\Izvjestaj.resx">
+      <DependentUpon>Izvjestaj.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PristupneForme\RacunPrikaz.resx">
+      <DependentUpon>RacunPrikaz.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PristupneForme\RacunUnos.resx">
+      <DependentUpon>RacunUnos.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="PristupneForme\Recepcija.resx">
       <DependentUpon>Recepcija.cs</DependentUpon>
