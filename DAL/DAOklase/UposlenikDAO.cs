@@ -72,7 +72,7 @@ namespace DAL
                 try
                 {
                     var datumRodjenja = entity.DatumRodjenja.Date.ToString("yyyy-MM-dd");
-                    var datumZaposlenja = entity.DatumRodjenja.Date.ToString("yyyy-MM-dd");
+                    var datumZaposlenja = entity.DatumZaposlenja.Date.ToString("yyyy-MM-dd");
 
                     /*c = new MySqlCommand(String.Format("UPDATE uposlenici SET id={0}, ime='{1}', prezime='{2}', spol='{3}', "+
                     "datumRodjenja = '{4}', datumZaposlenja = '{5}', plata = {6}, kontakt = '{7}', zaposlenje='{8}', " +
