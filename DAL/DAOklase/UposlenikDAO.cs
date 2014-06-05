@@ -85,13 +85,13 @@ namespace DAL
                     c = new MySqlCommand("UPDATE uposlenici set ime= '" + entity.Ime 
                                             + "', prezime= '" + entity.Prezime
                                             + "', spol= '" + Convert.ToString(entity.Spol)
-                                            + "', datumRodjenja= '" + entity.DatumRodjenja
-                                            + "', datumZaposlenja= '" + entity.DatumZaposlenja
+                                            + "', datumRodjenja= '" + datumRodjenja
+                                            + "', datumZaposlenja= '" + datumZaposlenja
                                             + "', plata= " + entity.Plata
                                             + ", kontakt= '" + entity.Kontakt
                                             + "', zaposlenje= '" + entity.ZaposlenjeS
                                             + "', sifra= '" + entity.Sifra
-                                            + "' where id = " + entity.IdUposlenika, con
+                                            + "' where id = " + entity.ID, con
                                             );
                     /*c = new MySqlCommand(String.Format("UPDATE uposlenici SET id={0}, ime='{1}', prezime='{2}', spol='{3}', " +
                     "datumRodjenja = '{4}', datumZaposlenja = '{5}', plata = {6}, kontakt = '{7}', zaposlenje='{8}', " +
@@ -101,7 +101,7 @@ namespace DAL
                         entity.ZaposlenjeS, entity.Sifra, Convert.ToInt32(id)), con);*/
                     c.ExecuteNonQuery();
                     //MessageBox.Show("Promjenjen");
-                    MessageBox.Show(Convert.ToString(entity.IdUposlenika));
+                    MessageBox.Show(entity.ZaposlenjeS);
                     return entity;
                 }
                 catch (Exception e)

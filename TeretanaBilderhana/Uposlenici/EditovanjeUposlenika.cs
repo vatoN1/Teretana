@@ -37,19 +37,19 @@ namespace TeretanaBilderhana
         {
             if (validiraj())
             {
-                String zaposlenje = zaposlenje_combo.SelectedValue as String;
+                String zaposlenje = zaposlenje_combo.Text;
                 String Spoll="Musko";
                 if(zenskoRB.Checked) Spoll="Zensko";
                
                 Uposlenik Uposlenik = new Uposlenik(
                     Convert.ToInt32(uposlenikID_masked_box.Text), imetb.Text, prezimetb.Text, Spoll, rodjenje_datetime.Value, 
                     zaposlenje_datetime.Value, plata_npd.Value, kontakt_masked_box.Text, zaposlenje, sifra_box.Text);
-
+      
                 DAL.DAL d = DAL.DAL.Instanca;
                 d.kreirajKonekciju("localhost", "Teretana", "root", "");
                 DAL.DAL.UposlenikDAO c = d.getDAO.getUposlenikDAO();
 
-                /*Uposlenik Uposlenik = c.getById(Convert.ToInt32(uposlenikID_masked_box.Text));
+               /* Uposlenik Uposlenik = c.getById(Convert.ToInt32(uposlenikID_masked_box.Text));
                 Uposlenik.Ime = imetb.Text;
                 Uposlenik.Prezime = prezimetb.Text;
                 if (muskoRB.Checked == true) Uposlenik.Spol = Spol.Musko;
@@ -58,9 +58,9 @@ namespace TeretanaBilderhana
                 Uposlenik.Kontakt = kontakt_masked_box.Text;
                 Uposlenik.Plata = plata_npd.Value;
                 Uposlenik.DatumZaposlenja = zaposlenje_datetime.Value;
-                Uposlenik.ZaposlenjeS = zaposlenje_combo.SelectedText;
+                Uposlenik.ZaposlenjeS = zaposlenje_combo.Text;
                 Uposlenik.Sifra = sifra_box.Text;*/
-
+                MessageBox.Show(zaposlenje_combo.Text);
                 c.update(Uposlenik);
                 d.terminirajKonekciju();
                 //Close();
@@ -184,14 +184,16 @@ namespace TeretanaBilderhana
                 DAL.DAL.UposlenikDAO c = d.getDAO.getUposlenikDAO();
 
                 Uposlenik Uposlenik = c.getById(Convert.ToInt32(uposlenikID_masked_box.Text));
+                string rodjenje = Convert.ToString(Uposlenik.DatumRodjenja);
+                string zaposlenje = Convert.ToString(Uposlenik.DatumZaposlenja);
                 imetb.Text = Uposlenik.Ime;
                 prezimetb.Text = Uposlenik.Prezime;
                 if (Convert.ToString(Uposlenik.Spol) == "Musko") muskoRB.Checked = true;
                 else zenskoRB.Checked = true;
-                rodjenje_datetime.Value = Uposlenik.DatumRodjenja;
+                rodjenje_datetime.Value = DateTime.Parse(rodjenje);
                 kontakt_masked_box.Text = Uposlenik.Kontakt;
                 plata_npd.Value = Uposlenik.Plata;
-                zaposlenje_datetime.Value = Uposlenik.DatumZaposlenja;
+                zaposlenje_datetime.Value = DateTime.Parse(zaposlenje);
                 zaposlenje_combo.SelectedText = Uposlenik.ZaposlenjeS;
                 sifra_box.Text = Uposlenik.Sifra;
                 d.terminirajKonekciju();
