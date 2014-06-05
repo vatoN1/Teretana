@@ -53,10 +53,10 @@
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.plata_npd = new System.Windows.Forms.NumericUpDown();
             this.label1 = new System.Windows.Forms.Label();
             this.uposlenikID_masked_box = new System.Windows.Forms.MaskedTextBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.plata_npd = new System.Windows.Forms.NumericUpDown();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             this.statusStrip1.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -166,6 +166,7 @@
             this.groupBox2.TabIndex = 16;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Spol: ";
+            this.groupBox2.Validating += new System.ComponentModel.CancelEventHandler(this.Spol_Validating);
             // 
             // prezimetb
             // 
@@ -283,6 +284,28 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Preregistracija uposlenika: ";
             // 
+            // plata_npd
+            // 
+            this.plata_npd.Location = new System.Drawing.Point(120, 195);
+            this.plata_npd.Maximum = new decimal(new int[] {
+            7000,
+            0,
+            0,
+            0});
+            this.plata_npd.Minimum = new decimal(new int[] {
+            1000,
+            0,
+            0,
+            0});
+            this.plata_npd.Name = "plata_npd";
+            this.plata_npd.Size = new System.Drawing.Size(135, 20);
+            this.plata_npd.TabIndex = 24;
+            this.plata_npd.Value = new decimal(new int[] {
+            1000,
+            0,
+            0,
+            0});
+            // 
             // label1
             // 
             this.label1.AutoSize = true;
@@ -309,28 +332,6 @@
             this.label2.Size = new System.Drawing.Size(27, 13);
             this.label2.TabIndex = 1;
             this.label2.Text = "Ime:";
-            // 
-            // plata_npd
-            // 
-            this.plata_npd.Location = new System.Drawing.Point(120, 195);
-            this.plata_npd.Maximum = new decimal(new int[] {
-            7000,
-            0,
-            0,
-            0});
-            this.plata_npd.Minimum = new decimal(new int[] {
-            1000,
-            0,
-            0,
-            0});
-            this.plata_npd.Name = "plata_npd";
-            this.plata_npd.Size = new System.Drawing.Size(135, 20);
-            this.plata_npd.TabIndex = 24;
-            this.plata_npd.Value = new decimal(new int[] {
-            1000,
-            0,
-            0,
-            0});
             // 
             // EditovanjeUposlenika
             // 

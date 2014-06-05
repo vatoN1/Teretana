@@ -60,11 +60,12 @@
             // nutricionstaID_masked_box
             // 
             this.nutricionstaID_masked_box.Location = new System.Drawing.Point(119, 195);
-            this.nutricionstaID_masked_box.Mask = "00000";
+            this.nutricionstaID_masked_box.Mask = "0000";
             this.nutricionstaID_masked_box.Name = "nutricionstaID_masked_box";
             this.nutricionstaID_masked_box.Size = new System.Drawing.Size(136, 20);
             this.nutricionstaID_masked_box.TabIndex = 25;
             this.nutricionstaID_masked_box.ValidatingType = typeof(int);
+            this.nutricionstaID_masked_box.Validating += new System.ComponentModel.CancelEventHandler(this.nutricionistaID_Validating);
             // 
             // errorProvider1
             // 
@@ -124,11 +125,12 @@
             // trenerID_masked_box
             // 
             this.trenerID_masked_box.Location = new System.Drawing.Point(119, 169);
-            this.trenerID_masked_box.Mask = "00000";
+            this.trenerID_masked_box.Mask = "0000";
             this.trenerID_masked_box.Name = "trenerID_masked_box";
             this.trenerID_masked_box.Size = new System.Drawing.Size(136, 20);
             this.trenerID_masked_box.TabIndex = 24;
             this.trenerID_masked_box.ValidatingType = typeof(int);
+            this.trenerID_masked_box.Validating += new System.ComponentModel.CancelEventHandler(this.trenerID_Validating);
             // 
             // izadjiButton
             // 
@@ -156,6 +158,7 @@
             this.imetb.Name = "imetb";
             this.imetb.Size = new System.Drawing.Size(137, 20);
             this.imetb.TabIndex = 14;
+            this.imetb.Validating += new System.ComponentModel.CancelEventHandler(this.imetb_Validating);
             // 
             // kontakttb
             // 
@@ -164,6 +167,7 @@
             this.kontakttb.Name = "kontakttb";
             this.kontakttb.Size = new System.Drawing.Size(137, 20);
             this.kontakttb.TabIndex = 13;
+            this.kontakttb.Validating += new System.ComponentModel.CancelEventHandler(this.kontakttb_Validating);
             // 
             // statusStrip1
             // 
@@ -181,6 +185,7 @@
             this.prezimetb.Name = "prezimetb";
             this.prezimetb.Size = new System.Drawing.Size(137, 20);
             this.prezimetb.TabIndex = 15;
+            this.prezimetb.Validating += new System.ComponentModel.CancelEventHandler(this.prezimetb_Validating);
             // 
             // zenskoRB
             // 
@@ -221,6 +226,7 @@
             this.groupBox2.TabIndex = 16;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Spol: ";
+            this.groupBox2.Validating += new System.ComponentModel.CancelEventHandler(this.Spol_Validating);
             // 
             // groupBox1
             // 

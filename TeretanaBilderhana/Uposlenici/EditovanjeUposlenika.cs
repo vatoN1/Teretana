@@ -88,8 +88,8 @@ namespace TeretanaBilderhana
         {
             if (prezimetb.Text.Length < 3)
             {
-                errorProvider1.SetError(prezimetb, "Ime prekratko");
-                toolStripStatusLabel1.Text = "Ime prekratko!";
+                errorProvider1.SetError(prezimetb, "Prezime prekratko");
+                toolStripStatusLabel1.Text = "Prezime prekratko!";
             }
             else
             {

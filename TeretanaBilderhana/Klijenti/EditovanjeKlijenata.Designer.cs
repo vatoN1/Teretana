@@ -71,11 +71,12 @@
             // klijentID_masked_box
             // 
             this.klijentID_masked_box.Location = new System.Drawing.Point(119, 20);
-            this.klijentID_masked_box.Mask = "00000";
+            this.klijentID_masked_box.Mask = "0000";
             this.klijentID_masked_box.Name = "klijentID_masked_box";
             this.klijentID_masked_box.Size = new System.Drawing.Size(136, 20);
             this.klijentID_masked_box.TabIndex = 22;
             this.klijentID_masked_box.ValidatingType = typeof(int);
+            this.klijentID_masked_box.Leave += new System.EventHandler(this.klijentID_masked_box_Leave);
             // 
             // datumRodjenjadtp
             // 
@@ -260,7 +261,7 @@
             // nutricionistaID_masked_box
             // 
             this.nutricionistaID_masked_box.Location = new System.Drawing.Point(119, 224);
-            this.nutricionistaID_masked_box.Mask = "00000";
+            this.nutricionistaID_masked_box.Mask = "0000";
             this.nutricionistaID_masked_box.Name = "nutricionistaID_masked_box";
             this.nutricionistaID_masked_box.Size = new System.Drawing.Size(136, 20);
             this.nutricionistaID_masked_box.TabIndex = 25;
@@ -269,11 +270,10 @@
             // trenerID_masked_box
             // 
             this.trenerID_masked_box.Location = new System.Drawing.Point(119, 198);
-            this.trenerID_masked_box.Mask = "00000";
+            this.trenerID_masked_box.Mask = "0000";
             this.trenerID_masked_box.Name = "trenerID_masked_box";
             this.trenerID_masked_box.Size = new System.Drawing.Size(136, 20);
             this.trenerID_masked_box.TabIndex = 24;
-            this.trenerID_masked_box.ValidatingType = typeof(int);
             // 
             // EditovanjeKlijenata
             // 

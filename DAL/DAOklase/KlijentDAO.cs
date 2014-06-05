@@ -17,8 +17,9 @@ namespace DAL
             {
                 try
                 {
+                    var datumRodjenja = entity.DatumRodjenja.Date.ToString("yyyy-MM-dd");
                     c = new MySqlCommand(String.Format("INSERT INTO Klijenti VALUES ('{0}', '{1}', '{2}', '{3}', '{4}', '{5}', '{6}', '{7}');",
-                        entity.ID, entity.Ime, entity.Prezime, entity.Spol.ToString(), entity.DatumRodjenja.ToShortDateString(), entity.Kontakt, entity.IDtrenera, entity.IDnutricioniste ), con);
+                        entity.ID, entity.Ime, entity.Prezime, entity.Spol.ToString(), datumRodjenja, entity.Kontakt, entity.IDtrenera, entity.IDnutricioniste ), con);
                     c.ExecuteNonQuery();
                     return c.LastInsertedId;
                 }
@@ -27,7 +28,7 @@ namespace DAL
                     throw e;
                 }
             }
-            public Klijent update(Klijent entity) { throw new NotImplementedException(); }
+            public Klijent update(int id, Klijent entity) { throw new NotImplementedException(); }
             public Klijent read(Klijent entity)
             {
                 try
@@ -52,12 +53,23 @@ namespace DAL
                 }
             }
 
-            public Klijent update(int id, Klijent entity)
+            public Klijent update(Klijent entity)
             {
                 try
                 {
-                    c = new MySqlCommand(String.Format("UPDATE Klijenti SET id='{0}', ime = '{1}', prezime = '{2}', spol = '{3}', datumRodjenja = '{4}', kontakt = '{5}', id_trenera = '{6}', id_nutricioniste = '{7}';",
-                        entity.ID, entity.Ime, entity.Prezime, entity.Spol.ToString(), entity.DatumRodjenja.ToShortDateString(), entity.Kontakt, entity.IDtrenera, entity.IDnutricioniste), con);
+                    var datumRodjenja = entity.DatumRodjenja.Date.ToString("yyyy-MM-dd");
+                    /*c = new MySqlCommand(String.Format("UPDATE Klijenti SET id='{0}', ime = '{1}', prezime = '{2}', spol = '{3}', datumRodjenja = '{4}', kontakt = '{5}', id_trenera = '{6}', id_nutricioniste = '{7}';",
+                        entity.ID, entity.Ime, entity.Prezime, entity.Spol.ToString(), entity.DatumRodjenja.ToShortDateString(), entity.Kontakt, entity.IDtrenera, entity.IDnutricioniste), con);*/
+                    c = new MySqlCommand("UPDATE klijenti set ime= '" + entity.Ime
+                                            + "', prezime= '" + entity.Prezime
+                                            + "', spol= '" + Convert.ToString(entity.Spol)
+                                            + "', datumRodjenja= '" + datumRodjenja
+                                            + "', kontakt= '" + entity.Kontakt
+                                            + "', id_trenera= " + entity.IDtrenera
+                                            + ", id_nutricioniste= " + entity.IDnutricioniste
+                                            + " where id = " + entity.ID, con
+                                            );
+                    
                     c.ExecuteNonQuery();
                     return entity;
                 }

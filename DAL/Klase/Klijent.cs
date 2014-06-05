@@ -11,7 +11,7 @@ using System.Text;
 
 public class Klijent : Osoba
 {
-    public Klijent(int id, string ime, string prezime, string spol, DateTime datumRodjenja, string kontakt, int idTrenera, int idNutricioniste) 
+    public Klijent(int id, string ime, string prezime, string spol, DateTime datumRodjenja, string kontakt, int idTrenera=0, int idNutricioniste=0) 
         : base(id, ime, prezime, spol, datumRodjenja, kontakt)
     {
         IDtrenera = idTrenera;
