@@ -255,8 +255,6 @@
             this.label19.Size = new System.Drawing.Size(75, 13);
             this.label19.TabIndex = 18;
             this.label19.Text = "datum_vrijeme";
-            this.label19.TextChanged += new System.EventHandler(this.label19_TextChanged);
-            this.label19.Click += new System.EventHandler(this.label19_Click);
             // 
             // label20
             // 
@@ -434,9 +432,9 @@
             this.label39.AutoSize = true;
             this.label39.Location = new System.Drawing.Point(142, 331);
             this.label39.Name = "label39";
-            this.label39.Size = new System.Drawing.Size(41, 13);
+            this.label39.Size = new System.Drawing.Size(28, 13);
             this.label39.TabIndex = 38;
-            this.label39.Text = "label39";
+            this.label39.Text = "0.00";
             // 
             // label40
             // 
