@@ -42,7 +42,7 @@ namespace TeretanaBilderhana.WorkoutProgrami
                 DAL.DAL d = DAL.DAL.Instanca;
                 d.kreirajKonekciju("localhost", "Teretana", "root", "");
                 DAL.DAL.WorkoutProgramDAO c = d.getDAO.getWorkoutProgramDAO();
-              
+                              
                 WorkoutProgram.IdWorkoutPrograma = (int)c.create(WorkoutProgram);
                 d.terminirajKonekciju();
                 MessageBox.Show("Workout program unesen! ID je: " + r);
