@@ -176,7 +176,7 @@
             0});
             this.plata_npd.Name = "plata_npd";
             this.plata_npd.Size = new System.Drawing.Size(120, 20);
-            this.plata_npd.TabIndex = 22;
+            this.plata_npd.TabIndex = 8;
             this.plata_npd.Value = new decimal(new int[] {
             1000,
             0,
@@ -188,21 +188,21 @@
             this.zaposlenje_datetime.Location = new System.Drawing.Point(119, 196);
             this.zaposlenje_datetime.Name = "zaposlenje_datetime";
             this.zaposlenje_datetime.Size = new System.Drawing.Size(120, 20);
-            this.zaposlenje_datetime.TabIndex = 21;
+            this.zaposlenje_datetime.TabIndex = 9;
             // 
             // rodjenje_datetime
             // 
             this.rodjenje_datetime.Location = new System.Drawing.Point(120, 118);
             this.rodjenje_datetime.Name = "rodjenje_datetime";
             this.rodjenje_datetime.Size = new System.Drawing.Size(120, 20);
-            this.rodjenje_datetime.TabIndex = 20;
+            this.rodjenje_datetime.TabIndex = 6;
             // 
             // sifra_box
             // 
             this.sifra_box.Location = new System.Drawing.Point(119, 251);
             this.sifra_box.Name = "sifra_box";
             this.sifra_box.Size = new System.Drawing.Size(121, 20);
-            this.sifra_box.TabIndex = 19;
+            this.sifra_box.TabIndex = 11;
             // 
             // zaposlenje_combo
             // 
@@ -214,7 +214,7 @@
             this.zaposlenje_combo.Location = new System.Drawing.Point(119, 222);
             this.zaposlenje_combo.Name = "zaposlenje_combo";
             this.zaposlenje_combo.Size = new System.Drawing.Size(121, 21);
-            this.zaposlenje_combo.TabIndex = 18;
+            this.zaposlenje_combo.TabIndex = 10;
             this.zaposlenje_combo.Validating += new System.ComponentModel.CancelEventHandler(this.zaposlenje_Validating);
             // 
             // groupBox2
@@ -224,7 +224,7 @@
             this.groupBox2.Location = new System.Drawing.Point(69, 70);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(171, 41);
-            this.groupBox2.TabIndex = 16;
+            this.groupBox2.TabIndex = 3;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Spol: ";
             this.groupBox2.Validating += new System.ComponentModel.CancelEventHandler(this.Spol_Validating);
@@ -235,7 +235,7 @@
             this.zenskoRB.Location = new System.Drawing.Point(90, 18);
             this.zenskoRB.Name = "zenskoRB";
             this.zenskoRB.Size = new System.Drawing.Size(61, 17);
-            this.zenskoRB.TabIndex = 1;
+            this.zenskoRB.TabIndex = 5;
             this.zenskoRB.Text = "Zensko";
             this.zenskoRB.UseVisualStyleBackColor = true;
             // 
@@ -246,7 +246,7 @@
             this.muskoRB.Location = new System.Drawing.Point(18, 19);
             this.muskoRB.Name = "muskoRB";
             this.muskoRB.Size = new System.Drawing.Size(57, 17);
-            this.muskoRB.TabIndex = 0;
+            this.muskoRB.TabIndex = 4;
             this.muskoRB.TabStop = true;
             this.muskoRB.Text = "Musko";
             this.muskoRB.UseVisualStyleBackColor = true;
@@ -256,7 +256,7 @@
             this.prezimetb.Location = new System.Drawing.Point(119, 44);
             this.prezimetb.Name = "prezimetb";
             this.prezimetb.Size = new System.Drawing.Size(121, 20);
-            this.prezimetb.TabIndex = 15;
+            this.prezimetb.TabIndex = 2;
             this.prezimetb.Validating += new System.ComponentModel.CancelEventHandler(this.prezimetb_Validating);
             // 
             // imetb
@@ -264,7 +264,7 @@
             this.imetb.Location = new System.Drawing.Point(119, 19);
             this.imetb.Name = "imetb";
             this.imetb.Size = new System.Drawing.Size(121, 20);
-            this.imetb.TabIndex = 14;
+            this.imetb.TabIndex = 1;
             this.imetb.Validating += new System.ComponentModel.CancelEventHandler(this.imetb_Validating);
             // 
             // kontakt_masked_box
@@ -273,14 +273,14 @@
             this.kontakt_masked_box.Mask = "000000000";
             this.kontakt_masked_box.Name = "kontakt_masked_box";
             this.kontakt_masked_box.Size = new System.Drawing.Size(121, 20);
-            this.kontakt_masked_box.TabIndex = 13;
+            this.kontakt_masked_box.TabIndex = 7;
             // 
             // unosButton
             // 
             this.unosButton.Location = new System.Drawing.Point(114, 300);
             this.unosButton.Name = "unosButton";
             this.unosButton.Size = new System.Drawing.Size(91, 23);
-            this.unosButton.TabIndex = 20;
+            this.unosButton.TabIndex = 12;
             this.unosButton.Text = "Unesi";
             this.unosButton.UseVisualStyleBackColor = true;
             this.unosButton.Click += new System.EventHandler(this.unosButton_Click);
@@ -290,7 +290,7 @@
             this.izadjiButton.Location = new System.Drawing.Point(217, 300);
             this.izadjiButton.Name = "izadjiButton";
             this.izadjiButton.Size = new System.Drawing.Size(83, 23);
-            this.izadjiButton.TabIndex = 21;
+            this.izadjiButton.TabIndex = 13;
             this.izadjiButton.Text = "Izadji";
             this.izadjiButton.UseVisualStyleBackColor = true;
             this.izadjiButton.Click += new System.EventHandler(this.izadjiButton_Click);
@@ -308,8 +308,7 @@
             // toolStripStatusLabel1
             // 
             this.toolStripStatusLabel1.Name = "toolStripStatusLabel1";
-            this.toolStripStatusLabel1.Size = new System.Drawing.Size(118, 17);
-            this.toolStripStatusLabel1.Text = "toolStripStatusLabel1";
+            this.toolStripStatusLabel1.Size = new System.Drawing.Size(0, 17);
             // 
             // errorProvider1
             // 

@@ -2,7 +2,9 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Drawing;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 using MySql.Data.MySqlClient;
 
 namespace DAL
@@ -17,18 +19,18 @@ namespace DAL
             {
                 try
                 {
-
-                    c = new MySqlCommand(String.Format("INSERT INTO workoutprogrami VALUES ('{0}','{1}', '{2}');"
-                        , entity.Opis, entity.TipPrograma, entity.Vjezbe), con);
+                    c = new MySqlCommand(String.Format("INSERT INTO workoutprogrami VALUES ('{0}','{1}','{2}','{3}');",
+                        entity.IdWorkoutPrograma, entity.Opis, entity.TipProgramaS, entity.Vjezbe), con);
                     c.ExecuteNonQuery();
                     return c.LastInsertedId;
                 }
                 catch (Exception e)
                 {
+                    MessageBox.Show(Convert.ToString(e));
                     throw e;
                 }
             }
-            public WorkoutProgram update(WorkoutProgram entity) { throw new NotImplementedException(); }
+            public WorkoutProgram update(int id, WorkoutProgram entity) { throw new NotImplementedException(); }
             public WorkoutProgram read(WorkoutProgram entity)
             {
                 try
@@ -58,13 +60,18 @@ namespace DAL
                 }
             }
 
-            public WorkoutProgram update(int id, WorkoutProgram entity)
+            public WorkoutProgram update(WorkoutProgram entity)
             {
                 try
                 {
-                    c = new MySqlCommand(String.Format("UPDATE wokroutprogrami SET opis='{0}', tipPrograma='{1}', " +
+                    /*c = new MySqlCommand(String.Format("UPDATE wokroutprogrami SET opis='{0}', tipPrograma='{1}', " +
                               "vjezbe='{2}, where id = '{9}'",
-                        entity.IdWorkoutPrograma, entity.Opis, entity.TipPrograma, entity.Vjezbe, id), con);
+                        entity.IdWorkoutPrograma, entity.Opis, entity.TipPrograma, entity.Vjezbe, entity.IdWorkoutPrograma), con);*/
+                    c = new MySqlCommand("UPDATE workoutprogrami set opis= '" + entity.Opis
+                                            + "', tipPrograma= '" + entity.TipProgramaS
+                                            + "', vjezbe= '" + entity.Vjezbe
+                                            + "' where id = " + entity.IdWorkoutPrograma, con
+                                            );
                     c.ExecuteNonQuery();
                     return entity;
                 }

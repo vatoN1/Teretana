@@ -17,13 +17,13 @@ using System.Text;
             base(opis, tipPrograma) 
         {
             this.idWorkoutPrograma = idWorkoutPrograma;
-            this.vjezbe = vjezbe;
+            Vjezbe = vjezbe;
         }
         public WorkoutProgram(int idWorkoutPrograma, String opis, String tipPrograma, String vjezbe) :
             base(opis, tipPrograma)
         {
             this.idWorkoutPrograma = idWorkoutPrograma;
-            this.vjezbe = vjezbe;
+            Vjezbe = vjezbe;
         }
         public WorkoutProgram()
 	    {

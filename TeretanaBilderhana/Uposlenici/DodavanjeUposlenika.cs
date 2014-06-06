@@ -48,9 +48,7 @@ namespace TeretanaBilderhana
                     Convert.ToDecimal(plata_npd.Value), kontakt_masked_box.Text, zaposlenje_combo.Text, sifra_box.Text);
 
                 DAL.DAL d = DAL.DAL.Instanca;
-                
                 d.kreirajKonekciju("localhost", "Teretana", "root", "");
-
                 DAL.DAL.UposlenikDAO c = d.getDAO.getUposlenikDAO();
 
                 Uposlenik.IdUposlenika = (int)c.create(Uposlenik);

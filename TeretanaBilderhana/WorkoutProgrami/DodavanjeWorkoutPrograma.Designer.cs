@@ -28,11 +28,11 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(DodavanjeWorkoutPrograma));
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.vjezbe_rich_box = new System.Windows.Forms.RichTextBox();
             this.opis_wprogram_rich_box = new System.Windows.Forms.RichTextBox();
-            this.tip_wprogram_box = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
@@ -40,15 +40,18 @@
             this.unosButton = new System.Windows.Forms.Button();
             this.statusStrip1 = new System.Windows.Forms.StatusStrip();
             this.toolStripStatusLabel1 = new System.Windows.Forms.ToolStripStatusLabel();
+            this.tipwp_combo = new System.Windows.Forms.ComboBox();
+            this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
             this.groupBox1.SuspendLayout();
             this.statusStrip1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             this.SuspendLayout();
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.tipwp_combo);
             this.groupBox1.Controls.Add(this.vjezbe_rich_box);
             this.groupBox1.Controls.Add(this.opis_wprogram_rich_box);
-            this.groupBox1.Controls.Add(this.tip_wprogram_box);
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Controls.Add(this.label3);
             this.groupBox1.Controls.Add(this.label5);
@@ -65,23 +68,18 @@
             this.vjezbe_rich_box.Location = new System.Drawing.Point(141, 152);
             this.vjezbe_rich_box.Name = "vjezbe_rich_box";
             this.vjezbe_rich_box.Size = new System.Drawing.Size(144, 80);
-            this.vjezbe_rich_box.TabIndex = 17;
+            this.vjezbe_rich_box.TabIndex = 3;
             this.vjezbe_rich_box.Text = "";
+            this.vjezbe_rich_box.Validating += new System.ComponentModel.CancelEventHandler(this.vjezbe_rich_box_Validating);
             // 
             // opis_wprogram_rich_box
             // 
             this.opis_wprogram_rich_box.Location = new System.Drawing.Point(141, 58);
             this.opis_wprogram_rich_box.Name = "opis_wprogram_rich_box";
             this.opis_wprogram_rich_box.Size = new System.Drawing.Size(144, 88);
-            this.opis_wprogram_rich_box.TabIndex = 16;
+            this.opis_wprogram_rich_box.TabIndex = 2;
             this.opis_wprogram_rich_box.Text = "";
-            // 
-            // tip_wprogram_box
-            // 
-            this.tip_wprogram_box.Location = new System.Drawing.Point(141, 30);
-            this.tip_wprogram_box.Name = "tip_wprogram_box";
-            this.tip_wprogram_box.Size = new System.Drawing.Size(144, 20);
-            this.tip_wprogram_box.TabIndex = 14;
+            this.opis_wprogram_rich_box.Validating += new System.ComponentModel.CancelEventHandler(this.opis_wprogram_rich_box_Validating);
             // 
             // label2
             // 
@@ -128,6 +126,7 @@
             this.unosButton.TabIndex = 22;
             this.unosButton.Text = "Unesi";
             this.unosButton.UseVisualStyleBackColor = true;
+            this.unosButton.Click += new System.EventHandler(this.unosButton_Click);
             // 
             // statusStrip1
             // 
@@ -141,9 +140,22 @@
             // 
             // toolStripStatusLabel1
             // 
+            this.toolStripStatusLabel1.IsLink = true;
             this.toolStripStatusLabel1.Name = "toolStripStatusLabel1";
-            this.toolStripStatusLabel1.Size = new System.Drawing.Size(118, 17);
-            this.toolStripStatusLabel1.Text = "toolStripStatusLabel1";
+            this.toolStripStatusLabel1.Size = new System.Drawing.Size(0, 17);
+            // 
+            // tipwp_combo
+            // 
+            this.tipwp_combo.FormattingEnabled = true;
+            this.tipwp_combo.Location = new System.Drawing.Point(141, 27);
+            this.tipwp_combo.Name = "tipwp_combo";
+            this.tipwp_combo.Size = new System.Drawing.Size(144, 21);
+            this.tipwp_combo.TabIndex = 1;
+            this.tipwp_combo.Validating += new System.ComponentModel.CancelEventHandler(this.tipwp_Validating);
+            // 
+            // errorProvider1
+            // 
+            this.errorProvider1.ContainerControl = this;
             // 
             // DodavanjeWorkoutPrograma
             // 
@@ -162,6 +174,7 @@
             this.groupBox1.PerformLayout();
             this.statusStrip1.ResumeLayout(false);
             this.statusStrip1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -170,7 +183,6 @@
         #endregion
 
         private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.TextBox tip_wprogram_box;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label5;
@@ -180,5 +192,7 @@
         private System.Windows.Forms.Button unosButton;
         private System.Windows.Forms.StatusStrip statusStrip1;
         private System.Windows.Forms.ToolStripStatusLabel toolStripStatusLabel1;
+        private System.Windows.Forms.ComboBox tipwp_combo;
+        private System.Windows.Forms.ErrorProvider errorProvider1;
     }
 }

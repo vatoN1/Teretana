@@ -74,7 +74,7 @@
             this.klijentID_masked_box.Mask = "0000";
             this.klijentID_masked_box.Name = "klijentID_masked_box";
             this.klijentID_masked_box.Size = new System.Drawing.Size(136, 20);
-            this.klijentID_masked_box.TabIndex = 22;
+            this.klijentID_masked_box.TabIndex = 1;
             this.klijentID_masked_box.ValidatingType = typeof(int);
             this.klijentID_masked_box.Leave += new System.EventHandler(this.klijentID_masked_box_Leave);
             // 
@@ -83,7 +83,7 @@
             this.datumRodjenjadtp.Location = new System.Drawing.Point(120, 147);
             this.datumRodjenjadtp.Name = "datumRodjenjadtp";
             this.datumRodjenjadtp.Size = new System.Drawing.Size(136, 20);
-            this.datumRodjenjadtp.TabIndex = 20;
+            this.datumRodjenjadtp.TabIndex = 7;
             // 
             // groupBox2
             // 
@@ -92,7 +92,7 @@
             this.groupBox2.Location = new System.Drawing.Point(69, 99);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(187, 41);
-            this.groupBox2.TabIndex = 16;
+            this.groupBox2.TabIndex = 4;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Spol: ";
             // 
@@ -102,7 +102,7 @@
             this.zenskoRB.Location = new System.Drawing.Point(90, 18);
             this.zenskoRB.Name = "zenskoRB";
             this.zenskoRB.Size = new System.Drawing.Size(61, 17);
-            this.zenskoRB.TabIndex = 1;
+            this.zenskoRB.TabIndex = 6;
             this.zenskoRB.TabStop = true;
             this.zenskoRB.Text = "Zensko";
             this.zenskoRB.UseVisualStyleBackColor = true;
@@ -113,7 +113,7 @@
             this.muskoRB.Location = new System.Drawing.Point(18, 19);
             this.muskoRB.Name = "muskoRB";
             this.muskoRB.Size = new System.Drawing.Size(57, 17);
-            this.muskoRB.TabIndex = 0;
+            this.muskoRB.TabIndex = 5;
             this.muskoRB.TabStop = true;
             this.muskoRB.Text = "Musko";
             this.muskoRB.UseVisualStyleBackColor = true;
@@ -123,14 +123,14 @@
             this.prezimetb.Location = new System.Drawing.Point(119, 73);
             this.prezimetb.Name = "prezimetb";
             this.prezimetb.Size = new System.Drawing.Size(137, 20);
-            this.prezimetb.TabIndex = 15;
+            this.prezimetb.TabIndex = 3;
             // 
             // imetb
             // 
             this.imetb.Location = new System.Drawing.Point(119, 48);
             this.imetb.Name = "imetb";
             this.imetb.Size = new System.Drawing.Size(137, 20);
-            this.imetb.TabIndex = 14;
+            this.imetb.TabIndex = 2;
             // 
             // kontakttb
             // 
@@ -138,7 +138,7 @@
             this.kontakttb.Mask = "000000000";
             this.kontakttb.Name = "kontakttb";
             this.kontakttb.Size = new System.Drawing.Size(137, 20);
-            this.kontakttb.TabIndex = 13;
+            this.kontakttb.TabIndex = 8;
             // 
             // label2
             // 
@@ -154,7 +154,7 @@
             this.izadjiButton.Location = new System.Drawing.Point(217, 280);
             this.izadjiButton.Name = "izadjiButton";
             this.izadjiButton.Size = new System.Drawing.Size(83, 23);
-            this.izadjiButton.TabIndex = 29;
+            this.izadjiButton.TabIndex = 12;
             this.izadjiButton.Text = "Izadji";
             this.izadjiButton.UseVisualStyleBackColor = true;
             this.izadjiButton.Click += new System.EventHandler(this.izadjiButton_Click);
@@ -164,7 +164,7 @@
             this.unosButton.Location = new System.Drawing.Point(114, 280);
             this.unosButton.Name = "unosButton";
             this.unosButton.Size = new System.Drawing.Size(91, 23);
-            this.unosButton.TabIndex = 28;
+            this.unosButton.TabIndex = 11;
             this.unosButton.Text = "Unesi";
             this.unosButton.UseVisualStyleBackColor = true;
             this.unosButton.Click += new System.EventHandler(this.unosButton_Click);
@@ -172,8 +172,7 @@
             // toolStripStatusLabel1
             // 
             this.toolStripStatusLabel1.Name = "toolStripStatusLabel1";
-            this.toolStripStatusLabel1.Size = new System.Drawing.Size(118, 17);
-            this.toolStripStatusLabel1.Text = "toolStripStatusLabel1";
+            this.toolStripStatusLabel1.Size = new System.Drawing.Size(0, 17);
             // 
             // statusStrip1
             // 
@@ -264,7 +263,7 @@
             this.nutricionistaID_masked_box.Mask = "0000";
             this.nutricionistaID_masked_box.Name = "nutricionistaID_masked_box";
             this.nutricionistaID_masked_box.Size = new System.Drawing.Size(136, 20);
-            this.nutricionistaID_masked_box.TabIndex = 25;
+            this.nutricionistaID_masked_box.TabIndex = 10;
             this.nutricionistaID_masked_box.ValidatingType = typeof(int);
             // 
             // trenerID_masked_box
@@ -273,7 +272,7 @@
             this.trenerID_masked_box.Mask = "0000";
             this.trenerID_masked_box.Name = "trenerID_masked_box";
             this.trenerID_masked_box.Size = new System.Drawing.Size(136, 20);
-            this.trenerID_masked_box.TabIndex = 24;
+            this.trenerID_masked_box.TabIndex = 9;
             // 
             // EditovanjeKlijenata
             // 

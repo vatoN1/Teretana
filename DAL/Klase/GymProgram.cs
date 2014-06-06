@@ -17,12 +17,12 @@ public abstract class GymProgram
 
     public GymProgram(String opis, TipPrograma tipPrograma) 
     {
-        this.opis = opis;
+        Opis = opis;
         this.tipPrograma = tipPrograma;
     }
     public GymProgram(String opis, String tipPrograma)
     {
-        this.opis = opis;
+        Opis = opis;
         this.tipProgramaS = tipPrograma;
     }
     public GymProgram()
