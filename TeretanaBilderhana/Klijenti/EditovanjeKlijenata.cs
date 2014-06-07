@@ -12,6 +12,11 @@ namespace TeretanaBilderhana.Klijenti
 {
     public partial class EditovanjeKlijenata : Form
     {
+        public EditovanjeKlijenata()
+        {
+            InitializeComponent();
+        }
+
         public bool validiraj()
         {
             return
@@ -23,10 +28,6 @@ namespace TeretanaBilderhana.Klijenti
                 (errorProvider1.GetError(nutricionistaID_masked_box) == "") &&
                 (errorProvider1.GetError(groupBox2) == "")
             );
-        }
-        public EditovanjeKlijenata()
-        {
-            InitializeComponent();
         }
 
         private void unosButton_Click(object sender, EventArgs e)
@@ -220,6 +221,11 @@ namespace TeretanaBilderhana.Klijenti
         private void izadjiButton_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void klijentID_masked_box_MaskInputRejected(object sender, MaskInputRejectedEventArgs e)
+        {
+
         }
     }
 }

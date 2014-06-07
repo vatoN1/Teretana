@@ -71,8 +71,6 @@ namespace TeretanaBilderhana
                         passtextbox.Clear();
                         IDtextbox.Clear();
                         //
-                        Recepcija r = new Recepcija();
-                        r.Show();
                     }
                     else if (radnik.Sifra == passtextbox.Text && radnik.ZaposlenjeS == "Recepcioner")
                     {

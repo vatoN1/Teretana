@@ -19,7 +19,8 @@ namespace TeretanaBilderhana.PristupneForme
 
         private void toolStripButton1_Click(object sender, EventArgs e)
         {
-            // PREGLED KLIJENATA DATA GRID
+            DosijeKlijentaN n = new DosijeKlijentaN();
+            n.Show();
         }
 
         private void toolStripButton2_Click(object sender, EventArgs e)
@@ -31,6 +32,12 @@ namespace TeretanaBilderhana.PristupneForme
         private void toolStripButton3_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void toolStripButton4_Click(object sender, EventArgs e)
+        {
+            IzvjestajForma f = new IzvjestajForma();
+            f.Show();
         }
     }
 }

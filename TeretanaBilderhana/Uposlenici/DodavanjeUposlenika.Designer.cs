@@ -210,7 +210,8 @@
             this.zaposlenje_combo.Items.AddRange(new object[] {
             "Trener",
             "Nutricionista",
-            "Tehnicar"});
+            "Tehnicar",
+            "Recepcioner"});
             this.zaposlenje_combo.Location = new System.Drawing.Point(119, 222);
             this.zaposlenje_combo.Name = "zaposlenje_combo";
             this.zaposlenje_combo.Size = new System.Drawing.Size(121, 21);

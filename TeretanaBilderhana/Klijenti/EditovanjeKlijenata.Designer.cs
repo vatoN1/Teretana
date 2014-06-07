@@ -76,6 +76,7 @@
             this.klijentID_masked_box.Size = new System.Drawing.Size(136, 20);
             this.klijentID_masked_box.TabIndex = 1;
             this.klijentID_masked_box.ValidatingType = typeof(int);
+            this.klijentID_masked_box.MaskInputRejected += new System.Windows.Forms.MaskInputRejectedEventHandler(this.klijentID_masked_box_MaskInputRejected);
             this.klijentID_masked_box.Leave += new System.EventHandler(this.klijentID_masked_box_Leave);
             // 
             // datumRodjenjadtp

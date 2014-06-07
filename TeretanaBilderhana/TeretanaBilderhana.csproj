@@ -125,6 +125,18 @@
     <Compile Include="PristupneForme\AdministratorskiPanel.Designer.cs">
       <DependentUpon>AdministratorskiPanel.cs</DependentUpon>
     </Compile>
+    <Compile Include="PristupneForme\DosijeKlijentaN.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PristupneForme\DosijeKlijentaN.Designer.cs">
+      <DependentUpon>DosijeKlijentaN.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PristupneForme\DosijeKlijentaT.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PristupneForme\DosijeKlijentaT.Designer.cs">
+      <DependentUpon>DosijeKlijentaT.cs</DependentUpon>
+    </Compile>
     <Compile Include="PristupneForme\IzvjestajForma.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -255,6 +267,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="PristupneForme\AdministratorskiPanel.resx">
       <DependentUpon>AdministratorskiPanel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PristupneForme\DosijeKlijentaN.resx">
+      <DependentUpon>DosijeKlijentaN.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PristupneForme\DosijeKlijentaT.resx">
+      <DependentUpon>DosijeKlijentaT.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="PristupneForme\IzvjestajForma.resx">
       <DependentUpon>IzvjestajForma.cs</DependentUpon>
