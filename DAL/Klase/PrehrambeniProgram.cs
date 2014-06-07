@@ -11,28 +11,19 @@ using System.Text;
 
 public class PrehrambeniProgram : GymProgram
 {
-    private int p1;
-    private string p2;
-    private string p3;
-    private string p4;
+    int idPrehrambeniProgram;
+    public PrehrambeniProgram(int idWorkoutPrograma, String opis, String tipPrograma, String obroci) :
+            base(opis, tipPrograma)
+        {
+            IdPrehrambeniProgram = idWorkoutPrograma;
+            Obroci = obroci;
+        }
 
-	
-    public PrehrambeniProgram()
-	{
-		
-	}
-
-    public PrehrambeniProgram(int p1, string p2, string p3, string p4)
+    public int IdPrehrambeniProgram
     {
-        // TODO: Complete member initialization
-        this.p1 = p1;
-        this.p2 = p2;
-        this.p3 = p3;
-        this.p4 = p4;
+        get { return idPrehrambeniProgram; }
+        set { idPrehrambeniProgram = value; }
     }
-
-
-
     public string Obroci
     {
         get;

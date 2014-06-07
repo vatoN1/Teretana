@@ -21,5 +21,10 @@ namespace TeretanaBilderhana.Oprema
         {
             this.Close();
         }
+
+        private void toolStripStatusLabel1_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

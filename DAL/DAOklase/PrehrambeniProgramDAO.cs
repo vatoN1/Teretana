@@ -19,7 +19,7 @@ using System;
 	                {
 	                    
 	                    c = new MySqlCommand(String.Format("INSERT INTO prehrambeniprogrami VALUES ('{0}','{1}','{2}','{3}');",
-	                        entity.ID1, entity.Opis, entity.TipPrograma, entity.Obroci), con);
+	                        entity.IdPrehrambeniProgram, entity.Opis, entity.TipProgramaS, entity.Obroci), con);
 	                    c.ExecuteNonQuery();
 	                    return c.LastInsertedId;
 	                }
@@ -28,7 +28,7 @@ using System;
 	                    throw e;
 	                }
 	            }
-                public PrehrambeniProgram update(PrehrambeniProgram entity) { throw new NotImplementedException(); }
+                public PrehrambeniProgram update(int id, PrehrambeniProgram entity) { throw new NotImplementedException(); }
 	            public PrehrambeniProgram read(PrehrambeniProgram entity)
 	            {
 	                try
@@ -53,12 +53,17 @@ using System;
 	                }
 	            }
 	
-	            public PrehrambeniProgram update(int id, PrehrambeniProgram entity)
+	            public PrehrambeniProgram update(PrehrambeniProgram entity)
 	            {
 	                try
 	                {
-	                    c = new MySqlCommand(String.Format("UPDATE prehrambeniprogrami SET id='{0}', opis='{1}', tipPrograma='{2}', obroci = '{3}' where id = '{8}';",
-	                        entity.ID1, entity.Opis, entity.TipPrograma, entity.Obroci, id), con);
+	                    /*c = new MySqlCommand(String.Format("UPDATE prehrambeniprogrami SET id='{0}', opis='{1}', tipPrograma='{2}', obroci = '{3}' where id = '{8}';",
+	                        entity.ID1, entity.Opis, entity.TipPrograma, entity.Obroci, id), con);*/
+                        c = new MySqlCommand("UPDATE prehrambeniprogrami set opis= '" + entity.Opis
+                                            + "', tipPrograma= '" + entity.TipProgramaS
+                                            + "', obroci= '" + entity.Obroci
+                                            + "' where id = " + entity.IdPrehrambeniProgram, con
+                                            );
 	                    c.ExecuteNonQuery();
 	                    return entity;
 	                }

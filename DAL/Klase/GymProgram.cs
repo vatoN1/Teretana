@@ -11,7 +11,6 @@ using System.Text;
 
 public abstract class GymProgram
 {
-    String opis;
     TipPrograma tipPrograma;
     String tipProgramaS;
 

@@ -11,22 +11,18 @@ using System.Text;
 
 public class Sprava : Inventar
 {
+    String tipSpraveS;
+    int id;
     public Sprava() { }
 
-    public Sprava(int p1, string p2, int p3, int p4)
+    public Sprava(int id, string tipSprave, int starost, int kolicina) : base(kolicina)
     {
         // TODO: Complete member initialization
-        this.p1 = p1;
-        this.p2 = p2;
-        this.p3 = p3;
-        this.p4 = p4;
+        Id = id;
+        TipSpraveS = tipSprave;
+        Starost = starost;
     }
-    int id;
-    private int p1;
-    private string p2;
-    private int p3;
-    private int p4;
-
+    
     public int Id
     {
         get { return id; }
@@ -37,7 +33,11 @@ public class Sprava : Inventar
 		get;
 		set;
 	}
-
+    public String TipSpraveS
+    {
+        get { return tipSpraveS; }
+        set { tipSpraveS = value; }
+    }
     public int Starost
 	{
 		get;

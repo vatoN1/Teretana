@@ -18,7 +18,7 @@ namespace DAL
                 {
 
                     c = new MySqlCommand(String.Format("INSERT INTO Sprave VALUES ('{0}','{1}','{2}','{3}');",
-                        entity.Id, entity.TipSprave, entity.Kolicina, entity.Starost), con); // ****
+                        entity.Id, entity.Starost, entity.TipSpraveS, entity.Kolicina), con); // ****
                     c.ExecuteNonQuery();
                     return c.LastInsertedId;
                 }
@@ -27,7 +27,7 @@ namespace DAL
                     throw e;
                 }
             }
-            public Sprava update(Sprava entity) { throw new NotImplementedException(); }
+            public Sprava update(int id, Sprava entity) { throw new NotImplementedException(); }
             public Sprava read(Sprava entity)
             {
                 try
@@ -52,12 +52,17 @@ namespace DAL
                 }
             }
 
-            public Sprava update(int id, Sprava entity)
+            public Sprava update(Sprava entity)
             {
                 try
                 { //****************
-                    c = new MySqlCommand(String.Format("UPDATE Sprave SET Id='{0}', TipSprave='{1}', Kolicina='{2}', Starost = '{3}' where id = '{8}';",
-                        entity.Id, entity.TipSprave, entity.Kolicina, entity.Starost, id), con);
+                    /*c = new MySqlCommand(String.Format("UPDATE Sprave SET Id='{0}', TipSprave='{1}', Kolicina='{2}', Starost = '{3}' where id = '{8}';",
+                        entity.Id, entity.TipSprave, entity.Kolicina, entity.Starost, id), con);*/
+                    c = new MySqlCommand("UPDATE sprave set starost= " + entity.Starost
+                                            + ", tipSprave= '" + entity.TipSpraveS
+                                            + "', kolicina= " + entity.Kolicina
+                                            + " where id = " + entity.Id, con
+                                            );
                     c.ExecuteNonQuery();
                     return entity;
                 }

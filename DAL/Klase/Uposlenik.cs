@@ -11,9 +11,6 @@ using System.Text;
 
     public class Uposlenik : Osoba
     {
-        Decimal plata;
-        DateTime datumZaposlenja;
-        TipZaposlenja zaposlenje;
         String zaposlenjeS;
         String sifra;
         int idUposlenika;

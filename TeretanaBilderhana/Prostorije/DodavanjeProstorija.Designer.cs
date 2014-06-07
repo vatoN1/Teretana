@@ -33,6 +33,7 @@
             this.statusStrip1 = new System.Windows.Forms.StatusStrip();
             this.toolStripStatusLabel1 = new System.Windows.Forms.ToolStripStatusLabel();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.prostorijacombo = new System.Windows.Forms.ComboBox();
             this.inventar_rich_box = new System.Windows.Forms.RichTextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
@@ -41,7 +42,6 @@
             this.label2 = new System.Windows.Forms.Label();
             this.izadjiButton = new System.Windows.Forms.Button();
             this.unosButton = new System.Windows.Forms.Button();
-            this.prostorijacombo = new System.Windows.Forms.ComboBox();
             this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
             this.statusStrip1.SuspendLayout();
             this.groupBox1.SuspendLayout();
@@ -62,8 +62,7 @@
             // toolStripStatusLabel1
             // 
             this.toolStripStatusLabel1.Name = "toolStripStatusLabel1";
-            this.toolStripStatusLabel1.Size = new System.Drawing.Size(118, 17);
-            this.toolStripStatusLabel1.Text = "toolStripStatusLabel1";
+            this.toolStripStatusLabel1.Size = new System.Drawing.Size(0, 17);
             // 
             // groupBox1
             // 
@@ -78,6 +77,21 @@
             this.groupBox1.TabIndex = 28;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Dodavanje prostorije:";
+            // 
+            // prostorijacombo
+            // 
+            this.prostorijacombo.FormattingEnabled = true;
+            this.prostorijacombo.Items.AddRange(new object[] {
+            "KardioSoba",
+            "Magacin",
+            "Milkbar",
+            "SobaZaMasazu",
+            "Svlacionica",
+            "WeightLiftingSoba"});
+            this.prostorijacombo.Location = new System.Drawing.Point(119, 26);
+            this.prostorijacombo.Name = "prostorijacombo";
+            this.prostorijacombo.Size = new System.Drawing.Size(144, 21);
+            this.prostorijacombo.TabIndex = 26;
             // 
             // inventar_rich_box
             // 
@@ -157,21 +171,6 @@
             this.unosButton.Text = "Unesi";
             this.unosButton.UseVisualStyleBackColor = true;
             this.unosButton.Click += new System.EventHandler(this.unosButton_Click);
-            // 
-            // prostorijacombo
-            // 
-            this.prostorijacombo.FormattingEnabled = true;
-            this.prostorijacombo.Items.AddRange(new object[] {
-            "KardioSoba",
-            "Magacin",
-            "Milkbar",
-            "SobaZaMasazu",
-            "Svlacionica",
-            "WeightLiftingSoba"});
-            this.prostorijacombo.Location = new System.Drawing.Point(119, 26);
-            this.prostorijacombo.Name = "prostorijacombo";
-            this.prostorijacombo.Size = new System.Drawing.Size(144, 21);
-            this.prostorijacombo.TabIndex = 26;
             // 
             // errorProvider1
             // 

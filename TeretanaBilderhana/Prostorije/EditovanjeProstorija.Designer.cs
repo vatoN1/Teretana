@@ -94,7 +94,7 @@
             // prostorijaID_masked_box
             // 
             this.prostorijaID_masked_box.Location = new System.Drawing.Point(119, 20);
-            this.prostorijaID_masked_box.Mask = "00000";
+            this.prostorijaID_masked_box.Mask = "0000";
             this.prostorijaID_masked_box.Name = "prostorijaID_masked_box";
             this.prostorijaID_masked_box.Size = new System.Drawing.Size(144, 20);
             this.prostorijaID_masked_box.TabIndex = 22;
@@ -163,8 +163,7 @@
             // toolStripStatusLabel1
             // 
             this.toolStripStatusLabel1.Name = "toolStripStatusLabel1";
-            this.toolStripStatusLabel1.Size = new System.Drawing.Size(118, 17);
-            this.toolStripStatusLabel1.Text = "toolStripStatusLabel1";
+            this.toolStripStatusLabel1.Size = new System.Drawing.Size(0, 17);
             // 
             // izadjiButton
             // 

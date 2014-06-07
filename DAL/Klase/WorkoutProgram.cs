@@ -12,7 +12,6 @@ using System.Text;
     public class WorkoutProgram : GymProgram
     {
         int idWorkoutPrograma;
-        String vjezbe;
         public WorkoutProgram(int idWorkoutPrograma, String opis, TipPrograma tipPrograma, String vjezbe) :
             base(opis, tipPrograma) 
         {

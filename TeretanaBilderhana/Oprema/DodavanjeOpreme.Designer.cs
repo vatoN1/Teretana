@@ -31,6 +31,7 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(DodavanjeOpreme));
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.tipopremecombo = new System.Windows.Forms.ComboBox();
             this.cijena_numeric = new System.Windows.Forms.NumericUpDown();
             this.kolicina_numeric = new System.Windows.Forms.NumericUpDown();
             this.label4 = new System.Windows.Forms.Label();
@@ -41,7 +42,6 @@
             this.statusStrip1 = new System.Windows.Forms.StatusStrip();
             this.toolStripStatusLabel1 = new System.Windows.Forms.ToolStripStatusLabel();
             this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
-            this.tipopremecombo = new System.Windows.Forms.ComboBox();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.cijena_numeric)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.kolicina_numeric)).BeginInit();
@@ -63,6 +63,22 @@
             this.groupBox1.TabIndex = 31;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Editovanje opreme:";
+            // 
+            // tipopremecombo
+            // 
+            this.tipopremecombo.FormattingEnabled = true;
+            this.tipopremecombo.Items.AddRange(new object[] {
+            "Bandaze",
+            "Flasa",
+            "Peskir",
+            "Pojas",
+            "Rukavice",
+            "Sorts",
+            "Tene"});
+            this.tipopremecombo.Location = new System.Drawing.Point(120, 19);
+            this.tipopremecombo.Name = "tipopremecombo";
+            this.tipopremecombo.Size = new System.Drawing.Size(144, 21);
+            this.tipopremecombo.TabIndex = 28;
             // 
             // cijena_numeric
             // 
@@ -158,28 +174,11 @@
             // toolStripStatusLabel1
             // 
             this.toolStripStatusLabel1.Name = "toolStripStatusLabel1";
-            this.toolStripStatusLabel1.Size = new System.Drawing.Size(118, 17);
-            this.toolStripStatusLabel1.Text = "toolStripStatusLabel1";
+            this.toolStripStatusLabel1.Size = new System.Drawing.Size(0, 17);
             // 
             // errorProvider1
             // 
             this.errorProvider1.ContainerControl = this;
-            // 
-            // tipopremecombo
-            // 
-            this.tipopremecombo.FormattingEnabled = true;
-            this.tipopremecombo.Items.AddRange(new object[] {
-            "Bandaze",
-            "Flasa",
-            "Peskir",
-            "Pojas",
-            "Rukavice",
-            "Sorts",
-            "Tene"});
-            this.tipopremecombo.Location = new System.Drawing.Point(120, 19);
-            this.tipopremecombo.Name = "tipopremecombo";
-            this.tipopremecombo.Size = new System.Drawing.Size(144, 21);
-            this.tipopremecombo.TabIndex = 28;
             // 
             // DodavanjeOpreme
             // 

@@ -42,7 +42,7 @@ namespace DAL
                 return new ProstorijaDAO();
             }
 
-            public SpravaDAO getSpraveDAO()
+            public SpravaDAO getSpravaDAO()
             {
                 return new SpravaDAO();
             }
