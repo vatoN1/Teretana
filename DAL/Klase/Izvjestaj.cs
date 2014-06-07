@@ -11,34 +11,41 @@ using System.Text;
 
 public class Izvjestaj
 {
-    public Izvjestaj()
-    {
-        throw new System.NotImplementedException();
-    }
+    DateTime datumIzvjestaja;
+    int iDuposlenik;
+    int idIzvjestaja;
+    String sadrzajIzvjestaja;
 
     public Izvjestaj(int id, int idUposlenika, DateTime datum, string sadrzaj)
     {
-        // TODO: Complete member initialization
-        this.ID = id;
-        this.IDuposlenik = idUposlenika;
-        this.DatumIzvjestaja = datum;
-        this.SadrzajIzvjestaja = sadrzaj;
+        IdIzvjestaja = id;
+        IDuposlenik = idUposlenika;
+        DatumIzvjestaja = datum;
+        SadrzajIzvjestaja = sadrzaj;
     }
 
-    public int ID { get; set; }
+    public int IdIzvjestaja
+    {
+        get { return idIzvjestaja; }
+        set { idIzvjestaja = value; }
+    }
 
-    public string SadrzajIzvjestaja
-	{
-		get;
-		set;
-	}
+    public String SadrzajIzvjestaja
+    {
+        get { return sadrzajIzvjestaja; }
+        set { sadrzajIzvjestaja = value; }
+    }
 
     public DateTime DatumIzvjestaja
 	{
-		get;
-		set;
+        get { return datumIzvjestaja; }
+        set { datumIzvjestaja = value; }
 	}
 
-    public int IDuposlenik { get; set; }
+    public int IDuposlenik
+    {
+        get { return iDuposlenik; }
+        set { iDuposlenik = value; } 
+    }
 }
 

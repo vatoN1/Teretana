@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using TeretanaBilderhana.Klijenti;
 using TeretanaBilderhana.Izvjestaji;
-using TeretanaBilderhana.Oprema;
+using TeretanaBilderhana.Opreme;
 using TeretanaBilderhana.Prehrambeni_programi;
 using TeretanaBilderhana.Prostorije;
 using TeretanaBilderhana.Sprave;

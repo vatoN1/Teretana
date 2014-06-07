@@ -33,6 +33,7 @@
             this.izadjiButton = new System.Windows.Forms.Button();
             this.unosButton = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.tipprehrambenog_combo = new System.Windows.Forms.ComboBox();
             this.pprogram_masked_box = new System.Windows.Forms.MaskedTextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.obroci_pprogram_rich_box = new System.Windows.Forms.RichTextBox();
@@ -42,7 +43,6 @@
             this.label5 = new System.Windows.Forms.Label();
             this.statusStrip1 = new System.Windows.Forms.StatusStrip();
             this.toolStripStatusLabel1 = new System.Windows.Forms.ToolStripStatusLabel();
-            this.tipprehrambenog_combo = new System.Windows.Forms.ComboBox();
             this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
             this.groupBox1.SuspendLayout();
             this.statusStrip1.SuspendLayout();
@@ -86,6 +86,15 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Editovanje prehrambenog programa:";
             // 
+            // tipprehrambenog_combo
+            // 
+            this.tipprehrambenog_combo.FormattingEnabled = true;
+            this.tipprehrambenog_combo.Location = new System.Drawing.Point(166, 50);
+            this.tipprehrambenog_combo.Name = "tipprehrambenog_combo";
+            this.tipprehrambenog_combo.Size = new System.Drawing.Size(144, 21);
+            this.tipprehrambenog_combo.TabIndex = 2;
+            this.tipprehrambenog_combo.Validating += new System.ComponentModel.CancelEventHandler(this.tipprehrambenog_combo_Validating);
+            // 
             // pprogram_masked_box
             // 
             this.pprogram_masked_box.Location = new System.Drawing.Point(166, 24);
@@ -95,6 +104,7 @@
             this.pprogram_masked_box.TabIndex = 1;
             this.pprogram_masked_box.ValidatingType = typeof(int);
             this.pprogram_masked_box.Leave += new System.EventHandler(this.pprogram_masked_box_Leave);
+            this.pprogram_masked_box.Validating += new System.ComponentModel.CancelEventHandler(this.pprogramID_Validating);
             // 
             // label1
             // 
@@ -112,6 +122,7 @@
             this.obroci_pprogram_rich_box.Size = new System.Drawing.Size(144, 80);
             this.obroci_pprogram_rich_box.TabIndex = 4;
             this.obroci_pprogram_rich_box.Text = "";
+            this.obroci_pprogram_rich_box.Validating += new System.ComponentModel.CancelEventHandler(this.obroci_pprogram_rich_box_Validating);
             // 
             // opis_pprogram_rich_box
             // 
@@ -120,6 +131,7 @@
             this.opis_pprogram_rich_box.Size = new System.Drawing.Size(144, 88);
             this.opis_pprogram_rich_box.TabIndex = 3;
             this.opis_pprogram_rich_box.Text = "";
+            this.opis_pprogram_rich_box.Validating += new System.ComponentModel.CancelEventHandler(this.opis_pprogram_rich_box_Validating);
             // 
             // label2
             // 
@@ -162,14 +174,6 @@
             // 
             this.toolStripStatusLabel1.Name = "toolStripStatusLabel1";
             this.toolStripStatusLabel1.Size = new System.Drawing.Size(0, 17);
-            // 
-            // tipprehrambenog_combo
-            // 
-            this.tipprehrambenog_combo.FormattingEnabled = true;
-            this.tipprehrambenog_combo.Location = new System.Drawing.Point(166, 50);
-            this.tipprehrambenog_combo.Name = "tipprehrambenog_combo";
-            this.tipprehrambenog_combo.Size = new System.Drawing.Size(144, 21);
-            this.tipprehrambenog_combo.TabIndex = 2;
             // 
             // errorProvider1
             // 

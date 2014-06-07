@@ -17,7 +17,7 @@ namespace DAL
                 try
                 {
                     c = new MySqlCommand(String.Format("INSERT INTO Prostorije VALUES ('{0}','{1}','{2}','{3}');",
-                        entity.Id, entity.NazivProstorije, entity.Dostupnost, entity.InventarS), con);
+                        entity.Id, entity.Dostupnost, entity.TipProstorije, entity.Inventar1), con);
                     c.ExecuteNonQuery();
                     return c.LastInsertedId;
                 }
@@ -26,7 +26,7 @@ namespace DAL
                     throw e;
                 }
             }
-            public Prostorija update(Prostorija entity) { throw new NotImplementedException(); }
+            public Prostorija update(int id, Prostorija entity) { throw new NotImplementedException(); }
             public Prostorija read(Prostorija entity)
             {
                 try
@@ -37,7 +37,8 @@ namespace DAL
 
                     if (r.Read())
                     {
-                        Prostorija prostorija = new Prostorija(r.GetInt32("id"), r.GetString("nazivProstorije"), r.GetBoolean("dostupnost"), r.GetString("inventar"));
+                        Prostorija prostorija = new Prostorija(
+                            r.GetInt32("id"), r.GetString("nazivProstorije"), r.GetString("dostupnost"), r.GetString("inventar"));
                         r.Close();
                         return prostorija;
                     }
@@ -51,12 +52,17 @@ namespace DAL
                 }
             }
 
-            public Prostorija update(int id, Prostorija entity)
+            public Prostorija update(Prostorija entity)
             {
                 try
                 {
-                    c = new MySqlCommand(String.Format("UPDATE Prostorije SET id='{0}', nazivProstorije='{1}', dostupnost='{2}', inventar = '{3}' where id = '{8}';",
-                        entity.Id, entity.NazivProstorije, entity.Dostupnost, entity.Inventar, id), con);
+                    /*c = new MySqlCommand(String.Format("UPDATE Prostorije SET id='{0}', nazivProstorije='{1}', dostupnost='{2}', inventar = '{3}' where id = '{8}';",
+                        entity.Id, entity.NazivProstorije, entity.Dostupnost, entity.Inventar, entity.Id), con);*/
+                    c = new MySqlCommand("UPDATE prostorije set dostupnost= '" + entity.Dostupnost
+                                            + "', nazivProstorije= '" + entity.TipProstorije
+                                            + "', inventar= '" + entity.Inventar1
+                                            + "' where id = " + entity.Id, con
+                                            );
                     c.ExecuteNonQuery();
                     return entity;
                 }
@@ -87,7 +93,7 @@ namespace DAL
                     MySqlDataReader r = c.ExecuteReader();
                     if (r.Read())
                     {
-                        Prostorija a = new Prostorija(r.GetInt32("id"), r.GetString("NazivProstorije"), r.GetBoolean("Dostupnost"),
+                        Prostorija a = new Prostorija(r.GetInt32("id"), r.GetString("Dostupnost"), r.GetString("NazivProstorije"), 
                             r.GetString("Inventar"));
                         r.Close();
                         return a;
@@ -109,7 +115,7 @@ namespace DAL
                     MySqlDataReader r = c.ExecuteReader();
                     List<Prostorija> prostorija = new List<Prostorija>();
                     while (r.Read())
-                        prostorija.Add(new Prostorija(r.GetInt32("id"), r.GetString("NazivProstorije"), r.GetBoolean("Dostupnost"),
+                        prostorija.Add(new Prostorija(r.GetInt32("id"), r.GetString("Dostupnost"), r.GetString("NazivProstorije"),
                             r.GetString("Inventar")));
 
                     r.Close();
@@ -130,7 +136,7 @@ namespace DAL
                     MySqlDataReader r = c.ExecuteReader();
                     List<Prostorija> prostorija = new List<Prostorija>();
                     while (r.Read())
-                        prostorija.Add(new Prostorija(r.GetInt32("id"), r.GetString("NazivProstorije"), r.GetBoolean("Dostupnost"),
+                        prostorija.Add(new Prostorija(r.GetInt32("id"), r.GetString("Dostupnost"), r.GetString("NazivProstorije"),
                             r.GetString("Inventar")));
                     r.Close();
                     return prostorija;

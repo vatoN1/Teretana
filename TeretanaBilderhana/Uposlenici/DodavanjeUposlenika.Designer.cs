@@ -203,6 +203,7 @@
             this.sifra_box.Name = "sifra_box";
             this.sifra_box.Size = new System.Drawing.Size(121, 20);
             this.sifra_box.TabIndex = 11;
+            this.sifra_box.Validating += new System.ComponentModel.CancelEventHandler(this.sifratb_Validating);
             // 
             // zaposlenje_combo
             // 
@@ -275,6 +276,7 @@
             this.kontakt_masked_box.Name = "kontakt_masked_box";
             this.kontakt_masked_box.Size = new System.Drawing.Size(121, 20);
             this.kontakt_masked_box.TabIndex = 7;
+            this.kontakt_masked_box.Validating += new System.ComponentModel.CancelEventHandler(this.kontakttb_Validating);
             // 
             // unosButton
             // 

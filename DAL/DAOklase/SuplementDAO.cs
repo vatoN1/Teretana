@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 using MySql.Data.MySqlClient;
 
 namespace DAL
@@ -17,18 +18,18 @@ namespace DAL
             {
                 try
                 {
-
-                    c = new MySqlCommand(String.Format("INSERT INTO suplementi VALUES ('{0}','{1}');"
-                        , entity.TipSuplementa, entity.Cijena), con);
+                    c = new MySqlCommand(String.Format("INSERT INTO suplementi VALUES ('{0}','{1}','{2},'{3}');",
+                        entity.IdSuplementa, entity.Kolicina, entity.Cijena, entity.TipSuplementaS), con);
                     c.ExecuteNonQuery();
                     return c.LastInsertedId;
                 }
                 catch (Exception e)
                 {
+                    MessageBox.Show(Convert.ToString(e));
                     throw e;
                 }
             }
-            public Suplement update(Suplement entity) { throw new NotImplementedException(); }
+            public Suplement update(int id, Suplement entity) { throw new NotImplementedException(); }
             public Suplement read(Suplement entity)
             {
                 try
@@ -42,7 +43,7 @@ namespace DAL
                     {
                         Suplement Suplement = new Suplement
                         (
-                            r.GetInt32("id"), r.GetString("tipSuplementa"), r.GetDecimal("cijena")
+                            r.GetInt32("id"), r.GetInt32("kolicina"), r.GetDecimal("cijena"), r.GetString("tipSuplementa")
                         );
 
                         r.Close();
@@ -58,13 +59,18 @@ namespace DAL
                 }
             }
 
-            public Suplement update(int id, Suplement entity)
+            public Suplement update(Suplement entity)
             {
                 try
                 {
-                    c = new MySqlCommand(String.Format("UPDATE suplementi SET, tipSuplementa='{0}', " +
+                    /*c = new MySqlCommand(String.Format("UPDATE suplementi SET, tipSuplementa='{0}', " +
                               "cijena='{1}, where id = '{2}'",
-                        entity.IdSuplementa, entity.TipSuplementa, entity.Cijena, id), con);
+                        entity.IdSuplementa, entity.TipSuplementa, entity.Cijena, id), con);*/
+                    c = new MySqlCommand("UPDATE suplementi set cijena= " + entity.Cijena
+                                            + ", tipSuplementa= '" + entity.TipSuplementaS
+                                            + "', kolicina= " + entity.Kolicina
+                                            + " where id = " + entity.IdSuplementa, con
+                                            );
                     c.ExecuteNonQuery();
                     return entity;
                 }
@@ -98,7 +104,7 @@ namespace DAL
                     {
                         Suplement Suplement = new Suplement
                         (
-                            r.GetInt32("id"), r.GetString("tipSuplementa"), r.GetDecimal("cijena")
+                            r.GetInt32("id"), r.GetInt32("kolicina"), r.GetDecimal("cijena"), r.GetString("tipSuplementa")
                         );
                         r.Close();
                         return Suplement;
@@ -122,7 +128,7 @@ namespace DAL
                     while (r.Read())
                         Suplementi.Add(new Suplement
                         (
-                            r.GetInt32("id"), r.GetString("tipSuplementa"), r.GetDecimal("cijena")
+                            r.GetInt32("id"), r.GetInt32("kolicina"), r.GetDecimal("cijena"), r.GetString("tipSuplementa")
                         ));
 
                     r.Close();
@@ -145,7 +151,7 @@ namespace DAL
                     while (r.Read())
                         Suplementi.Add(new Suplement
                         (
-                            r.GetInt32("id"), r.GetString("tipSuplementa"), r.GetDecimal("cijena")
+                            r.GetInt32("id"), r.GetInt32("kolicina"), r.GetDecimal("cijena"), r.GetString("tipSuplementa")
                         ));
                     r.Close();
                     return Suplementi;

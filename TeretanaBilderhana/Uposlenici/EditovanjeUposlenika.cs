@@ -29,7 +29,8 @@ namespace TeretanaBilderhana
                 (errorProvider1.GetError(kontakt_masked_box) == "") &&
                 (errorProvider1.GetError(sifra_box) == "") &&
                 (errorProvider1.GetError(zaposlenje_combo) == "") &&
-                (errorProvider1.GetError(groupBox2) == "")
+                (errorProvider1.GetError(groupBox2) == "") &&
+                (errorProvider1.GetError(uposlenikID_masked_box)=="")
             );
         }
 
@@ -70,7 +71,19 @@ namespace TeretanaBilderhana
                 toolStripStatusLabel1.Text = "Unesite ispravne podatke!";
             }
         }
-
+        private void uposlenikID_Validating(object sender, CancelEventArgs e)
+        {
+            if (uposlenikID_masked_box.Text.Length != 4)
+            {
+                errorProvider1.SetError(uposlenikID_masked_box, "Nedovoljan broj karaktera!");
+                toolStripStatusLabel1.Text = "Nedovoljan broj karaktera!";
+            }
+            else
+            {
+                errorProvider1.SetError(uposlenikID_masked_box, "");
+                toolStripStatusLabel1.Text = "";
+            }
+        }
         private void imetb_Validating(object sender, CancelEventArgs e)
         {
             if (imetb.Text.Length < 3)

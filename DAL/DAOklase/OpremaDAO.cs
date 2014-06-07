@@ -18,7 +18,7 @@ namespace DAL
                 try
                 {
                     c = new MySqlCommand(String.Format("INSERT INTO Oprema VALUES ('{0}', '{1}', '{2}', '{3}');",
-                        entity.ID, entity.Kolicina, entity.CijenaNajama, entity.TipOpremeS), con);
+                        entity.IdOpreme, entity.Kolicina, entity.CijenaNajama, entity.TipOpremeS), con);
                     c.ExecuteNonQuery();
                     return c.LastInsertedId;
                 }
@@ -27,18 +27,18 @@ namespace DAL
                     throw e;
                 }
             }
-            public Oprema update(Oprema entity) { throw new NotImplementedException(); }
+            public Oprema update(int id, Oprema entity) { throw new NotImplementedException(); }
             public Oprema read(Oprema entity)
             {
                 try
                 {
-                    c = new MySqlCommand(String.Format("SELECT * FROM Oprema WHERE id = '{0}';", entity.ID), con);
+                    c = new MySqlCommand(String.Format("SELECT * FROM Oprema WHERE id = '{0}';", entity.IdOpreme), con);
 
                     MySqlDataReader r = c.ExecuteReader();
 
                     if (r.Read())
                     {
-                        Oprema o = new Oprema(r.GetInt32("id"), r.GetInt32("kolicina"), r.GetDouble("cijenaNajama"), r.GetString("tipOpreme"));
+                        Oprema o = new Oprema(r.GetInt32("id"), r.GetInt32("kolicina"), r.GetDecimal("cijenaNajama"), r.GetString("tipOpreme"));
                         r.Close();
 
                         return o;
@@ -51,12 +51,17 @@ namespace DAL
                 }
             }
 
-            public Oprema update(int id, Oprema entity)
+            public Oprema update(Oprema entity)
             {
                 try
                 {
-                    c = new MySqlCommand(String.Format("UPDATE Oprema SET id='{0}', kolicina = '{1}', tipOpreme = '{2}', cijenaNajama = '{3}';",
-                        entity.ID, entity.Kolicina, entity.TipOpreme.ToString(), entity.CijenaNajama), con);
+                    /*c = new MySqlCommand(String.Format("UPDATE Oprema SET id='{0}', kolicina = '{1}', tipOpreme = '{2}', cijenaNajama = '{3}';",
+                        entity.IdOpreme, entity.Kolicina, entity.TipOpreme.ToString(), entity.CijenaNajama), con);*/
+                    c = new MySqlCommand("UPDATE oprema set cijenaNajama= " + entity.CijenaNajama
+                                            + ", tipOpreme= '" + entity.TipOpremeS
+                                            + "', kolicina= " + entity.Kolicina
+                                            + " where id = " + entity.IdOpreme, con
+                                            );
                     c.ExecuteNonQuery();
                     return entity;
                 }
@@ -70,7 +75,7 @@ namespace DAL
             {
                 try
                 {
-                    c = new MySqlCommand(("DELETE FROM Oprema WHERE id = '" + entity.ID + "';"), con);
+                    c = new MySqlCommand(("DELETE FROM Oprema WHERE id = '" + entity.IdOpreme + "';"), con);
                     c.ExecuteNonQuery();
                 }
                 catch (Exception e)
@@ -87,7 +92,7 @@ namespace DAL
                     MySqlDataReader r = c.ExecuteReader();
                     List<Oprema> oprema = new List<Oprema>();
                     while (r.Read())
-                        oprema.Add(new Oprema(r.GetInt32("id"), r.GetInt32("kolicina"), r.GetDouble("cijenaNajama"), r.GetString("tipOpreme")));
+                        oprema.Add(new Oprema(r.GetInt32("id"), r.GetInt32("kolicina"), r.GetDecimal("cijenaNajama"), r.GetString("tipOpreme")));
 
                     r.Close();
                     return oprema;
@@ -107,7 +112,7 @@ namespace DAL
                     MySqlDataReader r = c.ExecuteReader();
                     if (r.Read())
                     {
-                        Oprema o = new Oprema(r.GetInt32("id"), r.GetInt32("kolicina"), r.GetDouble("cijenaNajama"), r.GetString("tipOpreme"));
+                        Oprema o = new Oprema(r.GetInt32("id"), r.GetInt32("kolicina"), r.GetDecimal("cijenaNajama"), r.GetString("tipOpreme"));
                         r.Close();
                         return o;
                     }
@@ -128,7 +133,7 @@ namespace DAL
                     MySqlDataReader r = c.ExecuteReader();
                     List<Oprema> oprema = new List<Oprema>();
                     while (r.Read())
-                        oprema.Add(new Oprema(r.GetInt32("id"), r.GetInt32("kolicina"), r.GetDouble("cijenaNajama"), r.GetString("tipOpreme")));
+                        oprema.Add(new Oprema(r.GetInt32("id"), r.GetInt32("kolicina"), r.GetDecimal("cijenaNajama"), r.GetString("tipOpreme")));
                     r.Close();
                     return oprema;
                 }

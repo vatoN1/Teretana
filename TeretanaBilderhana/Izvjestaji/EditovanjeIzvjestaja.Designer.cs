@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(EditovanjeIzvjestaja));
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.sadrzaj_rich_box = new System.Windows.Forms.RichTextBox();
@@ -42,8 +43,10 @@
             this.unosButton = new System.Windows.Forms.Button();
             this.statusStrip1 = new System.Windows.Forms.StatusStrip();
             this.toolStripStatusLabel1 = new System.Windows.Forms.ToolStripStatusLabel();
+            this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
             this.groupBox1.SuspendLayout();
             this.statusStrip1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             this.SuspendLayout();
             // 
             // groupBox1
@@ -70,6 +73,7 @@
             this.sadrzaj_rich_box.Size = new System.Drawing.Size(144, 96);
             this.sadrzaj_rich_box.TabIndex = 31;
             this.sadrzaj_rich_box.Text = "";
+            this.sadrzaj_rich_box.Validating += new System.ComponentModel.CancelEventHandler(this.sadrzaj_rich_box_Validating);
             // 
             // izvjestaj_datetime
             // 
@@ -90,11 +94,12 @@
             // id_uposlenik_masked_box
             // 
             this.id_uposlenik_masked_box.Location = new System.Drawing.Point(119, 46);
-            this.id_uposlenik_masked_box.Mask = "00000";
+            this.id_uposlenik_masked_box.Mask = "0000";
             this.id_uposlenik_masked_box.Name = "id_uposlenik_masked_box";
             this.id_uposlenik_masked_box.Size = new System.Drawing.Size(144, 20);
             this.id_uposlenik_masked_box.TabIndex = 28;
             this.id_uposlenik_masked_box.ValidatingType = typeof(int);
+            this.id_uposlenik_masked_box.Validating += new System.ComponentModel.CancelEventHandler(this.uposlenikID_Validating);
             // 
             // label3
             // 
@@ -117,11 +122,13 @@
             // id_izvjestaj_masked_box
             // 
             this.id_izvjestaj_masked_box.Location = new System.Drawing.Point(119, 20);
-            this.id_izvjestaj_masked_box.Mask = "00000";
+            this.id_izvjestaj_masked_box.Mask = "0000";
             this.id_izvjestaj_masked_box.Name = "id_izvjestaj_masked_box";
             this.id_izvjestaj_masked_box.Size = new System.Drawing.Size(144, 20);
             this.id_izvjestaj_masked_box.TabIndex = 22;
             this.id_izvjestaj_masked_box.ValidatingType = typeof(int);
+            this.id_izvjestaj_masked_box.Leave += new System.EventHandler(this.izvjestajID_masked_box_Leave);
+            this.id_izvjestaj_masked_box.Validating += new System.ComponentModel.CancelEventHandler(this.izvjestajID_Validating);
             // 
             // label2
             // 
@@ -150,6 +157,7 @@
             this.unosButton.TabIndex = 32;
             this.unosButton.Text = "Unesi";
             this.unosButton.UseVisualStyleBackColor = true;
+            this.unosButton.Click += new System.EventHandler(this.unosButton_Click);
             // 
             // statusStrip1
             // 
@@ -165,6 +173,10 @@
             // 
             this.toolStripStatusLabel1.Name = "toolStripStatusLabel1";
             this.toolStripStatusLabel1.Size = new System.Drawing.Size(0, 17);
+            // 
+            // errorProvider1
+            // 
+            this.errorProvider1.ContainerControl = this;
             // 
             // EditovanjeIzvjestaja
             // 
@@ -183,6 +195,7 @@
             this.groupBox1.PerformLayout();
             this.statusStrip1.ResumeLayout(false);
             this.statusStrip1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -203,5 +216,6 @@
         private System.Windows.Forms.Button unosButton;
         private System.Windows.Forms.StatusStrip statusStrip1;
         private System.Windows.Forms.ToolStripStatusLabel toolStripStatusLabel1;
+        private System.Windows.Forms.ErrorProvider errorProvider1;
     }
 }

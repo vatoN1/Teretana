@@ -1,4 +1,4 @@
-﻿namespace TeretanaBilderhana.Oprema
+﻿namespace TeretanaBilderhana.Opreme
 {
     partial class DodavanjeOpreme
     {
@@ -67,18 +67,11 @@
             // tipopremecombo
             // 
             this.tipopremecombo.FormattingEnabled = true;
-            this.tipopremecombo.Items.AddRange(new object[] {
-            "Bandaze",
-            "Flasa",
-            "Peskir",
-            "Pojas",
-            "Rukavice",
-            "Sorts",
-            "Tene"});
             this.tipopremecombo.Location = new System.Drawing.Point(120, 19);
             this.tipopremecombo.Name = "tipopremecombo";
             this.tipopremecombo.Size = new System.Drawing.Size(144, 21);
-            this.tipopremecombo.TabIndex = 28;
+            this.tipopremecombo.TabIndex = 1;
+            this.tipopremecombo.Validating += new System.ComponentModel.CancelEventHandler(this.tipopreme_Validating);
             // 
             // cijena_numeric
             // 
@@ -90,7 +83,7 @@
             0});
             this.cijena_numeric.Name = "cijena_numeric";
             this.cijena_numeric.Size = new System.Drawing.Size(144, 20);
-            this.cijena_numeric.TabIndex = 27;
+            this.cijena_numeric.TabIndex = 3;
             this.cijena_numeric.Value = new decimal(new int[] {
             5,
             0,
@@ -107,7 +100,7 @@
             0});
             this.kolicina_numeric.Name = "kolicina_numeric";
             this.kolicina_numeric.Size = new System.Drawing.Size(144, 20);
-            this.kolicina_numeric.TabIndex = 26;
+            this.kolicina_numeric.TabIndex = 2;
             this.kolicina_numeric.Value = new decimal(new int[] {
             1,
             0,
@@ -146,7 +139,7 @@
             this.izadjiButton.Location = new System.Drawing.Point(216, 126);
             this.izadjiButton.Name = "izadjiButton";
             this.izadjiButton.Size = new System.Drawing.Size(83, 23);
-            this.izadjiButton.TabIndex = 34;
+            this.izadjiButton.TabIndex = 5;
             this.izadjiButton.Text = "Izadji";
             this.izadjiButton.UseVisualStyleBackColor = true;
             this.izadjiButton.Click += new System.EventHandler(this.izadjiButton_Click);
@@ -156,7 +149,7 @@
             this.unosButton.Location = new System.Drawing.Point(113, 126);
             this.unosButton.Name = "unosButton";
             this.unosButton.Size = new System.Drawing.Size(91, 23);
-            this.unosButton.TabIndex = 33;
+            this.unosButton.TabIndex = 4;
             this.unosButton.Text = "Unesi";
             this.unosButton.UseVisualStyleBackColor = true;
             this.unosButton.Click += new System.EventHandler(this.unosButton_Click);

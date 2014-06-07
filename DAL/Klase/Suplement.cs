@@ -12,45 +12,34 @@ using System.Text;
 public class Suplement : Inventar
 {
     int idSuplementa;
-    TipSuplementa tipSuplementa;
     String tipSuplementaS;
     Decimal cijena;
-    
-    public Suplement() { }
 
-    public Suplement(int id, TipSuplementa tipSuplementa, Decimal cijena)
+    public Suplement(int id, int kolicina, Decimal cijena, String tipSuplementa):base(kolicina)
     {
-        // TODO: Complete member initialization
-        this.idSuplementa = id;
-        this.tipSuplementa = tipSuplementa;
-        this.cijena = cijena;
+        IdSuplementa = id;
+        TipSuplementaS = tipSuplementa;
+        Cijena = cijena;
     }
-
-    public Suplement(int id, String tipSuplementa, Decimal cijena)
-    {
-        // TODO: Complete member initialization
-        this.idSuplementa = id;
-        this.tipSuplementaS = tipSuplementa;
-        this.cijena = cijena;
-    }
-
     public int IdSuplementa
+    {
+        get { return idSuplementa; }
+        set { idSuplementa = value; }
+    }
+    public String TipSuplementaS
+    {
+        get { return tipSuplementaS; }
+        set { tipSuplementaS = value; }
+    }
+    public Decimal Cijena
+	{
+        get { return cijena; }
+        set { cijena = value; }
+	}
+    public TipSuplementa TipSuplementa
     {
         get;
         set;
     }
-
-    public TipSuplementa TipSuplementa
-	{
-		get;
-		set;
-	}
-
-    public Decimal Cijena
-	{
-		get;
-		set;
-	}
-
 }
 

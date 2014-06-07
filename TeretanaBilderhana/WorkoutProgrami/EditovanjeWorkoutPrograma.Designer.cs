@@ -33,6 +33,7 @@
             this.izadjiButton = new System.Windows.Forms.Button();
             this.unosButton = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.tipwp_combo = new System.Windows.Forms.ComboBox();
             this.wprogramID_masked_box = new System.Windows.Forms.MaskedTextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.vjezbe_rich_box = new System.Windows.Forms.RichTextBox();
@@ -42,7 +43,6 @@
             this.label5 = new System.Windows.Forms.Label();
             this.statusStrip1 = new System.Windows.Forms.StatusStrip();
             this.toolStripStatusLabel1 = new System.Windows.Forms.ToolStripStatusLabel();
-            this.tipwp_combo = new System.Windows.Forms.ComboBox();
             this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
             this.groupBox1.SuspendLayout();
             this.statusStrip1.SuspendLayout();
@@ -54,7 +54,7 @@
             this.izadjiButton.Location = new System.Drawing.Point(239, 281);
             this.izadjiButton.Name = "izadjiButton";
             this.izadjiButton.Size = new System.Drawing.Size(83, 23);
-            this.izadjiButton.TabIndex = 26;
+            this.izadjiButton.TabIndex = 6;
             this.izadjiButton.Text = "Izadji";
             this.izadjiButton.UseVisualStyleBackColor = true;
             this.izadjiButton.Click += new System.EventHandler(this.izadjiButton_Click);
@@ -64,7 +64,7 @@
             this.unosButton.Location = new System.Drawing.Point(136, 281);
             this.unosButton.Name = "unosButton";
             this.unosButton.Size = new System.Drawing.Size(91, 23);
-            this.unosButton.TabIndex = 25;
+            this.unosButton.TabIndex = 5;
             this.unosButton.Text = "Unesi";
             this.unosButton.UseVisualStyleBackColor = true;
             this.unosButton.Click += new System.EventHandler(this.unosButton_Click);
@@ -86,13 +86,22 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Editovanje workout programa:";
             // 
+            // tipwp_combo
+            // 
+            this.tipwp_combo.FormattingEnabled = true;
+            this.tipwp_combo.Location = new System.Drawing.Point(139, 51);
+            this.tipwp_combo.Name = "tipwp_combo";
+            this.tipwp_combo.Size = new System.Drawing.Size(144, 21);
+            this.tipwp_combo.TabIndex = 2;
+            this.tipwp_combo.Validating += new System.ComponentModel.CancelEventHandler(this.tipwp_Validating);
+            // 
             // wprogramID_masked_box
             // 
             this.wprogramID_masked_box.Location = new System.Drawing.Point(139, 23);
             this.wprogramID_masked_box.Mask = "0000";
             this.wprogramID_masked_box.Name = "wprogramID_masked_box";
             this.wprogramID_masked_box.Size = new System.Drawing.Size(144, 20);
-            this.wprogramID_masked_box.TabIndex = 23;
+            this.wprogramID_masked_box.TabIndex = 1;
             this.wprogramID_masked_box.ValidatingType = typeof(int);
             this.wprogramID_masked_box.Leave += new System.EventHandler(this.wprogramID_masked_box_Leave);
             // 
@@ -110,16 +119,18 @@
             this.vjezbe_rich_box.Location = new System.Drawing.Point(139, 176);
             this.vjezbe_rich_box.Name = "vjezbe_rich_box";
             this.vjezbe_rich_box.Size = new System.Drawing.Size(144, 80);
-            this.vjezbe_rich_box.TabIndex = 17;
+            this.vjezbe_rich_box.TabIndex = 4;
             this.vjezbe_rich_box.Text = "";
+            this.vjezbe_rich_box.Validating += new System.ComponentModel.CancelEventHandler(this.vjezbe_rich_box_Validating);
             // 
             // opis_wprogram_rich_box
             // 
             this.opis_wprogram_rich_box.Location = new System.Drawing.Point(139, 82);
             this.opis_wprogram_rich_box.Name = "opis_wprogram_rich_box";
             this.opis_wprogram_rich_box.Size = new System.Drawing.Size(144, 88);
-            this.opis_wprogram_rich_box.TabIndex = 16;
+            this.opis_wprogram_rich_box.TabIndex = 3;
             this.opis_wprogram_rich_box.Text = "";
+            this.opis_wprogram_rich_box.Validating += new System.ComponentModel.CancelEventHandler(this.opis_wprogram_rich_box_Validating);
             // 
             // label2
             // 
@@ -162,14 +173,6 @@
             // 
             this.toolStripStatusLabel1.Name = "toolStripStatusLabel1";
             this.toolStripStatusLabel1.Size = new System.Drawing.Size(0, 17);
-            // 
-            // tipwp_combo
-            // 
-            this.tipwp_combo.FormattingEnabled = true;
-            this.tipwp_combo.Location = new System.Drawing.Point(139, 51);
-            this.tipwp_combo.Name = "tipwp_combo";
-            this.tipwp_combo.Size = new System.Drawing.Size(144, 21);
-            this.tipwp_combo.TabIndex = 24;
             // 
             // errorProvider1
             // 

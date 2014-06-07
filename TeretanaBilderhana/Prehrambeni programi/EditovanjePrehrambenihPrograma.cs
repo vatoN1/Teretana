@@ -24,7 +24,8 @@ namespace TeretanaBilderhana.Prehrambeni_programi
             (
                 (errorProvider1.GetError(tipprehrambenog_combo) == "") &&
                 (errorProvider1.GetError(opis_pprogram_rich_box) == "") &&
-                (errorProvider1.GetError(obroci_pprogram_rich_box) == "")
+                (errorProvider1.GetError(obroci_pprogram_rich_box) == "") &&
+                (errorProvider1.GetError(pprogram_masked_box)=="")
             );
         }
         private void unosButton_Click(object sender, EventArgs e)
@@ -43,6 +44,19 @@ namespace TeretanaBilderhana.Prehrambeni_programi
                 c.update(PrehrambeniProgram);
                 d.terminirajKonekciju();
                 Close();
+            }
+        }
+        private void pprogramID_Validating(object sender, CancelEventArgs e)
+        {
+            if (pprogram_masked_box.Text.Length != 4)
+            {
+                errorProvider1.SetError(pprogram_masked_box, "Nedovoljan broj karaktera!");
+                toolStripStatusLabel1.Text = "Nedovoljan broj karaktera!";
+            }
+            else
+            {
+                errorProvider1.SetError(pprogram_masked_box, "");
+                toolStripStatusLabel1.Text = "";
             }
         }
         private void opis_pprogram_rich_box_Validating(object sender, CancelEventArgs e)

@@ -32,7 +32,7 @@ namespace TeretanaBilderhana.Sprave
                 DAL.DAL d = DAL.DAL.Instanca;
                 d.kreirajKonekciju("localhost", "Teretana", "root", "");
                 DAL.DAL.SpravaDAO c = d.getDAO.getSpravaDAO();
-
+                MessageBox.Show(Sprava.TipSprave + " " + Sprava.TipSpraveS);
                 Sprava.Id = (int)c.create(Sprava);
                 d.terminirajKonekciju();
                 MessageBox.Show("Sprava unesena! ID je: " + r);
@@ -43,8 +43,8 @@ namespace TeretanaBilderhana.Sprave
         {
             if (tipsprave_combo.SelectedItem == null)
             {
-                errorProvider1.SetError(tipsprave_combo, "Odaberite tip workout programa!");
-                toolStripStatusLabel1.Text = "Odaberite tip workout programa!!";
+                errorProvider1.SetError(tipsprave_combo, "Odaberite tip sprave!");
+                toolStripStatusLabel1.Text = "Odaberite tip sprave!";
             }
             else
             {

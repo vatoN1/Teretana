@@ -26,7 +26,8 @@ namespace TeretanaBilderhana.Klijenti
                 (errorProvider1.GetError(kontakttb) == "") &&
                 (errorProvider1.GetError(trenerID_masked_box) == "") &&
                 (errorProvider1.GetError(nutricionistaID_masked_box) == "") &&
-                (errorProvider1.GetError(groupBox2) == "")
+                (errorProvider1.GetError(groupBox2) == "") &&
+                (errorProvider1.GetError(klijentID_masked_box)=="")
             );
         }
 
@@ -50,6 +51,19 @@ namespace TeretanaBilderhana.Klijenti
                 c.update(Klijent);
                 d.terminirajKonekciju();
                 //Close();
+            }
+        }
+        private void klijentID_Validating(object sender, CancelEventArgs e)
+        {
+            if (klijentID_masked_box.Text.Length != 4)
+            {
+                errorProvider1.SetError(klijentID_masked_box, "Nedovoljan broj karaktera!");
+                toolStripStatusLabel1.Text = "Nedovoljan broj karaktera!";
+            }
+            else
+            {
+                errorProvider1.SetError(klijentID_masked_box, "");
+                toolStripStatusLabel1.Text = "";
             }
         }
         private void imetb_Validating(object sender, CancelEventArgs e)
@@ -221,11 +235,6 @@ namespace TeretanaBilderhana.Klijenti
         private void izadjiButton_Click(object sender, EventArgs e)
         {
             this.Close();
-        }
-
-        private void klijentID_masked_box_MaskInputRejected(object sender, MaskInputRejectedEventArgs e)
-        {
-
         }
     }
 }

@@ -81,25 +81,20 @@
             // prostorijacombo
             // 
             this.prostorijacombo.FormattingEnabled = true;
-            this.prostorijacombo.Items.AddRange(new object[] {
-            "KardioSoba",
-            "Magacin",
-            "Milkbar",
-            "SobaZaMasazu",
-            "Svlacionica",
-            "WeightLiftingSoba"});
             this.prostorijacombo.Location = new System.Drawing.Point(119, 26);
             this.prostorijacombo.Name = "prostorijacombo";
             this.prostorijacombo.Size = new System.Drawing.Size(144, 21);
-            this.prostorijacombo.TabIndex = 26;
+            this.prostorijacombo.TabIndex = 1;
+            this.prostorijacombo.Validating += new System.ComponentModel.CancelEventHandler(this.prostorijacombo_Validating);
             // 
             // inventar_rich_box
             // 
             this.inventar_rich_box.Location = new System.Drawing.Point(119, 110);
             this.inventar_rich_box.Name = "inventar_rich_box";
             this.inventar_rich_box.Size = new System.Drawing.Size(144, 88);
-            this.inventar_rich_box.TabIndex = 25;
+            this.inventar_rich_box.TabIndex = 4;
             this.inventar_rich_box.Text = "";
+            this.inventar_rich_box.Validating += new System.ComponentModel.CancelEventHandler(this.inventar_rich_box_Validating);
             // 
             // label3
             // 
@@ -120,6 +115,7 @@
             this.groupBox2.TabIndex = 16;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Dostupnost:";
+            this.groupBox2.Validating += new System.ComponentModel.CancelEventHandler(this.Dostupnost_Validating);
             // 
             // dostupna_NE
             // 
@@ -127,7 +123,7 @@
             this.dostupna_NE.Location = new System.Drawing.Point(115, 19);
             this.dostupna_NE.Name = "dostupna_NE";
             this.dostupna_NE.Size = new System.Drawing.Size(39, 17);
-            this.dostupna_NE.TabIndex = 1;
+            this.dostupna_NE.TabIndex = 3;
             this.dostupna_NE.Text = "Ne";
             this.dostupna_NE.UseVisualStyleBackColor = true;
             // 
@@ -138,7 +134,7 @@
             this.dostupna_DA.Location = new System.Drawing.Point(43, 19);
             this.dostupna_DA.Name = "dostupna_DA";
             this.dostupna_DA.Size = new System.Drawing.Size(39, 17);
-            this.dostupna_DA.TabIndex = 0;
+            this.dostupna_DA.TabIndex = 2;
             this.dostupna_DA.TabStop = true;
             this.dostupna_DA.Text = "Da";
             this.dostupna_DA.UseVisualStyleBackColor = true;
@@ -157,7 +153,7 @@
             this.izadjiButton.Location = new System.Drawing.Point(216, 226);
             this.izadjiButton.Name = "izadjiButton";
             this.izadjiButton.Size = new System.Drawing.Size(83, 23);
-            this.izadjiButton.TabIndex = 31;
+            this.izadjiButton.TabIndex = 6;
             this.izadjiButton.Text = "Izadji";
             this.izadjiButton.UseVisualStyleBackColor = true;
             this.izadjiButton.Click += new System.EventHandler(this.izadjiButton_Click);
@@ -167,7 +163,7 @@
             this.unosButton.Location = new System.Drawing.Point(113, 226);
             this.unosButton.Name = "unosButton";
             this.unosButton.Size = new System.Drawing.Size(91, 23);
-            this.unosButton.TabIndex = 30;
+            this.unosButton.TabIndex = 5;
             this.unosButton.Text = "Unesi";
             this.unosButton.UseVisualStyleBackColor = true;
             this.unosButton.Click += new System.EventHandler(this.unosButton_Click);
@@ -214,7 +210,7 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button izadjiButton;
         private System.Windows.Forms.Button unosButton;
-        private System.Windows.Forms.ComboBox prostorijacombo;
         private System.Windows.Forms.ErrorProvider errorProvider1;
+        private System.Windows.Forms.ComboBox prostorijacombo;
     }
 }

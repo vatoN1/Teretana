@@ -11,40 +11,43 @@ using System.Text;
 
 public class Prostorija
 {
-    public Prostorija() { }
-
-    public Prostorija(int p1, string p2, bool p3, string p4)
-    {
-        // TODO: Complete member initialization
-        this.p1 = p1;
-        this.p2 = p2;
-        this.p3 = p3;
-        this.p4 = p4;
-    }
-
     int id;
-    private int p1;
-    private string p2;
-    private bool p3;
-    private string p4;
+    String tipProstorije;
+    String dostupnost;
+    String inventar;
+    public Prostorija(int id, String dostupnost, String tipProstorije, String inventar)
+    {
+        Id = id;
+        TipProstorije = tipProstorije;
+        Dostupnost = dostupnost;
+        Inventar1 = inventar;
+    }
 
     public int Id
     {
         get { return id; }
         set { id = value; }
     }
+    public String Inventar1
+    {
+        get { return inventar; }
+        set { inventar = value; }
+    }
+    public String Dostupnost
+    {
+        get { return dostupnost; }
+        set { dostupnost = value; }
+    }
+    public String TipProstorije
+    {
+        get { return tipProstorije; }
+        set { tipProstorije = value; }
+    }
     public TipProstorije NazivProstorije
 	{
 		get;
 		set;
 	}
-
-    public bool Dostupnost
-	{
-		get;
-		set;
-    }
-
     public List<Inventar> Inventar
     {
         get
@@ -56,11 +59,6 @@ public class Prostorija
         }
     }
 
-    public string InventarS
-    {
-        get { return p4; }
-        set { p4 = value; }
-    }
 
 
 }

@@ -1,4 +1,4 @@
-﻿namespace TeretanaBilderhana.Oprema
+﻿namespace TeretanaBilderhana.Opreme
 {
     partial class EditovanjeOpreme
     {
@@ -28,35 +28,38 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(EditovanjeOpreme));
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.tipopremecombo = new System.Windows.Forms.ComboBox();
             this.cijena_numeric = new System.Windows.Forms.NumericUpDown();
             this.kolicina_numeric = new System.Windows.Forms.NumericUpDown();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.opremaID_masked_box = new System.Windows.Forms.MaskedTextBox();
-            this.tip_opreme_box = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.izadjiButton = new System.Windows.Forms.Button();
             this.unosButton = new System.Windows.Forms.Button();
             this.statusStrip1 = new System.Windows.Forms.StatusStrip();
             this.toolStripStatusLabel1 = new System.Windows.Forms.ToolStripStatusLabel();
+            this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.cijena_numeric)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.kolicina_numeric)).BeginInit();
             this.statusStrip1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             this.SuspendLayout();
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.tipopremecombo);
             this.groupBox1.Controls.Add(this.cijena_numeric);
             this.groupBox1.Controls.Add(this.kolicina_numeric);
             this.groupBox1.Controls.Add(this.label4);
             this.groupBox1.Controls.Add(this.label3);
             this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Controls.Add(this.opremaID_masked_box);
-            this.groupBox1.Controls.Add(this.tip_opreme_box);
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Location = new System.Drawing.Point(12, 12);
             this.groupBox1.Name = "groupBox1";
@@ -65,20 +68,29 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Editovanje opreme:";
             // 
+            // tipopremecombo
+            // 
+            this.tipopremecombo.FormattingEnabled = true;
+            this.tipopremecombo.Location = new System.Drawing.Point(119, 48);
+            this.tipopremecombo.Name = "tipopremecombo";
+            this.tipopremecombo.Size = new System.Drawing.Size(144, 21);
+            this.tipopremecombo.TabIndex = 2;
+            this.tipopremecombo.Validating += new System.ComponentModel.CancelEventHandler(this.tipopreme_Validating);
+            // 
             // cijena_numeric
             // 
             this.cijena_numeric.DecimalPlaces = 2;
             this.cijena_numeric.Location = new System.Drawing.Point(119, 103);
             this.cijena_numeric.Name = "cijena_numeric";
             this.cijena_numeric.Size = new System.Drawing.Size(144, 20);
-            this.cijena_numeric.TabIndex = 27;
+            this.cijena_numeric.TabIndex = 4;
             // 
             // kolicina_numeric
             // 
             this.kolicina_numeric.Location = new System.Drawing.Point(119, 74);
             this.kolicina_numeric.Name = "kolicina_numeric";
             this.kolicina_numeric.Size = new System.Drawing.Size(144, 20);
-            this.kolicina_numeric.TabIndex = 26;
+            this.kolicina_numeric.TabIndex = 3;
             // 
             // label4
             // 
@@ -110,18 +122,13 @@
             // opremaID_masked_box
             // 
             this.opremaID_masked_box.Location = new System.Drawing.Point(119, 20);
-            this.opremaID_masked_box.Mask = "00000";
+            this.opremaID_masked_box.Mask = "0000";
             this.opremaID_masked_box.Name = "opremaID_masked_box";
             this.opremaID_masked_box.Size = new System.Drawing.Size(144, 20);
-            this.opremaID_masked_box.TabIndex = 22;
+            this.opremaID_masked_box.TabIndex = 1;
             this.opremaID_masked_box.ValidatingType = typeof(int);
-            // 
-            // tip_opreme_box
-            // 
-            this.tip_opreme_box.Location = new System.Drawing.Point(119, 48);
-            this.tip_opreme_box.Name = "tip_opreme_box";
-            this.tip_opreme_box.Size = new System.Drawing.Size(144, 20);
-            this.tip_opreme_box.TabIndex = 14;
+            this.opremaID_masked_box.Leave += new System.EventHandler(this.opremaID_masked_box_Leave);
+            this.opremaID_masked_box.Validating += new System.ComponentModel.CancelEventHandler(this.opremaID_Validating);
             // 
             // label2
             // 
@@ -137,7 +144,7 @@
             this.izadjiButton.Location = new System.Drawing.Point(216, 157);
             this.izadjiButton.Name = "izadjiButton";
             this.izadjiButton.Size = new System.Drawing.Size(83, 23);
-            this.izadjiButton.TabIndex = 30;
+            this.izadjiButton.TabIndex = 6;
             this.izadjiButton.Text = "Izadji";
             this.izadjiButton.UseVisualStyleBackColor = true;
             this.izadjiButton.Click += new System.EventHandler(this.izadjiButton_Click);
@@ -147,9 +154,10 @@
             this.unosButton.Location = new System.Drawing.Point(113, 157);
             this.unosButton.Name = "unosButton";
             this.unosButton.Size = new System.Drawing.Size(91, 23);
-            this.unosButton.TabIndex = 29;
+            this.unosButton.TabIndex = 5;
             this.unosButton.Text = "Unesi";
             this.unosButton.UseVisualStyleBackColor = true;
+            this.unosButton.Click += new System.EventHandler(this.unosButton_Click);
             // 
             // statusStrip1
             // 
@@ -165,7 +173,10 @@
             // 
             this.toolStripStatusLabel1.Name = "toolStripStatusLabel1";
             this.toolStripStatusLabel1.Size = new System.Drawing.Size(0, 17);
-            this.toolStripStatusLabel1.Click += new System.EventHandler(this.toolStripStatusLabel1_Click);
+            // 
+            // errorProvider1
+            // 
+            this.errorProvider1.ContainerControl = this;
             // 
             // EditovanjeOpreme
             // 
@@ -186,6 +197,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.kolicina_numeric)).EndInit();
             this.statusStrip1.ResumeLayout(false);
             this.statusStrip1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -196,7 +208,6 @@
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.MaskedTextBox opremaID_masked_box;
-        private System.Windows.Forms.TextBox tip_opreme_box;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.NumericUpDown cijena_numeric;
         private System.Windows.Forms.NumericUpDown kolicina_numeric;
@@ -206,5 +217,7 @@
         private System.Windows.Forms.Button unosButton;
         private System.Windows.Forms.StatusStrip statusStrip1;
         private System.Windows.Forms.ToolStripStatusLabel toolStripStatusLabel1;
+        private System.Windows.Forms.ErrorProvider errorProvider1;
+        private System.Windows.Forms.ComboBox tipopremecombo;
     }
 }

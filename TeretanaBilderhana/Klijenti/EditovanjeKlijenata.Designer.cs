@@ -76,8 +76,8 @@
             this.klijentID_masked_box.Size = new System.Drawing.Size(136, 20);
             this.klijentID_masked_box.TabIndex = 1;
             this.klijentID_masked_box.ValidatingType = typeof(int);
-            this.klijentID_masked_box.MaskInputRejected += new System.Windows.Forms.MaskInputRejectedEventHandler(this.klijentID_masked_box_MaskInputRejected);
             this.klijentID_masked_box.Leave += new System.EventHandler(this.klijentID_masked_box_Leave);
+            this.klijentID_masked_box.Validating += new System.ComponentModel.CancelEventHandler(this.klijentID_Validating);
             // 
             // datumRodjenjadtp
             // 
@@ -96,6 +96,7 @@
             this.groupBox2.TabIndex = 4;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Spol: ";
+            this.groupBox2.Validating += new System.ComponentModel.CancelEventHandler(this.Spol_Validating);
             // 
             // zenskoRB
             // 
@@ -125,6 +126,7 @@
             this.prezimetb.Name = "prezimetb";
             this.prezimetb.Size = new System.Drawing.Size(137, 20);
             this.prezimetb.TabIndex = 3;
+            this.prezimetb.Validating += new System.ComponentModel.CancelEventHandler(this.prezimetb_Validating);
             // 
             // imetb
             // 
@@ -132,6 +134,7 @@
             this.imetb.Name = "imetb";
             this.imetb.Size = new System.Drawing.Size(137, 20);
             this.imetb.TabIndex = 2;
+            this.imetb.Validating += new System.ComponentModel.CancelEventHandler(this.imetb_Validating);
             // 
             // kontakttb
             // 
@@ -140,6 +143,7 @@
             this.kontakttb.Name = "kontakttb";
             this.kontakttb.Size = new System.Drawing.Size(137, 20);
             this.kontakttb.TabIndex = 8;
+            this.kontakttb.Validating += new System.ComponentModel.CancelEventHandler(this.kontakttb_Validating);
             // 
             // label2
             // 
@@ -266,6 +270,7 @@
             this.nutricionistaID_masked_box.Size = new System.Drawing.Size(136, 20);
             this.nutricionistaID_masked_box.TabIndex = 10;
             this.nutricionistaID_masked_box.ValidatingType = typeof(int);
+            this.nutricionistaID_masked_box.Validating += new System.ComponentModel.CancelEventHandler(this.nutricionistaID_Validating);
             // 
             // trenerID_masked_box
             // 
@@ -274,6 +279,7 @@
             this.trenerID_masked_box.Name = "trenerID_masked_box";
             this.trenerID_masked_box.Size = new System.Drawing.Size(136, 20);
             this.trenerID_masked_box.TabIndex = 9;
+            this.trenerID_masked_box.Validating += new System.ComponentModel.CancelEventHandler(this.trenerID_Validating);
             // 
             // EditovanjeKlijenata
             // 

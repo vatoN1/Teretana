@@ -69,6 +69,7 @@
             this.sadrzaj_rich_box.Size = new System.Drawing.Size(144, 96);
             this.sadrzaj_rich_box.TabIndex = 31;
             this.sadrzaj_rich_box.Text = "";
+            this.sadrzaj_rich_box.Validating += new System.ComponentModel.CancelEventHandler(this.sadrzaj_rich_box_Validating);
             // 
             // izvjestaj_datetime
             // 
@@ -89,11 +90,12 @@
             // id_uposlenik_masked_box
             // 
             this.id_uposlenik_masked_box.Location = new System.Drawing.Point(120, 19);
-            this.id_uposlenik_masked_box.Mask = "00000";
+            this.id_uposlenik_masked_box.Mask = "0000";
             this.id_uposlenik_masked_box.Name = "id_uposlenik_masked_box";
             this.id_uposlenik_masked_box.Size = new System.Drawing.Size(144, 20);
             this.id_uposlenik_masked_box.TabIndex = 28;
             this.id_uposlenik_masked_box.ValidatingType = typeof(int);
+            this.id_uposlenik_masked_box.Validating += new System.ComponentModel.CancelEventHandler(this.uposlenikID_Validating);
             // 
             // label3
             // 

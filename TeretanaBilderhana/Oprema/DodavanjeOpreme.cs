@@ -7,15 +7,21 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using DAL;
 
-namespace TeretanaBilderhana.Oprema
+namespace TeretanaBilderhana.Opreme
 {
     public partial class DodavanjeOpreme : Form
     {
         public DodavanjeOpreme()
         {
             InitializeComponent();
+            tipopremecombo.Items.Add("Bandaze");
+            tipopremecombo.Items.Add("Flasa");
+            tipopremecombo.Items.Add("Peskir");
+            tipopremecombo.Items.Add("Pojas");
+            tipopremecombo.Items.Add("Rukavice");
+            tipopremecombo.Items.Add("Sorts");
+            tipopremecombo.Items.Add("Tene");
         }
 
         public bool validiraj()
@@ -32,22 +38,33 @@ namespace TeretanaBilderhana.Oprema
             {
                 Random id = new Random();
                 int r = id.Next(1111, 9999); 
-//                Inventar o = new Inventar(
-  //                  r, Convert.ToInt32(kolicina_numeric.Value), Convert.ToDouble(cijena_numeric.Value), tipopremecombo.Text);
+                Oprema Oprema = new Oprema(r, Convert.ToInt32(kolicina_numeric.Value), cijena_numeric.Value, 
+                    tipopremecombo.Text);
 
                 DAL.DAL d = DAL.DAL.Instanca;
-
                 d.kreirajKonekciju("localhost", "Teretana", "root", "");
+                DAL.DAL.OpremaDAO c = d.getDAO.getOpremaDAO();
 
-                DAL.DAL.IzvjestajDAO c = d.getDAO.getIzvjestajDAO();
-    //            o.ID = (int)c.create(o);
+                Oprema.IdOpreme = (int)c.create(Oprema);
                 d.terminirajKonekciju();
-                MessageBox.Show("Izvjestaj unesen! ID je: " + r);
+                MessageBox.Show("Oprema unesena! ID je: " + r);
                 Close();
             }
 
         }
-
+        private void tipopreme_Validating(object sender, CancelEventArgs e)
+        {
+            if (tipopremecombo.SelectedItem == null)
+            {
+                errorProvider1.SetError(tipopremecombo, "Odaberite tip opreme!");
+                toolStripStatusLabel1.Text = "Odaberite tip opreme!";
+            }
+            else
+            {
+                errorProvider1.SetError(tipopremecombo, "");
+                toolStripStatusLabel1.Text = "";
+            }
+        }
         private void izadjiButton_Click(object sender, EventArgs e)
         {
             this.Close();

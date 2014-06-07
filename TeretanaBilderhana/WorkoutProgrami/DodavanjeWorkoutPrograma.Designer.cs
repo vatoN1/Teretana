@@ -31,6 +31,7 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(DodavanjeWorkoutPrograma));
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.tipwp_combo = new System.Windows.Forms.ComboBox();
             this.vjezbe_rich_box = new System.Windows.Forms.RichTextBox();
             this.opis_wprogram_rich_box = new System.Windows.Forms.RichTextBox();
             this.label2 = new System.Windows.Forms.Label();
@@ -40,7 +41,6 @@
             this.unosButton = new System.Windows.Forms.Button();
             this.statusStrip1 = new System.Windows.Forms.StatusStrip();
             this.toolStripStatusLabel1 = new System.Windows.Forms.ToolStripStatusLabel();
-            this.tipwp_combo = new System.Windows.Forms.ComboBox();
             this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
             this.groupBox1.SuspendLayout();
             this.statusStrip1.SuspendLayout();
@@ -62,6 +62,15 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Unos workout programa:";
             this.groupBox1.Enter += new System.EventHandler(this.groupBox1_Enter);
+            // 
+            // tipwp_combo
+            // 
+            this.tipwp_combo.FormattingEnabled = true;
+            this.tipwp_combo.Location = new System.Drawing.Point(141, 27);
+            this.tipwp_combo.Name = "tipwp_combo";
+            this.tipwp_combo.Size = new System.Drawing.Size(144, 21);
+            this.tipwp_combo.TabIndex = 1;
+            this.tipwp_combo.Validating += new System.ComponentModel.CancelEventHandler(this.tipwp_Validating);
             // 
             // vjezbe_rich_box
             // 
@@ -113,7 +122,7 @@
             this.izadjiButton.Location = new System.Drawing.Point(239, 256);
             this.izadjiButton.Name = "izadjiButton";
             this.izadjiButton.Size = new System.Drawing.Size(83, 23);
-            this.izadjiButton.TabIndex = 23;
+            this.izadjiButton.TabIndex = 5;
             this.izadjiButton.Text = "Izadji";
             this.izadjiButton.UseVisualStyleBackColor = true;
             this.izadjiButton.Click += new System.EventHandler(this.izadjiButton_Click);
@@ -123,7 +132,7 @@
             this.unosButton.Location = new System.Drawing.Point(136, 256);
             this.unosButton.Name = "unosButton";
             this.unosButton.Size = new System.Drawing.Size(91, 23);
-            this.unosButton.TabIndex = 22;
+            this.unosButton.TabIndex = 4;
             this.unosButton.Text = "Unesi";
             this.unosButton.UseVisualStyleBackColor = true;
             this.unosButton.Click += new System.EventHandler(this.unosButton_Click);
@@ -143,15 +152,6 @@
             this.toolStripStatusLabel1.IsLink = true;
             this.toolStripStatusLabel1.Name = "toolStripStatusLabel1";
             this.toolStripStatusLabel1.Size = new System.Drawing.Size(0, 17);
-            // 
-            // tipwp_combo
-            // 
-            this.tipwp_combo.FormattingEnabled = true;
-            this.tipwp_combo.Location = new System.Drawing.Point(141, 27);
-            this.tipwp_combo.Name = "tipwp_combo";
-            this.tipwp_combo.Size = new System.Drawing.Size(144, 21);
-            this.tipwp_combo.TabIndex = 1;
-            this.tipwp_combo.Validating += new System.ComponentModel.CancelEventHandler(this.tipwp_Validating);
             // 
             // errorProvider1
             // 

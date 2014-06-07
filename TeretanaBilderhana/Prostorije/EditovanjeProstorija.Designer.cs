@@ -28,8 +28,10 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(EditovanjeProstorija));
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.prostorijacombo = new System.Windows.Forms.ComboBox();
             this.inventar_rich_box = new System.Windows.Forms.RichTextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
@@ -37,25 +39,26 @@
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.dostupna_NE = new System.Windows.Forms.RadioButton();
             this.dostupna_DA = new System.Windows.Forms.RadioButton();
-            this.naziv_prostorije_box = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.statusStrip1 = new System.Windows.Forms.StatusStrip();
             this.toolStripStatusLabel1 = new System.Windows.Forms.ToolStripStatusLabel();
             this.izadjiButton = new System.Windows.Forms.Button();
             this.unosButton = new System.Windows.Forms.Button();
+            this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.statusStrip1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             this.SuspendLayout();
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.prostorijacombo);
             this.groupBox1.Controls.Add(this.inventar_rich_box);
             this.groupBox1.Controls.Add(this.label3);
             this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Controls.Add(this.prostorijaID_masked_box);
             this.groupBox1.Controls.Add(this.groupBox2);
-            this.groupBox1.Controls.Add(this.naziv_prostorije_box);
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Location = new System.Drawing.Point(12, 12);
             this.groupBox1.Name = "groupBox1";
@@ -63,15 +66,24 @@
             this.groupBox1.TabIndex = 24;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Editovanje prostorije:";
-            this.groupBox1.Enter += new System.EventHandler(this.groupBox1_Enter);
+            // 
+            // prostorijacombo
+            // 
+            this.prostorijacombo.FormattingEnabled = true;
+            this.prostorijacombo.Location = new System.Drawing.Point(119, 48);
+            this.prostorijacombo.Name = "prostorijacombo";
+            this.prostorijacombo.Size = new System.Drawing.Size(144, 21);
+            this.prostorijacombo.TabIndex = 2;
+            this.prostorijacombo.Validating += new System.ComponentModel.CancelEventHandler(this.prostorijacombo_Validating);
             // 
             // inventar_rich_box
             // 
             this.inventar_rich_box.Location = new System.Drawing.Point(119, 132);
             this.inventar_rich_box.Name = "inventar_rich_box";
             this.inventar_rich_box.Size = new System.Drawing.Size(144, 88);
-            this.inventar_rich_box.TabIndex = 25;
+            this.inventar_rich_box.TabIndex = 4;
             this.inventar_rich_box.Text = "";
+            this.inventar_rich_box.Validating += new System.ComponentModel.CancelEventHandler(this.inventar_rich_box_Validating);
             // 
             // label3
             // 
@@ -97,8 +109,10 @@
             this.prostorijaID_masked_box.Mask = "0000";
             this.prostorijaID_masked_box.Name = "prostorijaID_masked_box";
             this.prostorijaID_masked_box.Size = new System.Drawing.Size(144, 20);
-            this.prostorijaID_masked_box.TabIndex = 22;
+            this.prostorijaID_masked_box.TabIndex = 1;
             this.prostorijaID_masked_box.ValidatingType = typeof(int);
+            this.prostorijaID_masked_box.Leave += new System.EventHandler(this.prostorijaID_masked_box_Leave);
+            this.prostorijaID_masked_box.Validating += new System.ComponentModel.CancelEventHandler(this.prostorijaID_Validating);
             // 
             // groupBox2
             // 
@@ -107,10 +121,10 @@
             this.groupBox2.Location = new System.Drawing.Point(76, 74);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(187, 52);
-            this.groupBox2.TabIndex = 16;
+            this.groupBox2.TabIndex = 3;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Dostupnost:";
-            this.groupBox2.Enter += new System.EventHandler(this.groupBox2_Enter);
+            this.groupBox2.Validating += new System.ComponentModel.CancelEventHandler(this.Dostupnost_Validating);
             // 
             // dostupna_NE
             // 
@@ -133,13 +147,6 @@
             this.dostupna_DA.TabStop = true;
             this.dostupna_DA.Text = "Da";
             this.dostupna_DA.UseVisualStyleBackColor = true;
-            // 
-            // naziv_prostorije_box
-            // 
-            this.naziv_prostorije_box.Location = new System.Drawing.Point(119, 48);
-            this.naziv_prostorije_box.Name = "naziv_prostorije_box";
-            this.naziv_prostorije_box.Size = new System.Drawing.Size(144, 20);
-            this.naziv_prostorije_box.TabIndex = 14;
             // 
             // label2
             // 
@@ -170,7 +177,7 @@
             this.izadjiButton.Location = new System.Drawing.Point(216, 252);
             this.izadjiButton.Name = "izadjiButton";
             this.izadjiButton.Size = new System.Drawing.Size(83, 23);
-            this.izadjiButton.TabIndex = 27;
+            this.izadjiButton.TabIndex = 6;
             this.izadjiButton.Text = "Izadji";
             this.izadjiButton.UseVisualStyleBackColor = true;
             this.izadjiButton.Click += new System.EventHandler(this.izadjiButton_Click);
@@ -180,9 +187,14 @@
             this.unosButton.Location = new System.Drawing.Point(113, 252);
             this.unosButton.Name = "unosButton";
             this.unosButton.Size = new System.Drawing.Size(91, 23);
-            this.unosButton.TabIndex = 26;
+            this.unosButton.TabIndex = 5;
             this.unosButton.Text = "Unesi";
             this.unosButton.UseVisualStyleBackColor = true;
+            this.unosButton.Click += new System.EventHandler(this.unosButton_Click);
+            // 
+            // errorProvider1
+            // 
+            this.errorProvider1.ContainerControl = this;
             // 
             // EditovanjeProstorija
             // 
@@ -203,6 +215,7 @@
             this.groupBox2.PerformLayout();
             this.statusStrip1.ResumeLayout(false);
             this.statusStrip1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -213,7 +226,6 @@
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.MaskedTextBox prostorijaID_masked_box;
-        private System.Windows.Forms.TextBox naziv_prostorije_box;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.RadioButton dostupna_NE;
@@ -224,6 +236,8 @@
         private System.Windows.Forms.ToolStripStatusLabel toolStripStatusLabel1;
         private System.Windows.Forms.Button izadjiButton;
         private System.Windows.Forms.Button unosButton;
+        private System.Windows.Forms.ComboBox prostorijacombo;
+        private System.Windows.Forms.ErrorProvider errorProvider1;
 
     }
 }

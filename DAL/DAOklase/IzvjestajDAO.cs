@@ -17,8 +17,9 @@ namespace DAL
             {
                 try
                 {
+                    var datumIzvjestaja = entity.DatumIzvjestaja.Date.ToString("yyyy-MM-dd");
                     c = new MySqlCommand(String.Format("INSERT INTO Izvjestaji VALUES ('{0}', '{1}', '{2}', '{3}');",
-                        entity.ID, entity.IDuposlenik, entity.DatumIzvjestaja.ToShortDateString(), entity.SadrzajIzvjestaja), con);
+                        entity.IdIzvjestaja, entity.IDuposlenik, datumIzvjestaja, entity.SadrzajIzvjestaja), con);
                     c.ExecuteNonQuery();
                     return c.LastInsertedId;
                 }
@@ -32,7 +33,7 @@ namespace DAL
             {
                 try
                 {
-                    c = new MySqlCommand (String.Format("SELECT * FROM Izvjestaji WHERE id = '{0}';", entity.ID ), con);
+                    c = new MySqlCommand (String.Format("SELECT * FROM Izvjestaji WHERE id = '{0}';", entity.IdIzvjestaja ), con);
 
                     MySqlDataReader r = c.ExecuteReader();
 
@@ -51,12 +52,18 @@ namespace DAL
                 }
             }
 
-            public Izvjestaj update(int id, Izvjestaj entity)
+            public Izvjestaj update(Izvjestaj entity)
             {
                 try
                 {
-                    c = new MySqlCommand(String.Format("UPDATE Izvjestaji SET id='{0}', Uposlenici_ID = '{1}', datumIzvjestaja = '{2}', sadrzaj = '{3}';",
-                        entity.ID, entity.IDuposlenik, entity.DatumIzvjestaja, entity.SadrzajIzvjestaja), con);
+                    var datumIzvjestaja = entity.DatumIzvjestaja.Date.ToString("yyyy-MM-dd");
+                    /*c = new MySqlCommand(String.Format("UPDATE Izvjestaji SET id='{0}', Uposlenici_ID = '{1}', datumIzvjestaja = '{2}', sadrzaj = '{3}';",
+                        entity.ID, entity.IDuposlenik, entity.DatumIzvjestaja, entity.SadrzajIzvjestaja), con);*/
+                    c = new MySqlCommand("UPDATE izvjestaji set Uposlenici_id= " + entity.IDuposlenik
+                                            + ", datumIzvjestaja= '" + datumIzvjestaja
+                                            + "', sadrzaj= '" + entity.SadrzajIzvjestaja
+                                            + "' where id = " + entity.IdIzvjestaja, con
+                                            );
                     c.ExecuteNonQuery();
                     return entity;
                 }
@@ -65,12 +72,12 @@ namespace DAL
                     throw e;
                 }
             }
-            public Izvjestaj update(Izvjestaj entity) { throw new NotImplementedException(); }
+            public Izvjestaj update(int id, Izvjestaj entity) { throw new NotImplementedException(); }
             public void delete(Izvjestaj entity)
             {
                 try
                 {
-                    c = new MySqlCommand(("DELETE FROM Izvjestaji WHERE id = '" + entity.ID + "';"), con);
+                    c = new MySqlCommand(("DELETE FROM Izvjestaji WHERE id = '" + entity.IdIzvjestaja + "';"), con);
                     c.ExecuteNonQuery();
                 }
                 catch (Exception e)

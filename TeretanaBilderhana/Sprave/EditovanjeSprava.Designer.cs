@@ -33,6 +33,7 @@
             this.izadjiButton = new System.Windows.Forms.Button();
             this.unosButton = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.tipsprave_combo = new System.Windows.Forms.ComboBox();
             this.label5 = new System.Windows.Forms.Label();
             this.kolicina_numeric = new System.Windows.Forms.NumericUpDown();
             this.label4 = new System.Windows.Forms.Label();
@@ -42,7 +43,6 @@
             this.label2 = new System.Windows.Forms.Label();
             this.toolStripStatusLabel1 = new System.Windows.Forms.ToolStripStatusLabel();
             this.statusStrip1 = new System.Windows.Forms.StatusStrip();
-            this.tipsprave_combo = new System.Windows.Forms.ComboBox();
             this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.kolicina_numeric)).BeginInit();
@@ -56,7 +56,7 @@
             this.izadjiButton.Location = new System.Drawing.Point(216, 163);
             this.izadjiButton.Name = "izadjiButton";
             this.izadjiButton.Size = new System.Drawing.Size(83, 23);
-            this.izadjiButton.TabIndex = 31;
+            this.izadjiButton.TabIndex = 6;
             this.izadjiButton.Text = "Izadji";
             this.izadjiButton.UseVisualStyleBackColor = true;
             this.izadjiButton.Click += new System.EventHandler(this.izadjiButton_Click);
@@ -66,7 +66,7 @@
             this.unosButton.Location = new System.Drawing.Point(113, 163);
             this.unosButton.Name = "unosButton";
             this.unosButton.Size = new System.Drawing.Size(91, 23);
-            this.unosButton.TabIndex = 30;
+            this.unosButton.TabIndex = 5;
             this.unosButton.Text = "Unesi";
             this.unosButton.UseVisualStyleBackColor = true;
             this.unosButton.Click += new System.EventHandler(this.unosButton_Click);
@@ -88,6 +88,15 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Editovanje sprave:";
             // 
+            // tipsprave_combo
+            // 
+            this.tipsprave_combo.FormattingEnabled = true;
+            this.tipsprave_combo.Location = new System.Drawing.Point(119, 48);
+            this.tipsprave_combo.Name = "tipsprave_combo";
+            this.tipsprave_combo.Size = new System.Drawing.Size(144, 21);
+            this.tipsprave_combo.TabIndex = 2;
+            this.tipsprave_combo.Validating += new System.ComponentModel.CancelEventHandler(this.tipsprave_Validating);
+            // 
             // label5
             // 
             this.label5.AutoSize = true;
@@ -102,7 +111,7 @@
             this.kolicina_numeric.Location = new System.Drawing.Point(119, 74);
             this.kolicina_numeric.Name = "kolicina_numeric";
             this.kolicina_numeric.Size = new System.Drawing.Size(144, 20);
-            this.kolicina_numeric.TabIndex = 30;
+            this.kolicina_numeric.TabIndex = 3;
             // 
             // label4
             // 
@@ -118,7 +127,7 @@
             this.starost_numeric.Location = new System.Drawing.Point(119, 100);
             this.starost_numeric.Name = "starost_numeric";
             this.starost_numeric.Size = new System.Drawing.Size(144, 20);
-            this.starost_numeric.TabIndex = 28;
+            this.starost_numeric.TabIndex = 4;
             // 
             // label1
             // 
@@ -135,9 +144,10 @@
             this.spravaID_masked_box.Mask = "0000";
             this.spravaID_masked_box.Name = "spravaID_masked_box";
             this.spravaID_masked_box.Size = new System.Drawing.Size(144, 20);
-            this.spravaID_masked_box.TabIndex = 22;
+            this.spravaID_masked_box.TabIndex = 1;
             this.spravaID_masked_box.ValidatingType = typeof(int);
             this.spravaID_masked_box.Leave += new System.EventHandler(this.spravaID_masked_box_Leave);
+            this.spravaID_masked_box.Validating += new System.ComponentModel.CancelEventHandler(this.spravaID_Validating);
             // 
             // label2
             // 
@@ -162,15 +172,6 @@
             this.statusStrip1.Size = new System.Drawing.Size(312, 22);
             this.statusStrip1.TabIndex = 29;
             this.statusStrip1.Text = "statusStrip1";
-            // 
-            // tipsprave_combo
-            // 
-            this.tipsprave_combo.FormattingEnabled = true;
-            this.tipsprave_combo.Location = new System.Drawing.Point(119, 48);
-            this.tipsprave_combo.Name = "tipsprave_combo";
-            this.tipsprave_combo.Size = new System.Drawing.Size(144, 21);
-            this.tipsprave_combo.TabIndex = 32;
-            this.tipsprave_combo.Validating += new System.ComponentModel.CancelEventHandler(this.tipsprave_Validating);
             // 
             // errorProvider1
             // 

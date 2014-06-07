@@ -19,7 +19,12 @@ namespace TeretanaBilderhana.Sprave
             tipsprave_combo.Items.Add("Kardio Sprave");
             tipsprave_combo.Items.Add("Sto Za Masazu");
         }
-        public bool validiraj() { return (errorProvider1.GetError(tipsprave_combo)==""); }
+        public bool validiraj() { 
+            return (
+                (errorProvider1.GetError(tipsprave_combo)=="") &&
+                (errorProvider1.GetError(spravaID_masked_box) == "")
+            );
+        }
         private void unosButton_Click(object sender, EventArgs e)
         {
             if (validiraj())
@@ -38,12 +43,25 @@ namespace TeretanaBilderhana.Sprave
                 Close();
             }
         }
+        private void spravaID_Validating(object sender, CancelEventArgs e)
+        {
+            if (spravaID_masked_box.Text.Length != 4)
+            {
+                errorProvider1.SetError(spravaID_masked_box, "Nedovoljan broj karaktera!");
+                toolStripStatusLabel1.Text = "Nedovoljan broj karaktera!";
+            }
+            else
+            {
+                errorProvider1.SetError(spravaID_masked_box, "");
+                toolStripStatusLabel1.Text = "";
+            }
+        }
         private void tipsprave_Validating(object sender, CancelEventArgs e)
         {
             if (tipsprave_combo.SelectedItem == null)
             {
-                errorProvider1.SetError(tipsprave_combo, "Odaberite tip workout programa!");
-                toolStripStatusLabel1.Text = "Odaberite tip workout programa!!";
+                errorProvider1.SetError(tipsprave_combo, "Odaberite tip sprave!");
+                toolStripStatusLabel1.Text = "Odaberite tip sprave!";
             }
             else
             {

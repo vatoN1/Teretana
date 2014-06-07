@@ -33,6 +33,7 @@
             this.izadjiButton = new System.Windows.Forms.Button();
             this.unosButton = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.tipsprave_combo = new System.Windows.Forms.ComboBox();
             this.label5 = new System.Windows.Forms.Label();
             this.kolicina_numeric = new System.Windows.Forms.NumericUpDown();
             this.label4 = new System.Windows.Forms.Label();
@@ -40,7 +41,6 @@
             this.label2 = new System.Windows.Forms.Label();
             this.toolStripStatusLabel1 = new System.Windows.Forms.ToolStripStatusLabel();
             this.statusStrip1 = new System.Windows.Forms.StatusStrip();
-            this.tipsprave_combo = new System.Windows.Forms.ComboBox();
             this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.kolicina_numeric)).BeginInit();
@@ -54,7 +54,7 @@
             this.izadjiButton.Location = new System.Drawing.Point(216, 136);
             this.izadjiButton.Name = "izadjiButton";
             this.izadjiButton.Size = new System.Drawing.Size(83, 23);
-            this.izadjiButton.TabIndex = 35;
+            this.izadjiButton.TabIndex = 5;
             this.izadjiButton.Text = "Izadji";
             this.izadjiButton.UseVisualStyleBackColor = true;
             this.izadjiButton.Click += new System.EventHandler(this.izadjiButton_Click);
@@ -64,7 +64,7 @@
             this.unosButton.Location = new System.Drawing.Point(113, 136);
             this.unosButton.Name = "unosButton";
             this.unosButton.Size = new System.Drawing.Size(91, 23);
-            this.unosButton.TabIndex = 34;
+            this.unosButton.TabIndex = 4;
             this.unosButton.Text = "Unesi";
             this.unosButton.UseVisualStyleBackColor = true;
             this.unosButton.Click += new System.EventHandler(this.unosButton_Click);
@@ -84,6 +84,15 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Editovanje sprave:";
             // 
+            // tipsprave_combo
+            // 
+            this.tipsprave_combo.FormattingEnabled = true;
+            this.tipsprave_combo.Location = new System.Drawing.Point(116, 21);
+            this.tipsprave_combo.Name = "tipsprave_combo";
+            this.tipsprave_combo.Size = new System.Drawing.Size(144, 21);
+            this.tipsprave_combo.TabIndex = 1;
+            this.tipsprave_combo.Validating += new System.ComponentModel.CancelEventHandler(this.tipsprave_Validating);
+            // 
             // label5
             // 
             this.label5.AutoSize = true;
@@ -98,7 +107,7 @@
             this.kolicina_numeric.Location = new System.Drawing.Point(116, 47);
             this.kolicina_numeric.Name = "kolicina_numeric";
             this.kolicina_numeric.Size = new System.Drawing.Size(144, 20);
-            this.kolicina_numeric.TabIndex = 30;
+            this.kolicina_numeric.TabIndex = 2;
             // 
             // label4
             // 
@@ -114,7 +123,7 @@
             this.starost_numeric.Location = new System.Drawing.Point(116, 73);
             this.starost_numeric.Name = "starost_numeric";
             this.starost_numeric.Size = new System.Drawing.Size(144, 20);
-            this.starost_numeric.TabIndex = 28;
+            this.starost_numeric.TabIndex = 3;
             // 
             // label2
             // 
@@ -139,15 +148,6 @@
             this.statusStrip1.Size = new System.Drawing.Size(311, 22);
             this.statusStrip1.TabIndex = 33;
             this.statusStrip1.Text = "statusStrip1";
-            // 
-            // tipsprave_combo
-            // 
-            this.tipsprave_combo.FormattingEnabled = true;
-            this.tipsprave_combo.Location = new System.Drawing.Point(116, 21);
-            this.tipsprave_combo.Name = "tipsprave_combo";
-            this.tipsprave_combo.Size = new System.Drawing.Size(144, 21);
-            this.tipsprave_combo.TabIndex = 33;
-            this.tipsprave_combo.Validating += new System.ComponentModel.CancelEventHandler(this.tipsprave_Validating);
             // 
             // errorProvider1
             // 

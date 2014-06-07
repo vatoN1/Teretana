@@ -24,8 +24,22 @@ namespace TeretanaBilderhana.WorkoutProgrami
             (
                 (errorProvider1.GetError(tipwp_combo) == "") &&
                 (errorProvider1.GetError(opis_wprogram_rich_box) == "") &&
-                (errorProvider1.GetError(vjezbe_rich_box) == "")
+                (errorProvider1.GetError(vjezbe_rich_box) == "") &&
+                (errorProvider1.GetError(wprogramID_masked_box)=="")
             );
+        }
+        private void wprogramID_Validating(object sender, CancelEventArgs e)
+        {
+            if (wprogramID_masked_box.Text.Length != 4)
+            {
+                errorProvider1.SetError(wprogramID_masked_box, "Nedovoljan broj karaktera!");
+                toolStripStatusLabel1.Text = "Nedovoljan broj karaktera!";
+            }
+            else
+            {
+                errorProvider1.SetError(wprogramID_masked_box, "");
+                toolStripStatusLabel1.Text = "";
+            }
         }
         private void unosButton_Click(object sender, EventArgs e)
         {
