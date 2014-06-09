@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using TeretanaBilderhana;
 
 namespace TeretanaBilderhana.PristupneForme
 {
@@ -24,8 +25,8 @@ namespace TeretanaBilderhana.PristupneForme
 
         private void toolStripButton2_Click(object sender, EventArgs e)
         {
-            EditovanjeUposlenika ex = new EditovanjeUposlenika();
-            ex.Show();
+            DosijeKlijentaT t = new DosijeKlijentaT();
+            t.Show();
         }
 
         private void toolStripButton1_Click(object sender, EventArgs e)

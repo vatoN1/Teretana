@@ -15,16 +15,8 @@ namespace TeretanaBilderhana.PristupneForme
         public DosijeKlijentaT()
         {
             InitializeComponent();
-        }
-
-        private void label10_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label9_Click(object sender, EventArgs e)
-        {
-
+            DAL.DAL d = DAL.DAL.Instanca;
+            d.terminirajKonekciju();
         }
 
         public bool validiraj()
@@ -54,6 +46,7 @@ namespace TeretanaBilderhana.PristupneForme
             }
             catch (System.Exception ex)
             {
+                d.terminirajKonekciju();
                 MessageBox.Show(Convert.ToString(ex));
                 return false;
             }
@@ -75,6 +68,8 @@ namespace TeretanaBilderhana.PristupneForme
                 }
                 catch (System.Exception ex)
                 {
+                    d.terminirajKonekciju();
+
                     MessageBox.Show(Convert.ToString(ex));
                     return false;
                 }
@@ -97,6 +92,7 @@ namespace TeretanaBilderhana.PristupneForme
                 }
                 catch (System.Exception ex)
                 {
+                    d.terminirajKonekciju();
                     MessageBox.Show(Convert.ToString(ex));
                     return false;
                 }
@@ -129,7 +125,36 @@ namespace TeretanaBilderhana.PristupneForme
             }
         }
 
+        private void klijentID_masked_box_Leave(object sender, EventArgs e)
+        {
+            if (imaKlijenta())
+            {
+                DAL.DAL d = DAL.DAL.Instanca;
+                d.kreirajKonekciju("localhost", "Teretana", "root", "");
+                DAL.DAL.KlijentDAO c = d.getDAO.getKlijentDAO();
+
+                Klijent Klijent = c.getById(Convert.ToInt32(klijentID_masked_box.Text));
+                string rodjenje = Convert.ToString(Klijent.DatumRodjenja);
+                imetb.Text = Klijent.Ime;
+                prezimetb.Text = Klijent.Prezime;
+                if (Convert.ToString(Klijent.Spol) == "Musko") muskoRB.Checked = true;
+                else zenskoRB.Checked = true;
+                datumRodjenjadtp.Value = DateTime.Parse(rodjenje);
+                kontakttb.Text = Klijent.Kontakt;
+                trenerID_masked_box.Text = Convert.ToString(Klijent.IDtrenera);
+                nutricionistaID_masked_box.Text = Convert.ToString(Klijent.IDnutricioniste);
+                d.terminirajKonekciju();
+            }
+            else
+                MessageBox.Show("Unesi ispravan ID!");
+        }
+
         private void klijentID_masked_box_MaskInputRejected(object sender, MaskInputRejectedEventArgs e)
+        {
+
+        }
+
+        private void label5_Click(object sender, EventArgs e)
         {
 
         }
