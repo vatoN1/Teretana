@@ -18,8 +18,8 @@ namespace DAL
             {
                 try
                 {
-                    c = new MySqlCommand(String.Format("INSERT INTO suplementi VALUES ('{0}','{1}','{2},'{3}');",
-                        entity.IdSuplementa, entity.Kolicina, entity.Cijena, entity.TipSuplementaS), con);
+                    c = new MySqlCommand(String.Format("INSERT INTO suplementi VALUES ('{0}','{1}','{2}','{3}');",
+                        entity.IdSuplementa, entity.Kolicina, entity.Cijena, entity.TipSuplementa), con);
                     c.ExecuteNonQuery();
                     return c.LastInsertedId;
                 }
@@ -122,7 +122,7 @@ namespace DAL
             {
                 try
                 {
-                    c = new MySqlCommand(String.Format("SELECT * FROM workoutprogram;"), con);
+                    c = new MySqlCommand(String.Format("SELECT * FROM suplementi;"), con);
                     MySqlDataReader r = c.ExecuteReader();
                     List<Suplement> Suplementi = new List<Suplement>();
                     while (r.Read())

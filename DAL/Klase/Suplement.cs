@@ -21,6 +21,12 @@ public class Suplement : Inventar
         TipSuplementaS = tipSuplementa;
         Cijena = cijena;
     }
+
+    public override string ToString()
+    {
+        return Convert.ToString(TipSuplementa);
+    }
+
     public int IdSuplementa
     {
         get { return idSuplementa; }

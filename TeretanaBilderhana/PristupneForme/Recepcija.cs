@@ -57,6 +57,8 @@ namespace TeretanaBilderhana.PristupneForme
 
         private void toolStripButton3_Click(object sender, EventArgs e)
         {
+//            Izvjestaji.DodavanjeIzvjestaja iz = new Izvjestaji.DodavanjeIzvjestaja();
+//            iz.Show();
             IzvjestajForma i = new IzvjestajForma();
             i.Show();
         }

@@ -7,6 +7,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Security.Cryptography;
+
 
 namespace TeretanaBilderhana.PristupneForme
 {
@@ -32,21 +34,68 @@ namespace TeretanaBilderhana.PristupneForme
             InitializeComponent();
         }
 
+
+        public static string GetRandomAlphanumericString(int length)
+        {
+            const string alphanumericCharacters =
+                "ABCDEFGHIJKLMNOPQRSTUVWXYZ" +
+                "0123456789";
+            return GetRandomString(length, alphanumericCharacters);
+        }
+
+        public static string GetRandomString(int length, IEnumerable<char> characterSet)
+        {
+            if (length < 0)
+                throw new ArgumentException("length must not be negative", "length");
+            if (length > int.MaxValue / 8) // 250 million chars ought to be enough for anybody
+                throw new ArgumentException("length is too big", "length");
+            if (characterSet == null)
+                throw new ArgumentNullException("characterSet");
+            var characterArray = characterSet.Distinct().ToArray();
+            if (characterArray.Length == 0)
+                throw new ArgumentException("characterSet must not be empty", "characterSet");
+
+            var bytes = new byte[length * 8];
+            new RNGCryptoServiceProvider().GetBytes(bytes);
+            var result = new char[length];
+            for (int i = 0; i < length; i++)
+            {
+                ulong value = BitConverter.ToUInt64(bytes, i * 8);
+                result[i] = characterArray[value % (uint)characterArray.Length];
+            }
+            return new string(result);
+        }
+
+
         private void Racun_Load(object sender, EventArgs e)
         {
+
+            string jib = GetRandomAlphanumericString(6);
+            label14.Text = jib;
+            string pib = GetRandomAlphanumericString(6);
+            label15.Text = pib;
+            string bf = GetRandomAlphanumericString(6);
+            label18.Text = bf;
+            string rand_alphanum = GetRandomAlphanumericString(13);
+            label41.Text = rand_alphanum;
+
             label19.Text = Convert.ToString(DateTime.Now);
-            RacunUnos r1 = new RacunUnos();
-            label36.Text = Convert.ToString(r1.Za_platiti());
-            label37.Text = Convert.ToString(r1.Za_platiti());
-            label38.Text = Convert.ToString(r1.Za_platiti());
 
-            label33.Text = Convert.ToString(r1.Za_platiti() - (r1.Za_platiti() * 0.17m));
-            label34.Text = Convert.ToString(r1.Za_platiti() * 0.17m);
-            label35.Text = Convert.ToString(r1.Za_platiti() * 0.17m);
+            label36.Text = Convert.ToString(p4) + ".00";
+            label37.Text = Convert.ToString(p4) + ".00";
+            label38.Text = Convert.ToString(p4) + ".00";
 
-            label22.Text = Convert.ToString(r1.Kolicina());
-            label23.Text = Convert.ToString(r1.Cijena());
-            label24.Text = Convert.ToString(r1.Za_platiti()) + "E";
+            label33.Text = Convert.ToString(p4 - (p4 * 0.17m));
+            label34.Text = Convert.ToString(p4 * 0.17m);
+            label35.Text = Convert.ToString(p4 * 0.17m);
+
+            label21.Text = p1;
+            label22.Text = Convert.ToString(p3);
+            label23.Text = Convert.ToString(p2);
+            label24.Text = Convert.ToString(p4) + ".00" + "E";
+            DateTime t = DateTime.Now.AddSeconds(-7);
+            label44.Text = "Vrijeme ulaska: " + Convert.ToString(DateTime.Now );
+            label45.Text = "Vrijeme izlaska: " + Convert.ToString(t);
         }
 
         private void label15_Click(object sender, EventArgs e)
