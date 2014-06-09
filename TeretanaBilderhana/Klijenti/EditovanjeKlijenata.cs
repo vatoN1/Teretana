@@ -12,9 +12,25 @@ namespace TeretanaBilderhana.Klijenti
 {
     public partial class EditovanjeKlijenata : Form
     {
+        List<Uposlenik> Uposlenici;
+        List<Klijent> Klijenti;
         public EditovanjeKlijenata()
         {
             InitializeComponent();
+            DAL.DAL d = DAL.DAL.Instanca;
+            d.kreirajKonekciju("localhost", "Teretana", "root", "");
+            DAL.DAL.UposlenikDAO c = d.getDAO.getUposlenikDAO();
+            DAL.DAL.KlijentDAO c1 = d.getDAO.getKlijentDAO();
+            Klijenti = c1.GetAll();
+            Uposlenici = c.GetAll();
+            d.terminirajKonekciju();
+            bodymass_numeric.Value = visina_numeric.Value - tezina_numeric.Value;
+
+            foreach (Uposlenik u in Uposlenici)
+            {
+                if (u.ZaposlenjeS == "Trener") trener_combo.Items.Add(u);
+                else if (u.ZaposlenjeS == "Nutricionista") nutricionista_combo.Items.Add(u);
+            }
         }
 
         public bool validiraj()
@@ -159,6 +175,7 @@ namespace TeretanaBilderhana.Klijenti
             catch (System.Exception ex)
             {
                 MessageBox.Show(Convert.ToString(ex));
+                d.terminirajKonekciju();
                 return false;
             }
 
@@ -241,10 +258,19 @@ namespace TeretanaBilderhana.Klijenti
                 prezimetb.Text = Klijent.Prezime;
                 if (Convert.ToString(Klijent.Spol) == "Musko") muskoRB.Checked = true;
                 else zenskoRB.Checked = true;
+                visina_numeric.Value = Klijent.Visina;
+                tezina_numeric.Value = Klijent.Tezina;
+                bodymass_numeric.Value = visina_numeric.Value - tezina_numeric.Value;
                 datumRodjenjadtp.Value = DateTime.Parse(rodjenje);
                 kontakttb.Text = Klijent.Kontakt;
                 trenerID_masked_box.Text = Convert.ToString(Klijent.IDtrenera);
                 nutricionistaID_masked_box.Text = Convert.ToString(Klijent.IDnutricioniste);
+                foreach(Uposlenik u in Uposlenici){
+                    if (u.ID == Convert.ToInt32(trenerID_masked_box.Text))
+                        trener_combo.SelectedItem = u;
+                    if (u.ID == Convert.ToInt32(nutricionistaID_masked_box.Text))
+                        nutricionista_combo.SelectedItem = u;
+                }
                 d.terminirajKonekciju();
                 toolStripStatusLabel1.Text = "";
             }
@@ -264,6 +290,16 @@ namespace TeretanaBilderhana.Klijenti
         private void trenerID_masked_box_MaskInputRejected(object sender, MaskInputRejectedEventArgs e)
         {
 
+        }
+
+        private void visina_numeric_ValueChanged(object sender, EventArgs e)
+        {
+            bodymass_numeric.Value = visina_numeric.Value - tezina_numeric.Value;
+        }
+
+        private void tezina_numeric_ValueChanged(object sender, EventArgs e)
+        {
+            bodymass_numeric.Value = visina_numeric.Value - tezina_numeric.Value;
         }
     }
 }

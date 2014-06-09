@@ -13,9 +13,21 @@ namespace TeretanaBilderhana.Klijenti
 {
     public partial class DodavanjeKlijenata : Form
     {
+        List<Uposlenik> Uposlenici;
         public DodavanjeKlijenata()
         {
             InitializeComponent();
+            DAL.DAL d = DAL.DAL.Instanca;
+            d.kreirajKonekciju("localhost", "Teretana", "root", "");
+            DAL.DAL.UposlenikDAO c = d.getDAO.getUposlenikDAO();
+            Uposlenici = c.GetAll();
+            d.terminirajKonekciju();
+            bodymass_numeric.Value = visina_numeric.Value - tezina_numeric.Value;
+            foreach (Uposlenik u in Uposlenici)
+            {
+                if (u.ZaposlenjeS == "Trener") trener_combo.Items.Add(u);
+                else if (u.ZaposlenjeS == "Nutricionista") nutricionista_combo.Items.Add(u);
+            }
         }
 
         public bool validiraj()
@@ -40,14 +52,14 @@ namespace TeretanaBilderhana.Klijenti
                 int r = id.Next(1111, 9999);
                 if(zenskoRB.Checked) Spol="Zensko"; 
                 Klijent k = new Klijent(
-                    r, imetb.Text, prezimetb.Text, Spol, datumRodjenjadtp.Value, 
-                    kontakttb.Text,Convert.ToInt32(trenerID_masked_box.Text),Convert.ToInt32(nutricionstaID_masked_box.Text));
+                    r, imetb.Text, prezimetb.Text, Spol, datumRodjenjadtp.Value, Convert.ToInt32(visina_numeric.Value), 
+                    tezina_numeric.Value, kontakttb.Text, Convert.ToInt32(trenerID_masked_box.Text),
+                    Convert.ToInt32(nutricionstaID_masked_box.Text));
 
                 DAL.DAL d = DAL.DAL.Instanca;
-                
                 d.kreirajKonekciju("localhost", "Teretana", "root", "");
-
                 DAL.DAL.KlijentDAO c = d.getDAO.getKlijentDAO();
+
                 k.ID = (int)c.create(k);
                 d.terminirajKonekciju();
                 MessageBox.Show("Klijent unesen! ID je: " + r);
@@ -143,15 +155,24 @@ namespace TeretanaBilderhana.Klijenti
 
                 try
                 {
-                    c.getById(Convert.ToInt32(trenerID_masked_box.Text));
+                    Uposlenik radnik = c.getById(Convert.ToInt32(trenerID_masked_box.Text));
+                    if (radnik.ZaposlenjeS == "Trener")
+                    {
+                        d.terminirajKonekciju();
+                        return true;
+                    }
+                    else
+                    {
+                        d.terminirajKonekciju();
+                        return false;
+                    }
                 }
                 catch (System.Exception ex)
                 {
                     MessageBox.Show(Convert.ToString(ex));
+                    d.terminirajKonekciju();
                     return false;
                 }
-                d.terminirajKonekciju();
-                return true;
             }
             else return false;
         }
@@ -165,15 +186,24 @@ namespace TeretanaBilderhana.Klijenti
 
                 try
                 {
-                    c.getById(Convert.ToInt32(nutricionstaID_masked_box.Text));
+                    Uposlenik radnik = c.getById(Convert.ToInt32(nutricionstaID_masked_box.Text));
+                    if (radnik.ZaposlenjeS == "Nutricionista")
+                    {
+                        d.terminirajKonekciju();
+                        return true;
+                    }
+                    else
+                    {
+                        d.terminirajKonekciju();
+                        return false;
+                    }
                 }
                 catch (System.Exception ex)
                 {
                     MessageBox.Show(Convert.ToString(ex));
+                    d.terminirajKonekciju();
                     return false;
                 }
-                d.terminirajKonekciju();
-                return true;
             }
             else return false;
         }
@@ -183,9 +213,24 @@ namespace TeretanaBilderhana.Klijenti
             this.Close();
         }
 
-        private void nutricionstaID_masked_box_MaskInputRejected(object sender, MaskInputRejectedEventArgs e)
+        private void trener_combo_SelectedIndexChanged(object sender, EventArgs e)
         {
+            trenerID_masked_box.Text = Convert.ToString(trener_combo.Text);
+        }
 
+        private void nutricionista_combo_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            nutricionstaID_masked_box.Text = Convert.ToString(nutricionista_combo.Text);
+        }
+
+        private void tezina_numeric_ValueChanged(object sender, EventArgs e)
+        {
+            bodymass_numeric.Value = visina_numeric.Value - tezina_numeric.Value;
+        }
+
+        private void visina_numeric_ValueChanged(object sender, EventArgs e)
+        {
+            bodymass_numeric.Value = visina_numeric.Value - tezina_numeric.Value;
         }
     }
 }

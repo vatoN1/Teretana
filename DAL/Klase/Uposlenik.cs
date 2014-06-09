@@ -77,7 +77,7 @@ using System.Text;
         }
         public override string ToString()
         {
-            return ID + " " + Ime + " " + Prezime + " - " + ZaposlenjeS;
+            return ID + " " + Ime + " " + Prezime + "-" + ZaposlenjeS;
         }
 
     }

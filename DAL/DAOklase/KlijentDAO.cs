@@ -18,8 +18,9 @@ namespace DAL
                 try
                 {
                     var datumRodjenja = entity.DatumRodjenja.Date.ToString("yyyy-MM-dd");
-                    c = new MySqlCommand(String.Format("INSERT INTO Klijenti VALUES ('{0}', '{1}', '{2}', '{3}', '{4}', '{5}', '{6}', '{7}');",
-                        entity.ID, entity.Ime, entity.Prezime, entity.Spol.ToString(), datumRodjenja, entity.Kontakt, entity.IDtrenera, entity.IDnutricioniste ), con);
+                    c = new MySqlCommand(String.Format("INSERT INTO Klijenti VALUES ('{0}', '{1}', '{2}', '{3}', '{4}', '{5}', '{6}', '{7}', '{8}', '{9}');",
+                        entity.ID, entity.Ime, entity.Prezime, entity.Spol.ToString(), datumRodjenja, entity.Kontakt, 
+                        entity.IDtrenera, entity.IDnutricioniste, entity.Visina, entity.Tezina), con);
                     c.ExecuteNonQuery();
                     return c.LastInsertedId;
                 }
@@ -40,7 +41,8 @@ namespace DAL
                     if (r.Read())
                     {
                         Klijent k = new Klijent(r.GetInt32("id"), r.GetString("ime"), r.GetString("prezime"), r.GetString("spol"),
-                            r.GetDateTime("datumRodjenja"), r.GetString("kontakt"), r.GetInt32("id_trenera"), r.GetInt32("id_nutricioniste"));
+                            r.GetDateTime("datumRodjenja"), r.GetInt32("visina"), r.GetDecimal("tezina"),
+                            r.GetString("kontakt"), r.GetInt32("id_trenera"), r.GetInt32("id_nutricioniste"));
                         r.Close();
 
                         return k;
@@ -67,6 +69,8 @@ namespace DAL
                                             + "', kontakt= '" + entity.Kontakt
                                             + "', id_trenera= " + entity.IDtrenera
                                             + ", id_nutricioniste= " + entity.IDnutricioniste
+                                            + ", visina= " + Convert.ToInt32(entity.Visina)
+                                            + ", tezina= " + entity.Tezina
                                             + " where id = " + entity.ID, con
                                             );
                     
@@ -101,7 +105,8 @@ namespace DAL
                     List<Klijent> klijenti = new List<Klijent>();
                     while (r.Read())
                         klijenti.Add(new Klijent(r.GetInt32("id"), r.GetString("ime"), r.GetString("prezime"), r.GetString("spol"),
-                            r.GetDateTime("datumRodjenja"), r.GetString("kontakt"), r.GetInt32("id_trenera"), r.GetInt32("id_nutricioniste")));
+                            r.GetDateTime("datumRodjenja"), r.GetInt32("visina"), r.GetDecimal("tezina"),
+                            r.GetString("kontakt"), r.GetInt32("id_trenera"), r.GetInt32("id_nutricioniste")));
 
                     r.Close();
                     return klijenti;
@@ -122,7 +127,8 @@ namespace DAL
                     if (r.Read())
                     {
                         Klijent k = new Klijent(r.GetInt32("id"), r.GetString("ime"), r.GetString("prezime"), r.GetString("spol"),
-                            r.GetDateTime("datumRodjenja"), r.GetString("kontakt"), r.GetInt32("id_trenera"), r.GetInt32("id_nutricioniste"));
+                            r.GetDateTime("datumRodjenja"), r.GetInt32("visina"), r.GetDecimal("tezina"),
+                            r.GetString("kontakt"), r.GetInt32("id_trenera"), r.GetInt32("id_nutricioniste"));
                         r.Close();
                         return k;
                     }
@@ -144,7 +150,8 @@ namespace DAL
                     List<Klijent> klijenti = new List<Klijent>();
                     while (r.Read())
                         klijenti.Add(new Klijent(r.GetInt32("id"), r.GetString("ime"), r.GetString("prezime"), r.GetString("spol"),
-                            r.GetDateTime("datumRodjenja"), r.GetString("kontakt"), r.GetInt32("id_trenera"), r.GetInt32("id_nutricioniste")));
+                            r.GetDateTime("datumRodjenja"), r.GetInt32("visina"), r.GetDecimal("tezina"),
+                            r.GetString("kontakt"), r.GetInt32("id_trenera"), r.GetInt32("id_nutricioniste")));
                     r.Close();
                     return klijenti;
                 }
