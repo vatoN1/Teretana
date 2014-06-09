@@ -58,10 +58,15 @@
             this.label12 = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
 <<<<<<< HEAD
+<<<<<<< HEAD
             this.label4 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.comboBox2 = new System.Windows.Forms.ComboBox();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
+=======
+            this.nutricionistaID_masked_box = new System.Windows.Forms.MaskedTextBox();
+            this.trenerID_masked_box = new System.Windows.Forms.MaskedTextBox();
+>>>>>>> aab45eba7a084bc6a0a0a6d7662ccf3d6bec4fe8
 =======
             this.nutricionistaID_masked_box = new System.Windows.Forms.MaskedTextBox();
             this.trenerID_masked_box = new System.Windows.Forms.MaskedTextBox();
@@ -290,6 +295,7 @@
             this.groupBox1.Text = "Editovanje klijenta:";
             // 
 <<<<<<< HEAD
+<<<<<<< HEAD
             // nutricionistaID_masked_box
             // 
             this.nutricionistaID_masked_box.Location = new System.Drawing.Point(120, 348);
@@ -309,6 +315,8 @@
             this.trenerID_masked_box.TabIndex = 9;
             this.trenerID_masked_box.Validating += new System.ComponentModel.CancelEventHandler(this.trenerID_Validating);
             // 
+=======
+>>>>>>> aab45eba7a084bc6a0a0a6d7662ccf3d6bec4fe8
 =======
 >>>>>>> aab45eba7a084bc6a0a0a6d7662ccf3d6bec4fe8
             // numericUpDown3
@@ -395,6 +403,7 @@
             this.label13.Text = "Tezina:";
             // 
 <<<<<<< HEAD
+<<<<<<< HEAD
             // label4
             // 
             this.label4.AutoSize = true;
@@ -429,6 +438,8 @@
             this.comboBox1.Size = new System.Drawing.Size(137, 21);
             this.comboBox1.TabIndex = 44;
 =======
+=======
+>>>>>>> aab45eba7a084bc6a0a0a6d7662ccf3d6bec4fe8
             // nutricionistaID_masked_box
             // 
             this.nutricionistaID_masked_box.Location = new System.Drawing.Point(119, 294);
@@ -447,6 +458,9 @@
             this.trenerID_masked_box.Size = new System.Drawing.Size(136, 20);
             this.trenerID_masked_box.TabIndex = 9;
             this.trenerID_masked_box.Validating += new System.ComponentModel.CancelEventHandler(this.trenerID_Validating);
+<<<<<<< HEAD
+>>>>>>> aab45eba7a084bc6a0a0a6d7662ccf3d6bec4fe8
+=======
 >>>>>>> aab45eba7a084bc6a0a0a6d7662ccf3d6bec4fe8
             // 
             // EditovanjeKlijenata
