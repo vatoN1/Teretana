@@ -182,5 +182,10 @@ namespace TeretanaBilderhana.Klijenti
         {
             this.Close();
         }
+
+        private void nutricionstaID_masked_box_MaskInputRejected(object sender, MaskInputRejectedEventArgs e)
+        {
+
+        }
     }
 }

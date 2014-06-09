@@ -260,5 +260,10 @@ namespace TeretanaBilderhana.Klijenti
         {
 
         }
+
+        private void trenerID_masked_box_MaskInputRejected(object sender, MaskInputRejectedEventArgs e)
+        {
+
+        }
     }
 }

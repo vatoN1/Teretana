@@ -78,6 +78,7 @@
             this.nutricionstaID_masked_box.Size = new System.Drawing.Size(136, 20);
             this.nutricionstaID_masked_box.TabIndex = 25;
             this.nutricionstaID_masked_box.ValidatingType = typeof(int);
+            this.nutricionstaID_masked_box.MaskInputRejected += new System.Windows.Forms.MaskInputRejectedEventHandler(this.nutricionstaID_masked_box_MaskInputRejected);
             this.nutricionstaID_masked_box.Validating += new System.ComponentModel.CancelEventHandler(this.nutricionistaID_Validating);
             // 
             // errorProvider1
