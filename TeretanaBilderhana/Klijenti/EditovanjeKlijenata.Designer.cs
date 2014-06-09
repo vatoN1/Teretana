@@ -51,14 +51,21 @@
             this.label6 = new System.Windows.Forms.Label();
             this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.nutricionistaID_masked_box = new System.Windows.Forms.MaskedTextBox();
-            this.trenerID_masked_box = new System.Windows.Forms.MaskedTextBox();
             this.numericUpDown3 = new System.Windows.Forms.NumericUpDown();
             this.numericUpDown2 = new System.Windows.Forms.NumericUpDown();
             this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
             this.label11 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
+<<<<<<< HEAD
+            this.label4 = new System.Windows.Forms.Label();
+            this.label10 = new System.Windows.Forms.Label();
+            this.comboBox2 = new System.Windows.Forms.ComboBox();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
+=======
+            this.nutricionistaID_masked_box = new System.Windows.Forms.MaskedTextBox();
+            this.trenerID_masked_box = new System.Windows.Forms.MaskedTextBox();
+>>>>>>> aab45eba7a084bc6a0a0a6d7662ccf3d6bec4fe8
             this.groupBox2.SuspendLayout();
             this.statusStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
@@ -165,7 +172,7 @@
             // 
             // izadjiButton
             // 
-            this.izadjiButton.Location = new System.Drawing.Point(217, 340);
+            this.izadjiButton.Location = new System.Drawing.Point(217, 394);
             this.izadjiButton.Name = "izadjiButton";
             this.izadjiButton.Size = new System.Drawing.Size(83, 23);
             this.izadjiButton.TabIndex = 12;
@@ -175,7 +182,7 @@
             // 
             // unosButton
             // 
-            this.unosButton.Location = new System.Drawing.Point(114, 340);
+            this.unosButton.Location = new System.Drawing.Point(114, 394);
             this.unosButton.Name = "unosButton";
             this.unosButton.Size = new System.Drawing.Size(91, 23);
             this.unosButton.TabIndex = 11;
@@ -192,11 +199,12 @@
             // 
             this.statusStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.toolStripStatusLabel1});
-            this.statusStrip1.Location = new System.Drawing.Point(0, 373);
+            this.statusStrip1.Location = new System.Drawing.Point(0, 420);
             this.statusStrip1.Name = "statusStrip1";
             this.statusStrip1.Size = new System.Drawing.Size(312, 22);
             this.statusStrip1.TabIndex = 30;
             this.statusStrip1.Text = "statusStrip1";
+            this.statusStrip1.ItemClicked += new System.Windows.Forms.ToolStripItemClickedEventHandler(this.statusStrip1_ItemClicked);
             // 
             // label3
             // 
@@ -210,7 +218,7 @@
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(33, 297);
+            this.label8.Location = new System.Drawing.Point(34, 351);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(80, 13);
             this.label8.TabIndex = 7;
@@ -219,7 +227,7 @@
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(56, 271);
+            this.label7.Location = new System.Drawing.Point(57, 325);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(57, 13);
             this.label7.TabIndex = 6;
@@ -249,6 +257,10 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.label4);
+            this.groupBox1.Controls.Add(this.label10);
+            this.groupBox1.Controls.Add(this.comboBox2);
+            this.groupBox1.Controls.Add(this.comboBox1);
             this.groupBox1.Controls.Add(this.numericUpDown3);
             this.groupBox1.Controls.Add(this.numericUpDown2);
             this.groupBox1.Controls.Add(this.numericUpDown1);
@@ -272,14 +284,15 @@
             this.groupBox1.Controls.Add(this.label6);
             this.groupBox1.Location = new System.Drawing.Point(12, 12);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(288, 322);
+            this.groupBox1.Size = new System.Drawing.Size(288, 376);
             this.groupBox1.TabIndex = 27;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Editovanje klijenta:";
             // 
+<<<<<<< HEAD
             // nutricionistaID_masked_box
             // 
-            this.nutricionistaID_masked_box.Location = new System.Drawing.Point(119, 294);
+            this.nutricionistaID_masked_box.Location = new System.Drawing.Point(120, 348);
             this.nutricionistaID_masked_box.Mask = "0000";
             this.nutricionistaID_masked_box.Name = "nutricionistaID_masked_box";
             this.nutricionistaID_masked_box.Size = new System.Drawing.Size(136, 20);
@@ -289,13 +302,15 @@
             // 
             // trenerID_masked_box
             // 
-            this.trenerID_masked_box.Location = new System.Drawing.Point(119, 268);
+            this.trenerID_masked_box.Location = new System.Drawing.Point(120, 322);
             this.trenerID_masked_box.Mask = "0000";
             this.trenerID_masked_box.Name = "trenerID_masked_box";
             this.trenerID_masked_box.Size = new System.Drawing.Size(136, 20);
             this.trenerID_masked_box.TabIndex = 9;
             this.trenerID_masked_box.Validating += new System.ComponentModel.CancelEventHandler(this.trenerID_Validating);
             // 
+=======
+>>>>>>> aab45eba7a084bc6a0a0a6d7662ccf3d6bec4fe8
             // numericUpDown3
             // 
             this.numericUpDown3.DecimalPlaces = 3;
@@ -379,11 +394,66 @@
             this.label13.TabIndex = 38;
             this.label13.Text = "Tezina:";
             // 
+<<<<<<< HEAD
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(14, 295);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(100, 13);
+            this.label4.TabIndex = 47;
+            this.label4.Text = "Izaberi nutricionistu:";
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Location = new System.Drawing.Point(37, 271);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(77, 13);
+            this.label10.TabIndex = 46;
+            this.label10.Text = "Izaberi trenera:";
+            // 
+            // comboBox2
+            // 
+            this.comboBox2.FormattingEnabled = true;
+            this.comboBox2.Location = new System.Drawing.Point(120, 295);
+            this.comboBox2.Name = "comboBox2";
+            this.comboBox2.Size = new System.Drawing.Size(137, 21);
+            this.comboBox2.TabIndex = 45;
+            // 
+            // comboBox1
+            // 
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Location = new System.Drawing.Point(120, 268);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(137, 21);
+            this.comboBox1.TabIndex = 44;
+=======
+            // nutricionistaID_masked_box
+            // 
+            this.nutricionistaID_masked_box.Location = new System.Drawing.Point(119, 294);
+            this.nutricionistaID_masked_box.Mask = "0000";
+            this.nutricionistaID_masked_box.Name = "nutricionistaID_masked_box";
+            this.nutricionistaID_masked_box.Size = new System.Drawing.Size(136, 20);
+            this.nutricionistaID_masked_box.TabIndex = 10;
+            this.nutricionistaID_masked_box.ValidatingType = typeof(int);
+            this.nutricionistaID_masked_box.Validating += new System.ComponentModel.CancelEventHandler(this.nutricionistaID_Validating);
+            // 
+            // trenerID_masked_box
+            // 
+            this.trenerID_masked_box.Location = new System.Drawing.Point(119, 268);
+            this.trenerID_masked_box.Mask = "0000";
+            this.trenerID_masked_box.Name = "trenerID_masked_box";
+            this.trenerID_masked_box.Size = new System.Drawing.Size(136, 20);
+            this.trenerID_masked_box.TabIndex = 9;
+            this.trenerID_masked_box.Validating += new System.ComponentModel.CancelEventHandler(this.trenerID_Validating);
+>>>>>>> aab45eba7a084bc6a0a0a6d7662ccf3d6bec4fe8
+            // 
             // EditovanjeKlijenata
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(312, 395);
+            this.ClientSize = new System.Drawing.Size(312, 442);
             this.Controls.Add(this.izadjiButton);
             this.Controls.Add(this.unosButton);
             this.Controls.Add(this.statusStrip1);
@@ -438,5 +508,9 @@
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.Label label13;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.ComboBox comboBox2;
+        private System.Windows.Forms.ComboBox comboBox1;
     }
 }

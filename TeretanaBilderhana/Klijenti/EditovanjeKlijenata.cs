@@ -246,6 +246,7 @@ namespace TeretanaBilderhana.Klijenti
                 trenerID_masked_box.Text = Convert.ToString(Klijent.IDtrenera);
                 nutricionistaID_masked_box.Text = Convert.ToString(Klijent.IDnutricioniste);
                 d.terminirajKonekciju();
+                toolStripStatusLabel1.Text = "";
             }
             else
                 MessageBox.Show("Unesi ispravan ID!");
@@ -253,6 +254,11 @@ namespace TeretanaBilderhana.Klijenti
         private void izadjiButton_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void statusStrip1_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
+        {
+
         }
     }
 }
