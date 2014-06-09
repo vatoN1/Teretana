@@ -75,7 +75,6 @@
             // 
             // cijena_numeric
             // 
-            this.cijena_numeric.DecimalPlaces = 2;
             this.cijena_numeric.Location = new System.Drawing.Point(120, 74);
             this.cijena_numeric.Maximum = new decimal(new int[] {
             1000,

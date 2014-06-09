@@ -173,6 +173,62 @@ namespace TeretanaBilderhana.PristupneForme
             Admintabcontrol.SelectedTab = brisanjetab;
         }
 
+        private void pregledunosbutton_Click(object sender, EventArgs e)
+        {
+            Uposlenici.Pregled pregled = new Uposlenici.Pregled();
+            pregled.Show();
+        }
+
+        private void pregledizvjestajibutton_Click(object sender, EventArgs e)
+        {
+            Izvjestaji.Pregled pregled = new Izvjestaji.Pregled();
+            pregled.Show();
+        }
+
+        private void pregledklijentibutton_Click(object sender, EventArgs e)
+        {
+            Klijenti.Pregled pregled = new Klijenti.Pregled();
+            pregled.Show();
+        }
+
+        private void pregledopremabutton_Click(object sender, EventArgs e)
+        {
+            Opreme.Pregled pregled = new Opreme.Pregled();
+            pregled.Show();
+        }
+
+        private void pregledspravebutton_Click(object sender, EventArgs e)
+        {
+            Sprave.Pregled pregled = new Sprave.Pregled();
+            pregled.Show();
+        }
+
+        private void pregledsuplementibutton_Click(object sender, EventArgs e)
+        {
+            Suplementi.Pregled pregled = new Suplementi.Pregled();
+            pregled.Show();
+        }
+
+        private void pregledprostorijebutton_Click(object sender, EventArgs e)
+        {
+            Prostorije.Pregled pregled = new Prostorije.Pregled();
+            pregled.Show();
+        }
+
+        private void pregledpprogramibutton_Click(object sender, EventArgs e)
+        {
+            Prehrambeni_programi.Pregled pregled = new Prehrambeni_programi.Pregled();
+            pregled.Show();
+        }
+
+        private void pregledwprogramibutton_Click(object sender, EventArgs e)
+        {
+            WorkoutProgrami.Pregled pregled = new WorkoutProgrami.Pregled();
+            pregled.Show();
+        }
+
+
+
 
     }
 }

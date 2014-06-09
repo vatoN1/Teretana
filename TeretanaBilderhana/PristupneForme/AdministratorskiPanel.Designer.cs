@@ -87,15 +87,15 @@
             this.brisanjespravebutton = new System.Windows.Forms.Button();
             this.brisanjeuposlenicibutton = new System.Windows.Forms.Button();
             this.uplateisplatetab = new System.Windows.Forms.TabPage();
-            this.uplatesljedecibutton = new System.Windows.Forms.Button();
-            this.uplateprethodnibutton = new System.Windows.Forms.Button();
-            this.monthCalendar5 = new System.Windows.Forms.MonthCalendar();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.uplatesljedecibutton = new System.Windows.Forms.Button();
+            this.uplateprethodnibutton = new System.Windows.Forms.Button();
+            this.monthCalendar5 = new System.Windows.Forms.MonthCalendar();
             this.Admintabcontrol.SuspendLayout();
             this.pregledtab.SuspendLayout();
             this.groupBox1.SuspendLayout();
@@ -188,6 +188,7 @@
             this.pregledwprogramibutton.TabIndex = 12;
             this.pregledwprogramibutton.Text = "Workout programi";
             this.pregledwprogramibutton.UseVisualStyleBackColor = true;
+            this.pregledwprogramibutton.Click += new System.EventHandler(this.pregledwprogramibutton_Click);
             // 
             // pregledpprogramibutton
             // 
@@ -197,6 +198,7 @@
             this.pregledpprogramibutton.TabIndex = 11;
             this.pregledpprogramibutton.Text = "Prehrambeni programi";
             this.pregledpprogramibutton.UseVisualStyleBackColor = true;
+            this.pregledpprogramibutton.Click += new System.EventHandler(this.pregledpprogramibutton_Click);
             // 
             // pregledizvjestajibutton
             // 
@@ -206,6 +208,7 @@
             this.pregledizvjestajibutton.TabIndex = 10;
             this.pregledizvjestajibutton.Text = "Izvjestaji";
             this.pregledizvjestajibutton.UseVisualStyleBackColor = true;
+            this.pregledizvjestajibutton.Click += new System.EventHandler(this.pregledizvjestajibutton_Click);
             // 
             // pregledklijentibutton
             // 
@@ -215,6 +218,7 @@
             this.pregledklijentibutton.TabIndex = 9;
             this.pregledklijentibutton.Text = "Klijenti";
             this.pregledklijentibutton.UseVisualStyleBackColor = true;
+            this.pregledklijentibutton.Click += new System.EventHandler(this.pregledklijentibutton_Click);
             // 
             // pregledprostorijebutton
             // 
@@ -224,6 +228,7 @@
             this.pregledprostorijebutton.TabIndex = 8;
             this.pregledprostorijebutton.Text = "Prostorije";
             this.pregledprostorijebutton.UseVisualStyleBackColor = true;
+            this.pregledprostorijebutton.Click += new System.EventHandler(this.pregledprostorijebutton_Click);
             // 
             // pregledopremabutton
             // 
@@ -233,6 +238,7 @@
             this.pregledopremabutton.TabIndex = 7;
             this.pregledopremabutton.Text = "Oprema";
             this.pregledopremabutton.UseVisualStyleBackColor = true;
+            this.pregledopremabutton.Click += new System.EventHandler(this.pregledopremabutton_Click);
             // 
             // pregledsuplementibutton
             // 
@@ -242,6 +248,7 @@
             this.pregledsuplementibutton.TabIndex = 6;
             this.pregledsuplementibutton.Text = "Suplementi";
             this.pregledsuplementibutton.UseVisualStyleBackColor = true;
+            this.pregledsuplementibutton.Click += new System.EventHandler(this.pregledsuplementibutton_Click);
             // 
             // pregledspravebutton
             // 
@@ -251,6 +258,7 @@
             this.pregledspravebutton.TabIndex = 5;
             this.pregledspravebutton.Text = "Sprave";
             this.pregledspravebutton.UseVisualStyleBackColor = true;
+            this.pregledspravebutton.Click += new System.EventHandler(this.pregledspravebutton_Click);
             // 
             // pregledunosbutton
             // 
@@ -260,6 +268,7 @@
             this.pregledunosbutton.TabIndex = 4;
             this.pregledunosbutton.Text = "Uposlenici";
             this.pregledunosbutton.UseVisualStyleBackColor = true;
+            this.pregledunosbutton.Click += new System.EventHandler(this.pregledunosbutton_Click);
             // 
             // unostab
             // 
@@ -710,32 +719,6 @@
             this.uplateisplatetab.Text = "Uplate/isplate";
             this.uplateisplatetab.UseVisualStyleBackColor = true;
             // 
-            // uplatesljedecibutton
-            // 
-            this.uplatesljedecibutton.Enabled = false;
-            this.uplatesljedecibutton.Location = new System.Drawing.Point(503, 235);
-            this.uplatesljedecibutton.Name = "uplatesljedecibutton";
-            this.uplatesljedecibutton.Size = new System.Drawing.Size(84, 23);
-            this.uplatesljedecibutton.TabIndex = 9;
-            this.uplatesljedecibutton.Text = "Sljedeci tab";
-            this.uplatesljedecibutton.UseVisualStyleBackColor = true;
-            // 
-            // uplateprethodnibutton
-            // 
-            this.uplateprethodnibutton.Location = new System.Drawing.Point(388, 235);
-            this.uplateprethodnibutton.Name = "uplateprethodnibutton";
-            this.uplateprethodnibutton.Size = new System.Drawing.Size(84, 23);
-            this.uplateprethodnibutton.TabIndex = 8;
-            this.uplateprethodnibutton.Text = "Prethodni tab";
-            this.uplateprethodnibutton.UseVisualStyleBackColor = true;
-            this.uplateprethodnibutton.Click += new System.EventHandler(this.uplateprethodnibutton_Click);
-            // 
-            // monthCalendar5
-            // 
-            this.monthCalendar5.Location = new System.Drawing.Point(388, 30);
-            this.monthCalendar5.Name = "monthCalendar5";
-            this.monthCalendar5.TabIndex = 0;
-            // 
             // dataGridView1
             // 
             this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.ColumnHeader;
@@ -784,6 +767,32 @@
             this.Column6.HeaderText = "Za platiti";
             this.Column6.Name = "Column6";
             this.Column6.Width = 72;
+            // 
+            // uplatesljedecibutton
+            // 
+            this.uplatesljedecibutton.Enabled = false;
+            this.uplatesljedecibutton.Location = new System.Drawing.Point(503, 235);
+            this.uplatesljedecibutton.Name = "uplatesljedecibutton";
+            this.uplatesljedecibutton.Size = new System.Drawing.Size(84, 23);
+            this.uplatesljedecibutton.TabIndex = 9;
+            this.uplatesljedecibutton.Text = "Sljedeci tab";
+            this.uplatesljedecibutton.UseVisualStyleBackColor = true;
+            // 
+            // uplateprethodnibutton
+            // 
+            this.uplateprethodnibutton.Location = new System.Drawing.Point(388, 235);
+            this.uplateprethodnibutton.Name = "uplateprethodnibutton";
+            this.uplateprethodnibutton.Size = new System.Drawing.Size(84, 23);
+            this.uplateprethodnibutton.TabIndex = 8;
+            this.uplateprethodnibutton.Text = "Prethodni tab";
+            this.uplateprethodnibutton.UseVisualStyleBackColor = true;
+            this.uplateprethodnibutton.Click += new System.EventHandler(this.uplateprethodnibutton_Click);
+            // 
+            // monthCalendar5
+            // 
+            this.monthCalendar5.Location = new System.Drawing.Point(388, 30);
+            this.monthCalendar5.Name = "monthCalendar5";
+            this.monthCalendar5.TabIndex = 0;
             // 
             // AdministratorskiPanel
             // 
