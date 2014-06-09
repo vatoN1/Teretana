@@ -51,14 +51,14 @@
             this.label6 = new System.Windows.Forms.Label();
             this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.nutricionistaID_masked_box = new System.Windows.Forms.MaskedTextBox();
-            this.trenerID_masked_box = new System.Windows.Forms.MaskedTextBox();
             this.numericUpDown3 = new System.Windows.Forms.NumericUpDown();
             this.numericUpDown2 = new System.Windows.Forms.NumericUpDown();
             this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
             this.label11 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
+            this.nutricionistaID_masked_box = new System.Windows.Forms.MaskedTextBox();
+            this.trenerID_masked_box = new System.Windows.Forms.MaskedTextBox();
             this.groupBox2.SuspendLayout();
             this.statusStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
@@ -277,25 +277,6 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Editovanje klijenta:";
             // 
-            // nutricionistaID_masked_box
-            // 
-            this.nutricionistaID_masked_box.Location = new System.Drawing.Point(119, 294);
-            this.nutricionistaID_masked_box.Mask = "0000";
-            this.nutricionistaID_masked_box.Name = "nutricionistaID_masked_box";
-            this.nutricionistaID_masked_box.Size = new System.Drawing.Size(136, 20);
-            this.nutricionistaID_masked_box.TabIndex = 10;
-            this.nutricionistaID_masked_box.ValidatingType = typeof(int);
-            this.nutricionistaID_masked_box.Validating += new System.ComponentModel.CancelEventHandler(this.nutricionistaID_Validating);
-            // 
-            // trenerID_masked_box
-            // 
-            this.trenerID_masked_box.Location = new System.Drawing.Point(119, 268);
-            this.trenerID_masked_box.Mask = "0000";
-            this.trenerID_masked_box.Name = "trenerID_masked_box";
-            this.trenerID_masked_box.Size = new System.Drawing.Size(136, 20);
-            this.trenerID_masked_box.TabIndex = 9;
-            this.trenerID_masked_box.Validating += new System.ComponentModel.CancelEventHandler(this.trenerID_Validating);
-            // 
             // numericUpDown3
             // 
             this.numericUpDown3.DecimalPlaces = 3;
@@ -378,6 +359,25 @@
             this.label13.Size = new System.Drawing.Size(42, 13);
             this.label13.TabIndex = 38;
             this.label13.Text = "Tezina:";
+            // 
+            // nutricionistaID_masked_box
+            // 
+            this.nutricionistaID_masked_box.Location = new System.Drawing.Point(119, 294);
+            this.nutricionistaID_masked_box.Mask = "0000";
+            this.nutricionistaID_masked_box.Name = "nutricionistaID_masked_box";
+            this.nutricionistaID_masked_box.Size = new System.Drawing.Size(136, 20);
+            this.nutricionistaID_masked_box.TabIndex = 10;
+            this.nutricionistaID_masked_box.ValidatingType = typeof(int);
+            this.nutricionistaID_masked_box.Validating += new System.ComponentModel.CancelEventHandler(this.nutricionistaID_Validating);
+            // 
+            // trenerID_masked_box
+            // 
+            this.trenerID_masked_box.Location = new System.Drawing.Point(119, 268);
+            this.trenerID_masked_box.Mask = "0000";
+            this.trenerID_masked_box.Name = "trenerID_masked_box";
+            this.trenerID_masked_box.Size = new System.Drawing.Size(136, 20);
+            this.trenerID_masked_box.TabIndex = 9;
+            this.trenerID_masked_box.Validating += new System.ComponentModel.CancelEventHandler(this.trenerID_Validating);
             // 
             // EditovanjeKlijenata
             // 

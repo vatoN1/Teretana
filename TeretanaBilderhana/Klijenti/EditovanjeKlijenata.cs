@@ -159,7 +159,6 @@ namespace TeretanaBilderhana.Klijenti
             catch (System.Exception ex)
             {
                 MessageBox.Show(Convert.ToString(ex));
-                d.terminirajKonekciju();
                 return false;
             }
 
