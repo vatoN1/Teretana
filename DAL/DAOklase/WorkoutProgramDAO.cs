@@ -129,7 +129,7 @@ namespace DAL
                     while (r.Read())
                         WorkoutProgrami.Add(new WorkoutProgram
                         (
-                            r.GetInt32("id"), r.GetString("opis"), r.GetString("tipSuplementa"), r.GetString("vjezbe")
+                            r.GetInt32("id"), r.GetString("opis"), r.GetString("tipPrograma"), r.GetString("vjezbe")
                         ));
 
                     r.Close();
@@ -152,7 +152,7 @@ namespace DAL
                     while (r.Read())
                         WorkoutProgrami.Add(new WorkoutProgram
                         (
-                            r.GetInt32("id"), r.GetString("opis"), r.GetString("tipSuplementa"), r.GetString("vjezbe")
+                            r.GetInt32("id"), r.GetString("opis"), r.GetString("tipPrograma"), r.GetString("vjezbe")
                         ));
                     r.Close();
                     return WorkoutProgrami;
