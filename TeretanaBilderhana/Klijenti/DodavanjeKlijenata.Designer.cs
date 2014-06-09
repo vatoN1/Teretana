@@ -348,6 +348,7 @@
             0,
             0,
             0});
+            this.tezina_numeric.ValueChanged += new System.EventHandler(this.tezina_numeric_ValueChanged);
             // 
             // visina_numeric
             // 
@@ -366,6 +367,7 @@
             0,
             0,
             0});
+            this.visina_numeric.ValueChanged += new System.EventHandler(this.visina_numeric_ValueChanged);
             // 
             // label9
             // 

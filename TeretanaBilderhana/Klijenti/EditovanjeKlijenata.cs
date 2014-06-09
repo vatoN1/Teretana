@@ -24,6 +24,7 @@ namespace TeretanaBilderhana.Klijenti
             Klijenti = c1.GetAll();
             Uposlenici = c.GetAll();
             d.terminirajKonekciju();
+            bodymass_numeric.Value = visina_numeric.Value - tezina_numeric.Value;
 
             foreach (Uposlenik u in Uposlenici)
             {

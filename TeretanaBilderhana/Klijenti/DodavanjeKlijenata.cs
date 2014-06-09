@@ -22,7 +22,7 @@ namespace TeretanaBilderhana.Klijenti
             DAL.DAL.UposlenikDAO c = d.getDAO.getUposlenikDAO();
             Uposlenici = c.GetAll();
             d.terminirajKonekciju();
-
+            bodymass_numeric.Value = visina_numeric.Value - tezina_numeric.Value;
             foreach (Uposlenik u in Uposlenici)
             {
                 if (u.ZaposlenjeS == "Trener") trener_combo.Items.Add(u);
@@ -221,6 +221,16 @@ namespace TeretanaBilderhana.Klijenti
         private void nutricionista_combo_SelectedIndexChanged(object sender, EventArgs e)
         {
             nutricionstaID_masked_box.Text = Convert.ToString(nutricionista_combo.Text);
+        }
+
+        private void tezina_numeric_ValueChanged(object sender, EventArgs e)
+        {
+            bodymass_numeric.Value = visina_numeric.Value - tezina_numeric.Value;
+        }
+
+        private void visina_numeric_ValueChanged(object sender, EventArgs e)
+        {
+            bodymass_numeric.Value = visina_numeric.Value - tezina_numeric.Value;
         }
     }
 }
