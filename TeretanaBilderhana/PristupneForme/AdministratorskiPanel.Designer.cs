@@ -90,6 +90,12 @@
             this.uplatesljedecibutton = new System.Windows.Forms.Button();
             this.uplateprethodnibutton = new System.Windows.Forms.Button();
             this.monthCalendar5 = new System.Windows.Forms.MonthCalendar();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Admintabcontrol.SuspendLayout();
             this.pregledtab.SuspendLayout();
             this.groupBox1.SuspendLayout();
@@ -100,6 +106,7 @@
             this.brisanjetab.SuspendLayout();
             this.groupBox3.SuspendLayout();
             this.uplateisplatetab.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // Admintabcontrol
@@ -691,6 +698,7 @@
             // 
             // uplateisplatetab
             // 
+            this.uplateisplatetab.Controls.Add(this.dataGridView1);
             this.uplateisplatetab.Controls.Add(this.uplatesljedecibutton);
             this.uplateisplatetab.Controls.Add(this.uplateprethodnibutton);
             this.uplateisplatetab.Controls.Add(this.monthCalendar5);
@@ -728,6 +736,55 @@
             this.monthCalendar5.Name = "monthCalendar5";
             this.monthCalendar5.TabIndex = 0;
             // 
+            // dataGridView1
+            // 
+            this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.ColumnHeader;
+            this.dataGridView1.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.DisplayedCells;
+            this.dataGridView1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.dataGridView1.ColumnHeadersHeight = 21;
+            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Column1,
+            this.Column3,
+            this.Column4,
+            this.Column5,
+            this.Column6});
+            this.dataGridView1.Cursor = System.Windows.Forms.Cursors.Arrow;
+            this.dataGridView1.Location = new System.Drawing.Point(3, 3);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.RowHeadersWidth = 9;
+            this.dataGridView1.Size = new System.Drawing.Size(373, 261);
+            this.dataGridView1.TabIndex = 10;
+            // 
+            // Column1
+            // 
+            this.Column1.HeaderText = "Datum uplate";
+            this.Column1.Name = "Column1";
+            this.Column1.Width = 95;
+            // 
+            // Column3
+            // 
+            this.Column3.HeaderText = "Usluga";
+            this.Column3.Name = "Column3";
+            this.Column3.Width = 65;
+            // 
+            // Column4
+            // 
+            this.Column4.HeaderText = "Cijena";
+            this.Column4.Name = "Column4";
+            this.Column4.Width = 61;
+            // 
+            // Column5
+            // 
+            this.Column5.HeaderText = "Kolicina";
+            this.Column5.Name = "Column5";
+            this.Column5.Width = 69;
+            // 
+            // Column6
+            // 
+            this.Column6.HeaderText = "Za platiti";
+            this.Column6.Name = "Column6";
+            this.Column6.Width = 72;
+            // 
             // AdministratorskiPanel
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -748,6 +805,7 @@
             this.brisanjetab.ResumeLayout(false);
             this.groupBox3.ResumeLayout(false);
             this.uplateisplatetab.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -815,6 +873,12 @@
         private System.Windows.Forms.Button brisanjeprethodnibutton;
         private System.Windows.Forms.Button uplatesljedecibutton;
         private System.Windows.Forms.Button uplateprethodnibutton;
+        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column5;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column6;
 
     }
 }
