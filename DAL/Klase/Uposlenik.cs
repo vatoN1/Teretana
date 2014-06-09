@@ -35,21 +35,25 @@ using System.Text;
             get;
             set;
         }
+
         public int IdUposlenika
         {
             get { return idUposlenika; }
             set { idUposlenika = value; }
         }
+
         public String Sifra
         {
             get { return sifra; }
             set { sifra = value; }
         }
+
         public String ZaposlenjeS
         {
             get { return zaposlenjeS; }
             set { zaposlenjeS = value; }
         }
+
         public DateTime DatumZaposlenja
         {
             get;
@@ -62,7 +66,6 @@ using System.Text;
             set;
         }
 
-
         public virtual Izvjestaj kreirajIzvjestaj()
         {
             throw new System.NotImplementedException();
@@ -71,6 +74,10 @@ using System.Text;
         public virtual void azurirajPodatke()
         {
             throw new System.NotImplementedException();
+        }
+        public override string ToString()
+        {
+            return ID + " " + Ime + " " + Prezime + " - " + ZaposlenjeS;
         }
 
     }

@@ -175,15 +175,24 @@ namespace TeretanaBilderhana.Klijenti
 
                 try
                 {
-                    c.getById(Convert.ToInt32(trenerID_masked_box.Text));
+                    Uposlenik radnik = c.getById(Convert.ToInt32(trenerID_masked_box.Text));
+                    if (radnik.ZaposlenjeS == "Trener") 
+                    {
+                        d.terminirajKonekciju();
+                        return true;
+                    }
+                    else
+                    {
+                        d.terminirajKonekciju();
+                        return false;
+                    }
                 }
                 catch (System.Exception ex)
                 {
                     MessageBox.Show(Convert.ToString(ex));
+                    d.terminirajKonekciju();
                     return false;
                 }
-                d.terminirajKonekciju();
-                return true;
             }
             else return false;
         }
@@ -197,15 +206,24 @@ namespace TeretanaBilderhana.Klijenti
 
                 try
                 {
-                    c.getById(Convert.ToInt32(nutricionistaID_masked_box.Text));
+                    Uposlenik radnik = c.getById(Convert.ToInt32(nutricionistaID_masked_box.Text));
+                    if (radnik.ZaposlenjeS == "Nutricionista")
+                    {
+                        d.terminirajKonekciju();
+                        return true;
+                    }
+                    else
+                    {
+                        d.terminirajKonekciju();
+                        return false;
+                    }
                 }
                 catch (System.Exception ex)
                 {
                     MessageBox.Show(Convert.ToString(ex));
+                    d.terminirajKonekciju();
                     return false;
                 }
-                d.terminirajKonekciju();
-                return true;
             }
             else return false;
         }
