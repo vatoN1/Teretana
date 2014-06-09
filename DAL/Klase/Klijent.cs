@@ -11,15 +11,41 @@ using System.Text;
 
 public class Klijent : Osoba
 {
-    public Klijent(int id, string ime, string prezime, string spol, DateTime datumRodjenja, string kontakt, int idTrenera=0, int idNutricioniste=0) 
+    int iDtrenera;
+    int iDnutricioniste;
+    int visina;
+    Decimal tezina;
+
+    public Klijent(int id, string ime, string prezime, string spol, DateTime datumRodjenja, 
+        int visina, Decimal tezina, string kontakt, int idTrenera, int idNutricioniste) 
         : base(id, ime, prezime, spol, datumRodjenja, kontakt)
     {
+        Visina = visina;
+        Tezina = tezina;
         IDtrenera = idTrenera;
         IDnutricioniste = idNutricioniste;
     }
 
-    public int IDtrenera { get; set; }
+    public int IDtrenera
+    {
+        get { return iDtrenera; }
+        set { iDtrenera = value; }
+    }
 
-    public int IDnutricioniste { get; set; }
+    public int IDnutricioniste 
+    { 
+        get { return iDnutricioniste; }
+        set { iDnutricioniste = value; }   
+    }
+    public int Visina
+    {
+        get { return visina; }
+        set { visina = value; }
+    }
+    public Decimal Tezina
+    {
+        get { return tezina; }
+        set { tezina = value; }
+    }
 }
 
