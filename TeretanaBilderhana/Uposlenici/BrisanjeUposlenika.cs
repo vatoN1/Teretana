@@ -74,26 +74,34 @@ namespace TeretanaBilderhana.Uposlenici
 
         private void unosButton_Click(object sender, EventArgs e)
         {
-            DAL.DAL d = DAL.DAL.Instanca;
-            d.kreirajKonekciju("localhost", "Teretana", "root", "");
-            DAL.DAL.UposlenikDAO c = d.getDAO.getUposlenikDAO();
-            Uposlenik u = c.getById(Convert.ToUInt32(uposlenikID_masked_box.Text));
-            c.delete(u);
+            try
+            {
+                DAL.DAL d = DAL.DAL.Instanca;
+                d.kreirajKonekciju("localhost", "Teretana", "root", "");
+                DAL.DAL.UposlenikDAO c = d.getDAO.getUposlenikDAO();
+                Uposlenik u = c.getById(Convert.ToUInt32(uposlenikID_masked_box.Text));
+                c.delete(u);
 
 
-            imetb.Text = "";
-            prezimetb.Text = "";
-            muskoRB.Checked = true;
-            zenskoRB.Checked = false;
-            rodjenje_datetime.Value = DateTime.Now;
-            kontakt_masked_box.Text = "";
-            plata_npd.Value = plata_npd.Minimum;
-            zaposlenje_datetime.Value = DateTime.Now;
-            zaposlenje_combo.SelectedText = "";
-            sifra_box.Text = "";   
+                imetb.Text = "";
+                prezimetb.Text = "";
+                muskoRB.Checked = true;
+                zenskoRB.Checked = false;
+                rodjenje_datetime.Value = DateTime.Now;
+                kontakt_masked_box.Text = "";
+                plata_npd.Value = plata_npd.Minimum;
+                zaposlenje_datetime.Value = DateTime.Now;
+                zaposlenje_combo.SelectedText = "";
+                sifra_box.Text = "";
 
 
-            d.terminirajKonekciju();
+                d.terminirajKonekciju();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Ne mozete ukloniti tog uposlenika");
+            }
+            
         }
 
        

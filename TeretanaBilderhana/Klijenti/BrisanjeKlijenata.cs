@@ -58,6 +58,8 @@ namespace TeretanaBilderhana.Klijenti
                 trenerID_masked_box.Text = Convert.ToString(Klijent.IDtrenera);
                 nutricionistaID_masked_box.Text = Convert.ToString(Klijent.IDnutricioniste);
                 numericUpDown1.Value = Klijent.Visina;
+                numericUpDown2.Value = Klijent.Tezina;
+                numericUpDown3.Value = numericUpDown1.Value - numericUpDown2.Value;
                 d.terminirajKonekciju();
                 toolStripStatusLabel1.Text = "";
             }
@@ -68,7 +70,25 @@ namespace TeretanaBilderhana.Klijenti
 
         private void unosButton_Click(object sender, EventArgs e)
         {
-            //// NE VALJA OVO JOŠ
+                DAL.DAL d = DAL.DAL.Instanca;
+                d.kreirajKonekciju("localhost", "Teretana", "root", "");
+                DAL.DAL.KlijentDAO c = d.getDAO.getKlijentDAO();
+                Klijent Klijent = c.getById(Convert.ToInt32(klijentID_masked_box.Text));
+                c.delete(Klijent);
+            
+                imetb.Text = "";
+                prezimetb.Text = "";
+                muskoRB.Checked = true;
+                zenskoRB.Checked = false;
+                datumRodjenjadtp.Value = DateTime.Now;
+                kontakttb.Text = "";
+                trenerID_masked_box.Text = "";
+                nutricionistaID_masked_box.Text = "";
+                numericUpDown1.Value = numericUpDown1.Minimum;
+                numericUpDown2.Value = numericUpDown2.Minimum;
+                numericUpDown3.Value = numericUpDown1.Value - numericUpDown2.Value;
+                d.terminirajKonekciju();
+                toolStripStatusLabel1.Text = "";
         }
     }
 }

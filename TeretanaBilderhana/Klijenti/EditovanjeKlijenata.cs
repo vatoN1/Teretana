@@ -290,5 +290,10 @@ namespace TeretanaBilderhana.Klijenti
         {
             nutricionistaID_masked_box.Text = Convert.ToString(nutricionista_combo.Text);
         }
+
+        private void bodymass_numeric_ValueChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

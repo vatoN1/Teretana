@@ -334,6 +334,7 @@
             this.bodymass_numeric.Size = new System.Drawing.Size(137, 20);
             this.bodymass_numeric.TabIndex = 43;
             this.bodymass_numeric.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.bodymass_numeric.ValueChanged += new System.EventHandler(this.bodymass_numeric_ValueChanged);
             // 
             // tezina_numeric
             // 
