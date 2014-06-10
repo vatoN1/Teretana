@@ -77,6 +77,12 @@
     <Compile Include="Izvjestaji\Pregled.Designer.cs">
       <DependentUpon>Pregled.cs</DependentUpon>
     </Compile>
+    <Compile Include="Klijenti\BrisanjeKlijenata.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Klijenti\BrisanjeKlijenata.Designer.cs">
+      <DependentUpon>BrisanjeKlijenata.cs</DependentUpon>
+    </Compile>
     <Compile Include="Klijenti\DodavanjeKlijenata.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -253,6 +259,12 @@
     <Compile Include="Suplementi\Pregled.Designer.cs">
       <DependentUpon>Pregled.cs</DependentUpon>
     </Compile>
+    <Compile Include="Uposlenici\BrisanjeUposlenika.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Uposlenici\BrisanjeUposlenika.Designer.cs">
+      <DependentUpon>BrisanjeUposlenika.cs</DependentUpon>
+    </Compile>
     <Compile Include="Uposlenici\DodavanjeUposlenika.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -297,6 +309,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Izvjestaji\Pregled.resx">
       <DependentUpon>Pregled.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Klijenti\BrisanjeKlijenata.resx">
+      <DependentUpon>BrisanjeKlijenata.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Klijenti\DodavanjeKlijenata.resx">
       <DependentUpon>DodavanjeKlijenata.cs</DependentUpon>
@@ -393,6 +408,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Suplementi\Pregled.resx">
       <DependentUpon>Pregled.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Uposlenici\BrisanjeUposlenika.resx">
+      <DependentUpon>BrisanjeUposlenika.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Uposlenici\DodavanjeUposlenika.resx">
       <DependentUpon>DodavanjeUposlenika.cs</DependentUpon>

@@ -225,5 +225,10 @@ namespace TeretanaBilderhana
 
         }
 
+        private void uposlenikID_masked_box_MaskInputRejected(object sender, MaskInputRejectedEventArgs e)
+        {
+
+        }
+
     }
 }

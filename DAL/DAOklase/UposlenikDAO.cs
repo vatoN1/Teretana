@@ -115,7 +115,7 @@ namespace DAL
             {
                 try
                 {
-                    c = new MySqlCommand(String.Format("DELETE FROM uposlenici WHERE id ='{0}';", entity.IdUposlenika), con);
+                    c = new MySqlCommand(String.Format("DELETE FROM uposlenici WHERE id ='{0}';", entity.ID), con);
                     c.ExecuteNonQuery();
                 }
                 catch (Exception e)

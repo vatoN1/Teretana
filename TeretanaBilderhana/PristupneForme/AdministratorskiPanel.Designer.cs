@@ -659,6 +659,7 @@
             this.brisanjeklijentibutton.TabIndex = 27;
             this.brisanjeklijentibutton.Text = "Klijenti";
             this.brisanjeklijentibutton.UseVisualStyleBackColor = true;
+            this.brisanjeklijentibutton.Click += new System.EventHandler(this.brisanjeklijentibutton_Click);
             // 
             // brisanjeprostorijebutton
             // 
@@ -704,6 +705,7 @@
             this.brisanjeuposlenicibutton.TabIndex = 22;
             this.brisanjeuposlenicibutton.Text = "Uposlenici";
             this.brisanjeuposlenicibutton.UseVisualStyleBackColor = true;
+            this.brisanjeuposlenicibutton.Click += new System.EventHandler(this.brisanjeuposlenicibutton_Click);
             // 
             // uplateisplatetab
             // 

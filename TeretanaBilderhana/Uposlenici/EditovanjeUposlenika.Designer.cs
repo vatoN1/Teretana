@@ -322,6 +322,7 @@
             this.uposlenikID_masked_box.Name = "uposlenikID_masked_box";
             this.uposlenikID_masked_box.Size = new System.Drawing.Size(136, 20);
             this.uposlenikID_masked_box.TabIndex = 22;
+            this.uposlenikID_masked_box.MaskInputRejected += new System.Windows.Forms.MaskInputRejectedEventHandler(this.uposlenikID_masked_box_MaskInputRejected);
             this.uposlenikID_masked_box.Leave += new System.EventHandler(this.uposlenikID_masked_box_Leave);
             this.uposlenikID_masked_box.Validating += new System.ComponentModel.CancelEventHandler(this.uposlenikID_Validating);
             // 

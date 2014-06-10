@@ -227,6 +227,18 @@ namespace TeretanaBilderhana.PristupneForme
             pregled.Show();
         }
 
+        private void brisanjeuposlenicibutton_Click(object sender, EventArgs e)
+        {
+            Uposlenici.BrisanjeUposlenika b = new Uposlenici.BrisanjeUposlenika();
+            b.Show();
+        }
+
+        private void brisanjeklijentibutton_Click(object sender, EventArgs e)
+        {
+            Klijenti.BrisanjeKlijenata b = new BrisanjeKlijenata();
+            b.Show();
+        }
+
 
 
 

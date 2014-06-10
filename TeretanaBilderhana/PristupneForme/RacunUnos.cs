@@ -96,7 +96,7 @@ namespace TeretanaBilderhana.PristupneForme
                 numericUpDown4.Enabled = true;
                 // SLICNO KAO ZA SUPLEMENTE
             }
-        }
+        } /// POPRAVITI NEKE FALINKE
 
         private void comboBox2_SelectedIndexChanged(object sender, EventArgs e)
         {
