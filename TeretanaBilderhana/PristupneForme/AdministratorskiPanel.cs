@@ -239,6 +239,49 @@ namespace TeretanaBilderhana.PristupneForme
             b.Show();
         }
 
+        private void b_Click(object sender, EventArgs e)
+        {
+            BrisanjeIzvjestaja b = new BrisanjeIzvjestaja();
+            b.Show();
+        }
+
+        private void brisanjeopremabutton_Click(object sender, EventArgs e)
+        {
+            BrisanjeOpreme b = new BrisanjeOpreme();
+            b.Show();
+        }
+
+        private void brisanjepprogramibutton_Click(object sender, EventArgs e)
+        {
+            BrisanjePrehrambenihPrograma b = new BrisanjePrehrambenihPrograma();
+            b.Show();
+        }
+
+        private void brisanjewprogramibutton_Click(object sender, EventArgs e)
+        {
+            BrisanjeWorkoutPrograma b = new BrisanjeWorkoutPrograma();
+            b.Show();
+        }
+
+        private void brisanjeprostorijebutton_Click(object sender, EventArgs e)
+        {
+            BrisanjeProstorija b = new BrisanjeProstorija();
+            b.Show();
+
+        }
+
+        private void brisanjesuplementibutton_Click(object sender, EventArgs e)
+        {
+            BrisanjeSuplemenata b = new BrisanjeSuplemenata();
+            b.Show();
+        }
+
+        private void brisanjespravebutton_Click(object sender, EventArgs e)
+        {
+            BrisanjeSprava b = new BrisanjeSprava();
+            b.Show();
+        }
+
 
 
 

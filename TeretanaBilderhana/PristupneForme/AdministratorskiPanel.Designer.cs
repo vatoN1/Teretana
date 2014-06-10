@@ -632,6 +632,7 @@
             this.brisanjewprogramibutton.TabIndex = 30;
             this.brisanjewprogramibutton.Text = "Workout programi";
             this.brisanjewprogramibutton.UseVisualStyleBackColor = true;
+            this.brisanjewprogramibutton.Click += new System.EventHandler(this.brisanjewprogramibutton_Click);
             // 
             // brisanjepprogramibutton
             // 
@@ -641,6 +642,7 @@
             this.brisanjepprogramibutton.TabIndex = 29;
             this.brisanjepprogramibutton.Text = "Prehrambeni programi";
             this.brisanjepprogramibutton.UseVisualStyleBackColor = true;
+            this.brisanjepprogramibutton.Click += new System.EventHandler(this.brisanjepprogramibutton_Click);
             // 
             // b
             // 
@@ -650,6 +652,7 @@
             this.b.TabIndex = 28;
             this.b.Text = "Izvjestaji";
             this.b.UseVisualStyleBackColor = true;
+            this.b.Click += new System.EventHandler(this.b_Click);
             // 
             // brisanjeklijentibutton
             // 
@@ -669,6 +672,7 @@
             this.brisanjeprostorijebutton.TabIndex = 26;
             this.brisanjeprostorijebutton.Text = "Prostorije";
             this.brisanjeprostorijebutton.UseVisualStyleBackColor = true;
+            this.brisanjeprostorijebutton.Click += new System.EventHandler(this.brisanjeprostorijebutton_Click);
             // 
             // brisanjeopremabutton
             // 
@@ -678,6 +682,7 @@
             this.brisanjeopremabutton.TabIndex = 25;
             this.brisanjeopremabutton.Text = "Oprema";
             this.brisanjeopremabutton.UseVisualStyleBackColor = true;
+            this.brisanjeopremabutton.Click += new System.EventHandler(this.brisanjeopremabutton_Click);
             // 
             // brisanjesuplementibutton
             // 
@@ -687,6 +692,7 @@
             this.brisanjesuplementibutton.TabIndex = 24;
             this.brisanjesuplementibutton.Text = "Suplementi";
             this.brisanjesuplementibutton.UseVisualStyleBackColor = true;
+            this.brisanjesuplementibutton.Click += new System.EventHandler(this.brisanjesuplementibutton_Click);
             // 
             // brisanjespravebutton
             // 
@@ -696,6 +702,7 @@
             this.brisanjespravebutton.TabIndex = 23;
             this.brisanjespravebutton.Text = "Sprave";
             this.brisanjespravebutton.UseVisualStyleBackColor = true;
+            this.brisanjespravebutton.Click += new System.EventHandler(this.brisanjespravebutton_Click);
             // 
             // brisanjeuposlenicibutton
             // 

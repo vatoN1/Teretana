@@ -77,7 +77,7 @@ using System;
 	            {
 	                try
 	                {
-	                    c = new MySqlCommand(String.Format("DELETE FROM prehrambeniprogrami WHERE id ='{0}';", entity.ID1), con);
+	                    c = new MySqlCommand(String.Format("DELETE FROM prehrambeniprogrami WHERE id ='{0}';", entity.IdPrehrambeniProgram), con);
 	                    c.ExecuteNonQuery();
 	                }
 	                catch (Exception e)

@@ -59,6 +59,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Izvjestaji\BrisanjeIzvjestaja.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Izvjestaji\BrisanjeIzvjestaja.Designer.cs">
+      <DependentUpon>BrisanjeIzvjestaja.cs</DependentUpon>
+    </Compile>
     <Compile Include="Izvjestaji\DodavanjeIzvjestaja.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -113,6 +119,12 @@
     <Compile Include="MainPage.Designer.cs">
       <DependentUpon>MainPage.cs</DependentUpon>
     </Compile>
+    <Compile Include="Opreme\BrisanjeOpreme.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Opreme\BrisanjeOpreme.Designer.cs">
+      <DependentUpon>BrisanjeOpreme.cs</DependentUpon>
+    </Compile>
     <Compile Include="Opreme\DodavanjeOpreme.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -130,6 +142,12 @@
     </Compile>
     <Compile Include="Opreme\Pregled.Designer.cs">
       <DependentUpon>Pregled.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Prehrambeni programi\BrisanjePrehrambenihPrograma.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Prehrambeni programi\BrisanjePrehrambenihPrograma.Designer.cs">
+      <DependentUpon>BrisanjePrehrambenihPrograma.cs</DependentUpon>
     </Compile>
     <Compile Include="Prehrambeni programi\DodavanjePrehrambenihPrograma.cs">
       <SubType>Form</SubType>
@@ -205,6 +223,12 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Prostorije\BrisanjeProstorija.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Prostorije\BrisanjeProstorija.Designer.cs">
+      <DependentUpon>BrisanjeProstorija.cs</DependentUpon>
+    </Compile>
     <Compile Include="Prostorije\DodavanjeProstorija.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -223,6 +247,12 @@
     <Compile Include="Prostorije\Pregled.Designer.cs">
       <DependentUpon>Pregled.cs</DependentUpon>
     </Compile>
+    <Compile Include="Sprave\BrisanjeSprava.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Sprave\BrisanjeSprava.Designer.cs">
+      <DependentUpon>BrisanjeSprava.cs</DependentUpon>
+    </Compile>
     <Compile Include="Sprave\DodavanjeSprava.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -240,6 +270,12 @@
     </Compile>
     <Compile Include="Sprave\Pregled.Designer.cs">
       <DependentUpon>Pregled.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Suplementi\BrisanjeSuplemenata.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Suplementi\BrisanjeSuplemenata.Designer.cs">
+      <DependentUpon>BrisanjeSuplemenata.cs</DependentUpon>
     </Compile>
     <Compile Include="Suplementi\DodavanjeSuplemenata.cs">
       <SubType>Form</SubType>
@@ -283,6 +319,12 @@
     <Compile Include="Uposlenici\Pregled.Designer.cs">
       <DependentUpon>Pregled.cs</DependentUpon>
     </Compile>
+    <Compile Include="WorkoutProgrami\BrisanjeWorkoutPrograma.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WorkoutProgrami\BrisanjeWorkoutPrograma.Designer.cs">
+      <DependentUpon>BrisanjeWorkoutPrograma.cs</DependentUpon>
+    </Compile>
     <Compile Include="WorkoutProgrami\DodavanjeWorkoutPrograma.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -301,6 +343,9 @@
     <Compile Include="WorkoutProgrami\Pregled.Designer.cs">
       <DependentUpon>Pregled.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Izvjestaji\BrisanjeIzvjestaja.resx">
+      <DependentUpon>BrisanjeIzvjestaja.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Izvjestaji\DodavanjeIzvjestaja.resx">
       <DependentUpon>DodavanjeIzvjestaja.cs</DependentUpon>
     </EmbeddedResource>
@@ -328,6 +373,9 @@
     <EmbeddedResource Include="MainPage.resx">
       <DependentUpon>MainPage.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Opreme\BrisanjeOpreme.resx">
+      <DependentUpon>BrisanjeOpreme.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Opreme\DodavanjeOpreme.resx">
       <DependentUpon>DodavanjeOpreme.cs</DependentUpon>
     </EmbeddedResource>
@@ -336,6 +384,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Opreme\Pregled.resx">
       <DependentUpon>Pregled.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Prehrambeni programi\BrisanjePrehrambenihPrograma.resx">
+      <DependentUpon>BrisanjePrehrambenihPrograma.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Prehrambeni programi\DodavanjePrehrambenihPrograma.resx">
       <DependentUpon>DodavanjePrehrambenihPrograma.cs</DependentUpon>
@@ -382,6 +433,9 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Prostorije\BrisanjeProstorija.resx">
+      <DependentUpon>BrisanjeProstorija.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Prostorije\DodavanjeProstorija.resx">
       <DependentUpon>DodavanjeProstorija.cs</DependentUpon>
     </EmbeddedResource>
@@ -391,6 +445,9 @@
     <EmbeddedResource Include="Prostorije\Pregled.resx">
       <DependentUpon>Pregled.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Sprave\BrisanjeSprava.resx">
+      <DependentUpon>BrisanjeSprava.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Sprave\DodavanjeSprava.resx">
       <DependentUpon>DodavanjeSprava.cs</DependentUpon>
     </EmbeddedResource>
@@ -399,6 +456,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Sprave\Pregled.resx">
       <DependentUpon>Pregled.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Suplementi\BrisanjeSuplemenata.resx">
+      <DependentUpon>BrisanjeSuplemenata.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Suplementi\DodavanjeSuplemenata.resx">
       <DependentUpon>DodavanjeSuplemenata.cs</DependentUpon>
@@ -420,6 +480,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Uposlenici\Pregled.resx">
       <DependentUpon>Pregled.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WorkoutProgrami\BrisanjeWorkoutPrograma.resx">
+      <DependentUpon>BrisanjeWorkoutPrograma.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="WorkoutProgrami\DodavanjeWorkoutPrograma.resx">
       <DependentUpon>DodavanjeWorkoutPrograma.cs</DependentUpon>

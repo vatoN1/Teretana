@@ -85,6 +85,7 @@
             this.groupBox1.TabIndex = 24;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Editovanje workout programa:";
+            this.groupBox1.Enter += new System.EventHandler(this.groupBox1_Enter);
             // 
             // tipwp_combo
             // 
@@ -93,6 +94,7 @@
             this.tipwp_combo.Name = "tipwp_combo";
             this.tipwp_combo.Size = new System.Drawing.Size(144, 21);
             this.tipwp_combo.TabIndex = 2;
+            this.tipwp_combo.SelectedIndexChanged += new System.EventHandler(this.tipwp_combo_SelectedIndexChanged);
             this.tipwp_combo.Validating += new System.ComponentModel.CancelEventHandler(this.tipwp_Validating);
             // 
             // wprogramID_masked_box
@@ -103,6 +105,7 @@
             this.wprogramID_masked_box.Size = new System.Drawing.Size(144, 20);
             this.wprogramID_masked_box.TabIndex = 1;
             this.wprogramID_masked_box.ValidatingType = typeof(int);
+            this.wprogramID_masked_box.MaskInputRejected += new System.Windows.Forms.MaskInputRejectedEventHandler(this.wprogramID_masked_box_MaskInputRejected);
             this.wprogramID_masked_box.Leave += new System.EventHandler(this.wprogramID_masked_box_Leave);
             // 
             // label1
@@ -113,6 +116,7 @@
             this.label1.Size = new System.Drawing.Size(60, 13);
             this.label1.TabIndex = 18;
             this.label1.Text = "Unesite ID:";
+            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // vjezbe_rich_box
             // 
@@ -121,6 +125,7 @@
             this.vjezbe_rich_box.Size = new System.Drawing.Size(144, 80);
             this.vjezbe_rich_box.TabIndex = 4;
             this.vjezbe_rich_box.Text = "";
+            this.vjezbe_rich_box.TextChanged += new System.EventHandler(this.vjezbe_rich_box_TextChanged);
             this.vjezbe_rich_box.Validating += new System.ComponentModel.CancelEventHandler(this.vjezbe_rich_box_Validating);
             // 
             // opis_wprogram_rich_box
@@ -130,6 +135,7 @@
             this.opis_wprogram_rich_box.Size = new System.Drawing.Size(144, 88);
             this.opis_wprogram_rich_box.TabIndex = 3;
             this.opis_wprogram_rich_box.Text = "";
+            this.opis_wprogram_rich_box.TextChanged += new System.EventHandler(this.opis_wprogram_rich_box_TextChanged);
             this.opis_wprogram_rich_box.Validating += new System.ComponentModel.CancelEventHandler(this.opis_wprogram_rich_box_Validating);
             // 
             // label2
@@ -140,6 +146,7 @@
             this.label2.Size = new System.Drawing.Size(113, 13);
             this.label2.TabIndex = 1;
             this.label2.Text = "Tip workout programa:";
+            this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
             // label3
             // 
@@ -149,6 +156,7 @@
             this.label3.Size = new System.Drawing.Size(31, 13);
             this.label3.TabIndex = 2;
             this.label3.Text = "Opis:";
+            this.label3.Click += new System.EventHandler(this.label3_Click);
             // 
             // label5
             // 
@@ -158,6 +166,7 @@
             this.label5.Size = new System.Drawing.Size(42, 13);
             this.label5.TabIndex = 4;
             this.label5.Text = "Vjezbe:";
+            this.label5.Click += new System.EventHandler(this.label5_Click);
             // 
             // statusStrip1
             // 
@@ -168,11 +177,13 @@
             this.statusStrip1.Size = new System.Drawing.Size(334, 22);
             this.statusStrip1.TabIndex = 27;
             this.statusStrip1.Text = "statusStrip1";
+            this.statusStrip1.ItemClicked += new System.Windows.Forms.ToolStripItemClickedEventHandler(this.statusStrip1_ItemClicked);
             // 
             // toolStripStatusLabel1
             // 
             this.toolStripStatusLabel1.Name = "toolStripStatusLabel1";
             this.toolStripStatusLabel1.Size = new System.Drawing.Size(0, 17);
+            this.toolStripStatusLabel1.Click += new System.EventHandler(this.toolStripStatusLabel1_Click);
             // 
             // errorProvider1
             // 

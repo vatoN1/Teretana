@@ -141,6 +141,61 @@ namespace TeretanaBilderhana.WorkoutProgrami
             this.Close();
         }
 
+        private void groupBox1_Enter(object sender, EventArgs e)
+        {
+
+        }
+
+        private void tipwp_combo_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void wprogramID_masked_box_MaskInputRejected(object sender, MaskInputRejectedEventArgs e)
+        {
+
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void vjezbe_rich_box_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void opis_wprogram_rich_box_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label3_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label5_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void statusStrip1_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
+        {
+
+        }
+
+        private void toolStripStatusLabel1_Click(object sender, EventArgs e)
+        {
+
+        }
+
         
     }
 }
