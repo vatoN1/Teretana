@@ -53,11 +53,11 @@
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.label4 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.numericUpDown3 = new System.Windows.Forms.NumericUpDown();
-            this.numericUpDown2 = new System.Windows.Forms.NumericUpDown();
-            this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
+            this.nutricionista_combo = new System.Windows.Forms.ComboBox();
+            this.trener_combo = new System.Windows.Forms.ComboBox();
+            this.bodymass_numeric = new System.Windows.Forms.NumericUpDown();
+            this.tezina_numeric = new System.Windows.Forms.NumericUpDown();
+            this.visina_numeric = new System.Windows.Forms.NumericUpDown();
             this.label11 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
@@ -67,9 +67,9 @@
             this.statusStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             this.groupBox1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bodymass_numeric)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tezina_numeric)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.visina_numeric)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -201,7 +201,6 @@
             this.statusStrip1.Size = new System.Drawing.Size(312, 22);
             this.statusStrip1.TabIndex = 30;
             this.statusStrip1.Text = "statusStrip1";
-            this.statusStrip1.ItemClicked += new System.Windows.Forms.ToolStripItemClickedEventHandler(this.statusStrip1_ItemClicked);
             // 
             // label3
             // 
@@ -256,11 +255,11 @@
             // 
             this.groupBox1.Controls.Add(this.label4);
             this.groupBox1.Controls.Add(this.label10);
-            this.groupBox1.Controls.Add(this.comboBox2);
-            this.groupBox1.Controls.Add(this.comboBox1);
-            this.groupBox1.Controls.Add(this.numericUpDown3);
-            this.groupBox1.Controls.Add(this.numericUpDown2);
-            this.groupBox1.Controls.Add(this.numericUpDown1);
+            this.groupBox1.Controls.Add(this.nutricionista_combo);
+            this.groupBox1.Controls.Add(this.trener_combo);
+            this.groupBox1.Controls.Add(this.bodymass_numeric);
+            this.groupBox1.Controls.Add(this.tezina_numeric);
+            this.groupBox1.Controls.Add(this.visina_numeric);
             this.groupBox1.Controls.Add(this.label11);
             this.groupBox1.Controls.Add(this.label12);
             this.groupBox1.Controls.Add(this.label13);
@@ -304,77 +303,80 @@
             this.label10.TabIndex = 46;
             this.label10.Text = "Izaberi trenera:";
             // 
-            // comboBox2
+            // nutricionista_combo
             // 
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Location = new System.Drawing.Point(120, 295);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(137, 21);
-            this.comboBox2.TabIndex = 45;
+            this.nutricionista_combo.FormattingEnabled = true;
+            this.nutricionista_combo.Location = new System.Drawing.Point(120, 295);
+            this.nutricionista_combo.Name = "nutricionista_combo";
+            this.nutricionista_combo.Size = new System.Drawing.Size(137, 21);
+            this.nutricionista_combo.TabIndex = 45;
+            this.nutricionista_combo.SelectedIndexChanged += new System.EventHandler(this.nutricionista_combo_SelectedIndexChanged);
             // 
-            // comboBox1
+            // trener_combo
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(120, 268);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(137, 21);
-            this.comboBox1.TabIndex = 44;
+            this.trener_combo.FormattingEnabled = true;
+            this.trener_combo.Location = new System.Drawing.Point(120, 268);
+            this.trener_combo.Name = "trener_combo";
+            this.trener_combo.Size = new System.Drawing.Size(137, 21);
+            this.trener_combo.TabIndex = 44;
+            this.trener_combo.SelectedIndexChanged += new System.EventHandler(this.trener_combo_SelectedIndexChanged);
             // 
-            // numericUpDown3
+            // bodymass_numeric
             // 
-            this.numericUpDown3.DecimalPlaces = 3;
-            this.numericUpDown3.Location = new System.Drawing.Point(118, 218);
-            this.numericUpDown3.Maximum = new decimal(new int[] {
+            this.bodymass_numeric.DecimalPlaces = 3;
+            this.bodymass_numeric.Location = new System.Drawing.Point(118, 218);
+            this.bodymass_numeric.Maximum = new decimal(new int[] {
             300,
             0,
             0,
             0});
-            this.numericUpDown3.Name = "numericUpDown3";
-            this.numericUpDown3.Size = new System.Drawing.Size(137, 20);
-            this.numericUpDown3.TabIndex = 43;
-            this.numericUpDown3.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.bodymass_numeric.Name = "bodymass_numeric";
+            this.bodymass_numeric.Size = new System.Drawing.Size(137, 20);
+            this.bodymass_numeric.TabIndex = 43;
+            this.bodymass_numeric.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
-            // numericUpDown2
+            // tezina_numeric
             // 
-            this.numericUpDown2.DecimalPlaces = 3;
-            this.numericUpDown2.Location = new System.Drawing.Point(118, 196);
-            this.numericUpDown2.Maximum = new decimal(new int[] {
+            this.tezina_numeric.DecimalPlaces = 3;
+            this.tezina_numeric.Location = new System.Drawing.Point(118, 196);
+            this.tezina_numeric.Maximum = new decimal(new int[] {
             1000,
             0,
             0,
             0});
-            this.numericUpDown2.Minimum = new decimal(new int[] {
+            this.tezina_numeric.Minimum = new decimal(new int[] {
             50,
             0,
             0,
             0});
-            this.numericUpDown2.Name = "numericUpDown2";
-            this.numericUpDown2.Size = new System.Drawing.Size(137, 20);
-            this.numericUpDown2.TabIndex = 42;
-            this.numericUpDown2.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            this.numericUpDown2.Value = new decimal(new int[] {
+            this.tezina_numeric.Name = "tezina_numeric";
+            this.tezina_numeric.Size = new System.Drawing.Size(137, 20);
+            this.tezina_numeric.TabIndex = 42;
+            this.tezina_numeric.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.tezina_numeric.Value = new decimal(new int[] {
             70,
             0,
             0,
             0});
             // 
-            // numericUpDown1
+            // visina_numeric
             // 
-            this.numericUpDown1.Location = new System.Drawing.Point(118, 173);
-            this.numericUpDown1.Maximum = new decimal(new int[] {
+            this.visina_numeric.Location = new System.Drawing.Point(118, 173);
+            this.visina_numeric.Maximum = new decimal(new int[] {
             300,
             0,
             0,
             0});
-            this.numericUpDown1.Name = "numericUpDown1";
-            this.numericUpDown1.Size = new System.Drawing.Size(137, 20);
-            this.numericUpDown1.TabIndex = 41;
-            this.numericUpDown1.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            this.numericUpDown1.Value = new decimal(new int[] {
+            this.visina_numeric.Name = "visina_numeric";
+            this.visina_numeric.Size = new System.Drawing.Size(137, 20);
+            this.visina_numeric.TabIndex = 41;
+            this.visina_numeric.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.visina_numeric.Value = new decimal(new int[] {
             150,
             0,
             0,
             0});
+            this.visina_numeric.ValueChanged += new System.EventHandler(this.visina_numeric_ValueChanged);
             // 
             // label11
             // 
@@ -418,7 +420,6 @@
             this.trenerID_masked_box.Name = "trenerID_masked_box";
             this.trenerID_masked_box.Size = new System.Drawing.Size(136, 20);
             this.trenerID_masked_box.TabIndex = 9;
-            this.trenerID_masked_box.MaskInputRejected += new System.Windows.Forms.MaskInputRejectedEventHandler(this.trenerID_masked_box_MaskInputRejected);
             this.trenerID_masked_box.Validating += new System.ComponentModel.CancelEventHandler(this.trenerID_Validating);
             // 
             // EditovanjeKlijenata
@@ -441,9 +442,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bodymass_numeric)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tezina_numeric)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.visina_numeric)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -474,15 +475,15 @@
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.MaskedTextBox trenerID_masked_box;
         private System.Windows.Forms.MaskedTextBox nutricionistaID_masked_box;
-        private System.Windows.Forms.NumericUpDown numericUpDown3;
-        private System.Windows.Forms.NumericUpDown numericUpDown2;
-        private System.Windows.Forms.NumericUpDown numericUpDown1;
+        private System.Windows.Forms.NumericUpDown bodymass_numeric;
+        private System.Windows.Forms.NumericUpDown tezina_numeric;
+        private System.Windows.Forms.NumericUpDown visina_numeric;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.ComboBox comboBox2;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox nutricionista_combo;
+        private System.Windows.Forms.ComboBox trener_combo;
     }
 }

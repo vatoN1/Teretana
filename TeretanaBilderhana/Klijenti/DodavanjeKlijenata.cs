@@ -223,14 +223,13 @@ namespace TeretanaBilderhana.Klijenti
             nutricionstaID_masked_box.Text = Convert.ToString(nutricionista_combo.Text);
         }
 
-        private void tezina_numeric_ValueChanged(object sender, EventArgs e)
-        {
-            bodymass_numeric.Value = visina_numeric.Value - tezina_numeric.Value;
-        }
-
         private void visina_numeric_ValueChanged(object sender, EventArgs e)
         {
-            bodymass_numeric.Value = visina_numeric.Value - tezina_numeric.Value;
+            if (zenskoRB.Checked == true)
+                bodymass_numeric.Value = visina_numeric.Value - 110;
+            else
+                bodymass_numeric.Value = visina_numeric.Value - 100;
         }
+
     }
 }

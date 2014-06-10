@@ -348,7 +348,6 @@
             0,
             0,
             0});
-            this.tezina_numeric.ValueChanged += new System.EventHandler(this.tezina_numeric_ValueChanged);
             // 
             // visina_numeric
             // 
