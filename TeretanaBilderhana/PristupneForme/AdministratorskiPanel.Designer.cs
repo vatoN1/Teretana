@@ -30,61 +30,61 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AdministratorskiPanel));
             this.brisanjetab = new System.Windows.Forms.TabPage();
-            this.groupBox3 = new System.Windows.Forms.GroupBox();
-            this.brisanjeuposlenicibutton = new System.Windows.Forms.Button();
-            this.brisanjespravebutton = new System.Windows.Forms.Button();
-            this.brisanjesuplementibutton = new System.Windows.Forms.Button();
-            this.brisanjeopremabutton = new System.Windows.Forms.Button();
-            this.brisanjeprostorijebutton = new System.Windows.Forms.Button();
-            this.brisanjeklijentibutton = new System.Windows.Forms.Button();
-            this.b = new System.Windows.Forms.Button();
-            this.brisanjepprogramibutton = new System.Windows.Forms.Button();
-            this.brisanjewprogramibutton = new System.Windows.Forms.Button();
-            this.monthCalendar4 = new System.Windows.Forms.MonthCalendar();
-            this.brisanjeprethodnibutton = new System.Windows.Forms.Button();
             this.brisanjesljedecibutton = new System.Windows.Forms.Button();
+            this.brisanjeprethodnibutton = new System.Windows.Forms.Button();
+            this.monthCalendar4 = new System.Windows.Forms.MonthCalendar();
+            this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.brisanjewprogramibutton = new System.Windows.Forms.Button();
+            this.brisanjepprogramibutton = new System.Windows.Forms.Button();
+            this.b = new System.Windows.Forms.Button();
+            this.brisanjeklijentibutton = new System.Windows.Forms.Button();
+            this.brisanjeprostorijebutton = new System.Windows.Forms.Button();
+            this.brisanjeopremabutton = new System.Windows.Forms.Button();
+            this.brisanjesuplementibutton = new System.Windows.Forms.Button();
+            this.brisanjespravebutton = new System.Windows.Forms.Button();
+            this.brisanjeuposlenicibutton = new System.Windows.Forms.Button();
             this.azuriranjetab = new System.Windows.Forms.TabPage();
-            this.groupBox4 = new System.Windows.Forms.GroupBox();
-            this.azuriranjeuposlenicibutton = new System.Windows.Forms.Button();
-            this.azuriranjespravebutton = new System.Windows.Forms.Button();
-            this.azuriranjesuplementibutton = new System.Windows.Forms.Button();
-            this.a = new System.Windows.Forms.Button();
-            this.azuriranjeprostorijebutton = new System.Windows.Forms.Button();
-            this.azuriranjeklijentibutton = new System.Windows.Forms.Button();
-            this.izjestajiazuriranjebutton = new System.Windows.Forms.Button();
-            this.azuriranjepprogramibutton = new System.Windows.Forms.Button();
-            this.azuriranjewprogramibutton = new System.Windows.Forms.Button();
-            this.monthCalendar3 = new System.Windows.Forms.MonthCalendar();
-            this.azuriranjeprethodnibutton = new System.Windows.Forms.Button();
             this.azuriranjesljedecibutton = new System.Windows.Forms.Button();
+            this.azuriranjeprethodnibutton = new System.Windows.Forms.Button();
+            this.monthCalendar3 = new System.Windows.Forms.MonthCalendar();
+            this.groupBox4 = new System.Windows.Forms.GroupBox();
+            this.azuriranjewprogramibutton = new System.Windows.Forms.Button();
+            this.azuriranjepprogramibutton = new System.Windows.Forms.Button();
+            this.izjestajiazuriranjebutton = new System.Windows.Forms.Button();
+            this.azuriranjeklijentibutton = new System.Windows.Forms.Button();
+            this.azuriranjeprostorijebutton = new System.Windows.Forms.Button();
+            this.a = new System.Windows.Forms.Button();
+            this.azuriranjesuplementibutton = new System.Windows.Forms.Button();
+            this.azuriranjespravebutton = new System.Windows.Forms.Button();
+            this.azuriranjeuposlenicibutton = new System.Windows.Forms.Button();
             this.unostab = new System.Windows.Forms.TabPage();
-            this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.unosuposlenicibutton = new System.Windows.Forms.Button();
-            this.unosspavebutton = new System.Windows.Forms.Button();
-            this.unossuplementibutton = new System.Windows.Forms.Button();
-            this.unosopremabutton = new System.Windows.Forms.Button();
-            this.unosprostorijebutton = new System.Windows.Forms.Button();
-            this.unosklijentibutton = new System.Windows.Forms.Button();
-            this.unosizvjestajibutton = new System.Windows.Forms.Button();
-            this.unospprogramibutton = new System.Windows.Forms.Button();
-            this.unoswprogramibutton = new System.Windows.Forms.Button();
-            this.monthCalendar2 = new System.Windows.Forms.MonthCalendar();
-            this.unosprethodnibutton = new System.Windows.Forms.Button();
             this.unossljedecitab = new System.Windows.Forms.Button();
+            this.unosprethodnibutton = new System.Windows.Forms.Button();
+            this.monthCalendar2 = new System.Windows.Forms.MonthCalendar();
+            this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.unoswprogramibutton = new System.Windows.Forms.Button();
+            this.unospprogramibutton = new System.Windows.Forms.Button();
+            this.unosizvjestajibutton = new System.Windows.Forms.Button();
+            this.unosklijentibutton = new System.Windows.Forms.Button();
+            this.unosprostorijebutton = new System.Windows.Forms.Button();
+            this.unosopremabutton = new System.Windows.Forms.Button();
+            this.unossuplementibutton = new System.Windows.Forms.Button();
+            this.unosspavebutton = new System.Windows.Forms.Button();
+            this.unosuposlenicibutton = new System.Windows.Forms.Button();
             this.pregledtab = new System.Windows.Forms.TabPage();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.pregledunosbutton = new System.Windows.Forms.Button();
-            this.pregledspravebutton = new System.Windows.Forms.Button();
-            this.pregledsuplementibutton = new System.Windows.Forms.Button();
-            this.pregledopremabutton = new System.Windows.Forms.Button();
-            this.pregledprostorijebutton = new System.Windows.Forms.Button();
-            this.pregledklijentibutton = new System.Windows.Forms.Button();
-            this.pregledizvjestajibutton = new System.Windows.Forms.Button();
-            this.pregledpprogramibutton = new System.Windows.Forms.Button();
-            this.pregledwprogramibutton = new System.Windows.Forms.Button();
-            this.monthCalendar1 = new System.Windows.Forms.MonthCalendar();
-            this.pregledprethodnibutton = new System.Windows.Forms.Button();
             this.pregledsljedecibutton = new System.Windows.Forms.Button();
+            this.pregledprethodnibutton = new System.Windows.Forms.Button();
+            this.monthCalendar1 = new System.Windows.Forms.MonthCalendar();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.pregledwprogramibutton = new System.Windows.Forms.Button();
+            this.pregledpprogramibutton = new System.Windows.Forms.Button();
+            this.pregledizvjestajibutton = new System.Windows.Forms.Button();
+            this.pregledklijentibutton = new System.Windows.Forms.Button();
+            this.pregledprostorijebutton = new System.Windows.Forms.Button();
+            this.pregledopremabutton = new System.Windows.Forms.Button();
+            this.pregledsuplementibutton = new System.Windows.Forms.Button();
+            this.pregledspravebutton = new System.Windows.Forms.Button();
+            this.pregledunosbutton = new System.Windows.Forms.Button();
             this.Admintabcontrol = new System.Windows.Forms.TabControl();
             this.brisanjetab.SuspendLayout();
             this.groupBox3.SuspendLayout();
@@ -111,6 +111,32 @@
             this.brisanjetab.Text = "Brisanje iz baze";
             this.brisanjetab.UseVisualStyleBackColor = true;
             // 
+            // brisanjesljedecibutton
+            // 
+            this.brisanjesljedecibutton.Enabled = false;
+            this.brisanjesljedecibutton.Location = new System.Drawing.Point(503, 235);
+            this.brisanjesljedecibutton.Name = "brisanjesljedecibutton";
+            this.brisanjesljedecibutton.Size = new System.Drawing.Size(84, 23);
+            this.brisanjesljedecibutton.TabIndex = 7;
+            this.brisanjesljedecibutton.Text = "Sljedeci tab";
+            this.brisanjesljedecibutton.UseVisualStyleBackColor = true;
+            // 
+            // brisanjeprethodnibutton
+            // 
+            this.brisanjeprethodnibutton.Location = new System.Drawing.Point(388, 235);
+            this.brisanjeprethodnibutton.Name = "brisanjeprethodnibutton";
+            this.brisanjeprethodnibutton.Size = new System.Drawing.Size(84, 23);
+            this.brisanjeprethodnibutton.TabIndex = 6;
+            this.brisanjeprethodnibutton.Text = "Prethodni tab";
+            this.brisanjeprethodnibutton.UseVisualStyleBackColor = true;
+            this.brisanjeprethodnibutton.Click += new System.EventHandler(this.brisanjeprethodnibutton_Click);
+            // 
+            // monthCalendar4
+            // 
+            this.monthCalendar4.Location = new System.Drawing.Point(388, 30);
+            this.monthCalendar4.Name = "monthCalendar4";
+            this.monthCalendar4.TabIndex = 5;
+            // 
             // groupBox3
             // 
             this.groupBox3.Controls.Add(this.brisanjewprogramibutton);
@@ -129,75 +155,15 @@
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Brisanje iz baze";
             // 
-            // brisanjeuposlenicibutton
+            // brisanjewprogramibutton
             // 
-            this.brisanjeuposlenicibutton.Location = new System.Drawing.Point(6, 33);
-            this.brisanjeuposlenicibutton.Name = "brisanjeuposlenicibutton";
-            this.brisanjeuposlenicibutton.Size = new System.Drawing.Size(76, 42);
-            this.brisanjeuposlenicibutton.TabIndex = 22;
-            this.brisanjeuposlenicibutton.Text = "Uposlenici";
-            this.brisanjeuposlenicibutton.UseVisualStyleBackColor = true;
-            this.brisanjeuposlenicibutton.Click += new System.EventHandler(this.brisanjeuposlenicibutton_Click);
-            // 
-            // brisanjespravebutton
-            // 
-            this.brisanjespravebutton.Location = new System.Drawing.Point(113, 81);
-            this.brisanjespravebutton.Name = "brisanjespravebutton";
-            this.brisanjespravebutton.Size = new System.Drawing.Size(76, 42);
-            this.brisanjespravebutton.TabIndex = 23;
-            this.brisanjespravebutton.Text = "Sprave";
-            this.brisanjespravebutton.UseVisualStyleBackColor = true;
-            this.brisanjespravebutton.Click += new System.EventHandler(this.brisanjespravebutton_Click);
-            // 
-            // brisanjesuplementibutton
-            // 
-            this.brisanjesuplementibutton.Location = new System.Drawing.Point(213, 81);
-            this.brisanjesuplementibutton.Name = "brisanjesuplementibutton";
-            this.brisanjesuplementibutton.Size = new System.Drawing.Size(76, 42);
-            this.brisanjesuplementibutton.TabIndex = 24;
-            this.brisanjesuplementibutton.Text = "Suplementi";
-            this.brisanjesuplementibutton.UseVisualStyleBackColor = true;
-            this.brisanjesuplementibutton.Click += new System.EventHandler(this.brisanjesuplementibutton_Click);
-            // 
-            // brisanjeopremabutton
-            // 
-            this.brisanjeopremabutton.Location = new System.Drawing.Point(6, 81);
-            this.brisanjeopremabutton.Name = "brisanjeopremabutton";
-            this.brisanjeopremabutton.Size = new System.Drawing.Size(76, 42);
-            this.brisanjeopremabutton.TabIndex = 25;
-            this.brisanjeopremabutton.Text = "Oprema";
-            this.brisanjeopremabutton.UseVisualStyleBackColor = true;
-            this.brisanjeopremabutton.Click += new System.EventHandler(this.brisanjeopremabutton_Click);
-            // 
-            // brisanjeprostorijebutton
-            // 
-            this.brisanjeprostorijebutton.Location = new System.Drawing.Point(6, 129);
-            this.brisanjeprostorijebutton.Name = "brisanjeprostorijebutton";
-            this.brisanjeprostorijebutton.Size = new System.Drawing.Size(76, 42);
-            this.brisanjeprostorijebutton.TabIndex = 26;
-            this.brisanjeprostorijebutton.Text = "Prostorije";
-            this.brisanjeprostorijebutton.UseVisualStyleBackColor = true;
-            this.brisanjeprostorijebutton.Click += new System.EventHandler(this.brisanjeprostorijebutton_Click);
-            // 
-            // brisanjeklijentibutton
-            // 
-            this.brisanjeklijentibutton.Location = new System.Drawing.Point(213, 33);
-            this.brisanjeklijentibutton.Name = "brisanjeklijentibutton";
-            this.brisanjeklijentibutton.Size = new System.Drawing.Size(76, 42);
-            this.brisanjeklijentibutton.TabIndex = 27;
-            this.brisanjeklijentibutton.Text = "Klijenti";
-            this.brisanjeklijentibutton.UseVisualStyleBackColor = true;
-            this.brisanjeklijentibutton.Click += new System.EventHandler(this.brisanjeklijentibutton_Click);
-            // 
-            // b
-            // 
-            this.b.Location = new System.Drawing.Point(113, 33);
-            this.b.Name = "b";
-            this.b.Size = new System.Drawing.Size(76, 42);
-            this.b.TabIndex = 28;
-            this.b.Text = "Izvjestaji";
-            this.b.UseVisualStyleBackColor = true;
-            this.b.Click += new System.EventHandler(this.b_Click);
+            this.brisanjewprogramibutton.Location = new System.Drawing.Point(213, 129);
+            this.brisanjewprogramibutton.Name = "brisanjewprogramibutton";
+            this.brisanjewprogramibutton.Size = new System.Drawing.Size(76, 42);
+            this.brisanjewprogramibutton.TabIndex = 30;
+            this.brisanjewprogramibutton.Text = "Workout programi";
+            this.brisanjewprogramibutton.UseVisualStyleBackColor = true;
+            this.brisanjewprogramibutton.Click += new System.EventHandler(this.brisanjewprogramibutton_Click);
             // 
             // brisanjepprogramibutton
             // 
@@ -209,41 +175,75 @@
             this.brisanjepprogramibutton.UseVisualStyleBackColor = true;
             this.brisanjepprogramibutton.Click += new System.EventHandler(this.brisanjepprogramibutton_Click);
             // 
-            // brisanjewprogramibutton
+            // b
             // 
-            this.brisanjewprogramibutton.Location = new System.Drawing.Point(213, 129);
-            this.brisanjewprogramibutton.Name = "brisanjewprogramibutton";
-            this.brisanjewprogramibutton.Size = new System.Drawing.Size(76, 42);
-            this.brisanjewprogramibutton.TabIndex = 30;
-            this.brisanjewprogramibutton.Text = "Workout programi";
-            this.brisanjewprogramibutton.UseVisualStyleBackColor = true;
-            this.brisanjewprogramibutton.Click += new System.EventHandler(this.brisanjewprogramibutton_Click);
+            this.b.Location = new System.Drawing.Point(113, 33);
+            this.b.Name = "b";
+            this.b.Size = new System.Drawing.Size(76, 42);
+            this.b.TabIndex = 28;
+            this.b.Text = "Izvjestaji";
+            this.b.UseVisualStyleBackColor = true;
+            this.b.Click += new System.EventHandler(this.b_Click);
             // 
-            // monthCalendar4
+            // brisanjeklijentibutton
             // 
-            this.monthCalendar4.Location = new System.Drawing.Point(388, 30);
-            this.monthCalendar4.Name = "monthCalendar4";
-            this.monthCalendar4.TabIndex = 5;
+            this.brisanjeklijentibutton.Location = new System.Drawing.Point(213, 33);
+            this.brisanjeklijentibutton.Name = "brisanjeklijentibutton";
+            this.brisanjeklijentibutton.Size = new System.Drawing.Size(76, 42);
+            this.brisanjeklijentibutton.TabIndex = 27;
+            this.brisanjeklijentibutton.Text = "Klijenti";
+            this.brisanjeklijentibutton.UseVisualStyleBackColor = true;
+            this.brisanjeklijentibutton.Click += new System.EventHandler(this.brisanjeklijentibutton_Click);
             // 
-            // brisanjeprethodnibutton
+            // brisanjeprostorijebutton
             // 
-            this.brisanjeprethodnibutton.Location = new System.Drawing.Point(388, 235);
-            this.brisanjeprethodnibutton.Name = "brisanjeprethodnibutton";
-            this.brisanjeprethodnibutton.Size = new System.Drawing.Size(84, 23);
-            this.brisanjeprethodnibutton.TabIndex = 6;
-            this.brisanjeprethodnibutton.Text = "Prethodni tab";
-            this.brisanjeprethodnibutton.UseVisualStyleBackColor = true;
-            this.brisanjeprethodnibutton.Click += new System.EventHandler(this.brisanjeprethodnibutton_Click);
+            this.brisanjeprostorijebutton.Location = new System.Drawing.Point(6, 129);
+            this.brisanjeprostorijebutton.Name = "brisanjeprostorijebutton";
+            this.brisanjeprostorijebutton.Size = new System.Drawing.Size(76, 42);
+            this.brisanjeprostorijebutton.TabIndex = 26;
+            this.brisanjeprostorijebutton.Text = "Prostorije";
+            this.brisanjeprostorijebutton.UseVisualStyleBackColor = true;
+            this.brisanjeprostorijebutton.Click += new System.EventHandler(this.brisanjeprostorijebutton_Click);
             // 
-            // brisanjesljedecibutton
+            // brisanjeopremabutton
             // 
-            this.brisanjesljedecibutton.Location = new System.Drawing.Point(503, 235);
-            this.brisanjesljedecibutton.Name = "brisanjesljedecibutton";
-            this.brisanjesljedecibutton.Size = new System.Drawing.Size(84, 23);
-            this.brisanjesljedecibutton.TabIndex = 7;
-            this.brisanjesljedecibutton.Text = "Sljedeci tab";
-            this.brisanjesljedecibutton.UseVisualStyleBackColor = true;
-            this.brisanjesljedecibutton.Click += new System.EventHandler(this.brisanjesljedecibutton_Click);
+            this.brisanjeopremabutton.Location = new System.Drawing.Point(6, 81);
+            this.brisanjeopremabutton.Name = "brisanjeopremabutton";
+            this.brisanjeopremabutton.Size = new System.Drawing.Size(76, 42);
+            this.brisanjeopremabutton.TabIndex = 25;
+            this.brisanjeopremabutton.Text = "Oprema";
+            this.brisanjeopremabutton.UseVisualStyleBackColor = true;
+            this.brisanjeopremabutton.Click += new System.EventHandler(this.brisanjeopremabutton_Click);
+            // 
+            // brisanjesuplementibutton
+            // 
+            this.brisanjesuplementibutton.Location = new System.Drawing.Point(213, 81);
+            this.brisanjesuplementibutton.Name = "brisanjesuplementibutton";
+            this.brisanjesuplementibutton.Size = new System.Drawing.Size(76, 42);
+            this.brisanjesuplementibutton.TabIndex = 24;
+            this.brisanjesuplementibutton.Text = "Suplementi";
+            this.brisanjesuplementibutton.UseVisualStyleBackColor = true;
+            this.brisanjesuplementibutton.Click += new System.EventHandler(this.brisanjesuplementibutton_Click);
+            // 
+            // brisanjespravebutton
+            // 
+            this.brisanjespravebutton.Location = new System.Drawing.Point(113, 81);
+            this.brisanjespravebutton.Name = "brisanjespravebutton";
+            this.brisanjespravebutton.Size = new System.Drawing.Size(76, 42);
+            this.brisanjespravebutton.TabIndex = 23;
+            this.brisanjespravebutton.Text = "Sprave";
+            this.brisanjespravebutton.UseVisualStyleBackColor = true;
+            this.brisanjespravebutton.Click += new System.EventHandler(this.brisanjespravebutton_Click);
+            // 
+            // brisanjeuposlenicibutton
+            // 
+            this.brisanjeuposlenicibutton.Location = new System.Drawing.Point(6, 33);
+            this.brisanjeuposlenicibutton.Name = "brisanjeuposlenicibutton";
+            this.brisanjeuposlenicibutton.Size = new System.Drawing.Size(76, 42);
+            this.brisanjeuposlenicibutton.TabIndex = 22;
+            this.brisanjeuposlenicibutton.Text = "Uposlenici";
+            this.brisanjeuposlenicibutton.UseVisualStyleBackColor = true;
+            this.brisanjeuposlenicibutton.Click += new System.EventHandler(this.brisanjeuposlenicibutton_Click);
             // 
             // azuriranjetab
             // 
@@ -258,6 +258,32 @@
             this.azuriranjetab.TabIndex = 2;
             this.azuriranjetab.Text = "Ažuriranje baze";
             this.azuriranjetab.UseVisualStyleBackColor = true;
+            // 
+            // azuriranjesljedecibutton
+            // 
+            this.azuriranjesljedecibutton.Location = new System.Drawing.Point(503, 235);
+            this.azuriranjesljedecibutton.Name = "azuriranjesljedecibutton";
+            this.azuriranjesljedecibutton.Size = new System.Drawing.Size(84, 23);
+            this.azuriranjesljedecibutton.TabIndex = 9;
+            this.azuriranjesljedecibutton.Text = "Sljedeci tab";
+            this.azuriranjesljedecibutton.UseVisualStyleBackColor = true;
+            this.azuriranjesljedecibutton.Click += new System.EventHandler(this.azuriranjesljedecibutton_Click);
+            // 
+            // azuriranjeprethodnibutton
+            // 
+            this.azuriranjeprethodnibutton.Location = new System.Drawing.Point(388, 235);
+            this.azuriranjeprethodnibutton.Name = "azuriranjeprethodnibutton";
+            this.azuriranjeprethodnibutton.Size = new System.Drawing.Size(84, 23);
+            this.azuriranjeprethodnibutton.TabIndex = 8;
+            this.azuriranjeprethodnibutton.Text = "Prethodni tab";
+            this.azuriranjeprethodnibutton.UseVisualStyleBackColor = true;
+            this.azuriranjeprethodnibutton.Click += new System.EventHandler(this.azuriranjeprethodnibutton_Click);
+            // 
+            // monthCalendar3
+            // 
+            this.monthCalendar3.Location = new System.Drawing.Point(388, 30);
+            this.monthCalendar3.Name = "monthCalendar3";
+            this.monthCalendar3.TabIndex = 4;
             // 
             // groupBox4
             // 
@@ -277,75 +303,15 @@
             this.groupBox4.TabStop = false;
             this.groupBox4.Text = "Ažuriranje baze";
             // 
-            // azuriranjeuposlenicibutton
+            // azuriranjewprogramibutton
             // 
-            this.azuriranjeuposlenicibutton.Location = new System.Drawing.Point(6, 33);
-            this.azuriranjeuposlenicibutton.Name = "azuriranjeuposlenicibutton";
-            this.azuriranjeuposlenicibutton.Size = new System.Drawing.Size(76, 42);
-            this.azuriranjeuposlenicibutton.TabIndex = 22;
-            this.azuriranjeuposlenicibutton.Text = "Uposlenici";
-            this.azuriranjeuposlenicibutton.UseVisualStyleBackColor = true;
-            this.azuriranjeuposlenicibutton.Click += new System.EventHandler(this.azuriranjeuposlenicibutton_Click);
-            // 
-            // azuriranjespravebutton
-            // 
-            this.azuriranjespravebutton.Location = new System.Drawing.Point(113, 81);
-            this.azuriranjespravebutton.Name = "azuriranjespravebutton";
-            this.azuriranjespravebutton.Size = new System.Drawing.Size(76, 42);
-            this.azuriranjespravebutton.TabIndex = 23;
-            this.azuriranjespravebutton.Text = "Sprave";
-            this.azuriranjespravebutton.UseVisualStyleBackColor = true;
-            this.azuriranjespravebutton.Click += new System.EventHandler(this.azuriranjespravebutton_Click);
-            // 
-            // azuriranjesuplementibutton
-            // 
-            this.azuriranjesuplementibutton.Location = new System.Drawing.Point(213, 81);
-            this.azuriranjesuplementibutton.Name = "azuriranjesuplementibutton";
-            this.azuriranjesuplementibutton.Size = new System.Drawing.Size(76, 42);
-            this.azuriranjesuplementibutton.TabIndex = 24;
-            this.azuriranjesuplementibutton.Text = "Suplementi";
-            this.azuriranjesuplementibutton.UseVisualStyleBackColor = true;
-            this.azuriranjesuplementibutton.Click += new System.EventHandler(this.azuriranjesuplementibutton_Click);
-            // 
-            // a
-            // 
-            this.a.Location = new System.Drawing.Point(6, 81);
-            this.a.Name = "a";
-            this.a.Size = new System.Drawing.Size(76, 42);
-            this.a.TabIndex = 25;
-            this.a.Text = "Oprema";
-            this.a.UseVisualStyleBackColor = true;
-            this.a.Click += new System.EventHandler(this.a_Click);
-            // 
-            // azuriranjeprostorijebutton
-            // 
-            this.azuriranjeprostorijebutton.Location = new System.Drawing.Point(6, 129);
-            this.azuriranjeprostorijebutton.Name = "azuriranjeprostorijebutton";
-            this.azuriranjeprostorijebutton.Size = new System.Drawing.Size(76, 42);
-            this.azuriranjeprostorijebutton.TabIndex = 26;
-            this.azuriranjeprostorijebutton.Text = "Prostorije";
-            this.azuriranjeprostorijebutton.UseVisualStyleBackColor = true;
-            this.azuriranjeprostorijebutton.Click += new System.EventHandler(this.azuriranjeprostorijebutton_Click);
-            // 
-            // azuriranjeklijentibutton
-            // 
-            this.azuriranjeklijentibutton.Location = new System.Drawing.Point(213, 33);
-            this.azuriranjeklijentibutton.Name = "azuriranjeklijentibutton";
-            this.azuriranjeklijentibutton.Size = new System.Drawing.Size(76, 42);
-            this.azuriranjeklijentibutton.TabIndex = 27;
-            this.azuriranjeklijentibutton.Text = "Klijenti";
-            this.azuriranjeklijentibutton.UseVisualStyleBackColor = true;
-            this.azuriranjeklijentibutton.Click += new System.EventHandler(this.azuriranjeklijentibutton_Click);
-            // 
-            // izjestajiazuriranjebutton
-            // 
-            this.izjestajiazuriranjebutton.Location = new System.Drawing.Point(113, 33);
-            this.izjestajiazuriranjebutton.Name = "izjestajiazuriranjebutton";
-            this.izjestajiazuriranjebutton.Size = new System.Drawing.Size(76, 42);
-            this.izjestajiazuriranjebutton.TabIndex = 28;
-            this.izjestajiazuriranjebutton.Text = "Izvjestaji";
-            this.izjestajiazuriranjebutton.UseVisualStyleBackColor = true;
-            this.izjestajiazuriranjebutton.Click += new System.EventHandler(this.izjestajiazuriranjebutton_Click);
+            this.azuriranjewprogramibutton.Location = new System.Drawing.Point(213, 129);
+            this.azuriranjewprogramibutton.Name = "azuriranjewprogramibutton";
+            this.azuriranjewprogramibutton.Size = new System.Drawing.Size(76, 42);
+            this.azuriranjewprogramibutton.TabIndex = 30;
+            this.azuriranjewprogramibutton.Text = "Workout programi";
+            this.azuriranjewprogramibutton.UseVisualStyleBackColor = true;
+            this.azuriranjewprogramibutton.Click += new System.EventHandler(this.azuriranjewprogramibutton_Click);
             // 
             // azuriranjepprogramibutton
             // 
@@ -357,41 +323,75 @@
             this.azuriranjepprogramibutton.UseVisualStyleBackColor = true;
             this.azuriranjepprogramibutton.Click += new System.EventHandler(this.azuriranjepprogramibutton_Click);
             // 
-            // azuriranjewprogramibutton
+            // izjestajiazuriranjebutton
             // 
-            this.azuriranjewprogramibutton.Location = new System.Drawing.Point(213, 129);
-            this.azuriranjewprogramibutton.Name = "azuriranjewprogramibutton";
-            this.azuriranjewprogramibutton.Size = new System.Drawing.Size(76, 42);
-            this.azuriranjewprogramibutton.TabIndex = 30;
-            this.azuriranjewprogramibutton.Text = "Workout programi";
-            this.azuriranjewprogramibutton.UseVisualStyleBackColor = true;
-            this.azuriranjewprogramibutton.Click += new System.EventHandler(this.azuriranjewprogramibutton_Click);
+            this.izjestajiazuriranjebutton.Location = new System.Drawing.Point(113, 33);
+            this.izjestajiazuriranjebutton.Name = "izjestajiazuriranjebutton";
+            this.izjestajiazuriranjebutton.Size = new System.Drawing.Size(76, 42);
+            this.izjestajiazuriranjebutton.TabIndex = 28;
+            this.izjestajiazuriranjebutton.Text = "Izvjestaji";
+            this.izjestajiazuriranjebutton.UseVisualStyleBackColor = true;
+            this.izjestajiazuriranjebutton.Click += new System.EventHandler(this.izjestajiazuriranjebutton_Click);
             // 
-            // monthCalendar3
+            // azuriranjeklijentibutton
             // 
-            this.monthCalendar3.Location = new System.Drawing.Point(388, 30);
-            this.monthCalendar3.Name = "monthCalendar3";
-            this.monthCalendar3.TabIndex = 4;
+            this.azuriranjeklijentibutton.Location = new System.Drawing.Point(213, 33);
+            this.azuriranjeklijentibutton.Name = "azuriranjeklijentibutton";
+            this.azuriranjeklijentibutton.Size = new System.Drawing.Size(76, 42);
+            this.azuriranjeklijentibutton.TabIndex = 27;
+            this.azuriranjeklijentibutton.Text = "Klijenti";
+            this.azuriranjeklijentibutton.UseVisualStyleBackColor = true;
+            this.azuriranjeklijentibutton.Click += new System.EventHandler(this.azuriranjeklijentibutton_Click);
             // 
-            // azuriranjeprethodnibutton
+            // azuriranjeprostorijebutton
             // 
-            this.azuriranjeprethodnibutton.Location = new System.Drawing.Point(388, 235);
-            this.azuriranjeprethodnibutton.Name = "azuriranjeprethodnibutton";
-            this.azuriranjeprethodnibutton.Size = new System.Drawing.Size(84, 23);
-            this.azuriranjeprethodnibutton.TabIndex = 8;
-            this.azuriranjeprethodnibutton.Text = "Prethodni tab";
-            this.azuriranjeprethodnibutton.UseVisualStyleBackColor = true;
-            this.azuriranjeprethodnibutton.Click += new System.EventHandler(this.azuriranjeprethodnibutton_Click);
+            this.azuriranjeprostorijebutton.Location = new System.Drawing.Point(6, 129);
+            this.azuriranjeprostorijebutton.Name = "azuriranjeprostorijebutton";
+            this.azuriranjeprostorijebutton.Size = new System.Drawing.Size(76, 42);
+            this.azuriranjeprostorijebutton.TabIndex = 26;
+            this.azuriranjeprostorijebutton.Text = "Prostorije";
+            this.azuriranjeprostorijebutton.UseVisualStyleBackColor = true;
+            this.azuriranjeprostorijebutton.Click += new System.EventHandler(this.azuriranjeprostorijebutton_Click);
             // 
-            // azuriranjesljedecibutton
+            // a
             // 
-            this.azuriranjesljedecibutton.Location = new System.Drawing.Point(503, 235);
-            this.azuriranjesljedecibutton.Name = "azuriranjesljedecibutton";
-            this.azuriranjesljedecibutton.Size = new System.Drawing.Size(84, 23);
-            this.azuriranjesljedecibutton.TabIndex = 9;
-            this.azuriranjesljedecibutton.Text = "Sljedeci tab";
-            this.azuriranjesljedecibutton.UseVisualStyleBackColor = true;
-            this.azuriranjesljedecibutton.Click += new System.EventHandler(this.azuriranjesljedecibutton_Click);
+            this.a.Location = new System.Drawing.Point(6, 81);
+            this.a.Name = "a";
+            this.a.Size = new System.Drawing.Size(76, 42);
+            this.a.TabIndex = 25;
+            this.a.Text = "Oprema";
+            this.a.UseVisualStyleBackColor = true;
+            this.a.Click += new System.EventHandler(this.a_Click);
+            // 
+            // azuriranjesuplementibutton
+            // 
+            this.azuriranjesuplementibutton.Location = new System.Drawing.Point(213, 81);
+            this.azuriranjesuplementibutton.Name = "azuriranjesuplementibutton";
+            this.azuriranjesuplementibutton.Size = new System.Drawing.Size(76, 42);
+            this.azuriranjesuplementibutton.TabIndex = 24;
+            this.azuriranjesuplementibutton.Text = "Suplementi";
+            this.azuriranjesuplementibutton.UseVisualStyleBackColor = true;
+            this.azuriranjesuplementibutton.Click += new System.EventHandler(this.azuriranjesuplementibutton_Click);
+            // 
+            // azuriranjespravebutton
+            // 
+            this.azuriranjespravebutton.Location = new System.Drawing.Point(113, 81);
+            this.azuriranjespravebutton.Name = "azuriranjespravebutton";
+            this.azuriranjespravebutton.Size = new System.Drawing.Size(76, 42);
+            this.azuriranjespravebutton.TabIndex = 23;
+            this.azuriranjespravebutton.Text = "Sprave";
+            this.azuriranjespravebutton.UseVisualStyleBackColor = true;
+            this.azuriranjespravebutton.Click += new System.EventHandler(this.azuriranjespravebutton_Click);
+            // 
+            // azuriranjeuposlenicibutton
+            // 
+            this.azuriranjeuposlenicibutton.Location = new System.Drawing.Point(6, 33);
+            this.azuriranjeuposlenicibutton.Name = "azuriranjeuposlenicibutton";
+            this.azuriranjeuposlenicibutton.Size = new System.Drawing.Size(76, 42);
+            this.azuriranjeuposlenicibutton.TabIndex = 22;
+            this.azuriranjeuposlenicibutton.Text = "Uposlenici";
+            this.azuriranjeuposlenicibutton.UseVisualStyleBackColor = true;
+            this.azuriranjeuposlenicibutton.Click += new System.EventHandler(this.azuriranjeuposlenicibutton_Click);
             // 
             // unostab
             // 
@@ -406,6 +406,32 @@
             this.unostab.TabIndex = 1;
             this.unostab.Text = "Unos u bazu";
             this.unostab.UseVisualStyleBackColor = true;
+            // 
+            // unossljedecitab
+            // 
+            this.unossljedecitab.Location = new System.Drawing.Point(503, 235);
+            this.unossljedecitab.Name = "unossljedecitab";
+            this.unossljedecitab.Size = new System.Drawing.Size(84, 23);
+            this.unossljedecitab.TabIndex = 9;
+            this.unossljedecitab.Text = "Sljedeci tab";
+            this.unossljedecitab.UseVisualStyleBackColor = true;
+            this.unossljedecitab.Click += new System.EventHandler(this.unossljedecitab_Click);
+            // 
+            // unosprethodnibutton
+            // 
+            this.unosprethodnibutton.Location = new System.Drawing.Point(388, 235);
+            this.unosprethodnibutton.Name = "unosprethodnibutton";
+            this.unosprethodnibutton.Size = new System.Drawing.Size(84, 23);
+            this.unosprethodnibutton.TabIndex = 8;
+            this.unosprethodnibutton.Text = "Prethodni tab";
+            this.unosprethodnibutton.UseVisualStyleBackColor = true;
+            this.unosprethodnibutton.Click += new System.EventHandler(this.unosprethodnibutton_Click);
+            // 
+            // monthCalendar2
+            // 
+            this.monthCalendar2.Location = new System.Drawing.Point(388, 30);
+            this.monthCalendar2.Name = "monthCalendar2";
+            this.monthCalendar2.TabIndex = 3;
             // 
             // groupBox2
             // 
@@ -425,75 +451,15 @@
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Unos u bazu";
             // 
-            // unosuposlenicibutton
+            // unoswprogramibutton
             // 
-            this.unosuposlenicibutton.Location = new System.Drawing.Point(6, 33);
-            this.unosuposlenicibutton.Name = "unosuposlenicibutton";
-            this.unosuposlenicibutton.Size = new System.Drawing.Size(76, 42);
-            this.unosuposlenicibutton.TabIndex = 13;
-            this.unosuposlenicibutton.Text = "Uposlenici";
-            this.unosuposlenicibutton.UseVisualStyleBackColor = true;
-            this.unosuposlenicibutton.Click += new System.EventHandler(this.unosuposlenicibutton_Click);
-            // 
-            // unosspavebutton
-            // 
-            this.unosspavebutton.Location = new System.Drawing.Point(113, 81);
-            this.unosspavebutton.Name = "unosspavebutton";
-            this.unosspavebutton.Size = new System.Drawing.Size(76, 42);
-            this.unosspavebutton.TabIndex = 14;
-            this.unosspavebutton.Text = "Sprave";
-            this.unosspavebutton.UseVisualStyleBackColor = true;
-            this.unosspavebutton.Click += new System.EventHandler(this.unosspavebutton_Click);
-            // 
-            // unossuplementibutton
-            // 
-            this.unossuplementibutton.Location = new System.Drawing.Point(213, 81);
-            this.unossuplementibutton.Name = "unossuplementibutton";
-            this.unossuplementibutton.Size = new System.Drawing.Size(76, 42);
-            this.unossuplementibutton.TabIndex = 15;
-            this.unossuplementibutton.Text = "Suplementi";
-            this.unossuplementibutton.UseVisualStyleBackColor = true;
-            this.unossuplementibutton.Click += new System.EventHandler(this.unossuplementibutton_Click);
-            // 
-            // unosopremabutton
-            // 
-            this.unosopremabutton.Location = new System.Drawing.Point(6, 81);
-            this.unosopremabutton.Name = "unosopremabutton";
-            this.unosopremabutton.Size = new System.Drawing.Size(76, 42);
-            this.unosopremabutton.TabIndex = 16;
-            this.unosopremabutton.Text = "Oprema";
-            this.unosopremabutton.UseVisualStyleBackColor = true;
-            this.unosopremabutton.Click += new System.EventHandler(this.unosopremabutton_Click);
-            // 
-            // unosprostorijebutton
-            // 
-            this.unosprostorijebutton.Location = new System.Drawing.Point(6, 129);
-            this.unosprostorijebutton.Name = "unosprostorijebutton";
-            this.unosprostorijebutton.Size = new System.Drawing.Size(76, 42);
-            this.unosprostorijebutton.TabIndex = 17;
-            this.unosprostorijebutton.Text = "Prostorije";
-            this.unosprostorijebutton.UseVisualStyleBackColor = true;
-            this.unosprostorijebutton.Click += new System.EventHandler(this.unosprostorijebutton_Click);
-            // 
-            // unosklijentibutton
-            // 
-            this.unosklijentibutton.Location = new System.Drawing.Point(213, 33);
-            this.unosklijentibutton.Name = "unosklijentibutton";
-            this.unosklijentibutton.Size = new System.Drawing.Size(76, 42);
-            this.unosklijentibutton.TabIndex = 18;
-            this.unosklijentibutton.Text = "Klijenti";
-            this.unosklijentibutton.UseVisualStyleBackColor = true;
-            this.unosklijentibutton.Click += new System.EventHandler(this.unosklijentibutton_Click);
-            // 
-            // unosizvjestajibutton
-            // 
-            this.unosizvjestajibutton.Location = new System.Drawing.Point(113, 33);
-            this.unosizvjestajibutton.Name = "unosizvjestajibutton";
-            this.unosizvjestajibutton.Size = new System.Drawing.Size(76, 42);
-            this.unosizvjestajibutton.TabIndex = 19;
-            this.unosizvjestajibutton.Text = "Izvjestaji";
-            this.unosizvjestajibutton.UseVisualStyleBackColor = true;
-            this.unosizvjestajibutton.Click += new System.EventHandler(this.unosizvjestajibutton_Click);
+            this.unoswprogramibutton.Location = new System.Drawing.Point(213, 129);
+            this.unoswprogramibutton.Name = "unoswprogramibutton";
+            this.unoswprogramibutton.Size = new System.Drawing.Size(76, 42);
+            this.unoswprogramibutton.TabIndex = 21;
+            this.unoswprogramibutton.Text = "Workout programi";
+            this.unoswprogramibutton.UseVisualStyleBackColor = true;
+            this.unoswprogramibutton.Click += new System.EventHandler(this.unoswprogramibutton_Click);
             // 
             // unospprogramibutton
             // 
@@ -505,41 +471,75 @@
             this.unospprogramibutton.UseVisualStyleBackColor = true;
             this.unospprogramibutton.Click += new System.EventHandler(this.unospprogramibutton_Click);
             // 
-            // unoswprogramibutton
+            // unosizvjestajibutton
             // 
-            this.unoswprogramibutton.Location = new System.Drawing.Point(213, 129);
-            this.unoswprogramibutton.Name = "unoswprogramibutton";
-            this.unoswprogramibutton.Size = new System.Drawing.Size(76, 42);
-            this.unoswprogramibutton.TabIndex = 21;
-            this.unoswprogramibutton.Text = "Workout programi";
-            this.unoswprogramibutton.UseVisualStyleBackColor = true;
-            this.unoswprogramibutton.Click += new System.EventHandler(this.unoswprogramibutton_Click);
+            this.unosizvjestajibutton.Location = new System.Drawing.Point(113, 33);
+            this.unosizvjestajibutton.Name = "unosizvjestajibutton";
+            this.unosizvjestajibutton.Size = new System.Drawing.Size(76, 42);
+            this.unosizvjestajibutton.TabIndex = 19;
+            this.unosizvjestajibutton.Text = "Izvjestaji";
+            this.unosizvjestajibutton.UseVisualStyleBackColor = true;
+            this.unosizvjestajibutton.Click += new System.EventHandler(this.unosizvjestajibutton_Click);
             // 
-            // monthCalendar2
+            // unosklijentibutton
             // 
-            this.monthCalendar2.Location = new System.Drawing.Point(388, 30);
-            this.monthCalendar2.Name = "monthCalendar2";
-            this.monthCalendar2.TabIndex = 3;
+            this.unosklijentibutton.Location = new System.Drawing.Point(213, 33);
+            this.unosklijentibutton.Name = "unosklijentibutton";
+            this.unosklijentibutton.Size = new System.Drawing.Size(76, 42);
+            this.unosklijentibutton.TabIndex = 18;
+            this.unosklijentibutton.Text = "Klijenti";
+            this.unosklijentibutton.UseVisualStyleBackColor = true;
+            this.unosklijentibutton.Click += new System.EventHandler(this.unosklijentibutton_Click);
             // 
-            // unosprethodnibutton
+            // unosprostorijebutton
             // 
-            this.unosprethodnibutton.Location = new System.Drawing.Point(388, 235);
-            this.unosprethodnibutton.Name = "unosprethodnibutton";
-            this.unosprethodnibutton.Size = new System.Drawing.Size(84, 23);
-            this.unosprethodnibutton.TabIndex = 8;
-            this.unosprethodnibutton.Text = "Prethodni tab";
-            this.unosprethodnibutton.UseVisualStyleBackColor = true;
-            this.unosprethodnibutton.Click += new System.EventHandler(this.unosprethodnibutton_Click);
+            this.unosprostorijebutton.Location = new System.Drawing.Point(6, 129);
+            this.unosprostorijebutton.Name = "unosprostorijebutton";
+            this.unosprostorijebutton.Size = new System.Drawing.Size(76, 42);
+            this.unosprostorijebutton.TabIndex = 17;
+            this.unosprostorijebutton.Text = "Prostorije";
+            this.unosprostorijebutton.UseVisualStyleBackColor = true;
+            this.unosprostorijebutton.Click += new System.EventHandler(this.unosprostorijebutton_Click);
             // 
-            // unossljedecitab
+            // unosopremabutton
             // 
-            this.unossljedecitab.Location = new System.Drawing.Point(503, 235);
-            this.unossljedecitab.Name = "unossljedecitab";
-            this.unossljedecitab.Size = new System.Drawing.Size(84, 23);
-            this.unossljedecitab.TabIndex = 9;
-            this.unossljedecitab.Text = "Sljedeci tab";
-            this.unossljedecitab.UseVisualStyleBackColor = true;
-            this.unossljedecitab.Click += new System.EventHandler(this.unossljedecitab_Click);
+            this.unosopremabutton.Location = new System.Drawing.Point(6, 81);
+            this.unosopremabutton.Name = "unosopremabutton";
+            this.unosopremabutton.Size = new System.Drawing.Size(76, 42);
+            this.unosopremabutton.TabIndex = 16;
+            this.unosopremabutton.Text = "Oprema";
+            this.unosopremabutton.UseVisualStyleBackColor = true;
+            this.unosopremabutton.Click += new System.EventHandler(this.unosopremabutton_Click);
+            // 
+            // unossuplementibutton
+            // 
+            this.unossuplementibutton.Location = new System.Drawing.Point(213, 81);
+            this.unossuplementibutton.Name = "unossuplementibutton";
+            this.unossuplementibutton.Size = new System.Drawing.Size(76, 42);
+            this.unossuplementibutton.TabIndex = 15;
+            this.unossuplementibutton.Text = "Suplementi";
+            this.unossuplementibutton.UseVisualStyleBackColor = true;
+            this.unossuplementibutton.Click += new System.EventHandler(this.unossuplementibutton_Click);
+            // 
+            // unosspavebutton
+            // 
+            this.unosspavebutton.Location = new System.Drawing.Point(113, 81);
+            this.unosspavebutton.Name = "unosspavebutton";
+            this.unosspavebutton.Size = new System.Drawing.Size(76, 42);
+            this.unosspavebutton.TabIndex = 14;
+            this.unosspavebutton.Text = "Sprave";
+            this.unosspavebutton.UseVisualStyleBackColor = true;
+            this.unosspavebutton.Click += new System.EventHandler(this.unosspavebutton_Click);
+            // 
+            // unosuposlenicibutton
+            // 
+            this.unosuposlenicibutton.Location = new System.Drawing.Point(6, 33);
+            this.unosuposlenicibutton.Name = "unosuposlenicibutton";
+            this.unosuposlenicibutton.Size = new System.Drawing.Size(76, 42);
+            this.unosuposlenicibutton.TabIndex = 13;
+            this.unosuposlenicibutton.Text = "Uposlenici";
+            this.unosuposlenicibutton.UseVisualStyleBackColor = true;
+            this.unosuposlenicibutton.Click += new System.EventHandler(this.unosuposlenicibutton_Click);
             // 
             // pregledtab
             // 
@@ -554,6 +554,32 @@
             this.pregledtab.TabIndex = 0;
             this.pregledtab.Text = "Pregled baze";
             this.pregledtab.UseVisualStyleBackColor = true;
+            // 
+            // pregledsljedecibutton
+            // 
+            this.pregledsljedecibutton.Location = new System.Drawing.Point(503, 235);
+            this.pregledsljedecibutton.Name = "pregledsljedecibutton";
+            this.pregledsljedecibutton.Size = new System.Drawing.Size(84, 23);
+            this.pregledsljedecibutton.TabIndex = 9;
+            this.pregledsljedecibutton.Text = "Sljedeci tab";
+            this.pregledsljedecibutton.UseVisualStyleBackColor = true;
+            this.pregledsljedecibutton.Click += new System.EventHandler(this.pregledsljedecibutton_Click);
+            // 
+            // pregledprethodnibutton
+            // 
+            this.pregledprethodnibutton.Enabled = false;
+            this.pregledprethodnibutton.Location = new System.Drawing.Point(388, 235);
+            this.pregledprethodnibutton.Name = "pregledprethodnibutton";
+            this.pregledprethodnibutton.Size = new System.Drawing.Size(84, 23);
+            this.pregledprethodnibutton.TabIndex = 8;
+            this.pregledprethodnibutton.Text = "Prethodni tab";
+            this.pregledprethodnibutton.UseVisualStyleBackColor = true;
+            // 
+            // monthCalendar1
+            // 
+            this.monthCalendar1.Location = new System.Drawing.Point(388, 30);
+            this.monthCalendar1.Name = "monthCalendar1";
+            this.monthCalendar1.TabIndex = 2;
             // 
             // groupBox1
             // 
@@ -573,75 +599,15 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Pregled baze";
             // 
-            // pregledunosbutton
+            // pregledwprogramibutton
             // 
-            this.pregledunosbutton.Location = new System.Drawing.Point(6, 33);
-            this.pregledunosbutton.Name = "pregledunosbutton";
-            this.pregledunosbutton.Size = new System.Drawing.Size(76, 42);
-            this.pregledunosbutton.TabIndex = 4;
-            this.pregledunosbutton.Text = "Uposlenici";
-            this.pregledunosbutton.UseVisualStyleBackColor = true;
-            this.pregledunosbutton.Click += new System.EventHandler(this.pregledunosbutton_Click);
-            // 
-            // pregledspravebutton
-            // 
-            this.pregledspravebutton.Location = new System.Drawing.Point(113, 81);
-            this.pregledspravebutton.Name = "pregledspravebutton";
-            this.pregledspravebutton.Size = new System.Drawing.Size(76, 42);
-            this.pregledspravebutton.TabIndex = 5;
-            this.pregledspravebutton.Text = "Sprave";
-            this.pregledspravebutton.UseVisualStyleBackColor = true;
-            this.pregledspravebutton.Click += new System.EventHandler(this.pregledspravebutton_Click);
-            // 
-            // pregledsuplementibutton
-            // 
-            this.pregledsuplementibutton.Location = new System.Drawing.Point(213, 81);
-            this.pregledsuplementibutton.Name = "pregledsuplementibutton";
-            this.pregledsuplementibutton.Size = new System.Drawing.Size(76, 42);
-            this.pregledsuplementibutton.TabIndex = 6;
-            this.pregledsuplementibutton.Text = "Suplementi";
-            this.pregledsuplementibutton.UseVisualStyleBackColor = true;
-            this.pregledsuplementibutton.Click += new System.EventHandler(this.pregledsuplementibutton_Click);
-            // 
-            // pregledopremabutton
-            // 
-            this.pregledopremabutton.Location = new System.Drawing.Point(6, 81);
-            this.pregledopremabutton.Name = "pregledopremabutton";
-            this.pregledopremabutton.Size = new System.Drawing.Size(76, 42);
-            this.pregledopremabutton.TabIndex = 7;
-            this.pregledopremabutton.Text = "Oprema";
-            this.pregledopremabutton.UseVisualStyleBackColor = true;
-            this.pregledopremabutton.Click += new System.EventHandler(this.pregledopremabutton_Click);
-            // 
-            // pregledprostorijebutton
-            // 
-            this.pregledprostorijebutton.Location = new System.Drawing.Point(6, 129);
-            this.pregledprostorijebutton.Name = "pregledprostorijebutton";
-            this.pregledprostorijebutton.Size = new System.Drawing.Size(76, 42);
-            this.pregledprostorijebutton.TabIndex = 8;
-            this.pregledprostorijebutton.Text = "Prostorije";
-            this.pregledprostorijebutton.UseVisualStyleBackColor = true;
-            this.pregledprostorijebutton.Click += new System.EventHandler(this.pregledprostorijebutton_Click);
-            // 
-            // pregledklijentibutton
-            // 
-            this.pregledklijentibutton.Location = new System.Drawing.Point(213, 33);
-            this.pregledklijentibutton.Name = "pregledklijentibutton";
-            this.pregledklijentibutton.Size = new System.Drawing.Size(76, 42);
-            this.pregledklijentibutton.TabIndex = 9;
-            this.pregledklijentibutton.Text = "Klijenti";
-            this.pregledklijentibutton.UseVisualStyleBackColor = true;
-            this.pregledklijentibutton.Click += new System.EventHandler(this.pregledklijentibutton_Click);
-            // 
-            // pregledizvjestajibutton
-            // 
-            this.pregledizvjestajibutton.Location = new System.Drawing.Point(113, 33);
-            this.pregledizvjestajibutton.Name = "pregledizvjestajibutton";
-            this.pregledizvjestajibutton.Size = new System.Drawing.Size(76, 42);
-            this.pregledizvjestajibutton.TabIndex = 10;
-            this.pregledizvjestajibutton.Text = "Izvjestaji";
-            this.pregledizvjestajibutton.UseVisualStyleBackColor = true;
-            this.pregledizvjestajibutton.Click += new System.EventHandler(this.pregledizvjestajibutton_Click);
+            this.pregledwprogramibutton.Location = new System.Drawing.Point(213, 129);
+            this.pregledwprogramibutton.Name = "pregledwprogramibutton";
+            this.pregledwprogramibutton.Size = new System.Drawing.Size(76, 42);
+            this.pregledwprogramibutton.TabIndex = 12;
+            this.pregledwprogramibutton.Text = "Workout programi";
+            this.pregledwprogramibutton.UseVisualStyleBackColor = true;
+            this.pregledwprogramibutton.Click += new System.EventHandler(this.pregledwprogramibutton_Click);
             // 
             // pregledpprogramibutton
             // 
@@ -653,41 +619,75 @@
             this.pregledpprogramibutton.UseVisualStyleBackColor = true;
             this.pregledpprogramibutton.Click += new System.EventHandler(this.pregledpprogramibutton_Click);
             // 
-            // pregledwprogramibutton
+            // pregledizvjestajibutton
             // 
-            this.pregledwprogramibutton.Location = new System.Drawing.Point(213, 129);
-            this.pregledwprogramibutton.Name = "pregledwprogramibutton";
-            this.pregledwprogramibutton.Size = new System.Drawing.Size(76, 42);
-            this.pregledwprogramibutton.TabIndex = 12;
-            this.pregledwprogramibutton.Text = "Workout programi";
-            this.pregledwprogramibutton.UseVisualStyleBackColor = true;
-            this.pregledwprogramibutton.Click += new System.EventHandler(this.pregledwprogramibutton_Click);
+            this.pregledizvjestajibutton.Location = new System.Drawing.Point(113, 33);
+            this.pregledizvjestajibutton.Name = "pregledizvjestajibutton";
+            this.pregledizvjestajibutton.Size = new System.Drawing.Size(76, 42);
+            this.pregledizvjestajibutton.TabIndex = 10;
+            this.pregledizvjestajibutton.Text = "Izvjestaji";
+            this.pregledizvjestajibutton.UseVisualStyleBackColor = true;
+            this.pregledizvjestajibutton.Click += new System.EventHandler(this.pregledizvjestajibutton_Click);
             // 
-            // monthCalendar1
+            // pregledklijentibutton
             // 
-            this.monthCalendar1.Location = new System.Drawing.Point(388, 30);
-            this.monthCalendar1.Name = "monthCalendar1";
-            this.monthCalendar1.TabIndex = 2;
+            this.pregledklijentibutton.Location = new System.Drawing.Point(213, 33);
+            this.pregledklijentibutton.Name = "pregledklijentibutton";
+            this.pregledklijentibutton.Size = new System.Drawing.Size(76, 42);
+            this.pregledklijentibutton.TabIndex = 9;
+            this.pregledklijentibutton.Text = "Klijenti";
+            this.pregledklijentibutton.UseVisualStyleBackColor = true;
+            this.pregledklijentibutton.Click += new System.EventHandler(this.pregledklijentibutton_Click);
             // 
-            // pregledprethodnibutton
+            // pregledprostorijebutton
             // 
-            this.pregledprethodnibutton.Enabled = false;
-            this.pregledprethodnibutton.Location = new System.Drawing.Point(388, 235);
-            this.pregledprethodnibutton.Name = "pregledprethodnibutton";
-            this.pregledprethodnibutton.Size = new System.Drawing.Size(84, 23);
-            this.pregledprethodnibutton.TabIndex = 8;
-            this.pregledprethodnibutton.Text = "Prethodni tab";
-            this.pregledprethodnibutton.UseVisualStyleBackColor = true;
+            this.pregledprostorijebutton.Location = new System.Drawing.Point(6, 129);
+            this.pregledprostorijebutton.Name = "pregledprostorijebutton";
+            this.pregledprostorijebutton.Size = new System.Drawing.Size(76, 42);
+            this.pregledprostorijebutton.TabIndex = 8;
+            this.pregledprostorijebutton.Text = "Prostorije";
+            this.pregledprostorijebutton.UseVisualStyleBackColor = true;
+            this.pregledprostorijebutton.Click += new System.EventHandler(this.pregledprostorijebutton_Click);
             // 
-            // pregledsljedecibutton
+            // pregledopremabutton
             // 
-            this.pregledsljedecibutton.Location = new System.Drawing.Point(503, 235);
-            this.pregledsljedecibutton.Name = "pregledsljedecibutton";
-            this.pregledsljedecibutton.Size = new System.Drawing.Size(84, 23);
-            this.pregledsljedecibutton.TabIndex = 9;
-            this.pregledsljedecibutton.Text = "Sljedeci tab";
-            this.pregledsljedecibutton.UseVisualStyleBackColor = true;
-            this.pregledsljedecibutton.Click += new System.EventHandler(this.pregledsljedecibutton_Click);
+            this.pregledopremabutton.Location = new System.Drawing.Point(6, 81);
+            this.pregledopremabutton.Name = "pregledopremabutton";
+            this.pregledopremabutton.Size = new System.Drawing.Size(76, 42);
+            this.pregledopremabutton.TabIndex = 7;
+            this.pregledopremabutton.Text = "Oprema";
+            this.pregledopremabutton.UseVisualStyleBackColor = true;
+            this.pregledopremabutton.Click += new System.EventHandler(this.pregledopremabutton_Click);
+            // 
+            // pregledsuplementibutton
+            // 
+            this.pregledsuplementibutton.Location = new System.Drawing.Point(213, 81);
+            this.pregledsuplementibutton.Name = "pregledsuplementibutton";
+            this.pregledsuplementibutton.Size = new System.Drawing.Size(76, 42);
+            this.pregledsuplementibutton.TabIndex = 6;
+            this.pregledsuplementibutton.Text = "Suplementi";
+            this.pregledsuplementibutton.UseVisualStyleBackColor = true;
+            this.pregledsuplementibutton.Click += new System.EventHandler(this.pregledsuplementibutton_Click);
+            // 
+            // pregledspravebutton
+            // 
+            this.pregledspravebutton.Location = new System.Drawing.Point(113, 81);
+            this.pregledspravebutton.Name = "pregledspravebutton";
+            this.pregledspravebutton.Size = new System.Drawing.Size(76, 42);
+            this.pregledspravebutton.TabIndex = 5;
+            this.pregledspravebutton.Text = "Sprave";
+            this.pregledspravebutton.UseVisualStyleBackColor = true;
+            this.pregledspravebutton.Click += new System.EventHandler(this.pregledspravebutton_Click);
+            // 
+            // pregledunosbutton
+            // 
+            this.pregledunosbutton.Location = new System.Drawing.Point(6, 33);
+            this.pregledunosbutton.Name = "pregledunosbutton";
+            this.pregledunosbutton.Size = new System.Drawing.Size(76, 42);
+            this.pregledunosbutton.TabIndex = 4;
+            this.pregledunosbutton.Text = "Uposlenici";
+            this.pregledunosbutton.UseVisualStyleBackColor = true;
+            this.pregledunosbutton.Click += new System.EventHandler(this.pregledunosbutton_Click);
             // 
             // Admintabcontrol
             // 

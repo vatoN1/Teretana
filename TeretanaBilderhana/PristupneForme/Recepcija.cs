@@ -101,6 +101,20 @@ namespace TeretanaBilderhana.PristupneForme
            
         }
 
+        private void toolStripButton5_Click(object sender, EventArgs e)
+        {
+            br++;
+            Bitmap myBitmap;
+            if (br % 2 == 1)
+                myBitmap = new Bitmap(@"C:\Users\Emir\Desktop\asd.jpg");
+            else
+                myBitmap = new Bitmap(@"C:\Users\Emir\Desktop\Screenshot_2.png");
+            Graphics g = Graphics.FromImage(myBitmap);
+            this.BackgroundImage = myBitmap;
+            Point p = new Point(0, 0);
+            g.DrawImage(myBitmap, p);
+        }
+
        
     }
 }

@@ -163,10 +163,6 @@ namespace TeretanaBilderhana.PristupneForme
             Admintabcontrol.SelectedTab = azuriranjetab;
         }
 
-        private void brisanjesljedecibutton_Click(object sender, EventArgs e)
-        {
-            Admintabcontrol.SelectedTab = uplateisplatetab;
-        }
 
         private void uplateprethodnibutton_Click(object sender, EventArgs e)
         {
