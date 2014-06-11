@@ -173,6 +173,7 @@ namespace TeretanaBilderhana.Klijenti
             catch (System.Exception ex)
             {
                 MessageBox.Show(Convert.ToString(ex));
+                d.terminirajKonekciju();
                 return false;
             }
 
@@ -259,7 +260,9 @@ namespace TeretanaBilderhana.Klijenti
                 kontakttb.Text = Klijent.Kontakt;
                 visina_numeric.Value = Klijent.Visina;
                 tezina_numeric.Value = Klijent.Tezina;
-                bodymass_numeric.Value = Klijent.Visina - Klijent.Tezina;
+                if (Convert.ToString(Klijent.Spol) == "Musko")
+                    bodymass_numeric.Value = Klijent.Visina - 100;
+                else bodymass_numeric.Value = Klijent.Visina - 110;
                 trenerID_masked_box.Text = Convert.ToString(Klijent.IDtrenera);
                 nutricionistaID_masked_box.Text = Convert.ToString(Klijent.IDnutricioniste);
                 d.terminirajKonekciju();

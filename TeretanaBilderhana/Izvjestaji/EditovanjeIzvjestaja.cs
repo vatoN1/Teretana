@@ -96,6 +96,7 @@ namespace TeretanaBilderhana.Izvjestaji
             catch (System.Exception ex)
             {
                 MessageBox.Show(Convert.ToString(ex));
+                d.terminirajKonekciju();
                 return false;
             }
 
@@ -117,6 +118,7 @@ namespace TeretanaBilderhana.Izvjestaji
                 catch (System.Exception ex)
                 {
                     MessageBox.Show(Convert.ToString(ex));
+                    d.terminirajKonekciju();
                     return false;
                 }
                 d.terminirajKonekciju();

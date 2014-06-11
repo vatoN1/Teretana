@@ -88,6 +88,7 @@ namespace TeretanaBilderhana.Suplementi
             catch (System.Exception ex)
             {
                 MessageBox.Show(Convert.ToString(ex));
+                d.terminirajKonekciju();
                 return false;
             }
 

@@ -37,8 +37,8 @@ namespace TeretanaBilderhana.Sprave
             }
             catch (System.Exception ex)
             {
-                d.terminirajKonekciju();
                 MessageBox.Show(Convert.ToString(ex));
+                d.terminirajKonekciju();
                 return false;
             }
 
@@ -54,7 +54,7 @@ namespace TeretanaBilderhana.Sprave
                 DAL.DAL d = DAL.DAL.Instanca;
                 d.kreirajKonekciju("localhost", "Teretana", "root", "");
                 DAL.DAL.SpravaDAO c = d.getDAO.getSpravaDAO();
-
+                
                 Sprava Sprava = c.getById(Convert.ToInt32(spravaID_masked_box.Text));
                 kolicina_numeric.Value = Sprava.Kolicina;
                 starost_numeric.Value = Sprava.Starost;
