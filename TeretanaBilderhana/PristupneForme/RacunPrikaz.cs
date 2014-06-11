@@ -81,9 +81,9 @@ namespace TeretanaBilderhana.PristupneForme
 
             label19.Text = Convert.ToString(DateTime.Now);
 
-            label36.Text = Convert.ToString(p4);
-            label37.Text = Convert.ToString(p4);
-            label38.Text = Convert.ToString(p4);
+            label36.Text = Convert.ToString(Math.Round(p4, 2));
+            label37.Text = Convert.ToString(Math.Round(p4, 2));
+            label38.Text = Convert.ToString(Math.Round(p4, 2));
 
             label33.Text = Convert.ToString(Math.Round (p4 - (p4 * 0.17m) , 2 ));
             label34.Text = Convert.ToString( Math.Round (p4 * 0.17m, 2));
@@ -92,7 +92,7 @@ namespace TeretanaBilderhana.PristupneForme
             label21.Text = p1;
             label22.Text = Convert.ToString(p3);
             label23.Text = Convert.ToString(p2);
-            label24.Text = Convert.ToString(p4) + "E";
+            label24.Text = Convert.ToString(Math.Round(p4 , 2)) +"E";
             DateTime t = DateTime.Now.AddSeconds(-7);
             label44.Text = "Vrijeme ulaska: " + Convert.ToString(DateTime.Now );
             label45.Text = "Vrijeme izlaska: " + Convert.ToString(t);
