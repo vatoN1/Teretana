@@ -95,6 +95,7 @@
             // numericUpDown3
             // 
             this.numericUpDown3.DecimalPlaces = 3;
+            this.numericUpDown3.Enabled = false;
             this.numericUpDown3.Location = new System.Drawing.Point(100, 196);
             this.numericUpDown3.Maximum = new decimal(new int[] {
             300,
@@ -118,6 +119,7 @@
             // numericUpDown2
             // 
             this.numericUpDown2.DecimalPlaces = 3;
+            this.numericUpDown2.Enabled = false;
             this.numericUpDown2.Location = new System.Drawing.Point(100, 174);
             this.numericUpDown2.Maximum = new decimal(new int[] {
             1000,
@@ -141,6 +143,7 @@
             // 
             // numericUpDown1
             // 
+            this.numericUpDown1.Enabled = false;
             this.numericUpDown1.Location = new System.Drawing.Point(100, 151);
             this.numericUpDown1.Maximum = new decimal(new int[] {
             300,
@@ -160,6 +163,7 @@
             // label11
             // 
             this.label11.AutoSize = true;
+            this.label11.Enabled = false;
             this.label11.Location = new System.Drawing.Point(5, 198);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(89, 13);
@@ -169,6 +173,7 @@
             // label12
             // 
             this.label12.AutoSize = true;
+            this.label12.Enabled = false;
             this.label12.Location = new System.Drawing.Point(56, 153);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(38, 13);
@@ -178,6 +183,7 @@
             // label13
             // 
             this.label13.AutoSize = true;
+            this.label13.Enabled = false;
             this.label13.Location = new System.Drawing.Point(52, 176);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(42, 13);
@@ -196,6 +202,7 @@
             // 
             // trenerID_masked_box
             // 
+            this.trenerID_masked_box.Enabled = false;
             this.trenerID_masked_box.Location = new System.Drawing.Point(100, 248);
             this.trenerID_masked_box.Mask = "0000";
             this.trenerID_masked_box.Name = "trenerID_masked_box";
@@ -223,6 +230,7 @@
             // 
             // datumRodjenjadtp
             // 
+            this.datumRodjenjadtp.Enabled = false;
             this.datumRodjenjadtp.Location = new System.Drawing.Point(100, 125);
             this.datumRodjenjadtp.Name = "datumRodjenjadtp";
             this.datumRodjenjadtp.Size = new System.Drawing.Size(136, 20);
@@ -280,6 +288,7 @@
             // 
             // kontakttb
             // 
+            this.kontakttb.Enabled = false;
             this.kontakttb.Location = new System.Drawing.Point(100, 222);
             this.kontakttb.Mask = "000000000";
             this.kontakttb.Name = "kontakttb";
@@ -289,6 +298,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
+            this.label3.Enabled = false;
             this.label3.Location = new System.Drawing.Point(67, 41);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(27, 13);
@@ -298,6 +308,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
+            this.label4.Enabled = false;
             this.label4.Location = new System.Drawing.Point(47, 66);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(47, 13);
@@ -307,6 +318,7 @@
             // label8
             // 
             this.label8.AutoSize = true;
+            this.label8.Enabled = false;
             this.label8.Location = new System.Drawing.Point(14, 277);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(80, 13);
@@ -316,6 +328,7 @@
             // label7
             // 
             this.label7.AutoSize = true;
+            this.label7.Enabled = false;
             this.label7.Location = new System.Drawing.Point(37, 251);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(57, 13);
@@ -325,6 +338,7 @@
             // label5
             // 
             this.label5.AutoSize = true;
+            this.label5.Enabled = false;
             this.label5.Location = new System.Drawing.Point(7, 127);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(86, 13);
@@ -334,6 +348,7 @@
             // label6
             // 
             this.label6.AutoSize = true;
+            this.label6.Enabled = false;
             this.label6.Location = new System.Drawing.Point(46, 225);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(47, 13);
@@ -372,7 +387,6 @@
             this.groupBox1.Controls.Add(this.label7);
             this.groupBox1.Controls.Add(this.label5);
             this.groupBox1.Controls.Add(this.label6);
-            this.groupBox1.Enabled = false;
             this.groupBox1.Location = new System.Drawing.Point(12, 12);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(242, 303);
@@ -394,9 +408,10 @@
             this.pictureBox1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.pictureBox1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox1.BackgroundImage")));
             this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.pictureBox1.Enabled = false;
             this.pictureBox1.ErrorImage = null;
             this.pictureBox1.ImageLocation = "295; 47";
-            this.pictureBox1.Location = new System.Drawing.Point(270, 9);
+            this.pictureBox1.Location = new System.Drawing.Point(270, 22);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(178, 187);
             this.pictureBox1.TabIndex = 33;

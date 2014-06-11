@@ -31,17 +31,34 @@ namespace TeretanaBilderhana.PristupneForme
 
         private void button2_Click(object sender, EventArgs e)
         {
-            numericUpDown1.Value = 0;
-            numericUpDown2.Value = 0;
-            numericUpDown3.Value = 0;
-            comboBox1.SelectedIndex = -1;
-            radioButton1.Checked = true;
-            numericUpDown4.Value = 0;
+            if (comboBox2.Visible == false)
+            {
+                numericUpDown1.Value = 0;
+                numericUpDown2.Value = 0;
+                numericUpDown3.Value = 0;
+                comboBox1.SelectedIndex = -1;
+                radioButton1.Checked = true;
+                numericUpDown4.Value = 0;
+            }
+            else {
+                comboBox1.Visible = true;
+                label1.Visible = true;
+                comboBox2.Visible = false;
+                label6.Visible = false;
+                numericUpDown1.Value = 0;
+                numericUpDown2.Value = 0;
+                numericUpDown3.Value = 0;
+                comboBox1.SelectedIndex = -1;
+                radioButton1.Checked = true;
+                numericUpDown4.Value = 0;
+            }
         }
-
         private void button1_Click(object sender, EventArgs e)
         {
-            RacunPrikaz r = new RacunPrikaz(comboBox2.Text, numericUpDown1.Value, Convert.ToInt32(numericUpDown4.Value), numericUpDown3.Value);
+            RacunPrikaz r;
+            if (comboBox2.Visible == true)
+                 r = new RacunPrikaz(comboBox2.Text, numericUpDown1.Value, Convert.ToInt32(numericUpDown4.Value), numericUpDown3.Value);
+            else  r = new RacunPrikaz(comboBox1.Text, numericUpDown1.Value, Convert.ToInt32(numericUpDown4.Value), numericUpDown3.Value);
             r.Show();
         }
 
@@ -79,6 +96,7 @@ namespace TeretanaBilderhana.PristupneForme
             {
                 numericUpDown4.Enabled = false;
                 numericUpDown1.Value = 100.00m;
+                numericUpDown4.Value = 1;
                 groupBox2.Enabled = false;
                 numericUpDown3.Value = numericUpDown1.Value * numericUpDown4.Value;
                 
@@ -94,7 +112,10 @@ namespace TeretanaBilderhana.PristupneForme
             else if (comboBox1.Text == "Iznajmljivanje opreme")
             {
                 numericUpDown4.Enabled = true;
-                // SLICNO KAO ZA SUPLEMENTE
+                numericUpDown1.Value = 25.00m;
+                numericUpDown4.Value = 1;
+                numericUpDown4.Enabled = false;
+                numericUpDown3.Value = numericUpDown1.Value * numericUpDown4.Value;
             }
         } /// POPRAVITI NEKE FALINKE
 
