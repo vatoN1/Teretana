@@ -29,10 +29,11 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Pregled));
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
             this.pretragaTextBox = new System.Windows.Forms.ToolStripTextBox();
+            this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
             this.uposleniciPregledGrid = new System.Windows.Forms.DataGridView();
-            this.uposlenikBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.iDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.prezimeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.imeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -41,7 +42,7 @@
             this.datumZaposlenjaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.zaposlenjeSDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.kontaktDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
+            this.uposlenikBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.toolStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.uposleniciPregledGrid)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.uposlenikBindingSource)).BeginInit();
@@ -64,6 +65,11 @@
             this.pretragaTextBox.Size = new System.Drawing.Size(100, 25);
             this.pretragaTextBox.Text = "Unesi pretragu...";
             this.pretragaTextBox.TextChanged += new System.EventHandler(this.pretragaTextChanged);
+            // 
+            // toolStripSeparator1
+            // 
+            this.toolStripSeparator1.Name = "toolStripSeparator1";
+            this.toolStripSeparator1.Size = new System.Drawing.Size(6, 25);
             // 
             // uposleniciPregledGrid
             // 
@@ -89,10 +95,6 @@
             this.uposleniciPregledGrid.RowHeadersWidth = 20;
             this.uposleniciPregledGrid.Size = new System.Drawing.Size(611, 279);
             this.uposleniciPregledGrid.TabIndex = 1;
-            // 
-            // uposlenikBindingSource
-            // 
-            this.uposlenikBindingSource.DataSource = typeof(Uposlenik);
             // 
             // iDDataGridViewTextBoxColumn
             // 
@@ -158,10 +160,9 @@
             this.kontaktDataGridViewTextBoxColumn.ReadOnly = true;
             this.kontaktDataGridViewTextBoxColumn.Width = 69;
             // 
-            // toolStripSeparator1
+            // uposlenikBindingSource
             // 
-            this.toolStripSeparator1.Name = "toolStripSeparator1";
-            this.toolStripSeparator1.Size = new System.Drawing.Size(6, 25);
+            this.uposlenikBindingSource.DataSource = typeof(Uposlenik);
             // 
             // Pregled
             // 
@@ -170,6 +171,7 @@
             this.ClientSize = new System.Drawing.Size(611, 304);
             this.Controls.Add(this.uposleniciPregledGrid);
             this.Controls.Add(this.toolStrip1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Pregled";
             this.Text = "Pregled";
             this.toolStrip1.ResumeLayout(false);

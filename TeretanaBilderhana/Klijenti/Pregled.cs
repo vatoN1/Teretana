@@ -40,5 +40,10 @@ namespace TeretanaBilderhana.Klijenti
             if (pretragaTextBox.Text == "")
                 klijentiPregledGrid.DataSource = klijenti;
         }
+
+        private void Pregled_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -29,14 +29,15 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Pregled));
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
-            this.pregledIzvjestajGrid = new System.Windows.Forms.DataGridView();
             this.pretragaTextBox = new System.Windows.Forms.ToolStripTextBox();
             this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
-            this.izvjestajBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.pregledIzvjestajGrid = new System.Windows.Forms.DataGridView();
             this.idIzvjestajaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.datumIzvjestajaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.iDuposlenikDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.izvjestajBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.toolStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pregledIzvjestajGrid)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.izvjestajBindingSource)).BeginInit();
@@ -52,6 +53,18 @@
             this.toolStrip1.Size = new System.Drawing.Size(343, 25);
             this.toolStrip1.TabIndex = 0;
             this.toolStrip1.Text = "toolStrip1";
+            // 
+            // pretragaTextBox
+            // 
+            this.pretragaTextBox.Name = "pretragaTextBox";
+            this.pretragaTextBox.Size = new System.Drawing.Size(100, 25);
+            this.pretragaTextBox.Text = "Unesite pretragu...";
+            this.pretragaTextBox.TextChanged += new System.EventHandler(this.pretragaEvent);
+            // 
+            // toolStripSeparator1
+            // 
+            this.toolStripSeparator1.Name = "toolStripSeparator1";
+            this.toolStripSeparator1.Size = new System.Drawing.Size(6, 25);
             // 
             // pregledIzvjestajGrid
             // 
@@ -70,22 +83,6 @@
             this.pregledIzvjestajGrid.ReadOnly = true;
             this.pregledIzvjestajGrid.Size = new System.Drawing.Size(343, 288);
             this.pregledIzvjestajGrid.TabIndex = 1;
-            // 
-            // pretragaTextBox
-            // 
-            this.pretragaTextBox.Name = "pretragaTextBox";
-            this.pretragaTextBox.Size = new System.Drawing.Size(100, 25);
-            this.pretragaTextBox.Text = "Unesite pretragu...";
-            this.pretragaTextBox.TextChanged += new System.EventHandler(this.pretragaEvent);
-            // 
-            // toolStripSeparator1
-            // 
-            this.toolStripSeparator1.Name = "toolStripSeparator1";
-            this.toolStripSeparator1.Size = new System.Drawing.Size(6, 25);
-            // 
-            // izvjestajBindingSource
-            // 
-            this.izvjestajBindingSource.DataSource = typeof(Izvjestaj);
             // 
             // idIzvjestajaDataGridViewTextBoxColumn
             // 
@@ -108,6 +105,10 @@
             this.iDuposlenikDataGridViewTextBoxColumn.Name = "iDuposlenikDataGridViewTextBoxColumn";
             this.iDuposlenikDataGridViewTextBoxColumn.ReadOnly = true;
             // 
+            // izvjestajBindingSource
+            // 
+            this.izvjestajBindingSource.DataSource = typeof(Izvjestaj);
+            // 
             // Pregled
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -115,6 +116,7 @@
             this.ClientSize = new System.Drawing.Size(343, 313);
             this.Controls.Add(this.pregledIzvjestajGrid);
             this.Controls.Add(this.toolStrip1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Pregled";
             this.Text = "Pregled";
             this.toolStrip1.ResumeLayout(false);

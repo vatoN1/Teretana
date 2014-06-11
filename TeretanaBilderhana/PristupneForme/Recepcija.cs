@@ -8,6 +8,8 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using TeretanaBilderhana.PristupneForme;
+//using System.Drawing.Imaging;
+//using System.Drawing.Design;
 
 namespace TeretanaBilderhana.PristupneForme
 {
@@ -19,8 +21,8 @@ namespace TeretanaBilderhana.PristupneForme
         }
 
         private void backgroundWorker1_DoWork(object sender, DoWorkEventArgs e)
-        {
-
+        {   
+           
         }
 
         private void dateTimePicker1_ValueChanged(object sender, EventArgs e)
@@ -55,6 +57,8 @@ namespace TeretanaBilderhana.PristupneForme
             r.Show();
         }
 
+
+
         private void toolStripButton3_Click(object sender, EventArgs e)
         {
 //            Izvjestaji.DodavanjeIzvjestaja iz = new Izvjestaji.DodavanjeIzvjestaja();
@@ -77,5 +81,26 @@ namespace TeretanaBilderhana.PristupneForme
         {
             this.Close();
         }
+        private void Recepcija_Load(object sender, EventArgs e)
+        {
+        }
+
+        public int br = 0;
+        private void button1_Click(object sender, EventArgs e)
+        {
+            br++;
+            Bitmap myBitmap;
+            if (br%2 == 1)
+                 myBitmap = new Bitmap(@"C:\Users\A\Desktop\asd.jpg");
+            else
+                 myBitmap = new Bitmap(@"C:\Users\A\Desktop\Screenshot_2.png");
+            Graphics g = Graphics.FromImage(myBitmap);
+                        this.BackgroundImage = myBitmap; 
+            Point p = new Point(0,0);
+            g.DrawImage(myBitmap,p);
+           
+        }
+
+       
     }
 }

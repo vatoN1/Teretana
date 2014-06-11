@@ -29,11 +29,11 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Pregled));
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
             this.pretragaTextBox = new System.Windows.Forms.ToolStripTextBox();
             this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
             this.klijentiPregledGrid = new System.Windows.Forms.DataGridView();
-            this.klijentBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.iDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.imeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.prezimeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -41,6 +41,7 @@
             this.kontaktDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.iDtreneraDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.iDnutricionisteDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.klijentBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.toolStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.klijentiPregledGrid)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.klijentBindingSource)).BeginInit();
@@ -53,7 +54,7 @@
             this.toolStripSeparator1});
             this.toolStrip1.Location = new System.Drawing.Point(0, 0);
             this.toolStrip1.Name = "toolStrip1";
-            this.toolStrip1.Size = new System.Drawing.Size(551, 25);
+            this.toolStrip1.Size = new System.Drawing.Size(552, 25);
             this.toolStrip1.TabIndex = 0;
             this.toolStrip1.Text = "toolStrip1";
             // 
@@ -89,12 +90,8 @@
             this.klijentiPregledGrid.Location = new System.Drawing.Point(0, 25);
             this.klijentiPregledGrid.Name = "klijentiPregledGrid";
             this.klijentiPregledGrid.ReadOnly = true;
-            this.klijentiPregledGrid.Size = new System.Drawing.Size(551, 316);
+            this.klijentiPregledGrid.Size = new System.Drawing.Size(552, 316);
             this.klijentiPregledGrid.TabIndex = 1;
-            // 
-            // klijentBindingSource
-            // 
-            this.klijentBindingSource.DataSource = typeof(Klijent);
             // 
             // iDDataGridViewTextBoxColumn
             // 
@@ -152,15 +149,21 @@
             this.iDnutricionisteDataGridViewTextBoxColumn.ReadOnly = true;
             this.iDnutricionisteDataGridViewTextBoxColumn.Width = 99;
             // 
+            // klijentBindingSource
+            // 
+            this.klijentBindingSource.DataSource = typeof(Klijent);
+            // 
             // Pregled
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(551, 341);
+            this.ClientSize = new System.Drawing.Size(552, 341);
             this.Controls.Add(this.klijentiPregledGrid);
             this.Controls.Add(this.toolStrip1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Pregled";
             this.Text = "Pregled";
+            this.Load += new System.EventHandler(this.Pregled_Load);
             this.toolStrip1.ResumeLayout(false);
             this.toolStrip1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.klijentiPregledGrid)).EndInit();

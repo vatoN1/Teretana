@@ -29,15 +29,15 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Pregled));
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
-            this.pregledSuplementiGrid = new System.Windows.Forms.DataGridView();
             this.pretragaTextBox = new System.Windows.Forms.ToolStripTextBox();
             this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
-            this.suplementBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.idSuplementaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.pregledSuplementiGrid = new System.Windows.Forms.DataGridView();
             this.tipSuplementaSDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.cijenaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.kolicinaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.suplementBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.toolStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pregledSuplementiGrid)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.suplementBindingSource)).BeginInit();
@@ -54,26 +54,6 @@
             this.toolStrip1.TabIndex = 0;
             this.toolStrip1.Text = "toolStrip1";
             // 
-            // pregledSuplementiGrid
-            // 
-            this.pregledSuplementiGrid.AllowUserToAddRows = false;
-            this.pregledSuplementiGrid.AllowUserToDeleteRows = false;
-            this.pregledSuplementiGrid.AutoGenerateColumns = false;
-            this.pregledSuplementiGrid.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
-            this.pregledSuplementiGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.pregledSuplementiGrid.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.idSuplementaDataGridViewTextBoxColumn,
-            this.tipSuplementaSDataGridViewTextBoxColumn,
-            this.cijenaDataGridViewTextBoxColumn,
-            this.kolicinaDataGridViewTextBoxColumn});
-            this.pregledSuplementiGrid.DataSource = this.suplementBindingSource;
-            this.pregledSuplementiGrid.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pregledSuplementiGrid.Location = new System.Drawing.Point(0, 25);
-            this.pregledSuplementiGrid.Name = "pregledSuplementiGrid";
-            this.pregledSuplementiGrid.ReadOnly = true;
-            this.pregledSuplementiGrid.Size = new System.Drawing.Size(265, 238);
-            this.pregledSuplementiGrid.TabIndex = 1;
-            // 
             // pretragaTextBox
             // 
             this.pretragaTextBox.Name = "pretragaTextBox";
@@ -86,17 +66,24 @@
             this.toolStripSeparator1.Name = "toolStripSeparator1";
             this.toolStripSeparator1.Size = new System.Drawing.Size(6, 25);
             // 
-            // suplementBindingSource
+            // pregledSuplementiGrid
             // 
-            this.suplementBindingSource.DataSource = typeof(Suplement);
-            // 
-            // idSuplementaDataGridViewTextBoxColumn
-            // 
-            this.idSuplementaDataGridViewTextBoxColumn.DataPropertyName = "ID";
-            this.idSuplementaDataGridViewTextBoxColumn.HeaderText = "ID";
-            this.idSuplementaDataGridViewTextBoxColumn.Name = "idSuplementaDataGridViewTextBoxColumn";
-            this.idSuplementaDataGridViewTextBoxColumn.ReadOnly = true;
-            this.idSuplementaDataGridViewTextBoxColumn.Width = 43;
+            this.pregledSuplementiGrid.AllowUserToAddRows = false;
+            this.pregledSuplementiGrid.AllowUserToDeleteRows = false;
+            this.pregledSuplementiGrid.AutoGenerateColumns = false;
+            this.pregledSuplementiGrid.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
+            this.pregledSuplementiGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.pregledSuplementiGrid.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.tipSuplementaSDataGridViewTextBoxColumn,
+            this.cijenaDataGridViewTextBoxColumn,
+            this.kolicinaDataGridViewTextBoxColumn});
+            this.pregledSuplementiGrid.DataSource = this.suplementBindingSource;
+            this.pregledSuplementiGrid.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pregledSuplementiGrid.Location = new System.Drawing.Point(0, 25);
+            this.pregledSuplementiGrid.Name = "pregledSuplementiGrid";
+            this.pregledSuplementiGrid.ReadOnly = true;
+            this.pregledSuplementiGrid.Size = new System.Drawing.Size(265, 238);
+            this.pregledSuplementiGrid.TabIndex = 1;
             // 
             // tipSuplementaSDataGridViewTextBoxColumn
             // 
@@ -122,6 +109,10 @@
             this.kolicinaDataGridViewTextBoxColumn.ReadOnly = true;
             this.kolicinaDataGridViewTextBoxColumn.Width = 69;
             // 
+            // suplementBindingSource
+            // 
+            this.suplementBindingSource.DataSource = typeof(Suplement);
+            // 
             // Pregled
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -129,6 +120,7 @@
             this.ClientSize = new System.Drawing.Size(265, 263);
             this.Controls.Add(this.pregledSuplementiGrid);
             this.Controls.Add(this.toolStrip1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Pregled";
             this.Text = "Pregled";
             this.toolStrip1.ResumeLayout(false);

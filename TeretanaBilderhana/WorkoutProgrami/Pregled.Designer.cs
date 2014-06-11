@@ -29,15 +29,16 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Pregled));
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
             this.pregledTextBox = new System.Windows.Forms.ToolStripTextBox();
             this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
             this.pregledWProgramGrid = new System.Windows.Forms.DataGridView();
-            this.workoutProgramBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.idWorkoutProgramaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.vjezbeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tipProgramaSDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.opisDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.workoutProgramBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.toolStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pregledWProgramGrid)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.workoutProgramBindingSource)).BeginInit();
@@ -86,10 +87,6 @@
             this.pregledWProgramGrid.Size = new System.Drawing.Size(256, 317);
             this.pregledWProgramGrid.TabIndex = 1;
             // 
-            // workoutProgramBindingSource
-            // 
-            this.workoutProgramBindingSource.DataSource = typeof(WorkoutProgram);
-            // 
             // idWorkoutProgramaDataGridViewTextBoxColumn
             // 
             this.idWorkoutProgramaDataGridViewTextBoxColumn.DataPropertyName = "IdWorkoutPrograma";
@@ -122,6 +119,10 @@
             this.opisDataGridViewTextBoxColumn.ReadOnly = true;
             this.opisDataGridViewTextBoxColumn.Width = 53;
             // 
+            // workoutProgramBindingSource
+            // 
+            this.workoutProgramBindingSource.DataSource = typeof(WorkoutProgram);
+            // 
             // Pregled
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -129,6 +130,7 @@
             this.ClientSize = new System.Drawing.Size(256, 342);
             this.Controls.Add(this.pregledWProgramGrid);
             this.Controls.Add(this.toolStrip1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Pregled";
             this.Text = "Pregled";
             this.toolStrip1.ResumeLayout(false);
