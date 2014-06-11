@@ -91,9 +91,9 @@ namespace TeretanaBilderhana.PristupneForme
             br++;
             Bitmap myBitmap;
             if (br%2 == 1)
-                 myBitmap = new Bitmap(@"C:\Users\A\Desktop\asd.jpg");
+                myBitmap = new Bitmap(@"C:\Users\Emir\Desktop\asd.jpg");
             else
-                 myBitmap = new Bitmap(@"C:\Users\A\Desktop\Screenshot_2.png");
+                myBitmap = new Bitmap(@"C:\Users\Emir\Desktop\Screenshot_2.png");
             Graphics g = Graphics.FromImage(myBitmap);
                         this.BackgroundImage = myBitmap; 
             Point p = new Point(0,0);
