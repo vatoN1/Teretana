@@ -78,7 +78,7 @@
             this.pictureBox1.Enabled = false;
             this.pictureBox1.ErrorImage = null;
             this.pictureBox1.ImageLocation = "295; 47";
-            this.pictureBox1.Location = new System.Drawing.Point(270, 45);
+            this.pictureBox1.Location = new System.Drawing.Point(270, 22);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(178, 187);
             this.pictureBox1.TabIndex = 0;

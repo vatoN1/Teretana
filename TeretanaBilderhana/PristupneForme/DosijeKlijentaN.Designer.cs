@@ -220,7 +220,6 @@
             // 
             // klijentID_masked_box
             // 
-            this.klijentID_masked_box.Enabled = false;
             this.klijentID_masked_box.Location = new System.Drawing.Point(100, 10);
             this.klijentID_masked_box.Mask = "0000";
             this.klijentID_masked_box.Name = "klijentID_masked_box";
