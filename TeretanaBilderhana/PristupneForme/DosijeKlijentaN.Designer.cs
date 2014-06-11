@@ -192,7 +192,6 @@
             // 
             // nutricionistaID_masked_box
             // 
-            this.nutricionistaID_masked_box.Enabled = false;
             this.nutricionistaID_masked_box.Location = new System.Drawing.Point(100, 274);
             this.nutricionistaID_masked_box.Mask = "0000";
             this.nutricionistaID_masked_box.Name = "nutricionistaID_masked_box";
@@ -226,6 +225,7 @@
             this.klijentID_masked_box.Size = new System.Drawing.Size(136, 20);
             this.klijentID_masked_box.TabIndex = 1;
             this.klijentID_masked_box.ValidatingType = typeof(int);
+            this.klijentID_masked_box.Leave += new System.EventHandler(this.klijentID_masked_box_Leave);
             // 
             // datumRodjenjadtp
             // 

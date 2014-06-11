@@ -224,7 +224,6 @@
             // 
             // trenerID_masked_box
             // 
-            this.trenerID_masked_box.Enabled = false;
             this.trenerID_masked_box.Location = new System.Drawing.Point(100, 248);
             this.trenerID_masked_box.Mask = "0000";
             this.trenerID_masked_box.Name = "trenerID_masked_box";
